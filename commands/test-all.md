@@ -1,16 +1,17 @@
-export default {
-  name: 'test-all',
-  description: 'Create comprehensive tests following project patterns',
-  requiresArgs: false,
-  enabled: true,
+---
+description: Create comprehensive tests following project patterns
+tools:
+  - Read
+  - Write
+  - MultiEdit
+  - Glob
+  - Grep
+  - Bash
+---
 
-  async execute(args, { cwd, say, ask }) {
-    say('🧪 Preparing comprehensive test creation guide...\\n');
+Create comprehensive tests for this codebase following these exact patterns:
 
-    const testType = await ask('What would you like to test? (feature/api/component/security/all)');
-
-    return {
-      prompt: `Please create comprehensive tests for this codebase following these exact patterns:
+Test type requested: ${1:-all}
 
 # Comprehensive Testing Guide
 
@@ -22,6 +23,7 @@ export default {
 - **DOM Testing**: happy-dom environment
 
 ## Project Test Structure
+```
 src/__tests__/
 ├── unit/           # Unit tests
 │   ├── api/        # API route tests
@@ -31,18 +33,20 @@ src/__tests__/
 ├── validation/     # Validation tests
 ├── test-utils.ts   # Test factories
 └── setup.ts        # Test setup
+```
 
 ## Test File Rules
 
 ### Import Structure (EXACT ORDER)
-1. Testing framework: import { describe, it, expect, vi, beforeEach } from 'vitest';
-2. React testing (if needed): import { render, screen } from '@testing-library/react';
-3. Source code: import { functionToTest } from '@/path/to/source';
-4. Mock factories: import { createMockUser, mockSupabaseSuccess } from '@/__tests__/test-utils';
+1. Testing framework: `import { describe, it, expect, vi, beforeEach } from 'vitest';`
+2. React testing (if needed): `import { render, screen } from '@testing-library/react';`
+3. Source code: `import { functionToTest } from '@/path/to/source';`
+4. Mock factories: `import { createMockUser, mockSupabaseSuccess } from '@/__tests__/test-utils';`
 
 ## Mock Patterns
 
 ### Supabase Mock
+```javascript
 vi.mock('@/lib/supabase/server', () => ({
   createClient: vi.fn(),
   createAdminClient: vi.fn(),
@@ -61,12 +65,14 @@ const mockSupabase = {
     single: vi.fn(),
   })),
 };
+```
 
 ## Test Categories
 
 ### 1. API Route Tests
 Location: src/__tests__/unit/api/
 
+```javascript
 describe('POST /api/route-name', () => {
   beforeEach(() => {
     vi.clearAllMocks();
@@ -96,6 +102,7 @@ describe('POST /api/route-name', () => {
     });
   });
 });
+```
 
 ### 2. Security Tests
 Location: src/__tests__/security/
@@ -145,11 +152,14 @@ Location: src/__tests__/unit/utils/
 5. All database operations
 
 ## Running Tests
+```bash
 npm test                 # Run all
 npm run test:coverage    # With coverage
 npm test -- --watch      # Watch mode
+```
 
 ## Expected Output
+```
 ✓ POST /api/admin/approve (12)
   ✓ Authentication (2)
     ✓ should return 401 if not authenticated
@@ -164,6 +174,7 @@ npm test -- --watch      # Watch mode
 
 Tests: 12 passed
 Duration: 245ms
+```
 
 ## Quality Checklist
 - [ ] All tests pass
@@ -176,7 +187,4 @@ Duration: 245ms
 - [ ] Happy path + error cases
 - [ ] Security tests included
 
-Remember: Tests are documentation. They should clearly show how code works.`
-    };
-  }
-};
+Remember: Tests are documentation. They should clearly show how code works.

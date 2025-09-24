@@ -1,28 +1,12 @@
-# /new-blog Slash Command
+---
+description: Research and create data-driven blog posts using Picks and Shovels methodology
+tools:
+  - Write
+  - WebSearch
+  - WebFetch
+---
 
-## Comprehensive Blog Creation System
-
-This command instructs Claude to research, analyze, and create high-quality blog posts following your specific guidelines and leveraging "Picks and Shovels" methodology.
-
-## Command Implementation
-
-```javascript
-// Save this as: ~/.claude/slash_commands/new-blog.mjs
-
-export default {
-  name: 'new-blog',
-  description: 'Research and create data-driven blog posts using Picks and Shovels methodology',
-  requiresArgs: false,
-  enabled: true,
-
-  async execute(args, { cwd, say, ask }) {
-    say('📊 Initializing comprehensive blog research and creation system...\n');
-
-    const topic = await ask('What topic or industry should I focus on? (or "general" for broad developer marketing)');
-    const audience = await ask('Who is your target audience? (e.g., "technical founders", "developer advocates", "product managers")');
-
-    return {
-      prompt: `Please create comprehensive, data-driven blog posts following this exact methodology:
+Please create comprehensive, data-driven blog posts following this exact methodology:
 
 # Blog Research and Creation System
 
@@ -99,7 +83,7 @@ Rate each potential topic (1-10) on:
 For each proposed post, provide:
 
 ### Structure for Each Proposal
-\`\`\`
+```
 Title: [Compelling, specific title - sentence case]
 
 Abstract (4-6 sentences):
@@ -123,7 +107,7 @@ Target Keywords:
 Distribution Strategy:
 - Primary channel: [where to publish first]
 - Repurpose for: [other platforms/formats]
-\`\`\`
+```
 
 ## Phase 4: Writing the Top 3 Posts
 
@@ -304,68 +288,6 @@ Final Deliverables:
 
 Remember: We're not just writing content, we're solving real problems for real developers. Every post should leave the reader smarter and more capable than before.
 
-Topic focus: ${topic || 'general developer marketing'}
-Target audience: ${audience || 'technical decision makers'}`
-    };
-  }
-};
-```
-
-## Additional Enhancements I Recommend
-
-1. **Competitive Intelligence Module**
-   - Track competitor content performance
-   - Identify content gaps they're missing
-   - Monitor their most successful posts
-
-2. **Content Scoring Algorithm**
-   - Predict post performance before publishing
-   - Based on historical data and patterns
-   - Recommend optimizations
-
-3. **Reader Journey Mapping**
-   - Map content to buyer journey stages
-   - Identify missing pieces in funnel
-   - Create content sequences
-
-4. **Technical Depth Calibration**
-   - Adjust technical level per audience
-   - Include code examples when appropriate
-   - Balance accessibility with expertise
-
-5. **Data Collection Framework**
-   - Original research surveys
-   - User interview insights
-   - Performance benchmarks
-   - Case study development
-
-6. **Content Velocity Tracking**
-   - Monitor trending topics in real-time
-   - Jump on emerging discussions
-   - Newsjacking opportunities
-
-7. **Authority Building Elements**
-   - Expert quote integration
-   - Original data visualization
-   - Contrarian but supported viewpoints
-   - Prediction tracking
-
-8. **Conversion Optimization**
-   - CTA testing framework
-   - Lead magnet suggestions
-   - Email capture optimization
-   - Product integration points
-
-9. **Community Feedback Loop**
-   - Comment analysis for next topics
-   - User survey integration
-   - Social listening insights
-   - Support ticket mining
-
-10. **ROI Measurement**
-    - Content attribution modeling
-    - Revenue impact tracking
-    - Cost per acquisition by post
-    - Lifetime value correlation
-
-Would you like me to add any of these additional modules to the command?
+Start by asking me for:
+1. The topic or industry to focus on (or "general" for broad developer marketing)
+2. The target audience (e.g., "technical founders", "developer advocates", "product managers")
