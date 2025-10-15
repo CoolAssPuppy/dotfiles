@@ -1,33 +1,47 @@
 tap "dopplerhq/cli"
 tap "supabase/tap"
+
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
+
 # Distributed revision control system
 brew "git"
+
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
+brew "pipx"
+
 # Quickly rewrite git repository history
 brew "git-filter-repo"
+
 # Postgres C API library
 brew "libpq"
+
 # Platform built on V8 to build network applications
 brew "node"
+
 # Manage multiple Node.js versions
 brew "nvm"
+
 # Fast, disk space efficient package manager
 brew "pnpm"
+
 # Command-line interface for Vercel
 brew "vercel-cli"
+
 # Generate your Xcode project from a spec file and your folder structure
 brew "xcodegen"
+
 # The official Doppler CLI for managing your secrets
 brew "dopplerhq/cli/doppler"
+
 # Supabase CLI
 brew "supabase/tap/supabase"
+
 # App to build and share containerised applications and microservices
-cask "docker-desktop"
 vscode "bradymholt.pgformatter"
 vscode "dbaeumer.vscode-eslint"
 vscode "esbenp.prettier-vscode"
