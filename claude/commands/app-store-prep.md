@@ -147,8 +147,8 @@ Create a fully automated deployment pipeline that handles everything from build 
    - `.env`: Actual secrets (gitignored)
    
    Required variables:
-   - FASTLANE_USER (Apple ID)
-   - FASTLANE_TEAM_ID
+   - FASTLANE_USER (Apple ID) [prashant_sridharan@hotmail.com]
+   - FASTLANE_TEAM_ID [REDACTED_TEAM_ID]
    - FASTLANE_ITC_TEAM_ID (if different)
    - MATCH_PASSWORD (if using match)
    - MATCH_GIT_URL (if using match)
