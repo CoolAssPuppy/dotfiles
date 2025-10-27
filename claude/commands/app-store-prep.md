@@ -33,139 +33,348 @@ Create a fully automated deployment pipeline that handles everything from build 
 3. **Project analysis** (within PROJECT_ROOT)
    - Identify if this is iOS, macOS, tvOS, or visionOS
    - Find the Xcode project/workspace file
-   - Identify all targets and schemes
-   - Extract bundle identifier(s), team ID, and app name
-   - Check current version and build numbers
-   - Identify any app extensions, widgets, or additional targets
-   - Check for existing CI/CD configuration
+   - Prefer .xcworkspace over .xcodeproj if both exist (CocoaPods or SPM)
+   - Identify all targets and schemes using `xcodebuild -list`
+   - Extract from project.pbxproj:
+     - Bundle identifier(s) for all targets
+     - Team ID (DEVELOPMENT_TEAM)
+     - Current version (MARKETING_VERSION) and build number (CURRENT_PROJECT_VERSION)
+     - Code signing style (Automatic vs Manual)
+     - Minimum deployment target
+     - Enabled capabilities and entitlements
+   - Check for Swift Package Manager dependencies
+   - Check for CocoaPods (Podfile presence)
+   - Check for Carthage (Cartfile presence)
+   - Identify if using SwiftUI, UIKit, or AppKit
+   - Check current directory structure
 
 4. **Environment audit**
-   - Check if Xcode Command Line Tools are installed
-   - Verify Ruby version (2.7+ recommended)
-   - Check if Bundler is available
-   - Look for existing Fastlane installation in PROJECT_ROOT
-   - Check for existing certificates in keychain
-   - Verify git is configured with user info
+   - Verify Ruby is installed:
+     - Check version with `ruby --version`
+     - Prefer 3.3.x (warn if 3.4+ due to stdlib changes)
+     - Warn if < 3.0 (outdated)
+   - Verify Xcode is installed:
+     - Check with `xcode-select -p`
+     - Verify version is recent (15.0+ recommended)
+     - Check that command line tools are installed
+   - Verify Xcode license is accepted: `sudo xcodebuild -license`
+   - Check for existing Fastlane setup (don't overwrite without asking)
+   - Check Git repository status (warn about uncommitted changes)
+   - Verify bundle identifier is registered in Apple Developer portal
+   - Check App Store Connect access
+   - For macOS apps: Verify hardened runtime is enabled
+   - Check for Privacy Manifest (PrivacyInfo.xcprivacy) if iOS 17+ target
+
+5. **Certificate and provisioning verification**
+   - Run `security find-identity -v -p codesigning` to list all code signing identities
+   - Check certificate validity (expiration dates)
+   - For iOS:
+     - Check for "Apple Distribution" certificate
+     - Check for "Apple Development" certificate (for local testing)
+     - Warn if certificates expire within 30 days
+   - For macOS:
+     - Check for "Apple Distribution" certificate
+     - Check for "Mac Installer Distribution" certificate (REQUIRED for App Store)
+     - Check for "Developer ID Application" certificate (optional, for non-App Store)
+     - Check for "Developer ID Installer" certificate (optional, for non-App Store)
+   - Check provisioning profiles:
+     - For manual signing: Verify profiles exist in ~/Library/MobileDevice/Provisioning Profiles/
+     - Check profile expiration dates
+     - Verify profiles match bundle identifiers
+   - If missing certificates, provide step-by-step instructions:
+     - Link to Apple Developer portal
+     - Explain CSR creation process
+     - Show how to download and install
+   - Warn user if critical certificates are missing before proceeding
 
 ## Phase 2: Fastlane installation and configuration
 
 **CRITICAL: All Fastlane files go in PROJECT_ROOT, not repo root**
 
-1. **Install dependencies**
-   - Create `Gemfile` in PROJECT_ROOT with Fastlane and necessary plugins:
-     - fastlane-plugin-increment_build_number
-     - fastlane-plugin-versioning (for iOS)
-     - fastlane-plugin-changelog
+1. **Create Gemfile with Ruby 3.4+ compatibility** (in PROJECT_ROOT)
+   ```ruby
+   source "https://rubygems.org"
+   gem "fastlane", "~> 2.219"
+   gem "abbrev"  # Ruby 3.4+ compatibility - removed from stdlib
+   gem "ostruct" # Ruby 3.4+ compatibility - will be removed in 3.5
+   gem "dotenv"  # Environment variable management
+   ```
+
+   Explanation:
+   - Ruby 3.4+ removed abbrev and ostruct from default gems
+   - Without these, Fastlane will fail with "cannot load such file" errors
+   - dotenv is critical for loading .env files (Fastlane doesn't auto-load them)
+
+2. **Install dependencies**
    - Run `bundle install` from PROJECT_ROOT to create Gemfile.lock
-   - Initialize Fastlane with `bundle exec fastlane init` from PROJECT_ROOT
+   - This creates vendor/bundle with all gems
+   - Always use `bundle exec fastlane` to ensure correct gem versions
 
-2. **Configure Appfile** (in PROJECT_ROOT/fastlane/)
-   - Set app_identifier (or multiple for multi-target apps)
-   - Set apple_id placeholder (user will provide)
-   - Set team_id placeholder (user will provide)
-   - Set itc_team_id if different from team_id
+3. **Configure Appfile** (in PROJECT_ROOT/fastlane/)
+   ```ruby
+   app_identifier("com.company.app") # Bundle identifier
+   apple_id("user@example.com")      # Apple ID
+   team_id("ABCD123456")              # Developer Portal Team ID
+   itc_team_id("ABCD123456")          # App Store Connect Team ID (if different)
+   ```
 
-3. **Create comprehensive Fastfile** (in PROJECT_ROOT/fastlane/)
+4. **Create comprehensive Fastfile** (in PROJECT_ROOT/fastlane/)
+
+   **CRITICAL: Environment variable loading**
+   At the very top of Fastfile, BEFORE default_platform:
+   ```ruby
+   require 'dotenv'
+   env_file = File.expand_path('../.env', __dir__)
+   Dotenv.load(env_file) if File.exist?(env_file)
+
+   default_platform(:ios)  # or :mac
+   ```
+
+   Without this, ENV variables won't be available and authentication will fail.
+
+   **CRITICAL: Path handling**
+   Fastlane runs from the fastlane/ directory, so:
+   - Project files: `../ProjectName.xcodeproj` (relative to fastlane/)
+   - Info.plist: `../ProjectName/Info.plist`
+   - .env file: `../.env`
+   - API key: `File.expand_path("../fastlane/app_store_connect_api_key.p8", __dir__)`
+
    Build these lanes:
-   
+
    **prep lane**: Pre-flight checks
    - Verify environment variables are set
-   - Check certificates are available
-   - Validate provisioning profiles
-   - Ensure git working directory is clean (check repo root)
+   - Check certificates are available using `security find-identity`
+   - Validate provisioning profiles (for macOS, ensure Mac Installer Distribution exists)
+   - Ensure git working directory is clean
    - Check that version numbers follow semantic versioning
    - Verify we're in the correct directory (PROJECT_ROOT)
-   
+
    **test lane**: Run all tests
    - Run unit tests for all schemes
    - Run UI tests if they exist
    - Generate test report
    - Fail fast if any tests fail
-   
+
    **bump_patch/bump_minor/bump_major lanes**: Version management
-   - Increment version number according to semantic versioning
-   - Increment build number automatically
-   - Commit version bump to git (from repo root if monorepo)
-   - Create git tag
-   
-   **screenshots lane**: Generate App Store screenshots
-   - Use Snapshot if UI tests exist
-   - Frame screenshots with device frames
-   - Generate for all required device sizes
-   - Organize by locale
-   
+
+   **CRITICAL: Never use agvtool-based actions**
+   The increment_build_number and increment_version_number actions fail with "Apple Generic Versioning is not enabled". Always use plutil commands directly:
+
+   ```ruby
+   desc "Bump patch version"
+   lane :bump_patch do
+     # Get current version from Info.plist
+     version = sh("plutil -extract CFBundleShortVersionString raw ../#{SCHEME}/Info.plist").strip
+
+     # Calculate new version
+     parts = version.split('.').map(&:to_i)
+     new_version = "#{parts[0]}.#{parts[1]}.#{parts[2] + 1}"
+
+     # Update Info.plist
+     sh("plutil -replace CFBundleShortVersionString -string '#{new_version}' ../#{SCHEME}/Info.plist")
+
+     # Commit version bump
+     git_commit(path: ["#{SCHEME}/Info.plist"], message: "Bump version to #{new_version}")
+     add_git_tag(tag: "v#{new_version}")
+   end
+
+   desc "Bump minor version"
+   lane :bump_minor do
+     version = sh("plutil -extract CFBundleShortVersionString raw ../#{SCHEME}/Info.plist").strip
+     parts = version.split('.').map(&:to_i)
+     new_version = "#{parts[0]}.#{parts[1] + 1}.0"
+     sh("plutil -replace CFBundleShortVersionString -string '#{new_version}' ../#{SCHEME}/Info.plist")
+     git_commit(path: ["#{SCHEME}/Info.plist"], message: "Bump version to #{new_version}")
+     add_git_tag(tag: "v#{new_version}")
+   end
+
+   desc "Bump major version"
+   lane :bump_major do
+     version = sh("plutil -extract CFBundleShortVersionString raw ../#{SCHEME}/Info.plist").strip
+     parts = version.split('.').map(&:to_i)
+     new_version = "#{parts[0] + 1}.0.0"
+     sh("plutil -replace CFBundleShortVersionString -string '#{new_version}' ../#{SCHEME}/Info.plist")
+     git_commit(path: ["#{SCHEME}/Info.plist"], message: "Bump version to #{new_version}")
+     add_git_tag(tag: "v#{new_version}")
+   end
+   ```
+
+   **build lane**: Build app
+
+   For iOS:
+   ```ruby
+   desc "Build iOS app"
+   lane :build do
+     # Increment build number using plutil
+     build_number = sh("plutil -extract CFBundleVersion raw ../#{SCHEME}/Info.plist").strip.to_i
+     new_build = build_number + 1
+     sh("plutil -replace CFBundleVersion -string '#{new_build}' ../#{SCHEME}/Info.plist")
+
+     # Build with automatic code signing
+     build_ios_app(
+       scheme: SCHEME,
+       export_method: "app-store",
+       xcargs: "CODE_SIGN_STYLE=Automatic DEVELOPMENT_TEAM=#{ENV['FASTLANE_TEAM_ID']} -allowProvisioningUpdates"
+     )
+   end
+   ```
+
+   For macOS:
+   ```ruby
+   desc "Build macOS app"
+   lane :build do
+     # Increment build number using plutil
+     build_number = sh("plutil -extract CFBundleVersion raw ../#{SCHEME}/Info.plist").strip.to_i
+     new_build = build_number + 1
+     sh("plutil -replace CFBundleVersion -string '#{new_build}' ../#{SCHEME}/Info.plist")
+
+     # Build for Mac App Store (requires both Apple Distribution and Mac Installer Distribution certificates)
+     gym(
+       scheme: SCHEME,
+       output_directory: "./fastlane/builds",
+       clean: true,
+       export_method: "app-store",
+       xcargs: "CODE_SIGN_STYLE=Automatic DEVELOPMENT_TEAM=#{ENV['FASTLANE_TEAM_ID']} -allowProvisioningUpdates"
+     )
+   end
+   ```
+
    **beta lane**: TestFlight deployment
-   - Run tests first
-   - Build app with archive
-   - Export IPA with App Store provisioning
-   - Upload to TestFlight
-   - Skip waiting for build processing by default
-   - Send notification on completion
-   
+
+   **CRITICAL: Upload optimization**
+   By default, upload_to_testflight waits for Apple to process the build (5-30 minutes). This is unnecessary.
+
+   ```ruby
+   desc "Deploy to TestFlight"
+   lane :beta do
+     build
+
+     # Use App Store Connect API for authentication (no 2FA prompts)
+     api_key = app_store_connect_api_key(
+       key_id: ENV["APP_STORE_CONNECT_API_KEY_ID"],
+       issuer_id: ENV["APP_STORE_CONNECT_API_ISSUER_ID"],
+       key_filepath: File.expand_path("../fastlane/app_store_connect_api_key.p8", __dir__)
+     )
+
+     # Upload without waiting (completes in seconds instead of minutes)
+     upload_to_testflight(
+       api_key: api_key,
+       app_identifier: APP_IDENTIFIER,
+       skip_waiting_for_build_processing: true,  # Don't wait for Apple processing
+       skip_submission: true,                     # Don't wait for API confirmation
+       distribute_external: false,                # Only internal testers initially
+       changelog: ENV["TESTFLIGHT_CHANGELOG"] || "New build"
+     )
+
+     # Build will still be processed and appear in TestFlight within 10-15 minutes
+   end
+   ```
+
    **release lane**: Production App Store deployment
    - Prompt for confirmation (safety check)
    - Run tests first
    - Build and archive
-   - Export IPA
+   - Export IPA/pkg
    - Upload to App Store Connect
    - Submit for review (optional flag)
    - Generate release notes from changelog
-   
+
    **metadata lane**: Update App Store metadata
    - Update descriptions, keywords, screenshots
    - Handle multiple localizations if present
    - Upload promotional artwork
-   
-   **download_metadata lane**: Pull current App Store metadata
-   - Useful for initial setup or syncing changes
+
+5. **Update Xcode project settings**
+   Add these to BOTH Debug and Release build configurations in project.pbxproj:
+   ```
+   CURRENT_PROJECT_VERSION = 1;
+   MARKETING_VERSION = 1.0.0;
+   ```
+   This enables version visibility in Xcode but doesn't require agvtool to work.
 
 ## Phase 3: Code signing setup
 
-1. **Determine code signing strategy**
-   - Check if using Xcode automatic signing or manual
-   - Recommend using fastlane match for team environments
-   - Set up match if chosen, otherwise configure cert/sigh
+**For Solo Developers (Recommended)**
 
-2. **Configure match (recommended)** (in PROJECT_ROOT/fastlane/)
-   - Initialize match with `bundle exec fastlane match init`
-   - Create Matchfile with git repo URL placeholder
-   - Document the git repo requirement
-   - Create match lanes for development, adhoc, and appstore profiles
-   - Add match to .gitignore
+1. **Use Xcode automatic code signing**
+   - Verify project has CODE_SIGN_STYLE set to "Automatic"
+   - Confirm DEVELOPMENT_TEAM is set correctly
+   - Document in DEPLOY-STEPS.md that user needs to enable "Automatically manage signing" in Xcode
+   - No need for Match, cert, or sigh for solo developers
+   - Fastlane will use Xcode's automatic signing when building
+   - Add `-allowProvisioningUpdates` flag to xcargs to auto-create provisioning profiles
 
-3. **Alternative: cert and sigh**
-   - Configure cert to manage certificates
-   - Configure sigh to manage provisioning profiles
-   - Document manual certificate management
+2. **For macOS**: Ensure both certificates exist
+   - "Apple Distribution" (for signing the .app)
+   - "Mac Installer Distribution" (for signing the .pkg installer)
+   - Without BOTH, export will fail with "No signing certificate found"
 
 ## Phase 4: Environment and secrets management
 
 **Place .env files in PROJECT_ROOT, not repo root**
 
 1. **Create .env files** (in PROJECT_ROOT)
-   - `.env.default`: Template with all required variables (checked into git)
-   - `.env`: Actual secrets (gitignored)
-   
-   Required variables:
-   - FASTLANE_USER (Apple ID) [prashant_sridharan@hotmail.com]
-   - FASTLANE_TEAM_ID [REDACTED_TEAM_ID]
-   - FASTLANE_ITC_TEAM_ID (if different)
-   - MATCH_PASSWORD (if using match)
-   - MATCH_GIT_URL (if using match)
-   - FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD
-   - APP_STORE_CONNECT_API_KEY_ID (recommended over password)
-   - APP_STORE_CONNECT_API_ISSUER_ID
-   - APP_STORE_CONNECT_API_KEY_PATH
-   
-2. **Update .gitignore** (add to existing repo .gitignore or create in PROJECT_ROOT)
-   - Use relative paths from repo root if monorepo
-   - Add .env
-   - Add fastlane/report.xml (adjust path if needed)
-   - Add fastlane/Preview.html
-   - Add fastlane/screenshots (if not committing)
-   - Add fastlane/test_output
-   - Add *.ipa, *.dSYM.zip
-   - Add certificates and profiles if not using match
+
+   `.env.default` (template, checked into git):
+   ```bash
+   # Apple Developer Account
+   FASTLANE_USER=your.email@example.com
+   FASTLANE_TEAM_ID=ABCD123456
+   FASTLANE_ITC_TEAM_ID=ABCD123456
+
+   # App Store Connect API (preferred over Apple ID)
+   APP_STORE_CONNECT_API_KEY_ID=ABC123DEF4
+   APP_STORE_CONNECT_API_ISSUER_ID=abcd1234-ef56-78gh-90ij-klmnopqrstuv
+   APP_STORE_CONNECT_API_KEY_PATH=fastlane/app_store_connect_api_key.p8
+
+   # Optional
+   FASTLANE_SKIP_2FA_UPGRADE=true
+   TESTFLIGHT_CHANGELOG=New build from CI/CD
+   ```
+
+   `.env` (actual secrets, gitignored):
+   - Copy from .env.default and fill in real values
+   - For this user: FASTLANE_USER=prashant_sridharan@hotmail.com, FASTLANE_TEAM_ID=REDACTED_TEAM_ID
+
+   **Creating App Store Connect API Key:**
+   1. Go to App Store Connect → Users and Access → Keys
+   2. Click "+" to generate new key
+   3. Give it "Admin" or "App Manager" access
+   4. Download the .p8 file (ONLY available once!)
+   5. Save as `fastlane/app_store_connect_api_key.p8`
+   6. Note the Key ID and Issuer ID for .env file
+
+2. **Update .gitignore**
+   Add to existing repo .gitignore or create in PROJECT_ROOT:
+   ```gitignore
+   # Environment and secrets
+   .env
+   .env.local
+
+   # Fastlane
+   fastlane/report.xml
+   fastlane/Preview.html
+   fastlane/screenshots/**/*.png
+   fastlane/test_output
+   fastlane/builds
+   */fastlane/report.xml
+   */fastlane/Preview.html
+   */fastlane/test_output
+   */fastlane/builds
+   */fastlane/*.p8
+
+   # Ruby/Bundler
+   */Gemfile.lock
+   */vendor/bundle
+   vendor/bundle
+   Gemfile.lock
+
+   # Build artifacts
+   *.ipa
+   *.dSYM.zip
+   *.app
+   *.pkg
+   ```
 
 ## Phase 5: Automation scripts
 
@@ -187,6 +396,39 @@ Create a fully automated deployment pipeline that handles everything from build 
    - Makes it colorful and user-friendly
    - Works whether called from PROJECT_ROOT or repo root
 
+   Example structure:
+   ```bash
+   #!/bin/bash
+   set -e
+
+   # Navigate to script directory (PROJECT_ROOT)
+   cd "$(dirname "$0")"
+   echo "Working in: $(pwd)"
+
+   # Check prerequisites
+   command -v ruby >/dev/null 2>&1 || { echo "Ruby not installed"; exit 1; }
+   command -v bundle >/dev/null 2>&1 || { echo "Bundler not installed"; exit 1; }
+
+   # Check .env exists
+   if [ ! -f .env ]; then
+     echo "Error: .env file not found"
+     echo "Copy .env.default to .env and fill in your values"
+     exit 1
+   fi
+
+   # Interactive menu
+   echo "Select deployment type:"
+   echo "1) TestFlight (beta)"
+   echo "2) App Store (release)"
+   read -p "Choice: " choice
+
+   case $choice in
+     1) bundle exec fastlane beta ;;
+     2) bundle exec fastlane release ;;
+     *) echo "Invalid choice"; exit 1 ;;
+   esac
+   ```
+
 2. **Create quick-test.sh script** (in PROJECT_ROOT)
    - Auto-navigates to PROJECT_ROOT
    - Runs test lane quickly
@@ -198,22 +440,43 @@ Create a fully automated deployment pipeline that handles everything from build 
    - Easier than remembering Fastlane commands
 
 4. **Make all scripts executable**
-   - chmod +x for all .sh files
+   ```bash
+   chmod +x deploy.sh quick-test.sh update-metadata.sh
+   ```
 
 ## Phase 6: Changelog management
 
 **Create CHANGELOG.md in PROJECT_ROOT**
 
-1. **Create CHANGELOG.md**
-   - Follow Keep a Changelog format
-   - Include Unreleased section
-   - Create initial version entry
-   - Make it clear this is for the iOS/macOS app specifically
+Follow Keep a Changelog format:
+```markdown
+# Changelog
 
-2. **Create changelog automation**
-   - Script or lane to extract version entries
-   - Convert markdown to App Store-friendly format
-   - Support multiple locales if needed
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Added
+- Feature descriptions go here
+
+### Changed
+- Changes go here
+
+### Fixed
+- Bug fixes go here
+
+## [1.0.0] - 2024-01-15
+
+### Added
+- Initial release
+- Feature list
+
+[Unreleased]: https://github.com/user/repo/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/user/repo/releases/tag/v1.0.0
+```
 
 ## Phase 7: CI/CD integration (optional but recommended)
 
@@ -224,31 +487,70 @@ Create a fully automated deployment pipeline that handles everything from build 
    - Check for .circleci/config.yml
 
 2. **Create GitHub Actions workflow** (if .github exists)
-   - Place workflow in repo root .github/workflows/
-   - Workflow must cd to PROJECT_ROOT before running Fastlane
-   - Workflow for running tests on PR
-   - Workflow for deploying to TestFlight on merge to main
-   - Workflow for deploying to production on release tag
-   - Include secrets documentation
-   - Use working-directory parameter or explicit cd commands
-   - Example:
-     ```yaml
-     - name: Deploy to TestFlight
-       working-directory: ./ios  # or whatever PROJECT_ROOT is
-       run: bundle exec fastlane beta
-     ```
+   Place workflow in repo root .github/workflows/
 
-3. **Document CI/CD setup**
-   - What secrets need to be added (repo level, not project level)
-   - How to trigger workflows
-   - How to view results
-   - Note the monorepo structure in docs
+   **testflight.yml**:
+   ```yaml
+   name: Deploy to TestFlight
+
+   on:
+     push:
+       branches: [main]
+       paths:
+         - 'ios/**'  # Adjust path to PROJECT_ROOT
+         - '.github/workflows/testflight.yml'
+
+   jobs:
+     deploy:
+       runs-on: macos-latest
+
+       steps:
+         - name: Checkout
+           uses: actions/checkout@v4
+
+         - name: Setup Ruby
+           uses: ruby/setup-ruby@v1
+           with:
+             ruby-version: '3.3'
+             bundler-cache: true
+             working-directory: ./ios  # PROJECT_ROOT path
+
+         - name: Create .env file
+           working-directory: ./ios  # PROJECT_ROOT path
+           run: |
+             cat > .env << EOF
+             FASTLANE_USER=${{ secrets.FASTLANE_USER }}
+             FASTLANE_TEAM_ID=${{ secrets.FASTLANE_TEAM_ID }}
+             FASTLANE_ITC_TEAM_ID=${{ secrets.FASTLANE_ITC_TEAM_ID }}
+             APP_STORE_CONNECT_API_KEY_ID=${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+             APP_STORE_CONNECT_API_ISSUER_ID=${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+             APP_STORE_CONNECT_API_KEY_PATH=fastlane/app_store_connect_api_key.p8
+             EOF
+
+         - name: Create API Key
+           working-directory: ./ios  # PROJECT_ROOT path
+           run: |
+             mkdir -p fastlane
+             echo "${{ secrets.APP_STORE_CONNECT_API_KEY }}" > fastlane/app_store_connect_api_key.p8
+
+         - name: Deploy to TestFlight
+           working-directory: ./ios  # PROJECT_ROOT path
+           run: bundle exec fastlane beta
+   ```
+
+   **Required GitHub Secrets** (add at repo level):
+   - `FASTLANE_USER`: Apple ID email
+   - `FASTLANE_TEAM_ID`: Team ID
+   - `FASTLANE_ITC_TEAM_ID`: iTunes Connect team ID
+   - `APP_STORE_CONNECT_API_KEY_ID`: API key ID
+   - `APP_STORE_CONNECT_API_ISSUER_ID`: Issuer ID
+   - `APP_STORE_CONNECT_API_KEY`: Contents of .p8 file (raw text)
 
 ## Phase 8: Documentation generation
 
-After completing all setup, create **DEPLOY-STEPS.md in PROJECT_ROOT** with:
+Create **DEPLOY-STEPS.md in PROJECT_ROOT** with:
 
-1. **Project structure section** (NEW)
+1. **Project structure section**
    - Clearly state if this is a monorepo
    - Show the directory structure
    - Explain where all files are located
@@ -257,52 +559,142 @@ After completing all setup, create **DEPLOY-STEPS.md in PROJECT_ROOT** with:
      ```
      # From repo root:
      cd ios && ./deploy.sh
-     
+
      # From PROJECT_ROOT (ios/):
      ./deploy.sh
      ```
 
-2. **Prerequisites checklist section**
-   - What the user needs from Apple Developer account
-   - What the user needs from App Store Connect
-   - Required access levels
+2. **Prerequisites checklist**
+   - Apple Developer account with Admin access
+   - App registered in App Store Connect
+   - Xcode installed with command line tools
+   - Ruby 3.0+ installed
+   - Bundler installed
+   - Git repository initialized
 
 3. **One-time setup section**
-   - Step-by-step instructions for:
-     - Creating App Store Connect app entry (if not exists)
-     - Generating App Store Connect API key
-     - Setting up certificates (if not using match)
-     - Configuring match git repository (if using match)
-     - Adding secrets to .env file (note exact path)
-     - Running initial setup commands
-   - Each step numbered with exact commands to run
-   - Each command shows full path (cd ios && bundle install)
-   - Each step explains why it's necessary
+   Step-by-step instructions with exact commands:
 
-4. **Regular deployment workflow section**
-   - How to deploy to TestFlight
-   - How to deploy to production
-   - How to update metadata
-   - How to generate screenshots
-   - Example commands for each scenario
-   - Commands work from repo root AND PROJECT_ROOT
+   **3.1. Enable Xcode automatic code signing**
+   - Open project in Xcode
+   - Select target → Signing & Capabilities
+   - Check "Automatically manage signing"
+   - Select your team
+   - Xcode will handle certificates and profiles automatically
+
+   **3.2. Create App Store Connect API key**
+   - Go to App Store Connect → Users and Access → Keys
+   - Generate new key with "App Manager" role
+   - Download .p8 file (ONLY available once!)
+   - Save as `PROJECT_ROOT/fastlane/app_store_connect_api_key.p8`
+   - Note Key ID and Issuer ID
+
+   **3.3. Set up environment variables**
+   ```bash
+   cd PROJECT_ROOT
+   cp .env.default .env
+   # Edit .env with your values
+   ```
+
+   **3.4. Install Ruby dependencies**
+   ```bash
+   cd PROJECT_ROOT
+   bundle install
+   ```
+
+   **3.5. Verify setup**
+   ```bash
+   cd PROJECT_ROOT
+   bundle exec fastlane prep
+   ```
+
+4. **Regular deployment workflow**
+
+   **Deploy to TestFlight:**
+   ```bash
+   cd PROJECT_ROOT
+   ./deploy.sh  # Select option 1
+   # OR
+   bundle exec fastlane beta
+   ```
+
+   **Deploy to production:**
+   ```bash
+   cd PROJECT_ROOT
+   ./deploy.sh  # Select option 2
+   # OR
+   bundle exec fastlane release
+   ```
+
+   **Bump version:**
+   ```bash
+   bundle exec fastlane bump_patch  # 1.0.0 → 1.0.1
+   bundle exec fastlane bump_minor  # 1.0.0 → 1.1.0
+   bundle exec fastlane bump_major  # 1.0.0 → 2.0.0
+   ```
 
 5. **Troubleshooting section**
-   - Common errors and solutions
-   - Wrong directory errors
-   - How to regenerate certificates
-   - How to fix code signing issues
-   - Where to find logs (note full paths)
 
-6. **What was automated section**
-   - Clear list of everything now automated
-   - Time savings estimate
-   - Comparison to manual process
+   **Error: "cannot load such file -- abbrev"**
+   - Cause: Ruby 3.4+ removed abbrev from default gems
+   - Solution: Ensure Gemfile has `gem "abbrev"` and `gem "ostruct"`
+   - Run: `bundle install`
+
+   **Error: "Could not find Xcode project"**
+   - Cause: Wrong directory or incorrect path
+   - Solution: Ensure you're in PROJECT_ROOT when running Fastlane
+   - Fastlane looks for projects in parent directory (../)
+
+   **Error: "Apple Generic Versioning is not enabled"**
+   - Cause: Using agvtool-based actions (increment_build_number, increment_version_number)
+   - Solution: These actions are NOT used in this setup - we use plutil commands
+   - If you see this error, check your Fastfile for agvtool actions
+
+   **Error: "No signing certificate 'Mac Installer Distribution' found"**
+   - Cause: Missing required certificate for macOS App Store
+   - Solution: Create "Mac Installer Distribution" certificate in Apple Developer portal
+   - macOS requires TWO certificates (Apple Distribution AND Mac Installer Distribution)
+
+   **Error: "No profiles for 'com.company.app' were found"**
+   - Cause: Automatic signing couldn't create provisioning profile
+   - Solution: Ensure `-allowProvisioningUpdates` flag is in xcargs
+   - Check that bundle identifier matches Apple Developer portal
+
+   **Error: Fastlane hangs after upload**
+   - Cause: Waiting for Apple's build processing (5-30 minutes)
+   - Solution: Our setup uses `skip_waiting_for_build_processing: true`
+   - Build will still process and appear in TestFlight within 10-15 minutes
+
+   **Error: "Could not load .env file"**
+   - Cause: .env file not found or Fastfile not loading dotenv
+   - Solution: Ensure Fastfile has dotenv require at the top (before default_platform)
+   - Check .env file exists in PROJECT_ROOT
+
+   **Error: Wrong directory**
+   - Symptom: "No such file or directory" errors
+   - Solution: Always run Fastlane from PROJECT_ROOT, not fastlane/ directory
+   - Use `cd PROJECT_ROOT && bundle exec fastlane lane_name`
+
+6. **What was automated**
+   - ✅ Build number incrementation (automatic on every build)
+   - ✅ Version number bumping (semantic versioning)
+   - ✅ Code signing (automatic via Xcode)
+   - ✅ Provisioning profile management (automatic)
+   - ✅ App archiving and export
+   - ✅ TestFlight upload
+   - ✅ App Store upload
+   - ✅ Git tagging for releases
+   - ✅ Changelog management
+   - ✅ CI/CD integration (optional)
+
+   **Time savings**: ~30-45 minutes per deployment reduced to ~5 minutes
 
 7. **Maintenance section**
-   - How to update Fastlane
-   - How to update certificates before expiry
-   - How to add new team members
+   - Update Fastlane: `bundle update fastlane`
+   - Update all gems: `bundle update`
+   - Renew certificates: Xcode handles automatically for solo developers
+   - Check certificate expiration: `security find-identity -v -p codesigning`
+   - Rotate API keys: Generate new key in App Store Connect, update .env and .p8 file
 
 ## Phase 9: Validation and testing
 
@@ -311,14 +703,24 @@ After completing all setup, create **DEPLOY-STEPS.md in PROJECT_ROOT** with:
    - Test that all scripts are executable
    - Verify Gemfile.lock was created in PROJECT_ROOT
    - Check that .gitignore is properly configured
-   - Validate Fastfile syntax
-   - Ensure all placeholders are documented
+   - Validate Fastfile syntax with `bundle exec fastlane lanes`
+   - Ensure all placeholders in .env.default are documented
    - Test scripts from both repo root and PROJECT_ROOT
+   - Verify dotenv is loaded in Fastfile
+   - Check that plutil commands (not agvtool) are used for versioning
 
 2. **Create validation checklist in DEPLOY-STEPS.md**
-   - Things user must verify before first deployment
-   - How to test without actually submitting
-   - Verify correct directory is being used
+   Before first deployment:
+   - [ ] Bundle identifier registered in Apple Developer portal
+   - [ ] App created in App Store Connect
+   - [ ] "Apple Distribution" certificate installed
+   - [ ] "Mac Installer Distribution" certificate installed (macOS only)
+   - [ ] App Store Connect API key created and .p8 file saved
+   - [ ] .env file created with all values filled in
+   - [ ] Xcode automatic signing enabled in project
+   - [ ] bundle install completed successfully
+   - [ ] bundle exec fastlane prep passes all checks
+   - [ ] MARKETING_VERSION and CURRENT_PROJECT_VERSION set in Xcode project
 
 ## Critical requirements
 
@@ -330,12 +732,41 @@ After completing all setup, create **DEPLOY-STEPS.md in PROJECT_ROOT** with:
 - Every script must validate it's in the correct directory
 - Every environment variable must be documented
 - Every manual step must be explained with "why"
-- Use best practices from official Fastlane documentation
-- Optimize for the 80/20 rule: automate common tasks perfectly
+- Use battle-tested best practices:
+  - Never use agvtool - always use plutil commands
+  - Always load dotenv explicitly in Fastfile
+  - Always use skip_waiting_for_build_processing for uploads
+  - Always use -allowProvisioningUpdates for automatic signing
+  - Always include abbrev and ostruct gems for Ruby 3.4+
+  - Always use File.expand_path for path resolution
+  - Always use App Store Connect API keys (not Apple ID)
 - Make it impossible for the user to skip critical steps
 - Use semantic versioning strictly
 - Include rollback instructions if something fails
 - Make the deploy.sh output beautiful and confidence-inspiring
+
+## Common errors and their solutions
+
+### "cannot load such file -- abbrev"
+**Solution:** Add to Gemfile: `gem "abbrev"` and `gem "ostruct"`
+
+### "Could not find Xcode project"
+**Solution:** Use relative paths with `../` prefix since Fastlane runs from fastlane/ directory
+
+### "Apple Generic Versioning is not enabled"
+**Solution:** Don't use agvtool actions. Use plutil commands directly.
+
+### "No signing certificate found"
+**Solution:** For macOS, create "Mac Installer Distribution" certificate in Apple Developer portal
+
+### "No profiles found"
+**Solution:** Add `-allowProvisioningUpdates` to xcargs for automatic provisioning profile creation
+
+### Long wait after upload
+**Solution:** Use `skip_waiting_for_build_processing: true` and `skip_submission: true`
+
+### Environment variables not loading
+**Solution:** Add dotenv require at top of Fastfile with proper path resolution
 
 ## Output format
 
@@ -350,5 +781,3 @@ After completing all setup, create **DEPLOY-STEPS.md in PROJECT_ROOT** with:
 ## Quality standards
 
 This is production infrastructure. Every command must be correct. Every path must be accurate. Every instruction must work from any starting directory. Test automation yourself before documenting. If you're unsure about a step, research it or ask for clarification rather than guessing.
-
-$ARGUMENTS
