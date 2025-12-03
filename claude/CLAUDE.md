@@ -83,41 +83,50 @@
 
 ### Testing approach
 
-#### Unit testing
+#### Core Philosophy
 
-- Write unit tests for all new functions and components.
-- Place test files adjacent to source files with `.test.ts` or `.spec.ts` extensions.
-- Aim for meaningful test coverage, not just high percentages.
-- Mock external dependencies in tests.
-- Test edge cases and error conditions.
-- Keep unit tests fast and isolated.
+**TEST-DRIVEN DEVELOPMENT IS NON-NEGOTIABLE.** Every single line of production code must be written in response to a failing test. No exceptions. This is not a suggestion or a preference - it is the fundamental practice that enables all other principles in this document.
 
-#### Integration testing
+I follow Test-Driven Development (TDD) with a strong emphasis on behavior-driven testing and functional programming principles. All work should be done in small, incremental changes that maintain a working state throughout development.
 
-- Test API endpoints with real database connections.
-- Test component interactions and data flow.
-- Use test databases for integration tests.
-- Test authentication and authorization flows.
-- Verify external service integrations (payment, email, etc.).
-- Clean up test data after each integration test.
+#### Quick Reference
 
-#### End-to-end (E2E) testing
+**Key Principles:**
 
-- Use Playwright for E2E testing.
-- Test critical user journeys and workflows.
-- Test across different browsers and devices.
-- Include accessibility testing in E2E suites.
-- Test error scenarios and edge cases.
-- Use realistic test data that mirrors production scenarios.
+- Write tests first (TDD)
+- Test behavior, not implementation
+- No `any` types or type assertions
+- Immutable data only
+- Small, pure functions
+- TypeScript strict mode always
+- Use real schemas/types in tests, never redefine them
 
-#### Testing best practices
+**Preferred Tools:**
 
-- Write tests before or alongside feature development.
-- Use descriptive test names that explain the expected behavior.
-- Group related tests using describe blocks.
-- Use setup and teardown functions for test isolation.
-- Run tests in CI/CD pipeline before deployment.
-- Maintain test data factories for consistent test scenarios.
+- **Language**: TypeScript (strict mode)
+- **Testing**: Jest/Vitest + React Testing Library
+- **State Management**: Prefer immutable patterns
+
+#### Testing Principles
+
+**Core principle**: Test behavior, not implementation. 100% coverage through business behavior.
+
+**Quick reference:**
+- Write tests first (TDD non-negotiable)
+- Test through public API exclusively
+- Use factory functions for test data (no `let`/`beforeEach`)
+- Tests must document expected business behavior
+- No 1:1 mapping between test files and implementation files
+
+For comprehensive testing guidelines including:
+- Behavior-driven testing principles and anti-patterns
+- Test data patterns and factory functions with full examples
+- Achieving 100% coverage through business behavior
+- React component testing strategies
+- Testing tools (Jest, Vitest, React Testing Library)
+- Validating test data with schemas
+
+See @~/.claude/docs/testing.md
 
 ### Error handling patterns
 
