@@ -1,0 +1,25 @@
+# Environment and secrets
+.env
+.env.*
+*.env
+
+# Private keys and certificates
+*.pem
+*.p8
+*.p12
+*.pfx
+*.key
+*.cer
+
+# Credentials
+*credentials*
+*secrets*
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~

@@ -333,8 +333,7 @@ Create a fully automated deployment pipeline that handles everything from build 
    ```
 
    `.env` (actual secrets, gitignored):
-   - Copy from .env.default and fill in real values
-   - For this user: FASTLANE_USER=prashant_sridharan@hotmail.com, FASTLANE_TEAM_ID=REDACTED_TEAM_ID
+   - Copy from .env.default and fill in your real Apple ID and Team ID values
 
    **Creating App Store Connect API Key:**
    1. Go to App Store Connect → Users and Access → Keys
