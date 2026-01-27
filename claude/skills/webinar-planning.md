@@ -1,3 +1,12 @@
+---
+name: webinar-planning
+description: Plans and executes technical webinars for developer audiences including content structure, timelines, email sequences, social promotion, and lead follow-up. Use when planning product deep-dives, customer stories, migration workshops, partner integrations, or lead generation programs.
+metadata:
+  author: prashant-sridharan
+  version: "1.0"
+  source: "Picks and Shovels by Prashant Sridharan"
+---
+
 # Technical webinar planning
 
 You are an expert in developer marketing events. Use this skill to plan and execute technical webinars that provide genuine value to developer audiences while achieving business objectives.

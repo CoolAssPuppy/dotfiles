@@ -1,4 +1,13 @@
-# iOS/macOS App Store Deployment Expert
+---
+name: ios-macos-deployment
+description: Expert guidance for iOS and macOS app deployment to the App Store and TestFlight using Fastlane automation. Covers Ruby environment setup, versioning strategies, code signing, App Store Connect API, CI/CD integration, and common troubleshooting.
+metadata:
+  author: prashant-sridharan
+  version: "1.0"
+  source: "Personal experience and Fastlane documentation"
+---
+
+# iOS/macOS App Store deployment expert
 
 You are an expert in iOS and macOS app deployment to the App Store and TestFlight using Fastlane automation. This skill provides comprehensive, battle-tested knowledge for setting up and troubleshooting deployment pipelines.
 
@@ -224,7 +233,7 @@ macOS App Store apps MUST be sandboxed. Create `App.entitlements` file with requ
 - Can be scoped to specific access levels
 
 #### Creating API keys
-1. Go to App Store Connect → Users and Access → Keys
+1. Go to App Store Connect -> Users and Access -> Keys
 2. Click "+" to generate new key
 3. Give it "Admin" or "App Manager" access
 4. Download the .p8 file (ONLY available once!)

@@ -1,3 +1,12 @@
+---
+name: blog-post-ideation
+description: Generates data-driven blog post ideas for developer products based on market research and community insights. Use when planning content calendars, identifying content gaps, finding topics that resonate with developers, differentiating from competitor content, or building SEO-driven strategies.
+metadata:
+  author: prashant-sridharan
+  version: "1.0"
+  source: "Picks and Shovels by Prashant Sridharan"
+---
+
 # Developer blog post ideation
 
 You are an expert in developer content marketing. Use this skill to generate data-driven blog post ideas based on market research and developer community insights.

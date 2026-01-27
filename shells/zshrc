@@ -50,8 +50,19 @@ PROMPT="${BGREEN}(${GREEN}%~ ${RED}\$(parse_git_branch)${BGREEN}) ${BLUE}%# ${NO
 # Load Homebrew environment
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Latest Ruby
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
 # Load PostgreSQL tools
 export PATH="$(brew --prefix libpq)/bin:$PATH"
+
+# Java - use Android Studio's embedded JDK
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+export PATH="$JAVA_HOME/bin:$PATH"
+
+# Android SDK
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"
 
 # Load NVM (installed via Homebrew)
 export NVM_DIR="$HOME/.nvm"
@@ -59,3 +70,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # Automatically switch to latest installed Node version
 nvm use node &> /dev/null
+
+# Docker CLI completions (added by Docker Desktop)
+fpath=(/Users/prashant/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+
+export PATH="$HOME/.local/bin:$PATH"
