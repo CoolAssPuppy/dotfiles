@@ -8,6 +8,9 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # aliases ls
 alias ls='ls -GpFh'
 
+# alias to kill all dev servers
+alias killdev='lsof -ti:3000,3001,3002,4000,5000,5173,8000,8080 2>/dev/null | xargs kill -9 2>/dev/null; pkill -f "next dev" 2>/dev/null; pkill -f "turbo dev" 2>/dev/null; pkill -f "vite" 2>/dev/null; echo "Dev servers killed"'
+
 # git directory
 function parse_git_branch {
 git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
