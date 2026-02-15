@@ -76,7 +76,19 @@ For each advantage they have:
 
 Be honest. If you cannot counter an advantage, acknowledge it. There are deals you should not win.
 
-### 6. Competitive talking points
+### 6. Consequences of each choice
+
+For each competitive alternative (direct competitors, status quo, build-it-yourself), articulate the specific, measurable consequences the customer faces if they choose that path instead of your product.
+
+| Alternative | Consequence | Impact |
+|-------------|-------------|--------|
+| [Competitor 1] | [Specific consequence] | [Measurable impact] |
+| [Status quo] | [Specific consequence] | [Measurable impact] |
+| [Build-it-yourself] | [Specific consequence] | [Measurable impact] |
+
+Be honest. Do not exaggerate. The consequences should be specific enough that a customer would recognize them from their own experience.
+
+### 7. Competitive talking points
 
 For common competitive situations, provide response frameworks:
 
@@ -89,7 +101,7 @@ For common competitive situations, provide response frameworks:
 - If they need [X], we are stronger because [specific reason]
 - If they need [Y], [Competitor] may be a better fit because [honest assessment]
 
-### 7. When to recommend competitors
+### 8. When to recommend competitors
 
 List scenarios where you would recommend a competitor:
 
@@ -99,7 +111,7 @@ List scenarios where you would recommend a competitor:
 
 This builds trust with prospects and saves everyone time on bad-fit deals.
 
-### 8. Migration paths
+### 9. Migration paths
 
 If relevant, document how customers migrate from each competitor:
 

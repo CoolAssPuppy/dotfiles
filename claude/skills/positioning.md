@@ -3,7 +3,7 @@ name: positioning
 description: Creates positioning and messaging frameworks for technical products. Develops segmentation strategies, ideal customer profiles (ICP), value propositions, and messaging hierarchies using Aristotle's rhetorical principles. Use when defining target audiences, crafting product positioning, developing messaging, differentiating from competitors, or creating foundational marketing materials.
 metadata:
   author: prashant-sridharan
-  version: "1.0"
+  version: "2.0"
   source: "Picks and Shovels by Prashant Sridharan"
 ---
 
@@ -154,6 +154,34 @@ Choose your positioning approach:
 3. **Challenger**: Position against the incumbent ("Firebase alternative")
 4. **Niche specialist**: Own a specific use case ("time-series data at scale")
 
+### Category test
+
+After completing the positioning statement, test each major element in isolation:
+
+- Can the category alone answer "what is this?" ("Service business" fails. "Time-series database" passes. "Developer platform" is borderline.)
+- Can the use case alone answer "what is this?" ("Helps developers build real-time dashboards" passes. "Makes development easier" fails.)
+- If either test fails, go back and revise.
+
+### Problem-framing variants
+
+Rewrite the problem summary three ways:
+
+- Category-anchored: frame the problem as a gap in the category
+- Use-case-anchored: frame the problem as a daily workflow pain
+- Alternative-anchored: frame the problem as frustration with the current approach
+
+Recommend which framing best fits the go-to-market motion.
+
+### Output format
+
+```markdown
+### Problem-framing variants
+Category-anchored: [Problem framed as a category gap]
+Use-case-anchored: [Problem framed as a workflow pain]
+Alternative-anchored: [Problem framed as a displacement story]
+Recommended framing: [Which one and why]
+```
+
 ---
 
 ## Step 4: Messaging hierarchy
@@ -167,21 +195,21 @@ Build a three-level messaging hierarchy using Aristotle's rhetorical framework:
 **Level 2: Value pillars (3 pillars using Aristotle's framework)**
 
 Pillar 1 - Emotional Appeal (Pathos):
-- Why will users love using this?
-- What productivity gains or pain relief does it provide?
-- How does it make their daily work better?
+- Brief: Why will users love using this? What productivity gains or pain relief does it provide?
+- Mechanism: How does the product technically enable this emotional benefit? What is the approach that makes daily work better?
+- Consequence: What happens if the customer does not act? What pain persists or worsens?
 - Proof points: testimonials, community sentiment, adoption stories
 
 Pillar 2 - Logical Appeal (Logos):
-- What unique technical capabilities does it have?
-- What are the measurable differentiators?
-- Benchmarks, performance data, feature comparisons
+- Brief: What unique technical capabilities does it have? What are the measurable differentiators?
+- Mechanism: What is the technical approach that enables these capabilities? How does the architecture or design make this possible?
+- Consequence: What happens if the customer does not act? What inefficiency, cost, or limitation remains?
 - Proof points: technical documentation, benchmarks, architecture
 
 Pillar 3 - Credibility Appeal (Ethos):
-- Why can customers depend on this long-term?
-- What track record, team background, or backing proves reliability?
-- Security certifications, enterprise adoption, funding, open source health
+- Brief: Why can customers depend on this long-term? What track record, team background, or backing proves reliability?
+- Mechanism: What is the approach that ensures ongoing reliability? Security certifications, enterprise adoption, funding, open source health.
+- Consequence: What happens if the customer does not act? What trust, compliance, or stability risk remains?
 - Proof points: customer logos, uptime stats, team credentials
 
 **Level 3: Proof points (2-3 per pillar)**
@@ -201,6 +229,8 @@ Pillar 3 - Credibility Appeal (Ethos):
 #### Pillar 1: Emotional Appeal (Pathos)
 [One sentence description]
 
+How it works: [The mechanism or approach that enables this benefit]
+Without this: [What happens if the customer does not act]
 Proof points:
 - [Specific feature or metric]
 - [Customer outcome or benchmark]
@@ -208,6 +238,8 @@ Proof points:
 #### Pillar 2: Logical Appeal (Logos)
 [One sentence description]
 
+How it works: [The mechanism or approach that enables this benefit]
+Without this: [What happens if the customer does not act]
 Proof points:
 - [Specific feature or metric]
 - [Customer outcome or benchmark]
@@ -215,9 +247,24 @@ Proof points:
 #### Pillar 3: Credibility Appeal (Ethos)
 [One sentence description]
 
+How it works: [The mechanism or approach that enables this benefit]
+Without this: [What happens if the customer does not act]
 Proof points:
 - [Specific feature or metric]
 - [Customer outcome or benchmark]
+```
+
+---
+
+## Step 4b: Differentiation summary
+
+After completing the three pillars, write one sentence that synthesizes all pillars into a unified differentiation story. This closes the narrative loop from problem to solution and becomes a reusable asset for press boilerplate, executive summaries, and elevator pitches.
+
+### Output format
+
+```markdown
+## Differentiation summary
+[One sentence synthesizing all three pillars]
 ```
 
 ---
@@ -295,17 +342,14 @@ Apply the "Help First" principle: every piece of positioning should help custome
 
 ---
 
-## Validation checklist
+## Validation tests
 
-Before finalizing positioning:
+Before finalizing positioning, run these four tests. If any fails, revise before moving to messaging.
 
-- [ ] Can a customer understand it in under 10 seconds?
-- [ ] Does it clearly identify who it's for?
-- [ ] Does it articulate a specific problem?
-- [ ] Is the differentiation meaningful and defensible?
-- [ ] Can you prove your claims with evidence?
-- [ ] Does it resonate with your ICP's pain points?
-- [ ] Is it different from your top 3 competitors?
+1. **The duck test.** Does your positioning clearly name what you are in language a developer would use? If you need to explain your category label, it is wrong.
+2. **The category test.** Can your category alone answer "what is this?" Can your use case alone answer it? If not, the element is too vague.
+3. **The swap test.** Can your primary competitor say your positioning statement truthfully by replacing your product name with theirs? If yes, you have table stakes, not differentiation.
+4. **The consequence test.** Does each pillar have a tangible, specific consequence of inaction? If the consequence is vague, the pillar is not solving a real problem.
 
 ---
 

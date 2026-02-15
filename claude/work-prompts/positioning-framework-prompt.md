@@ -19,53 +19,89 @@ You are creating a positioning framework for a developer tool or platform. Your 
 
 ## Framework structure
 
-### 1. Category statement
+### 1. Category test
+Test whether the positioning elements can stand alone:
+- Does the category descriptor alone answer "what is this product?"
+- Does the primary use case alone answer "what is this product?"
+- If either test fails, revise the element until it passes before continuing.
 
-Complete this sentence:
-"[PRODUCT] is a [CATEGORY] that helps [TARGET AUDIENCE] achieve [OUTCOME]."
+### 2. Positioning statement
+Complete this framework:
+"For [target developers with specific context]
+who [experience this specific problem],
+[Product] is a [category descriptor]
+that [primary benefit in developer terms].
+Unlike [primary alternative],
+we [key differentiator that matters to developers]."
 
-Keep it simple. One sentence. No jargon.
+### 3. Problem-framing variants
+Rewrite the problem statement three ways:
+- Category-anchored: Frame the problem as a gap in the category
+- Use-case-anchored: Frame the problem as a daily workflow pain
+- Alternative-anchored: Frame the problem as frustration with the current approach
+Recommend which framing best fits the product's go-to-market motion.
 
-### 2. Three pillars
+### 4. Three messaging pillars (Aristotle's framework)
 
-Define your positioning across three dimensions:
+**Pillar 1 - Emotional Appeal (Pathos):**
+- Value claim: Why will developers love using this?
+- How it works: The mechanism or approach that enables this benefit
+- Without this: What happens if the developer does not act
+- Proof points: testimonials, community sentiment, adoption stories
 
-**Emotional pillar:** How does this product improve developers' lives? What frustration does it eliminate? What does it feel like to use?
+**Pillar 2 - Logical Appeal (Logos):**
+- Value claim: What unique technical capabilities does it have?
+- How it works: The mechanism or approach that enables this benefit
+- Without this: What happens if the developer does not act
+- Proof points: benchmarks, performance data, feature comparisons
 
-**Logical pillar:** What unique capabilities does it offer? What can developers do with this that they cannot do with alternatives? Be specific about features.
+**Pillar 3 - Credibility Appeal (Ethos):**
+- Value claim: Why can developers depend on this long-term?
+- How it works: The mechanism or approach that enables this benefit
+- Without this: What happens if the developer does not act
+- Proof points: customer logos, uptime stats, team credentials
 
-**Credibility pillar:** Why should developers trust this? Include: company track record, scale metrics, security certifications, notable customers, open source contributions, or technical pedigree.
+### 5. Differentiation summary
+One sentence synthesizing all three pillars into a unified differentiation story.
 
-### 3. Competitive differentiation
+### 6. Competitive positioning
+For each competitor, provide:
+- What they genuinely do well (be honest)
+- Where you have defensible advantages
+- The consequence for the customer of choosing them over you
 
-For each of 2-3 main competitors, provide:
-- Competitor name
-- Their positioning (how they describe themselves)
-- Your advantage (specific, provable)
-- When you would recommend them instead (be honest)
+### 7. Messaging guidelines
 
-### 4. Proof points
+DO:
+- Lead with technical capability, then business benefit
+- Use precise technical terminology correctly
+- Show working code examples in all materials
+- Acknowledge limitations and tradeoffs honestly
+- Let the product speak through demos and docs
 
-List 3-5 concrete proof points that validate your positioning:
-- Customer testimonials with names and companies
-- Usage metrics (users, requests, uptime)
-- Performance benchmarks
-- Security certifications
-- Industry recognition
+DON'T:
+- Use superlatives without proof ("blazing fast", "revolutionary")
+- Lead with business value before technical substance
+- Hide pricing or require sales calls for basic info
+- Ignore competitor strengths in comparisons
+- Create artificial urgency or scarcity
+- Use vague differentiators: "better developer experience" or "more intuitive"
+- Claim to be "the best" or "the leading" without proof
+- Use marketing jargon: "synergy," "holistic," "end-to-end solution"
+- Use grandiose language: "revolutionizing," "transforming the industry"
+- Use "seamless," "robust," "cutting-edge," "powerful" without explaining why
+- Use "leverage," "utilize," "facilitate," "delve"
+- Use trailing participle clauses
+- Use emdashes or emoji
 
-Each proof point must be specific and verifiable.
-
-## What NOT to do
-
-- Do not use vague differentiators: "better developer experience" or "more intuitive"
-- Do not claim to be "the best" or "the leading" without proof
-- Do not use marketing jargon: "synergy," "holistic," "end-to-end solution"
-- Do not use grandiose language: "revolutionizing," "transforming the industry"
-- Do not ignore competitor strengths. Honest positioning builds trust.
-- Do not use "seamless," "robust," "cutting-edge," "powerful" without explaining why
-- Do not use "leverage," "utilize," "facilitate," "delve"
-- Do not use trailing participle clauses
-- Do not use emdashes or emoji
+### 8. Validation
+Run four tests on the completed positioning:
+- Duck test: Does it clearly name what the product is?
+- Category test: Can the category alone classify the product?
+- Swap test: Can a competitor say the same positioning statement truthfully?
+- Consequence test: Does each pillar have a tangible cost of inaction?
+Flag any failures and suggest revisions.
+```
 
 ## Inputs needed
 
@@ -76,4 +112,5 @@ Provide the following:
 - Key features and capabilities
 - Any existing proof points (metrics, customers, certifications)
 - Honest assessment of weaknesses or gaps
-```
+
+Apply the "Help First" principle: every piece of positioning should help customers understand if this product solves their problem, even if the answer is no.

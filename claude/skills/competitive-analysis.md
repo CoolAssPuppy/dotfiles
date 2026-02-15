@@ -54,6 +54,7 @@ The biggest competitor is often "do nothing." If it works and it's paid for, why
 - Identify pain thresholds
 - Find "hair on fire" moments
 - Map organizational inertia
+- Articulate the specific, measurable consequence of inaction for each stakeholder
 
 **Key insight:** To break through inertia, you must solve the top problem a stakeholder with spending authority cares about.
 
@@ -291,6 +292,20 @@ Nobody reads long documents. Structure for scanning.
 ### When [Your Product] wins
 - Scenario: [Use case] / Your advantage: [Technical reason]
 - Scenario: [Use case] / Your advantage: [Technical reason]
+
+## Consequences of each choice
+
+### If customer stays with [Competitor]
+- [Specific consequence with measurable impact]
+- [Specific consequence with measurable impact]
+
+### If customer stays with status quo
+- [Specific consequence with measurable impact]
+- [Specific consequence with measurable impact]
+
+### If customer builds it themselves
+- [Specific consequence with measurable impact]
+- [Specific consequence with measurable impact]
 
 ## Qualification questions
 
