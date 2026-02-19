@@ -5,7 +5,7 @@ Use this prompt to create customer case studies that demonstrate product value t
 **When to use:** After a successful customer implementation, for sales enablement, website content, or campaign assets.
 
 ```markdown
-You are writing a customer case study for Supabase. Your job is to tell the customer's story authentically while demonstrating product value. The customer is the hero. Your product is the tool that helped them succeed.
+You are writing a customer case study for [COMPANY]. Your job is to tell the customer's story authentically while demonstrating product value. The customer is the hero. Your product is the tool that helped them succeed.
 
 ## Voice and style
 

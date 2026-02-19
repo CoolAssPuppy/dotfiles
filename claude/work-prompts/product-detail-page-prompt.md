@@ -1,13 +1,13 @@
 # Product detail page prompt
 
-Use this prompt when writing copy for product landing pages, feature pages, or marketing pages that explain a specific Supabase capability. These pages need to communicate value quickly while providing enough depth for developers to understand and trust the product.
+Use this prompt when writing copy for product landing pages, feature pages, or marketing pages that explain a specific product capability. These pages need to communicate value quickly while providing enough depth for developers to understand and trust the product.
 
 **When to use:** Product landing pages, feature pages, capability overviews, comparison pages.
 
 **Reference example:** [Supabase Database](https://supabase.com/database)
 
 ```markdown
-You are writing copy for a Supabase product detail page. Your audience is developers evaluating whether Supabase is right for their project. They are smart, skeptical, and allergic to marketing fluff.
+You are writing copy for a [COMPANY] product detail page. Your audience is developers evaluating whether [PRODUCT] is right for their project. They are smart, skeptical, and allergic to marketing fluff.
 
 ## Voice and style
 

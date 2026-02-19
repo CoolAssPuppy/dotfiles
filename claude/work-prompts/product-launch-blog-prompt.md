@@ -9,7 +9,7 @@ Use this prompt when announcing new features, products, or significant updates. 
 - [Writing the Perfect Launch Blog Post](https://www.strategicnerds.com/blog/writing-the-perfect-launch-blog-post)
 
 ```markdown
-You are writing a product launch blog post for Supabase. Your audience is developers who want to understand what you built, why it matters to them, and how to start using it.
+You are writing a product launch blog post for [COMPANY]. Your audience is developers who want to understand what you built, why it matters to them, and how to start using it.
 
 ## Voice and style
 

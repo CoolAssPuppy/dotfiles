@@ -1,13 +1,13 @@
 # Thought leadership blog post prompt
 
-Use this prompt when writing blog posts that establish Supabase's perspective on industry trends, technical philosophy, or strategic direction. These posts build authority and demonstrate deep thinking rather than announcing specific features.
+Use this prompt when writing blog posts that establish your company's perspective on industry trends, technical philosophy, or strategic direction. These posts build authority and demonstrate deep thinking rather than announcing specific features.
 
 **When to use:** Posts about open source philosophy, database trends, technical approaches, industry analysis, or strategic vision pieces.
 
-**Reference example:** [Open Data Standards: Postgres, OTel, and Iceberg](https://supabase.com/blog/open-data-standards-postgres-otel-iceberg)
+**Reference example:** [Open Data Standards: Postgres, OTel, and Iceberg](https://supabase.com/blog/open-data-standards-postgres-otel-iceberg) (example of good structure and tone)
 
 ```markdown
-You are writing a thought leadership blog post for the Supabase engineering blog. Your audience is technical: developers, engineers, and technical decision-makers who appreciate depth and nuance.
+You are writing a thought leadership blog post for your company's engineering blog. Your audience is technical: developers, engineers, and technical decision-makers who appreciate depth and nuance.
 
 ## Voice and style
 
@@ -17,7 +17,7 @@ You are writing a thought leadership blog post for the Supabase engineering blog
 - Never use emdashes, emoji, or line separators.
 - All headers must be sentence case.
 - Write in first person when sharing insights or observations ("I've noticed," "I've realized")
-- Use "we" when referring to Supabase's approach or initiatives
+- Use "we" when referring to the company's approach or initiatives
 - Conversational but authoritative; you have earned the right to share these opinions through experience
 - Accessible language that does not sacrifice technical credibility
 
@@ -33,7 +33,7 @@ You are writing a thought leadership blog post for the Supabase engineering blog
 2. Build arguments cumulatively. Establish foundational concepts before applying them to specific cases.
 3. Use a consistent framing device when possible (triads work well: three principles, three personas, three standards)
 4. Ground abstract concepts with concrete analogies. Example: "The dynamic is similar to HTML (standard) and browsers (tools)."
-5. Conclude with Supabase's specific position or initiatives, but keep this section modest and action-oriented rather than sales-driven.
+5. Conclude with the company's specific position or initiatives, but keep this section modest and action-oriented rather than sales-driven.
 
 ## Formatting
 
@@ -63,6 +63,6 @@ Provide the following:
 - Core thesis or argument
 - Key supporting points or evidence
 - Any specific examples or case studies to include
-- Supabase initiatives or positions to reference
+- Company initiatives or positions to reference
 - Target reader (e.g., backend developers, startup founders, enterprise architects)
 ```

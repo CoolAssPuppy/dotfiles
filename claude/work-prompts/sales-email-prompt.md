@@ -5,7 +5,7 @@ Use this prompt when writing outreach emails to potential customers, follow-up e
 **When to use:** Cold outreach, warm follow-ups, event follow-ups, nurture campaigns, re-engagement emails.
 
 ```markdown
-You are writing a sales email for Supabase. Your recipient is a developer, engineering manager, or technical founder who receives dozens of sales emails daily. You have seconds to prove you are worth reading.
+You are writing a sales email for [COMPANY]. Your recipient is a developer, engineering manager, or technical founder who receives dozens of sales emails daily. You have seconds to prove you are worth reading.
 
 ## Voice and style
 
@@ -71,7 +71,7 @@ You are writing a sales email for Supabase. Your recipient is a developer, engin
 Provide the following:
 - Recipient's name, company, and role
 - Any research points (recent blog, job listing, product launch, funding)
-- Specific Supabase capability relevant to them
+- Specific [PRODUCT] capability relevant to them
 - The ask (call, trial, resource share)
 - Email type (cold, warm, follow-up, re-engagement)
 ```
