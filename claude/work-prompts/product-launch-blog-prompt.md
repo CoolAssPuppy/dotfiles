@@ -75,6 +75,8 @@ For each major feature:
 - Do not use "delve," "seamless," "robust," "cutting-edge," "leverage," "utilize"
 - Do not use vague adjectives: "powerful," "flexible," "intuitive" (show, do not tell)
 - Do not end without a clear call-to-action and next steps
+- Do not use the "It's not X, it's Y" construction
+- Do not use the "the kind of person who does [verb]" construction
 
 ## Inputs needed
 
