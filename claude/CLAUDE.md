@@ -117,6 +117,7 @@ Use this methodology whenever starting to work on a coding session.
 
 ### Supabase best practices
 
+- Always use declarative schemas if working with local Supabase
 - Generate types from the database automatically.
 - Extend types where appropriate.
 - Use Supabase features and components.
