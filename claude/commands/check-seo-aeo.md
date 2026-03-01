@@ -113,45 +113,114 @@ VideoObject: name, description, thumbnailUrl, uploadDate, duration, contentUrl, 
 
 ## AI Engine Optimization (AEO)
 
-### 1. `/public/llms.txt`
+Based on analysis of 1.2 million ChatGPT responses and 30 million citations (source: Kevin Indig, Growth Memo).
+
+### 1. Document position strategy (the "ski ramp")
+
+AI models cite content heavily from the top of a page, tapering off toward the bottom:
+- **First 30% of content**: 44.2% of all citations originate here
+- **Middle 30-70%**: 31.1% of citations
+- **Final 30%**: 24.7% of citations
+
+**What to do:**
+- Use BLUF (Bottom Line Up Front): state your conclusion or answer immediately, then elaborate
+- Front-load your strongest claims, definitions, and data into the opening sections
+- Do not build suspense or save the best insight for the end
+- Establish the interpretive frame in the introduction so that everything after it is read through that lens
+
+### 2. Five winning content characteristics
+
+#### a. Definitive language (2x more citations)
+- Citation winners use definitive constructions 36.2% of the time vs 20.2% for losers
+- Use phrases like "is defined as," "refers to," "is the process of"
+- Resolve queries in a single statement (zero-shot approach)
+- The word "is" acts as a strong vector bridge connecting subjects to definitions
+
+**Example:**
+- Weak: "SEO can mean different things depending on who you ask"
+- Strong: "SEO is the practice of optimizing web pages to rank higher in search engine results"
+
+#### b. Question-answer headers (2x more question marks in cited text)
+- Cited text contains question marks 2x more often (18% vs 8.9%)
+- 78.4% of question-based citations originate from H2 headings
+- Frame H2s as literal user queries, not abstract topic labels
+- Answer immediately in the first sentence of the following paragraph
+- Use "entity echoing": repeat the topic word at the start of the answer
+
+**Example:**
+- Weak header: "The history of SEO"
+- Strong header: "When did SEO start?"
+- Strong answer: "SEO started in the mid-1990s when..."
+
+#### c. Entity richness (target ~20% named entity density)
+- Standard English text contains 5-8% entity density (proper nouns, brands, tools)
+- Heavily cited content averages 20.6% entity density
+- LLMs treat specific entities as anchors that lower answer uncertainty
+- Name-drop tools, brands, people, and competitors freely
+
+**Example:**
+- Weak: "There are many good tools for this task" (0% density)
+- Strong: "Top tools include Salesforce, HubSpot, and Pipedrive" (30% density)
+
+#### d. Balanced sentiment (target ~0.47 subjectivity)
+- On a scale of 0.0 (pure objectivity) to 1.0 (pure opinion), the winning sweet spot is ~0.47
+- This is the "analyst voice": combine a fact with analysis in the same sentence
+- Avoid both dry Wikipedia-style prose and emotional opinion pieces
+
+**Example:**
+- Too objective: "iPhone 15 features the A16 chip"
+- Too subjective: "iPhone 15 is the most amazing phone ever made"
+- Analyst voice: "iPhone 15 features the A16 chip, making it the strongest option for content creators"
+
+#### e. Business-grade writing clarity (Flesch-Kincaid ~16)
+- Citation winners score Flesch-Kincaid 16 (college level)
+- Citation losers score 19.1 (PhD/academic level)
+- Use simple subject-verb-object sentence structures
+- Avoid multisyllabic jargon and winding sentences
+- Even sophisticated topics suffer when written at PhD level
+
+### 3. Within-paragraph optimization
+
+Where sentences sit inside a paragraph also matters:
+- **Middle of paragraph**: 53% of citations (highest information gain)
+- **First sentence**: 24.5% of citations
+- **Last sentence**: 22.5% of citations
+
+**What to do:**
+- Pack your highest-value claims and data points into the body of paragraphs, not just openers
+- ChatGPT seeks sentences with the highest information gain regardless of sentence position
+- Use opening sentences to set context, middle sentences for your strongest claims
+
+### 4. `/public/llms.txt`
 ```
 # Site Name - LLM Context File
 
 > Brief description of what this site is
 
-## About This Site
+## About this site
 Clear explanation of site purpose and content
 
-## Author/Organization Information
+## Author/organization information
 Name, title, credentials, expertise areas
 
-## Key Topics Covered
+## Key topics covered
 - Topic 1
 - Topic 2
 - Topic 3
 
-## Primary Content Sections
+## Primary content sections
 /path1 - Description
 /path2 - Description
 /path3 - Description
 
-## Citing This Content
+## Citing this content
 Attribution format, author name, website URL
 
-## Contact for Verification
+## Contact for verification
 Email, social links for fact-checking
 ```
 
-### 2. Content Principles for LLMs
-- Write clear, factual, unambiguous content
-- Define technical terms on first use
-- Use structured headings that summarize sections
-- Include author bylines with credentials
-- Date all content (published and updated)
-- Link to authoritative sources
-- Avoid content that could be misinterpreted out of context
-
-### 3. E-E-A-T Signals (Experience, Expertise, Authoritativeness, Trustworthiness)
+### 5. E-E-A-T signals (experience, expertise, authoritativeness, trustworthiness)
 - Author bio pages with credentials
 - Link author pages to content
 - Display credentials/certifications
@@ -268,11 +337,17 @@ For sites with regularly updated content:
 - [ ] Dynamic OG images for all page types
 - [ ] Test with Facebook Debugger and Twitter Card Validator
 
-### AEO
+### AEO (content structure for AI citation)
 - [ ] /public/llms.txt created
-- [ ] Author pages with credentials
-- [ ] Clear, factual content structure
-- [ ] Dates on all content
+- [ ] BLUF structure: conclusions and key definitions in the first 30% of each page
+- [ ] H2 headings framed as user queries (not abstract topic labels)
+- [ ] Immediate answers after question headers using entity echoing
+- [ ] Definitive language: "is defined as," "refers to" constructions throughout
+- [ ] Entity density ~20%: specific brands, tools, people named (not generic references)
+- [ ] Balanced sentiment ~0.47: analyst voice combining facts with analysis
+- [ ] Readability at Flesch-Kincaid ~16 (college level, not PhD)
+- [ ] Author pages with credentials (E-E-A-T)
+- [ ] Dates on all content (published and updated)
 
 ### Performance & Trust
 - [ ] Core Web Vitals passing
