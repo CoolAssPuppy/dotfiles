@@ -1,4 +1,5 @@
 ---
+user-invocable: true
 name: ios-macos-deployment
 description: Expert guidance for iOS and macOS app deployment to the App Store and TestFlight using Fastlane automation. Covers Ruby environment setup, versioning strategies, code signing, App Store Connect API, CI/CD integration, and common troubleshooting.
 metadata:

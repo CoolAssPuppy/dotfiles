@@ -11,6 +11,8 @@ You are writing copy for a [COMPANY] product detail page. Your audience is devel
 
 ## Voice and style
 
+Follow the authoritative voice guide at @~/.claude/skills/writing/SKILL.md. No banned words, FATAL constructions, or AI writing tells.
+
 - Write at a 5th grade reading level. Short sentences. Easy to understand by everyone, including people new to the English language.
 - Use American English spelling and grammar.
 - Always use the serial comma (Oxford comma).

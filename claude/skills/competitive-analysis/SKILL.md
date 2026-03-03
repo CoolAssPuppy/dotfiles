@@ -1,4 +1,5 @@
 ---
+user-invocable: true
 name: competitive-analysis
 description: Conducts competitive analysis and creates battle cards for technical products. Covers competitor identification, product teardowns, go-to-market analysis, sales enablement materials, and honest comparison frameworks. Use when analyzing competitors, creating battle cards, preparing sales collateral, or developing differentiation strategies.
 metadata:
@@ -16,6 +17,7 @@ This skill helps conduct competitive analysis and create battle cards for techni
 Competitive analysis is not about reacting. It is about proactively positioning your product to win in the minds of customers and decision makers. Honesty builds credibility; customers will fact-check your claims.
 
 ---
+user-invocable: true
 
 ## Competitor identification
 
@@ -71,6 +73,7 @@ Some customers love building things. Your product may compete with internal solu
 **Question to ask:** If your product can be quickly built in-house, should you rethink the product?
 
 ---
+user-invocable: true
 
 ## Public data sources
 
@@ -116,6 +119,7 @@ Job requirements reveal:
 - Employee commentary
 
 ---
+user-invocable: true
 
 ## Product and feature comparison
 
@@ -148,6 +152,7 @@ Go beyond marketing feature lists:
 - Hidden costs
 
 ---
+user-invocable: true
 
 ## Go-to-market analysis
 
@@ -192,6 +197,7 @@ Using tools like Ahrefs or Semrush:
 - Deal process signals
 
 ---
+user-invocable: true
 
 ## Customer intelligence
 
@@ -226,6 +232,7 @@ Include competitive questions:
 - "How do you compare us to [competitor]?"
 
 ---
+user-invocable: true
 
 ## Battle card structure
 
@@ -368,6 +375,7 @@ Beyond features, how to frame the evaluation:
 ```
 
 ---
+user-invocable: true
 
 ## Competitive positioning strategies
 
@@ -402,6 +410,7 @@ Define a new category you lead.
 - Risk: market education burden
 
 ---
+user-invocable: true
 
 ## AI-enhanced battle cards
 
@@ -416,6 +425,7 @@ Combine:
 **Output:** Customized talking points for each customer meeting
 
 ---
+user-invocable: true
 
 ## Competitive analysis cadence
 
@@ -441,6 +451,7 @@ Combine:
 - Strategic recommendations
 
 ---
+user-invocable: true
 
 ## Key principles
 
@@ -453,6 +464,7 @@ Combine:
 4. **Focus on use cases, not features**: Frame comparisons around what customers are trying to accomplish, not feature checklists.
 
 ---
+user-invocable: true
 
 ## Competitive analysis checklist
 
@@ -470,6 +482,7 @@ Combine:
 - [ ] Regular update cadence established
 
 ---
+user-invocable: true
 
 ## Common mistakes
 

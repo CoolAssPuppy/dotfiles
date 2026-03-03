@@ -1,4 +1,5 @@
 ---
+user-invocable: true
 name: content-strategy
 description: Creates content marketing strategies for technical products. Covers content types, inside-out vs outside-in approaches, content funnel alignment, distribution, SEO, quality standards, and the Help First philosophy. Use when planning content calendars, creating editorial strategies, scaling content production, or building content programs for technical audiences.
 metadata:
@@ -18,6 +19,7 @@ Content marketing for technical audiences starts from a place of genuine helpful
 > Help First means leading with value, not with a sales pitch.
 
 ---
+user-invocable: true
 
 ## Inside-out vs outside-in content
 
@@ -56,6 +58,7 @@ For content marketing focused on growth:
 - 30% inside-out content (convert interested prospects)
 
 ---
+user-invocable: true
 
 ## Content and the buyer funnel
 
@@ -101,6 +104,7 @@ Buyers ready to evaluate and choose.
 **Goal:** Remove friction to adoption
 
 ---
+user-invocable: true
 
 ## Content types that work
 
@@ -180,6 +184,7 @@ Educational content that builds expertise.
 - Builds product familiarity
 
 ---
+user-invocable: true
 
 ## Content mix by type
 
@@ -222,6 +227,7 @@ Define your portfolio with percentages:
 - Starter template strategy
 
 ---
+user-invocable: true
 
 ## Distribution strategy
 
@@ -305,6 +311,7 @@ Creating content is half the battle. Distribution matters.
 - Event sponsorships
 
 ---
+user-invocable: true
 
 ## SEO strategy
 
@@ -345,6 +352,7 @@ Creating content is half the battle. Distribution matters.
 - XML sitemap
 
 ---
+user-invocable: true
 
 ## Content calendar framework
 
@@ -381,6 +389,7 @@ Based on team size:
 **Quality over quantity.** One excellent post beats five mediocre ones.
 
 ---
+user-invocable: true
 
 ## Quality standards
 
@@ -402,6 +411,7 @@ Every piece of content must:
 - [ ] Accessible (alt text, readable formatting)
 
 ---
+user-invocable: true
 
 ## Success metrics
 
@@ -439,6 +449,7 @@ Track lead source through the entire journey:
 - Multi-touch (full journey)
 
 ---
+user-invocable: true
 
 ## Content quality checklist
 
@@ -455,6 +466,7 @@ Before publishing:
 - [ ] Is it optimized for search without being spammy?
 
 ---
+user-invocable: true
 
 ## Common content mistakes
 

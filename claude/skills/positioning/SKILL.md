@@ -1,4 +1,5 @@
 ---
+user-invocable: true
 name: positioning
 description: Creates positioning and messaging frameworks for technical products. Develops segmentation strategies, ideal customer profiles (ICP), value propositions, and messaging hierarchies using Aristotle's rhetorical principles. Use when defining target audiences, crafting product positioning, developing messaging, differentiating from competitors, or creating foundational marketing materials.
 metadata:
@@ -16,6 +17,7 @@ This skill helps create positioning and messaging frameworks for technical produ
 Positioning is about owning a specific place in your customer's mind. For technical products, this means being the obvious choice for a specific type of buyer solving a specific problem.
 
 ---
+user-invocable: true
 
 ## Workflow
 
@@ -28,6 +30,7 @@ Follow these steps in order:
 5. Create value propositions
 
 ---
+user-invocable: true
 
 ## Step 1: Market segmentation
 
@@ -71,6 +74,7 @@ Segment your market using these dimensions:
 ```
 
 ---
+user-invocable: true
 
 ## Step 2: Ideal customer profile (ICP)
 
@@ -124,6 +128,7 @@ Create a detailed ICP using this framework:
 ```
 
 ---
+user-invocable: true
 
 ## Step 3: Positioning statement
 
@@ -183,6 +188,7 @@ Recommended framing: [Which one and why]
 ```
 
 ---
+user-invocable: true
 
 ## Step 4: Messaging hierarchy
 
@@ -255,6 +261,7 @@ Proof points:
 ```
 
 ---
+user-invocable: true
 
 ## Step 4b: Differentiation summary
 
@@ -268,6 +275,7 @@ After completing the three pillars, write one sentence that synthesizes all pill
 ```
 
 ---
+user-invocable: true
 
 ## Step 5: Value propositions
 
@@ -310,6 +318,7 @@ Create value propositions for different audiences and contexts:
 ```
 
 ---
+user-invocable: true
 
 ## Competitive positioning
 
@@ -321,6 +330,7 @@ For each competitor, provide:
 - How to handle objections when they come up in evaluation
 
 ---
+user-invocable: true
 
 ## Messaging guidelines
 
@@ -341,6 +351,7 @@ For each competitor, provide:
 Apply the "Help First" principle: every piece of positioning should help customers understand if this product solves their problem, even if the answer is no.
 
 ---
+user-invocable: true
 
 ## Validation tests
 
@@ -352,6 +363,7 @@ Before finalizing positioning, run these four tests. If any fails, revise before
 4. **The consequence test.** Does each pillar have a tangible, specific consequence of inaction? If the consequence is vague, the pillar is not solving a real problem.
 
 ---
+user-invocable: true
 
 ## Common mistakes to avoid
 
@@ -361,3 +373,113 @@ Before finalizing positioning, run these four tests. If any fails, revise before
 4. **Ignoring the status quo**: Your biggest competitor is often "do nothing"
 5. **Jargon overload**: Clarity beats cleverness
 6. **Inconsistent messaging**: Same core story across all channels
+
+---
+user-invocable: true
+
+## Tagline creation
+
+Create a memorable tagline that:
+- Captures the essence of the positioning
+- Is concise (5-8 words maximum)
+- Resonates emotionally with developers
+- Is distinct from competitors
+
+### Output format
+
+```markdown
+## Tagline
+"[5-8 word memorable tagline]"
+```
+
+---
+user-invocable: true
+
+## Product narrative
+
+Write a 3-4 paragraph narrative that:
+- Explains what the product is in plain language
+- Describes the problem it solves
+- Articulates the unique approach
+- Connects to developer pain points
+
+This narrative becomes the source material for website copy, press materials, and pitch decks.
+
+### Output format
+
+```markdown
+## Product narrative
+[3-4 paragraphs explaining the product, problem, and unique approach]
+```
+
+---
+user-invocable: true
+
+## Feature mapping table
+
+Create a table that maps each positioning pillar to:
+- Key benefits and value propositions
+- Specific product features and capabilities
+- Links to documentation or resources
+- Customer case studies or proof points
+
+### Output format
+
+```markdown
+## Positioning feature mapping
+
+| Pillar | Key benefits | Features | Documentation | Proof points |
+|--------|-------------|----------|---------------|-------------|
+| Emotional (Pathos) | [Benefits] | [Features] | [Links] | [Case studies] |
+| Logical (Logos) | [Benefits] | [Features] | [Links] | [Case studies] |
+| Credibility (Ethos) | [Benefits] | [Features] | [Links] | [Case studies] |
+```
+
+---
+user-invocable: true
+
+## Terminology dictionary
+
+Define proper usage for:
+- Product names and capitalization
+- Feature names and when to capitalize
+- Common technical terms
+- Brand voice guidelines
+
+Consistent terminology across all materials reinforces positioning and prevents confusion.
+
+### Output format
+
+```markdown
+## Terminology dictionary
+
+| Term | Correct usage | Notes |
+|------|--------------|-------|
+| [Product name] | [Capitalization rules] | [Context] |
+| [Feature name] | [When to capitalize] | [Context] |
+| [Technical term] | [How to use] | [Avoid these alternatives] |
+```
+
+---
+user-invocable: true
+
+## Key statistics
+
+List important metrics that support positioning claims:
+- User/developer count
+- Performance benchmarks
+- Scale indicators
+- Community size
+- Funding or market position
+
+These become proof points for marketing materials, pitch decks, and sales conversations.
+
+### Output format
+
+```markdown
+## Key statistics
+
+- [Metric]: [Value] ([Source/date])
+- [Metric]: [Value] ([Source/date])
+- [Metric]: [Value] ([Source/date])
+```

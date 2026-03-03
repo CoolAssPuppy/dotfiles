@@ -1,4 +1,5 @@
 ---
+user-invocable: true
 name: lifecycle-marketing
 description: Designs lifecycle marketing programs for technical products across email, in-app, and social channels. Covers behavioral triggers, sequence design, upsell/retention/onboarding frameworks, developer audience optimization, personalization, and measurement. Use when building automated email sequences, designing upsell campaigns, planning onboarding flows, creating re-engagement programs, or optimizing lifecycle touchpoints for developer and technical audiences.
 metadata:

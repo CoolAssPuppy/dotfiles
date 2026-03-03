@@ -1,4 +1,5 @@
 ---
+user-invocable: true
 name: humanizer
 version: 2.1.1
 description: |
@@ -32,6 +33,7 @@ When given text to humanize:
 5. **Add soul** - Don't just remove bad patterns; inject actual personality
 
 ---
+user-invocable: true
 
 ## PERSONALITY AND SOUL
 
@@ -66,6 +68,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > I genuinely don't know how to feel about this one. 3 million lines of code, generated while the humans presumably slept. Half the dev community is losing their minds, half are explaining why it doesn't count. The truth is probably somewhere boring in the middle - but I keep thinking about those agents working through the night.
 
 ---
+user-invocable: true
 
 ## CONTENT PATTERNS
 
@@ -82,6 +85,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > The Statistical Institute of Catalonia was established in 1989 to collect and publish regional statistics independently from Spain's national statistics office.
 
 ---
+user-invocable: true
 
 ### 2. Undue Emphasis on Notability and Media Coverage
 
@@ -96,6 +100,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > In a 2024 New York Times interview, she argued that AI regulation should focus on outcomes rather than methods.
 
 ---
+user-invocable: true
 
 ### 3. Superficial Analyses with -ing Endings
 
@@ -110,6 +115,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > The temple uses blue, green, and gold colors. The architect said these were chosen to reference local bluebonnets and the Gulf coast.
 
 ---
+user-invocable: true
 
 ### 4. Promotional and Advertisement-like Language
 
@@ -124,6 +130,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > Alamata Raya Kobo is a town in the Gonder region of Ethiopia, known for its weekly market and 18th-century church.
 
 ---
+user-invocable: true
 
 ### 5. Vague Attributions and Weasel Words
 
@@ -138,6 +145,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > The Haolai River supports several endemic fish species, according to a 2019 survey by the Chinese Academy of Sciences.
 
 ---
+user-invocable: true
 
 ### 6. Outline-like "Challenges and Future Prospects" Sections
 
@@ -152,6 +160,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > Traffic congestion increased after 2015 when three new IT parks opened. The municipal corporation began a stormwater drainage project in 2022 to address recurring floods.
 
 ---
+user-invocable: true
 
 ## LANGUAGE AND GRAMMAR PATTERNS
 
@@ -168,6 +177,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > Somali cuisine also includes camel meat, which is considered a delicacy. Pasta dishes, introduced during Italian colonization, remain common, especially in the south.
 
 ---
+user-invocable: true
 
 ### 8. Avoidance of "is"/"are" (Copula Avoidance)
 
@@ -182,6 +192,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > Gallery 825 is LAAA's exhibition space for contemporary art. The gallery has four rooms totaling 3,000 square feet.
 
 ---
+user-invocable: true
 
 ### 9. Negative Parallelisms
 
@@ -194,6 +205,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > The heavy beat adds to the aggressive tone.
 
 ---
+user-invocable: true
 
 ### 10. Rule of Three Overuse
 
@@ -206,6 +218,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > The event includes talks and panels. There's also time for informal networking between sessions.
 
 ---
+user-invocable: true
 
 ### 11. Elegant Variation (Synonym Cycling)
 
@@ -218,6 +231,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > The protagonist faces many challenges but eventually triumphs and returns home.
 
 ---
+user-invocable: true
 
 ### 12. False Ranges
 
@@ -230,6 +244,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > The book covers the Big Bang, star formation, and current theories about dark matter.
 
 ---
+user-invocable: true
 
 ## STYLE PATTERNS
 
@@ -244,6 +259,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > The term is primarily promoted by Dutch institutions, not by the people themselves. You don't say "Netherlands, Europe" as an address, yet this mislabeling continues in official documents.
 
 ---
+user-invocable: true
 
 ### 14. Overuse of Boldface
 
@@ -256,6 +272,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > It blends OKRs, KPIs, and visual strategy tools like the Business Model Canvas and Balanced Scorecard.
 
 ---
+user-invocable: true
 
 ### 15. Inline-Header Vertical Lists
 
@@ -270,6 +287,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > The update improves the interface, speeds up load times through optimized algorithms, and adds end-to-end encryption.
 
 ---
+user-invocable: true
 
 ### 16. Title Case in Headings
 
@@ -282,6 +300,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > ## Strategic negotiations and global partnerships
 
 ---
+user-invocable: true
 
 ### 17. Emojis
 
@@ -296,6 +315,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > The product launches in Q3. User research showed a preference for simplicity. Next step: schedule a follow-up meeting.
 
 ---
+user-invocable: true
 
 ### 18. Curly Quotation Marks
 
@@ -308,6 +328,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > He said "the project is on track" but others disagreed.
 
 ---
+user-invocable: true
 
 ## COMMUNICATION PATTERNS
 
@@ -324,6 +345,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > The French Revolution began in 1789 when financial crisis and food shortages led to widespread unrest.
 
 ---
+user-invocable: true
 
 ### 20. Knowledge-Cutoff Disclaimers
 
@@ -338,6 +360,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > The company was founded in 1994, according to its registration documents.
 
 ---
+user-invocable: true
 
 ### 21. Sycophantic/Servile Tone
 
@@ -350,6 +373,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > The economic factors you mentioned are relevant here.
 
 ---
+user-invocable: true
 
 ## FILLER AND HEDGING
 
@@ -364,6 +388,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 - "It is important to note that the data shows" → "The data shows"
 
 ---
+user-invocable: true
 
 ### 23. Excessive Hedging
 
@@ -376,6 +401,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > The policy may affect outcomes.
 
 ---
+user-invocable: true
 
 ### 24. Generic Positive Conclusions
 
@@ -388,6 +414,7 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 > The company plans to open two more locations next year.
 
 ---
+user-invocable: true
 
 ## Process
 
@@ -409,6 +436,7 @@ Provide:
 2. A brief summary of changes made (optional, if helpful)
 
 ---
+user-invocable: true
 
 ## Full Example
 
@@ -460,6 +488,7 @@ Provide:
 - Used simple sentence structures and concrete examples
 
 ---
+user-invocable: true
 
 ## Reference
 

@@ -1,4 +1,5 @@
 ---
+user-invocable: true
 name: launch
 description: Plans and executes product launches for technical products. Covers launch tiers, sine wave timing, naming conventions, pre-launch preparation, launch day execution, channel strategies, and post-launch activities. Use when launching new products, features, major releases, or planning go-to-market campaigns.
 metadata:
@@ -16,6 +17,7 @@ This skill helps plan and execute product launches for technical products based 
 A launch is not a moment; it's a campaign. The goal is sustained visibility and adoption, not a single spike of attention. The best launches feel less like "launches" and more like "this is now available." Focus on helping customers, not creating hype.
 
 ---
+user-invocable: true
 
 ## Launch tiers
 
@@ -49,6 +51,7 @@ Not every launch deserves the same investment. Categorize launches into tiers:
 **Investment:** Changelog entry, brief social mention, community update, 1-2 weeks preparation
 
 ---
+user-invocable: true
 
 ## The sine wave pattern
 
@@ -78,6 +81,7 @@ Attention
 - **Avoid holidays:** Check all major markets for conflicts
 
 ---
+user-invocable: true
 
 ## Product naming
 
@@ -107,6 +111,7 @@ Names matter. Follow these guidelines:
 - Already trademarked in your industry
 
 ---
+user-invocable: true
 
 ## Pre-launch phase
 
@@ -154,6 +159,7 @@ Start 4-8 weeks before launch:
 - [ ] Send reminder emails to registrants (if applicable)
 
 ---
+user-invocable: true
 
 ## Launch day execution
 
@@ -190,6 +196,7 @@ Start 4-8 weeks before launch:
 - [ ] Plan follow-up content based on response
 
 ---
+user-invocable: true
 
 ## Channel-specific strategies
 
@@ -238,6 +245,7 @@ Start 4-8 weeks before launch:
 - Single, clear call-to-action
 
 ---
+user-invocable: true
 
 ## Content asset checklist
 
@@ -258,6 +266,7 @@ Start 4-8 weeks before launch:
 - [ ] Customer testimonials
 
 ---
+user-invocable: true
 
 ## Metrics dashboard
 
@@ -291,6 +300,7 @@ Start 4-8 weeks before launch:
 - Support ticket volume
 
 ---
+user-invocable: true
 
 ## Post-launch phase
 
@@ -322,6 +332,7 @@ The launch is just the beginning:
 - [ ] Plan next launch in the sequence
 
 ---
+user-invocable: true
 
 ## Risk mitigation
 
@@ -338,6 +349,7 @@ For each risk, prepare:
 - **Competitor announcement**: Talking points, differentiation messaging
 
 ---
+user-invocable: true
 
 ## Launch brief template
 
@@ -388,6 +400,7 @@ Create this document for every Tier 1 or Tier 2 launch:
 ```
 
 ---
+user-invocable: true
 
 ## Common launch mistakes
 
@@ -399,3 +412,160 @@ Create this document for every Tier 1 or Tier 2 launch:
 6. **Not briefing internal teams**: Sales and support need to know first
 7. **No rollback plan**: Be ready for technical issues
 8. **Forgetting existing customers**: They should hear about it first
+
+---
+user-invocable: true
+
+## Channel-specific success metrics
+
+Supplement the channel strategies above with concrete targets:
+
+### Product Hunt
+
+- **Timing:** Launch Tuesday-Thursday at 12:01 AM PT
+- **Hunter:** Get a well-known hunter to submit (or submit yourself if you have audience)
+- **Assets:** Compelling thumbnail, clear tagline, 3-5 screenshots or demo GIFs, short demo video (under 2 minutes)
+- **Engagement:** Respond to every comment within minutes. Engage authentically, avoid canned responses.
+- **Success metrics:** Top 5 product of the day, 200+ upvotes, 50+ comments
+
+### Hacker News
+
+- **Post type:** Link directly to blog post or product. Include technical details in first comment.
+- **Success metrics:** Front page (top 30), 100+ points, 50+ comments
+
+### Reddit
+
+- **Subreddits:** r/programming (strict rules, high value), product-specific (r/webdev, r/javascript, etc.), r/SideProject (for early-stage)
+- **Post format:** Clear, descriptive title. Detailed post explaining problem and solution. Include GitHub link, demo, or code examples.
+- **Success metrics:** 500+ upvotes in r/programming, 50+ meaningful comments
+
+### Dev.to / Hashnode
+
+- **Content type:** Technical tutorials, how we built X posts, problem-solving narratives
+- **SEO optimization:** Target specific keywords, include code examples, add relevant tags
+- **Success metrics:** 1,000+ views, 50+ reactions, featured in top posts
+
+### Twitter/X
+
+- **Thread strategy:** 8-12 tweet thread. Start with hook/problem, build to solution, end with CTA.
+- **Visual assets:** Demo GIFs, screenshots, architecture diagrams
+- **Success metrics:** 10,000+ impressions, 200+ engagements, 20+ retweets
+
+### YouTube
+
+- **Video types:** Product demo (5-10 minutes), technical deep dive (15-30 minutes), quick start tutorial (3-5 minutes)
+- **SEO:** Optimize title and description, include relevant tags, add timestamps
+- **Success metrics:** 1,000+ views in first week, 50+ likes, positive comment engagement
+
+### Discord/Slack communities
+
+- Share in communities where you're already active
+- Ask for feedback, not just promotion
+- Offer exclusive early access or features
+- Target framework-specific, platform-specific, and general developer communities
+
+---
+user-invocable: true
+
+## Team roles and responsibilities
+
+### Product marketing
+
+- Own launch plan and timeline
+- Create messaging and positioning
+- Coordinate content creation
+- Manage launch day activities
+
+### Product
+
+- Ensure product readiness
+- QA and bug fixes
+- Create demo environments
+- Support technical content
+
+### Engineering
+
+- Infrastructure readiness
+- Load testing
+- Monitor performance
+- Quick response to issues
+
+### Design
+
+- Visual assets creation
+- Screenshots and mockups
+- Video editing
+- Website updates
+
+### Customer success
+
+- Support readiness
+- FAQ preparation
+- Beta customer engagement
+- Early adopter nurturing
+
+### Sales
+
+- Outbound messaging
+- Customer conversations
+- Deal acceleration
+- Feedback loop
+
+---
+user-invocable: true
+
+## Success criteria
+
+**Must have (launch is successful if):**
+- Product works reliably for first users
+- Documentation is complete and helpful
+- Support can handle incoming questions
+- Target activation metric is hit (e.g., 100 sign-ups)
+
+**Should have (launch exceeded expectations if):**
+- Front page of HN or #1 on Product Hunt
+- 1,000+ engaged users in first week
+- Positive social media sentiment
+- Inbound partnership interest
+
+**Nice to have (exceptional launch if):**
+- Media coverage or industry analyst mention
+- Viral social media moment
+- Open source community contributions
+- Competitor response or acknowledgment
+
+---
+user-invocable: true
+
+## Launch communication plan
+
+**Internal updates:**
+- Daily stand-up during launch week
+- Slack channel for real-time coordination
+- End-of-day metrics summary
+- Weekly retrospectives
+
+**External communication:**
+- Social media monitoring and response
+- Community engagement
+- Press and analyst briefings
+- Customer email updates
+
+---
+user-invocable: true
+
+## Launch day war room
+
+Create a dedicated space (physical or virtual) for:
+- Real-time monitoring dashboard
+- Team coordination
+- Quick decision making
+- Issue triaging
+- Celebration of wins
+
+Include:
+- Live metrics feed
+- Social media monitoring
+- Support ticket queue
+- Issue tracking
+- Team chat

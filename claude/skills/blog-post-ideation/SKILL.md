@@ -1,4 +1,5 @@
 ---
+user-invocable: true
 name: blog-post-ideation
 description: Generates data-driven blog post ideas for developer products based on market research and community insights. Use when planning content calendars, identifying content gaps, finding topics that resonate with developers, differentiating from competitor content, or building SEO-driven strategies.
 metadata:

@@ -1,4 +1,5 @@
 ---
+user-invocable: true
 name: gtm-strategy
 description: Develops go-to-market strategies for technical products. Covers product-led growth (PLG), sales-led growth (SLG), open-source models, and hybrid approaches. Use when planning acquisition models, designing PLG funnels, building sales motions, or combining bottom-up and top-down strategies.
 metadata:
@@ -16,6 +17,7 @@ This skill helps develop go-to-market strategies for technical products based on
 Dogmatic thinking has no place in GTM strategy. The goal is to find customers, get them to pay, and grow the business. PLG, SLG, and hybrid approaches are tools, not religions.
 
 ---
+user-invocable: true
 
 ## GTM model overview
 
@@ -62,6 +64,7 @@ Acquisition through open-source adoption.
 - Long adoption cycles
 
 ---
+user-invocable: true
 
 ## When PLG makes sense
 
@@ -90,6 +93,7 @@ PLG works best when:
 - Long time-to-value
 
 ---
+user-invocable: true
 
 ## When SLG makes sense
 
@@ -110,6 +114,7 @@ SLG works best when:
 - ACV: Higher, justifying sales involvement
 
 ---
+user-invocable: true
 
 ## The PLG funnel
 
@@ -142,6 +147,7 @@ Cross-functional team required:
 - **Sales**: Enterprise accounts from PLG signals
 
 ---
+user-invocable: true
 
 ## PLG activation signals
 
@@ -161,6 +167,7 @@ Define what "activation" means for your product:
 - Multi-user signals (same domain, multiple signups)
 
 ---
+user-invocable: true
 
 ## PLG to SLG handoff
 
@@ -194,6 +201,7 @@ Using product signals to trigger sales engagement:
 - Upgrade attempts blocked by plan limits
 
 ---
+user-invocable: true
 
 ## Sales-led growth strategy
 
@@ -227,6 +235,7 @@ SLG messaging must address:
 6. **Close**: Final negotiation and signature
 
 ---
+user-invocable: true
 
 ## Open-source GTM models
 
@@ -263,6 +272,7 @@ Open-source is free; revenue from support, training, integration.
 Use licensing (like Timescale's Cloud Protection License) to prevent hyperscalers from hosting your open-source project competitively.
 
 ---
+user-invocable: true
 
 ## Converting open-source users
 
@@ -288,6 +298,7 @@ First contact should be:
 **Then:** Identify if commercial product solves a real pain point.
 
 ---
+user-invocable: true
 
 ## Hybrid GTM strategy
 
@@ -315,6 +326,7 @@ Combining PLG and SLG strategically:
 - **Build champions**: Turn initial PLG users into internal advocates
 
 ---
+user-invocable: true
 
 ## GTM metrics dashboard
 
@@ -354,6 +366,7 @@ Combining PLG and SLG strategically:
 - Seat growth
 
 ---
+user-invocable: true
 
 ## GTM strategy checklist
 
@@ -372,6 +385,7 @@ Before launching your GTM motion:
 - [ ] Prepared for enterprise requirements
 
 ---
+user-invocable: true
 
 ## Common GTM mistakes
 
