@@ -55,6 +55,10 @@ Derived from analysis of Picks and Shovels and blog work.
 - **Specific examples over abstractions.** Not "companies that do developer marketing well" but "Stripe's API documentation redesign in 2018."
 - **Acknowledges nuance.** "Metrics tell an incomplete story" not "metrics are dead." The world is complicated. Pretending otherwise insults the reader.
 - **Self-deprecating where earned.** "I got this wrong for three years before I figured it out." Vulnerability in service of credibility, not performance.
+- **Gradations over binaries.** Real thinking has nuance. Don't split the world into "the good ones" and "the bad ones." Use progressions: table stakes, better, next level. Binary framing sounds like a listicle.
+- **Peer framing, not othering.** The reader is alongside you, not behind you. "They think in prompts the same way you do" not "They think in prompts the way you think in bullet points." Don't position the reader as the one who needs to catch up.
+- **Personal, casual, specific details only you could write.** "Hell, there was a stretch during the end of February where Anthropic would ship three new game-changing things every day." Drop in lived moments with casual language. These are the sentences AI cannot generate and readers remember.
+- **Natural qualifiers over dramatic negation.** "Not necessarily production code that ships to customers" not "Not production code. Not the kind of code that ships to customers." Normal people soften naturally. Stacked negation is a writing trick that sounds rehearsed.
 
 ### BAD non-fiction
 
@@ -169,6 +173,26 @@ BAD:
 
 GOOD:
 > Stripe reduced their API integration time from 7 days to 7 minutes by rewriting their onboarding flow in 2018.
+
+### Cut redundant restatements. Trust the next paragraph.
+
+BAD:
+> The bottleneck is no longer production. It is judgment.
+
+(If the next paragraph is about judgment, you don't need to announce it. The reader will get there.)
+
+GOOD:
+> Production is no longer the bottleneck.
+
+### One example is enough. Don't over-explain.
+
+If the point is already made, don't add another example just to fill space. An extra illustration after the argument lands is padding, not reinforcement.
+
+BAD:
+> Headcounts are shrinking. Engineering resources that used to be available for marketing projects are not there anymore. The marketing team that used to have a dedicated engineer to build landing pages now has to build them themselves.
+
+GOOD:
+> Headcounts are shrinking. Engineering resources that used to be available for marketing projects are not there anymore.
 
 ### Never pad output to seem more thorough.
 
