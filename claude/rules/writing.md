@@ -5,6 +5,7 @@
 - Never use emoji or emdashes.
 - Use sentence case for all headers.
 - Use Capital case for all "Chapter" headings or major sections.
+- Do not use separators when creating Notion documents
 - For professional content, write professionally, focusing on clarity, and at a 6th grade level.
 - For personal or literary content, write like Salman Rushdie.
 
