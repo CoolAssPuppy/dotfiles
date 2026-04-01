@@ -207,4 +207,4 @@ There are exactly two metrics that determine whether your shorts go viral. Check
 
 ## Related skills
 
-- `/generate-bookgram-video` -- Production pipeline for BookTok/Bookstagram ranking videos. Use this when you need to actually generate videos.
+- `/generate-ranking-video` -- Production pipeline for ranking countdown videos (books, people, anything). Use this when you need to actually generate videos.
