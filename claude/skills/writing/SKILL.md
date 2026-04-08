@@ -212,6 +212,10 @@ GOOD:
 | Fiction | Elite craft, accessible | N/A | Character-driven | N/A | Woven into character action |
 | Marketing course | Direct instruction | 6th grade | Occasional, self-deprecating | Nuanced but confident | Moderate with frameworks |
 
+## Formatting rules
+
+- **No horizontal rules (separators).** Never use `---`, `***`, or `___` to divide sections. Use headings instead.
+
 ## How to match voice when revising
 
 1. **Read the surrounding text first.** Match its rhythm, vocabulary, and sentence length distribution before writing anything.
