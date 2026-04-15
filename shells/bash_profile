@@ -5,6 +5,9 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 # silence the warning message from macOS
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+# Claude Code: disable terminal flicker
+export CLAUDE_CODE_NO_FLICKER=1
+
 # aliases ls
 alias ls='ls -GpFh'
 

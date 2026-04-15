@@ -220,7 +220,50 @@ Attribution format, author name, website URL
 Email, social links for fact-checking
 ```
 
-### 5. E-E-A-T signals (experience, expertise, authoritativeness, trustworthiness)
+### 5. Agent discovery (for content sites)
+
+Checks that apply when the site is a blog, documentation site, or marketing site (no APIs, no commerce, no MCP server). Skip the rest of the isitagentready.com checklist for these sites — OAuth discovery, MCP Server Card, WebMCP, x402, UCP, and ACP are for API/commerce platforms, not content.
+
+#### a. Content Signals in robots.txt
+
+Add a `Content-Signal:` directive to `robots.txt` declaring AI content-usage preferences. Example for a content site that wants citations but not training use:
+
+```
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+```
+
+Values: `ai-train` (use for model training), `search` (index for search/retrieval), `ai-input` (use as input to AI systems with attribution). Each one takes `yes` or `no`.
+
+If `robots.txt` is generated via Next.js `MetadataRoute.Robots`, that format does not support custom directives. Convert to a custom route at `src/app/robots.txt/route.ts` that returns plain text with full control over the output.
+
+Reference: https://contentsignals.org/
+
+#### b. Markdown for Agents (Accept content negotiation)
+
+Return markdown when a client sends `Accept: text/markdown`. Browsers never send this header, so HTML stays the default for humans. Agents get clean markdown for citation.
+
+Implementation for MDX-based blogs:
+
+1. Add a route handler at `src/app/api/md/blog/[slug]/route.ts` that loads the post by slug and returns the raw MDX body with `Content-Type: text/markdown; charset=utf-8`. Include a short frontmatter block with title, canonical URL, and published date so citations are traceable.
+2. Add `src/middleware.ts (or src/proxy.ts on Next.js 16+)` that inspects the `Accept` header on `/blog/:slug` requests. If markdown is preferred, rewrite to the markdown route. Include `Vary: Accept` on the markdown response so caches behave.
+
+Reference: https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/
+
+#### c. Link response headers (RFC 8288)
+
+Add `Link` response headers to the homepage pointing at agent-discoverable resources. For a content site, the useful targets are `llms.txt`, `llms-full.txt`, and the sitemap:
+
+```
+Link: </llms.txt>; rel="alternate"; type="text/plain"; title="LLM context"
+Link: </llms-full.txt>; rel="alternate"; type="text/plain"; title="Full LLM content"
+Link: </sitemap.xml>; rel="sitemap"; type="application/xml"
+```
+
+Set these from `src/middleware.ts (or src/proxy.ts on Next.js 16+)` on the root path. Use `response.headers.append("Link", ...)` (not `set`) so multiple Link headers stack correctly.
+
+Reference: https://www.rfc-editor.org/rfc/rfc8288
+
+### 6. E-E-A-T signals (experience, expertise, authoritativeness, trustworthiness)
 - Author bio pages with credentials
 - Link author pages to content
 - Display credentials/certifications
@@ -336,6 +379,11 @@ For sites with regularly updated content:
 - [ ] Twitter Card tags on every page
 - [ ] Dynamic OG images for all page types
 - [ ] Test with Facebook Debugger and Twitter Card Validator
+
+### Agent discovery (content sites)
+- [ ] `Content-Signal:` directive in robots.txt declaring ai-train/search/ai-input preferences
+- [ ] `Accept: text/markdown` on `/blog/[slug]` returns the MDX source as `text/markdown`
+- [ ] Homepage response includes `Link:` headers pointing at llms.txt, llms-full.txt, and sitemap.xml
 
 ### AEO (content structure for AI citation)
 - [ ] /public/llms.txt created

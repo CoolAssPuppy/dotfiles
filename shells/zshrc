@@ -4,6 +4,9 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 # Silence macOS zsh warning (BASH_SILENCE_DEPRECATION_WARNING is Bash-specific, not needed in zsh)
 
+# Claude Code: disable terminal flicker
+export CLAUDE_CODE_NO_FLICKER=1
+
 # Aliases
 alias ls='ls -GpFh'
 
