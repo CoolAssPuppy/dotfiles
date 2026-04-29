@@ -32,8 +32,7 @@
 
 **AI writing tells:** All phrases from the Wikipedia Signs of AI Writing Guide.
 
-## Comprehensive reference
+## Project-specific overrides
 
-For the full voice guide with fiction/non-fiction analysis, BAD/GOOD examples for every context, and tone calibration matrix:
-- @~/.claude/skills/writing/SKILL.md (authoritative voice guide)
-- Project-level context/brand-voice.md (when working in ongoing-notes)
+- The `/writing` skill at `~/.claude/skills/writing/SKILL.md` is the authoritative voice guide. Loaded on demand when invoked or when Claude detects a writing task.
+- For projects with their own voice (e.g. ongoing-notes), check `context/brand-voice.md` in the project root.

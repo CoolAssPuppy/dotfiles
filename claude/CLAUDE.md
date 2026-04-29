@@ -90,13 +90,15 @@ Use this methodology whenever starting to work on a coding session.
 - @rules/supabase.md - Declarative schemas, types, MCP database usage
 - @rules/writing.md - Content generation, voice guidelines, banned phrases
 
-## Comprehensive reference docs
+## Reference docs (read on demand)
 
-- @docs/testing.md - Full testing methodology with examples
-- @docs/code-style.md - Detailed code style guidelines
-- @docs/typescript.md - TypeScript guidelines
-- @docs/workflow.md - Development workflow
-- @docs/working-with-claude.md - Claude collaboration guide
+When you need depth beyond the rules above, read the relevant file with the Read tool:
+
+- `~/.claude/docs/testing.md` - Full testing methodology with examples
+- `~/.claude/docs/code-style.md` - Detailed code style guidelines
+- `~/.claude/docs/typescript.md` - TypeScript guidelines
+- `~/.claude/docs/workflow.md` - Development workflow (TDD playbook, refactoring, commits)
+- `~/.claude/docs/working-with-claude.md` - Claude collaboration guide
 
 ## Excellence mindset
 
