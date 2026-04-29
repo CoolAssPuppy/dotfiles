@@ -1,6 +1,16 @@
 {
   "version": 1,
   "skills": {
+    "data-storytelling": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "eca30a8c6e0931beb9688484381eae2864358158edf6bfed1072927d2b2ff582"
+    },
+    "data-visualization": {
+      "source": "anthropics/knowledge-work-plugins",
+      "sourceType": "github",
+      "computedHash": "64055493de5ff4afed716cc871018cf6e020338b76d3e7ed5c2985707cb43cec"
+    },
     "stripe-best-practices": {
       "source": "docs.stripe.com",
       "sourceType": "well-known",
@@ -19,7 +29,7 @@
     "supabase-postgres-best-practices": {
       "source": "supabase/agent-skills",
       "sourceType": "github",
-      "computedHash": "f4cd7570115d97af6bcb2946eb891a958c8d04a43b479871c9ccadbc670ad058"
+      "computedHash": "d606a1146be6d54fb9e73f718b5320b9acac5ff2ba2d7230a555df4b5a923b4a"
     },
     "upgrade-stripe": {
       "source": "docs.stripe.com",
