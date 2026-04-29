@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>{{APP_NAME}}</string>
+	<key>CFBundleDisplayName</key>
+	<string>{{APP_NAME}}</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>arm64</string>
+	</array>
+
+	<!-- Add app-specific keys below. Common ones: -->
+	<!-- Permission usage strings (required if your app uses these APIs): -->
+	<!-- <key>NSCameraUsageDescription</key><string>...</string> -->
+	<!-- <key>NSPhotoLibraryUsageDescription</key><string>...</string> -->
+	<!-- <key>NSLocationWhenInUseUsageDescription</key><string>...</string> -->
+	<!-- <key>NSContactsUsageDescription</key><string>...</string> -->
+	<!-- <key>NSMicrophoneUsageDescription</key><string>...</string> -->
+
+	<!-- Background modes if your app needs them: -->
+	<!-- <key>UIBackgroundModes</key><array><string>fetch</string></array> -->
+
+	<!-- URL schemes for OAuth callbacks, etc.: -->
+	<!-- <key>CFBundleURLTypes</key><array>...</array> -->
+</dict>
+</plist>

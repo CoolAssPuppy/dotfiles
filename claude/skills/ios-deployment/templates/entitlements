@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	Empty entitlements file. iOS apps run in a sandbox by default and
+	require entitlements to opt into specific capabilities.
+
+	When this file is renamed to {{APP_NAME_NOSPACE}}.entitlements
+	in your project, the project.yml CODE_SIGN_ENTITLEMENTS setting
+	picks it up.
+
+	Common entitlements:
+
+	Push notifications:
+	<key>aps-environment</key>
+	<string>production</string>     (or "development" for sandbox APNs)
+
+	App Groups (sharing data with extensions):
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>group.com.example.MyApp</string>
+	</array>
+
+	iCloud Key-Value Storage:
+	<key>com.apple.developer.ubiquity-kvstore-identifier</key>
+	<string>$(TeamIdentifierPrefix)$(CFBundleIdentifier)</string>
+
+	Sign in with Apple:
+	<key>com.apple.developer.applesignin</key>
+	<array>
+		<string>Default</string>
+	</array>
+
+	Associated Domains (Universal Links):
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:example.com</string>
+	</array>
+
+	Entitlements must also be enabled on the App ID in the Apple
+	Developer portal. The first time you add a new capability, do it
+	via Xcode's Signing & Capabilities tab so the App ID gets updated
+	automatically. After that, the entitlement here drives the rest.
+	-->
+</dict>
+</plist>
