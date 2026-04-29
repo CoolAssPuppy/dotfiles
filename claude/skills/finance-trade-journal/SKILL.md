@@ -1,5 +1,6 @@
 ---
 user-invocable: true
+disable-model-invocation: true
 name: finance-trade-journal
 description: Structured logging of every trade -- thesis, entry, emotion state, outcome, and lessons. Weekly performance review every Friday at 15:30 ET identifies losing patterns. Monthly deep review with Sharpe ratio and streak analysis.
 ---

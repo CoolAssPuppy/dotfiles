@@ -1,5 +1,6 @@
 ---
 user-invocable: true
+disable-model-invocation: true
 name: finance-copy-trading
 description: Tracks congressional stock disclosures on Capitol Trades and hedge fund 13F filings. Identifies highest-conviction active traders, sizes and times positions that mirror their moves, and monitors on a daily schedule.
 ---

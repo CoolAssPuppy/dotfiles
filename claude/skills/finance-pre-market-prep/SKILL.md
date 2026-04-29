@@ -1,5 +1,6 @@
 ---
 user-invocable: true
+disable-model-invocation: true
 name: finance-pre-market-prep
 description: Runs a structured morning briefing every trading day at 09:00 ET. Covers overnight futures, economic calendar, key levels on open positions, sector movers, and earnings. Produces a concrete game plan for the session.
 ---

@@ -1,5 +1,6 @@
 ---
 user-invocable: true
+disable-model-invocation: true
 name: finance-iv-rank
 description: Pre-trade volatility filter for all options trades. Calculates IV rank, IV percentile, term structure, and skew to determine whether to buy or sell premium. Run this before any options strategy. Includes earnings IV spike protocol.
 ---

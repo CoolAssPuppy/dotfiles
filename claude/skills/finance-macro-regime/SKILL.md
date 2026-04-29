@@ -1,5 +1,6 @@
 ---
 user-invocable: true
+disable-model-invocation: true
 name: finance-macro-regime
 description: Macro checklist before any new position. Analyzes rate environment, dollar direction, market breadth, sector rotation, and VIX to classify the regime as risk-on, risk-off, mixed, or transition. Adjusts position sizing and strategy selection accordingly. Weekly Monday update.
 ---

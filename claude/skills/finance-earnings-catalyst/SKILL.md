@@ -1,5 +1,6 @@
 ---
 user-invocable: true
+disable-model-invocation: true
 name: finance-earnings-catalyst
 description: Complete earnings trade playbook. Pre-earnings setup, implied move analysis, strategy selection based on IV rank, execution, and post-earnings management. Compares implied vs historical moves to find edge. Weekly earnings calendar scan on Sundays.
 ---

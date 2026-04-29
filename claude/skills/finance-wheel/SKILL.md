@@ -1,5 +1,6 @@
 ---
 user-invocable: true
+disable-model-invocation: true
 name: finance-wheel
 description: Runs the full three-phase options income cycle -- sell cash-secured puts, take assignment if necessary, sell covered calls. Picks strikes, monitors positions, rolls contracts, and closes early at 50% profit. Run finance-iv-rank first.
 ---

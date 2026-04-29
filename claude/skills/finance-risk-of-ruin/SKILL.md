@@ -1,5 +1,6 @@
 ---
 user-invocable: true
+disable-model-invocation: true
 name: finance-risk-of-ruin
 description: Calculates probability of account blowup given win rate, win/loss ratio, and position sizing. Uses Kelly criterion for optimal sizing. Monthly review of trading system sustainability. Survival arithmetic -- not optional.
 ---

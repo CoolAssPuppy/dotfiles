@@ -1,5 +1,6 @@
 ---
 user-invocable: true
+disable-model-invocation: true
 name: finance-master
 description: Foundation trading system prompt. Sets up Alpaca paper trading connection, standing risk rules, position sizing, trade execution workflow, and monitoring conventions. Activate this first before using any other finance skill.
 ---

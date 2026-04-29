@@ -1,5 +1,6 @@
 ---
 user-invocable: true
+disable-model-invocation: true
 name: finance-options-flow
 description: Reads the options tape like an institutional desk. Identifies unusual options activity, dark pool prints, gamma squeeze setups, and put/call ratios. Classifies each print as directional bet, hedge, or synthetic positioning. Intelligence layer, not execution.
 ---

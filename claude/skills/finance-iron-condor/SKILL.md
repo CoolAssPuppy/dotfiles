@@ -1,5 +1,6 @@
 ---
 user-invocable: true
+disable-model-invocation: true
 name: finance-iron-condor
 description: Generates consistent income with defined-risk options spreads. Iron condors for range-bound markets, put credit spreads for bullish bias, call credit spreads for bearish bias. Requires IV rank 40+ for credit spreads, 50+ for condors. Includes rolling and management rules.
 ---

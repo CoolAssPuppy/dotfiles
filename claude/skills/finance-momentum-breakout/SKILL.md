@@ -1,5 +1,6 @@
 ---
 user-invocable: true
+disable-model-invocation: true
 name: finance-momentum-breakout
 description: Identifies and executes high-probability breakout setups using a five-condition checklist (trend, consolidation, volume dry-up, resistance, volume surge). Tiered exits at 10%, 20%, and trailing remainder. IBD/William O'Neil methodology.
 ---

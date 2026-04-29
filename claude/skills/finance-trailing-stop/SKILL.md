@@ -1,5 +1,6 @@
 ---
 user-invocable: true
+disable-model-invocation: true
 name: finance-trailing-stop
 description: Buys a position, sets a hard stop loss floor, and runs a ratcheting trailing stop that locks in gains as the price climbs. Includes optional ladder-in logic to average down at preset levels. Monitors every 5 minutes during market hours via cron.
 ---

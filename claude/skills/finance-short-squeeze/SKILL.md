@@ -1,5 +1,6 @@
 ---
 user-invocable: true
+disable-model-invocation: true
 name: finance-short-squeeze
 description: Screens stocks for short squeeze potential before a squeeze happens. Scores candidates 0-7 on short interest, days to cover, borrow cost, float size, OTM call OI, price action, and volume. Builds trade plans for high-priority setups.
 ---
