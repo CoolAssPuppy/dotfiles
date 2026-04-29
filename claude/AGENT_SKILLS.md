@@ -42,6 +42,18 @@ Source: unclear, possibly Anthropic or community. No author metadata in frontmat
 - **data-storytelling** (1 file) — Transforming data into narratives using visualization, context, persuasive structure. For analytics presentations and executive reports.
 - **data-visualization** (1 file) — Creating effective charts with Python (matplotlib, seaborn, plotly). Marked `user-invocable: false` so only Claude can invoke it.
 
+## Skills previously installed but removed
+
+These were installed at some earlier point (likely by a Vercel-flavored agent skill installer) and committed as top-level symlinks pointing into a `.agents/skills/` location that never existed in this repo. They have been broken since installation and surfaced nothing to Claude Code. They were removed during the cleanup that produced this document. Reinstall via the relevant installer if you want them back.
+
+- **deploy-to-vercel** — Vercel deployment guidance.
+- **find-skills** — Skill discovery helper.
+- **remotion-best-practices** — Remotion video framework patterns.
+- **vercel-composition-patterns** — Vercel app composition patterns.
+- **vercel-react-best-practices** — React-on-Vercel best practices.
+- **vercel-react-native-skills** — React Native on Vercel.
+- **web-design-guidelines** — General web design guidelines.
+
 ## How to refresh from upstream
 
 If a partner ships a new version of a skill, you have two paths:
