@@ -249,7 +249,19 @@ Implementation for MDX-based blogs:
 
 Reference: https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/
 
-#### c. Link response headers (RFC 8288)
+#### c. API catalog (RFC 9727)
+
+Even content sites usually expose a few agent-facing endpoints worth cataloging: an RSS feed, markdown content routes, sitemap. Publish `/.well-known/api-catalog` returning `application/linkset+json` per RFC 9264.
+
+Each linkset entry needs an `anchor` (the API URL) and one or more link relations like `service-doc` (human docs), `service-desc` (machine-readable spec, e.g., OpenAPI), `describedby`, and `type`.
+
+For a content site, anchor entries at endpoints like `/api/rss`, `/api/blog`, `/api/glossary` and point `service-doc` at the corresponding human listing page. You don't need OpenAPI specs for the catalog to be valid.
+
+Also advertise the catalog from the homepage with a Link header: `Link: </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json"`.
+
+Reference: https://www.rfc-editor.org/rfc/rfc9727
+
+#### d. Link response headers (RFC 8288)
 
 Add `Link` response headers to the homepage pointing at agent-discoverable resources. For a content site, the useful targets are `llms.txt`, `llms-full.txt`, and the sitemap:
 
@@ -383,7 +395,9 @@ For sites with regularly updated content:
 ### Agent discovery (content sites)
 - [ ] `Content-Signal:` directive in robots.txt declaring ai-train/search/ai-input preferences
 - [ ] `Accept: text/markdown` on `/blog/[slug]` returns the MDX source as `text/markdown`
-- [ ] Homepage response includes `Link:` headers pointing at llms.txt, llms-full.txt, and sitemap.xml
+- [ ] `Accept: text/markdown` on `/` returns a markdown summary (e.g., llms.txt content) with `Content-Type: text/markdown`
+- [ ] `/.well-known/api-catalog` returns `application/linkset+json` listing agent-facing endpoints
+- [ ] Homepage response includes `Link:` headers pointing at llms.txt, llms-full.txt, sitemap.xml, and api-catalog
 
 ### AEO (content structure for AI citation)
 - [ ] /public/llms.txt created
