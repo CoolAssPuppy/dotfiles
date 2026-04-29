@@ -23,3 +23,11 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Third-party agent skill installer artifacts
+# Tools like Stripe's and Supabase's installers detect every AI tool the
+# user might run and dump per-tool symlinks into claude/skills/.<tool>/.
+# Block those — the canonical content lives at claude/skills/<name>/.
+# See claude/AGENT_SKILLS.md for the full list of committed partner skills.
+claude/skills/.*/
+claude/skills/skills/
