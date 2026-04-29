@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	Empty entitlements file. With ENABLE_APP_SANDBOX: NO and
+	ENABLE_HARDENED_RUNTIME: YES (set in project.yml), the app runs
+	unsandboxed but with hardened runtime. Most utility apps need
+	nothing more.
+
+	Add entitlements below as needed. Common ones:
+
+	iCloud Key-Value Storage (small settings sync across Macs):
+	<key>com.apple.developer.ubiquity-kvstore-identifier</key>
+	<string>$(TeamIdentifierPrefix)$(CFBundleIdentifier)</string>
+
+	JIT compilation (rare, breaks hardened runtime by default):
+	<key>com.apple.security.cs.allow-jit</key>
+	<true/>
+
+	Apple Events to other apps (e.g. controlling Music.app):
+	<key>com.apple.security.automation.apple-events</key>
+	<true/>
+
+	Loading unsigned/non-team libraries (use sparingly):
+	<key>com.apple.security.cs.disable-library-validation</key>
+	<true/>
+
+	When this file is renamed to {{APP_NAME_NOSPACE}}.entitlements
+	in your project, the project.yml CODE_SIGN_ENTITLEMENTS setting
+	will pick it up automatically.
+	-->
+</dict>
+</plist>

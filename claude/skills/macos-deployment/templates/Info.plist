@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>{{APP_NAME}}</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>{{APP_NAME}}</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>${MACOSX_DEPLOYMENT_TARGET}</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright {{COPYRIGHT_YEAR}} {{COMPANY}}.</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+
+	<!-- Sparkle auto-update keys. -->
+	<!-- SUFeedURL must be your Dub.co (or other) shortlink, not the raw R2 URL.
+	     The shortlink lets you move hosts later without re-shipping the app. -->
+	<key>SUFeedURL</key>
+	<string>{{DUB_SHORTLINK}}</string>
+	<!-- Replace with the base64 public key printed by `generate_keys` (see sparkle-setup.md). -->
+	<key>SUPublicEDKey</key>
+	<string>PASTE_BASE64_PUBLIC_KEY_HERE</string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<!-- 86400 seconds = 1 day -->
+	<key>SUScheduledCheckInterval</key>
+	<integer>86400</integer>
+
+	<!-- Add app-specific keys below this line. Common ones: -->
+	<!-- <key>LSUIElement</key><true/>                       (menu-bar-only, no Dock icon) -->
+	<!-- <key>LSMultipleInstancesProhibited</key><true/>     (single-instance app) -->
+	<!-- <key>CFBundleURLTypes</key><array>...</array>       (custom URL schemes) -->
+</dict>
+</plist>
