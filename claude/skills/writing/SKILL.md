@@ -99,6 +99,7 @@ This is the single authoritative list. If it's here, it doesn't appear in any co
 - Paradigm
 - Disrupt/disruptive (unless quoting someone else)
 - Innovative (show it, don't label it)
+- Load-bearing (as metaphor: "the load-bearing assumption")
 
 ### Banned constructions (FATAL)
 

@@ -26,7 +26,7 @@
 - "of someone who"
 - "the kind of person who"
 
-**Banned words:** Delve, dive into, unpack, harness, leverage, utilize, game-changer, cutting-edge, revolutionary, unlock (metaphorical), landscape (metaphorical), ecosystem (unless literal), robust, seamless, streamline, elevate, empower, navigate (metaphorical), reimagine, supercharge, synergy, holistic, paradigm, disrupt/disruptive, innovative.
+**Banned words:** Delve, dive into, unpack, harness, leverage, utilize, game-changer, cutting-edge, revolutionary, unlock (metaphorical), landscape (metaphorical), ecosystem (unless literal), robust, seamless, streamline, elevate, empower, navigate (metaphorical), reimagine, supercharge, synergy, holistic, paradigm, disrupt/disruptive, innovative, load-bearing (metaphorical).
 
 **Banned openers:** "I've spent [number] years...", "Everyone is talking about...", "In today's [adjective] world...", "Let me tell you a story...", "What if I told you..."
 
