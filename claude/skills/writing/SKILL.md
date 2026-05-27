@@ -41,8 +41,11 @@ Derived from analysis of The Midnight Coder's Children and related work.
 
 Derived from analysis of Picks and Shovels and blog work.
 
+**Boundary with fiction voice.** Techniques from the fiction voice (fragments, one-word beats, sentence-as-drum-roll, dramatic single-word paragraphs) do not transfer to non-fiction prose, even when the topic is personal or the tone is casual. Non-fiction earns its emphasis through argument and specificity, not through punctuation tricks.
+
 ### What defines it
 
+- **Complete sentences in prose.** Fragments belong to fiction beats, quoted dialogue, or actual bulleted lists. They do not appear in non-fiction paragraphs as rhetorical punctuation. No "That's cosmetic theater." No "No UI clicking." No "Half-shipped." Write the verdict as a sentence with a subject and verb.
 - **Conversational authority.** You've done this. You know the terrain. But you're not lecturing. You're the experienced colleague at the next desk, leaning over to say "here's what actually works."
 - **Personal anecdotes woven naturally.** Not "Let me tell you a story." Just a moment dropped in. "When we launched Supabase's vector feature, the first thing that broke was..." Concrete. Specific. In service of the point.
 - **Direct address.** "You probably feel" not "one might feel." "Your team" not "teams in general." The reader is a person, not an abstraction.
@@ -99,7 +102,13 @@ This is the single authoritative list. If it's here, it doesn't appear in any co
 - Paradigm
 - Disrupt/disruptive (unless quoting someone else)
 - Innovative (show it, don't label it)
-- Load-bearing (as metaphor: "the load-bearing assumption")
+- Load-bearing / load bearing (banned outright, including non-metaphorical usage; if you mean "this assumption is critical," say that)
+- Out of the box (PM-LinkedIn vocabulary; say "by default" or "on first run")
+- First-class (as judgment: "first-class choice", "first-class citizen", "first-class support")
+- Broken-by-default
+- Non-obvious (say "not obvious" or describe what is hidden)
+- Half-shipped
+- Discoverable / discoverability (as judgment of a feature; "not discoverable" is PM-deck vocabulary)
 
 ### Banned constructions (FATAL)
 
@@ -109,6 +118,8 @@ These are never acceptable. Their presence means the text needs rewriting.
 - "It's not X, it's Y." (same pattern, different punctuation.)
 - "of someone who" ("the hands of someone who...")
 - "the kind of person who" ("she was the kind of person who...")
+- **Fragment-as-verdict** (non-fiction only). State a problem, then drop a two- or three-word fragment as the punchline. "That's cosmetic theater." "No UI clicking." "Half-shipped." "Inconsistent." Rewrite as a complete sentence with subject and verb. "The warning is cosmetic, not protective." "Every Notion change went through a tool call instead of the UI."
+- **Pre-labeled importance**. "The biggest single failure." "The most critical issue." "The number one thing." "The single most important X." Do not announce that what follows is the biggest or most important. Let the content earn its weight. If it does not earn the weight, the label is a lie.
 
 ### Banned openers
 
@@ -195,6 +206,16 @@ BAD:
 GOOD:
 > Headcounts are shrinking. Engineering resources that used to be available for marketing projects are not there anymore.
 
+### Don't write spec-prose.
+
+If a paragraph is a stack of fragments with no connective tissue, it is bullet points pretending to be prose. Either write a bulleted list and own the format, or rewrite the fragments into sentences with verbs and connectors that explain how the facts relate.
+
+BAD:
+> One-way polling sync from Linear to a Notion database. Reconciler pulls from Linear every 2 minutes, queue worker drains 25 events at a time and writes Notion rows. Filtered to the DEVREL team via `LINEAR_TEAM_KEYS`.
+
+GOOD:
+> The system polls Linear every two minutes and drains 25 events at a time through a queue worker that writes the results into a Notion database. A `LINEAR_TEAM_KEYS` filter scopes everything to the DEVREL team.
+
 ### Never pad output to seem more thorough.
 
 BAD:
@@ -205,13 +226,13 @@ GOOD:
 
 ## Tone calibration by context
 
-| Context | Register | Reading level | Humor | Hedging | Technical depth |
-|---------|----------|---------------|-------|---------|-----------------|
-| Professional books | Conversational authority | 6th grade | Dry, earned | Acknowledge nuance | Moderate with examples |
-| Technical blog (Supabase) | Skilled colleague teaching | 5th-6th grade | Minimal, wry | Honest about trade-offs | High with working code |
-| Personal blog | Relaxed, opinionated | 6th grade | More frequent, personal | Less hedging, more conviction | Moderate |
-| Fiction | Elite craft, accessible | N/A | Character-driven | N/A | Woven into character action |
-| Marketing course | Direct instruction | 6th grade | Occasional, self-deprecating | Nuanced but confident | Moderate with frameworks |
+| Context | Register | Reading level | Humor | Hedging | Technical depth | Fragment use |
+|---------|----------|---------------|-------|---------|-----------------|--------------|
+| Professional books | Conversational authority | 6th grade | Dry, earned | Acknowledge nuance | Moderate with examples | Disallowed in prose; allowed in lists |
+| Technical blog (Supabase) | Skilled colleague teaching | 5th-6th grade | Minimal, wry | Honest about trade-offs | High with working code | Disallowed in prose; allowed in lists |
+| Personal blog | Relaxed, opinionated | 6th grade | More frequent, personal | Less hedging, more conviction | Moderate | Disallowed in prose; allowed inside quoted thought |
+| Fiction | Elite craft, accessible | N/A | Character-driven | N/A | Woven into character action | Allowed for beat and tension |
+| Marketing course | Direct instruction | 6th grade | Occasional, self-deprecating | Nuanced but confident | Moderate with frameworks | Disallowed in prose; allowed in lists |
 
 ## Formatting rules
 

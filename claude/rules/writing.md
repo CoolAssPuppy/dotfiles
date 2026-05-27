@@ -25,8 +25,10 @@
 - "It's not X, it's Y."
 - "of someone who"
 - "the kind of person who"
+- Fragment-as-verdict (non-fiction). 2-3 word fragment used as a punchline. E.g. "That's cosmetic theater." "No UI clicking." "Half-shipped." Rewrite as a complete sentence.
+- Pre-labeled importance. Announcing the rank of what follows. E.g. "The biggest single failure." "The most critical issue." Let the content earn the weight.
 
-**Banned words:** Delve, dive into, unpack, harness, leverage, utilize, game-changer, cutting-edge, revolutionary, unlock (metaphorical), landscape (metaphorical), ecosystem (unless literal), robust, seamless, streamline, elevate, empower, navigate (metaphorical), reimagine, supercharge, synergy, holistic, paradigm, disrupt/disruptive, innovative, load-bearing (metaphorical).
+**Banned words:** Delve, dive into, unpack, harness, leverage, utilize, game-changer, cutting-edge, revolutionary, unlock (metaphorical), landscape (metaphorical), ecosystem (unless literal), robust, seamless, streamline, elevate, empower, navigate (metaphorical), reimagine, supercharge, synergy, holistic, paradigm, disrupt/disruptive, innovative, load-bearing, load bearing, out of the box, first-class (as judgment), broken-by-default, non-obvious, half-shipped, discoverable / discoverability (as judgment).
 
 **Banned openers:** "I've spent [number] years...", "Everyone is talking about...", "In today's [adjective] world...", "Let me tell you a story...", "What if I told you..."
 
