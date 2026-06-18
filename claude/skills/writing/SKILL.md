@@ -109,6 +109,7 @@ This is the single authoritative list. If it's here, it doesn't appear in any co
 - Non-obvious (say "not obvious" or describe what is hidden)
 - Half-shipped
 - Discoverable / discoverability (as judgment of a feature; "not discoverable" is PM-deck vocabulary)
+- Landed
 
 ### Banned constructions (FATAL)
 
@@ -118,6 +119,7 @@ These are never acceptable. Their presence means the text needs rewriting.
 - "It's not X, it's Y." (same pattern, different punctuation.)
 - "of someone who" ("the hands of someone who...")
 - "the kind of person who" ("she was the kind of person who...")
+- "There are three things, and two of them are..." (inline contradictory lists)
 - **Fragment-as-verdict** (non-fiction only). State a problem, then drop a two- or three-word fragment as the punchline. "That's cosmetic theater." "No UI clicking." "Half-shipped." "Inconsistent." Rewrite as a complete sentence with subject and verb. "The warning is cosmetic, not protective." "Every Notion change went through a tool call instead of the UI."
 - **Pre-labeled importance**. "The biggest single failure." "The most critical issue." "The number one thing." "The single most important X." Do not announce that what follows is the biggest or most important. Let the content earn its weight. If it does not earn the weight, the label is a lie.
 
@@ -155,6 +157,16 @@ BAD:
 
 GOOD:
 > Developer marketing has one job: help developers succeed with your product. Everything else is noise.
+
+### The first paragraph says what the post is about.
+
+The opening paragraph orients the reader. State the subject and the payoff in the first few sentences. Do not open with atmosphere, a tangent, or background that assumes the reader already knows what they are reading. A reader who finishes the first paragraph should be able to say what the post covers and why it is worth their time.
+
+BAD:
+> Postgres has been around for decades, and over that time the community has built a deep collection of tools and extensions. Connection pooling, in particular, has a long and interesting history.
+
+GOOD:
+> Multigres is a drop-in Postgres replacement built to scale past the connection limits that wreck a single Postgres instance. We pointed a real application at it and pushed to 20,000 concurrent connections on one laptop. Here is what happened.
 
 ### Vary sentence length. Mix short and long.
 
@@ -223,6 +235,38 @@ BAD:
 
 GOOD:
 > Three things to remember: help first, measure what matters, and write docs like someone's production deployment depends on them. Because it does.
+
+## Headlines and section headers
+
+### Headlines: lead with the most impressive data point.
+
+The headline names the achievement, not the genre of the post. Before finalizing a headline, scan the post for the single most impressive, concrete, quantified result. That number is the headline. Words like "proven with," "a real app," or "drop-in" describe the post's marketing angle, not its substance, and force the reader to open the post to find out what is actually impressive.
+
+BAD:
+> Drop-in Postgres, proven with a real app
+
+GOOD:
+> Scaling Postgres to 20,000 connections
+
+"Proven with a real app" tells the reader you ran a test. "20,000 connections" tells them the result. The result is the better hook every time.
+
+### Section headers: write like the engineer who did the work.
+
+Section headers should read the way the person who did the work would describe it to another engineer, not the way a marketer would label the section. A header that names a section by its role in the argument ("The X test," "The Y demo," "The Z benchmark") is an abstract placeholder. Rewrite it as what actually happened, with the real tool, the real machine, and the real outcome. Favor first person and plain results.
+
+BAD:
+> The drop-in test
+
+GOOD:
+> We pointed Miniflux at Multigres and it just ran
+
+BAD:
+> The 20,000-connection demo
+
+GOOD:
+> 20k connections on my laptop
+
+The abstract versions only tell you the section exists. The engineer versions tell you what happened in it. "On my laptop" and "it just ran" signal that a person did this, not a marketing department.
 
 ## Tone calibration by context
 
