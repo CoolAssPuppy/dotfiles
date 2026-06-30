@@ -208,6 +208,44 @@ BAD:
 GOOD:
 > Production is no longer the bottleneck.
 
+### Cut sentences that only point at meaning.
+
+A sentence whose only job is to tell the reader what to notice, or to restate a point in a punchier way, carries no information. It reads as profound because of the rhythm and the brevity, but the reader already had the substance. Cut it, or merge the signal into a sentence that reports a fact, often with "because" or "since."
+
+The test: can the sentence be removed without losing any fact the reader did not already have? If yes, it is doing curation, not reporting. Cut it. The same goes for throwaway asides: if an aside does not carry a fact, a number, a mechanism, or a decision, it goes.
+
+BAD:
+> We decided to lead with Postgres. The question changed. It moved.
+
+GOOD:
+> We decided to lead with Postgres, because the durable advantage is the database, not the trend.
+
+BAD:
+> The full line survives the swap. This is the core argument for anchoring to the moat.
+
+GOOD:
+> The full line survives the swap, because a competitor cannot repeat it truthfully.
+
+### Don't string three items together for rhythm (non-fiction).
+
+In fiction, lists of three are a rhythm tool. In non-fiction marketing prose they read as ad copy, especially when the third item is a vague flourish bolted on for cadence. Name the one concrete thing that matters instead.
+
+BAD:
+> Real Postgres, the whole backend, and you own all of it.
+
+GOOD:
+> Every layer is open source, from the database to the edge functions.
+
+### Use contractions. Write like a person talking.
+
+Uncontracted prose ("it is," "you are," "do not," "cannot") reads stiff and machine-made. Write the way you would say it out loud.
+
+BAD:
+> It is real Postgres, and you do not have to rewrite it when it gets real.
+
+GOOD:
+> It's real Postgres, and you don't have to rewrite it when it gets real.
+
 ### One example is enough. Don't over-explain.
 
 If the point is already made, don't add another example just to fill space. An extra illustration after the argument lands is padding, not reinforcement.
