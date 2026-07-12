@@ -33,6 +33,9 @@ step() {
     return 0
   else
     code=$?
+    # A child that read a password (sudo) can leave the tty without newline
+    # translation, which prints the error dump as a staircase.
+    [[ -t 1 ]] && stty sane 2>/dev/null
     fail "$label"
     printf '\n%s%sFailed: %s (exit %d)%s\n\n' "$C_RED" "$C_BOLD" "$label" "$code" "$C_RESET" >&2
     cat "$log" >&2
@@ -40,6 +43,30 @@ step() {
     rm -f "$log"
     exit "$code"
   fi
+}
+
+# soft_step "Label" cmd...
+# Like step, but a failure warns and continues instead of aborting the run.
+# For things that are not worth failing a whole machine setup over.
+soft_step() {
+  local label="$1"; shift
+  local log
+  log="$(mktemp)"
+
+  printf '%s%s·%s %s' "$CLEAR_LINE" "$C_DIM" "$C_RESET" "$label"
+
+  if "$@" >"$log" 2>&1; then
+    ok "$label"
+    rm -f "$log"
+    return 0
+  fi
+
+  [[ -t 1 ]] && stty sane 2>/dev/null
+  fail "$label"
+  SOFT_FAILURES="${SOFT_FAILURES:-}${SOFT_FAILURES:+, }$label"
+  sed 's/^/    /' "$log" >&2
+  rm -f "$log"
+  return 0
 }
 
 # version "Label" cmd...
