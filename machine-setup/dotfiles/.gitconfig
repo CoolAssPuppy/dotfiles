@@ -1,10 +1,14 @@
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
 [user]
 	name = Prashant Sridharan
 	email = prashant_sridharan@hotmail.com
 [init]
 	defaultBranch = main
+[pull]
+	rebase = false
+[color]
+	ui = auto
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

@@ -5,8 +5,11 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 # silence the warning message from macOS
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+export CLAUDE_CODE_NO_FLICKER=1
+
 # aliases ls
 alias ls='ls -GpFh'
+alias killdev='lsof -ti:3000,3001,3002,4000,5000,5173,8000,8080 2>/dev/null | xargs kill -9 2>/dev/null; pkill -f "next dev" 2>/dev/null; pkill -f "turbo dev" 2>/dev/null; pkill -f "vite" 2>/dev/null; echo "Dev servers killed"'
 
 # git directory
 function parse_git_branch {
@@ -48,14 +51,31 @@ NORMAL='\[\033[00m\]'
 PS1="${BGREEN}(${GREEN}\w${BGREEN} ${RED}\$(parse_git_branch)${BGREEN}) ${BLUE}\$ ${NORMAL}"
 
 # Load Homebrew environment
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [ -x /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -x /usr/local/bin/brew ]; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
 
 # Load PostgreSQL tools
 export PATH="$(brew --prefix libpq)/bin:$PATH"
 
+# Latest Ruby
+export PATH="$(brew --prefix ruby)/bin:$PATH"
+
+# pipx and other user-local binaries
+export PATH="$HOME/.local/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+
 # Load NVM (installed via Homebrew)
 export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "$(brew --prefix nvm)/nvm.sh" ] && \. "$(brew --prefix nvm)/nvm.sh"
 
 # Automatically switch to latest installed Node version
 nvm use node &> /dev/null

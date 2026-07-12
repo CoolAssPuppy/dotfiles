@@ -15,17 +15,25 @@ dotfiles/
 │   ├── docs/                  # Reference documentation
 │   ├── skills/                # Developer marketing expertise
 │   └── work-prompts/          # Standalone prompts for content creation
-├── machine-setup/             # macOS development environment setup
-│   ├── dev-install.sh         # Fresh machine setup script
-│   ├── dev-update.sh          # Update existing installation
-│   ├── Brewfile               # Homebrew packages and casks
-│   ├── dotfiles/              # Shell and SSH configurations
-│   ├── node-globals/          # Global npm/yarn/pnpm packages
-│   └── git-global-config.txt  # Git configuration
-└── shells/                    # Alternative shell configurations
-    ├── zshrc                  # Zsh configuration with git prompt
-    └── bash_profile           # Bash configuration
+└── machine-setup/             # macOS development environment setup
+    ├── dev-install.sh         # Fresh machine setup script
+    ├── dev-update.sh          # Update existing installation
+    ├── brew-sync.sh           # Trust taps, install and upgrade from the Brewfile
+    ├── link-codex.sh          # Mirror Claude skills and rules into Codex
+    ├── lib.sh                 # Shared status output
+    ├── Brewfile               # Homebrew packages, casks, VS Code extensions
+    └── dotfiles/              # Shell, git, SSH, editor and terminal config
+        ├── .zshrc             # Zsh config with git prompt and nvm auto-switch
+        ├── .bash_profile      # Bash config
+        ├── .gitconfig         # Git identity, defaults and LFS filters
+        ├── config             # SSH config
+        ├── zed/               # Zed editor settings
+        └── ghostty/           # Ghostty terminal config and layout script
 ```
+
+`dev-install.sh` symlinks everything in `machine-setup/dotfiles/` into place, backing up
+anything already there to `~/.dotfiles-backup/<timestamp>/`. Machine-specific shell config
+that should not be tracked goes in `~/.zshrc.d/*.zsh`, which `.zshrc` sources automatically.
 
 ## Machine setup
 
@@ -39,16 +47,23 @@ Scripts and configurations for setting up a new Mac development environment.
 ./machine-setup/dev-update.sh
 ```
 
-The Brewfile includes common development tools, applications, and fonts.
+Both scripts are idempotent. `dev-install.sh` sets up a fresh machine end to end;
+`dev-update.sh` brings an existing one current. Each step prints a green check, and a
+failing step prints the full error output and stops.
+
+The Brewfile includes development tools, applications, fonts, and VS Code extensions.
+`brew bundle` installs and upgrades everything in it, so the Brewfile is the single
+source of truth for what is on the machine.
 
 ## Shell configurations
 
-The `shells/` directory contains zsh and bash configurations with:
+`machine-setup/dotfiles/` contains the zsh and bash configurations:
 
 - Git branch display in prompt
 - Color-coded ls output
-- Custom aliases
+- Custom aliases, including `killdev` to stop stray dev servers
 - `gitsync` helper function for quick commits
+- Automatic Node version switching from `.nvmrc`
 
 ## Claude Code configuration
 
@@ -141,10 +156,10 @@ Run the install script for a fresh Mac:
 
 ### Claude Code
 
-Copy the `claude/` directory contents to your `~/.claude/` directory:
+`dev-install.sh` symlinks `claude/` into `~/.claude/` for you. To do it on its own:
 
 ```bash
-cp -r claude/* ~/.claude/
+./claude/setup.sh
 ```
 
 ## Learn more

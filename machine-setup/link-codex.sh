@@ -17,9 +17,12 @@ set -euo pipefail
 #
 # It never touches ~/.codex/skills/.system (Codex-managed built-in skills).
 
-DOTFILES_CLAUDE="$HOME/Developer/dotfiles/claude"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+DOTFILES_CLAUDE="$REPO_ROOT/claude"
 DOTFILES_SKILLS="$DOTFILES_CLAUDE/skills"
-BRAIN="$HOME/Developer/brain"
+BRAIN="${BRAIN:-$(cd "$REPO_ROOT/.." && pwd)/brain}"
 BRAIN_SKILLS="$BRAIN/.claude/skills"
 CODEX_HOME_DIR="${CODEX_HOME:-$HOME/.codex}"
 CODEX_SKILLS="$CODEX_HOME_DIR/skills"

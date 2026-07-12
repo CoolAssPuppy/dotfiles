@@ -1,60 +1,26 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Require Homebrew
-if ! command -v brew >/dev/null 2>&1; then
-  echo "Homebrew not found. Install Homebrew first: https://brew.sh"
-  exit 1
-fi
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+BRAIN="${BRAIN:-$(cd "$REPO_ROOT/.." && pwd)/brain}"
 
-echo "Updating Homebrew metadata..."
-brew update
+# shellcheck source=lib.sh
+. "$SCRIPT_DIR/lib.sh"
 
-update_brew_formula() {
-  local formula="$1"
-  if brew list --formula --versions "$formula" >/dev/null 2>&1; then
-    echo "Upgrading $formula via Homebrew..."
-    brew upgrade "$formula" || true
-  else
-    echo "$formula is not managed by Homebrew. Skipping."
-  fi
-}
+"$SCRIPT_DIR/brew-sync.sh"
 
-# Supabase CLI
-update_brew_formula "supabase/tap/supabase"
+step "Homebrew cleanup" brew cleanup
 
-# Doppler CLI
-update_brew_formula "dopplerhq/cli/doppler"
-
-# Vercel CLI
-if brew list --formula --versions vercel-cli >/dev/null 2>&1; then
-  echo "Upgrading vercel-cli via Homebrew..."
-  brew upgrade vercel-cli || true
-else
-  if command -v vercel >/dev/null 2>&1; then
-    if command -v pnpm >/dev/null 2>&1; then
-      echo "Updating Vercel via pnpm global..."
-      pnpm add -g vercel@latest || true
-    elif command -v npm >/dev/null 2>&1; then
-      echo "Updating Vercel via npm global..."
-      npm -g install vercel@latest || true
-    else
-      echo "Neither pnpm nor npm found to update Vercel outside Homebrew."
-    fi
-  else
-    echo "Vercel CLI not found."
-  fi
-fi
-
-# Claude Code for VS Code
-if command -v code >/dev/null 2>&1; then
-  echo "Updating Claude Code extension..."
-  code --install-extension anthropic.claude --force || code --install-extension anthropic.claude-dev --force || true
+if [[ -d "$BRAIN" ]]; then
+  step "Codex mirror" "$SCRIPT_DIR/link-codex.sh"
 fi
 
 echo
-echo "Versions after update:"
-command -v supabase >/dev/null 2>&1 && supabase --version || echo "supabase not found"
-command -v doppler  >/dev/null 2>&1 && doppler  --version || echo "doppler not found"
-command -v vercel   >/dev/null 2>&1 && vercel   --version || echo "vercel not found"
-
+version "node    " node -v
+version "pnpm    " pnpm -v
+version "gh      " gh --version
+version "supabase" supabase --version
+version "vercel  " vercel --version
+version "doppler " doppler --version
+version "stripe  " stripe --version

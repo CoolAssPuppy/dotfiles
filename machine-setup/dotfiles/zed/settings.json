@@ -1,0 +1,65 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "proxy": "",
+  "buffer_font_family": "JetBrains Mono",
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "context_servers": {
+    "mcp-server-supabase": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "supabase_access_token": "YOUR_TOKEN",
+        "read_only": false
+      }
+    }
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+      "default_mode": "bypassPermissions"
+    }
+  },
+  "icon_theme": "Catppuccin Latte",
+  "terminal": {
+    "shell": {
+      "program": "zsh"
+    }
+  },
+  "on_last_window_closed": "quit_app",
+  "when_closing_with_no_tabs": "keep_window_open",
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": "Night Owl Dark",
+}
