@@ -20,7 +20,10 @@ install_xcode_tools() {
 }
 step "Xcode command line tools" install_xcode_tools
 
-"$SCRIPT_DIR/brew-sync.sh"
+if ! "$SCRIPT_DIR/brew-sync.sh"; then
+  fail "Homebrew sync failed. Fix the error above, then re-run."
+  exit 1
+fi
 
 mkdir -p "$HOME/.zshrc.d" "$HOME/.nvm" "$HOME/.ssh" "$HOME/.config/zed" "$HOME/.config/ghostty"
 
@@ -62,7 +65,7 @@ fi
 
 export NVM_DIR="$HOME/.nvm"
 # shellcheck source=/dev/null
-[ -s "$BREW_PREFIX/opt/nvm/nvm.sh" ] && . "$BREW_PREFIX/opt/nvm/nvm.sh"
+if [ -s "$BREW_PREFIX/opt/nvm/nvm.sh" ]; then . "$BREW_PREFIX/opt/nvm/nvm.sh"; fi
 
 setup_node() {
   nvm install --lts

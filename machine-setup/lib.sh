@@ -35,7 +35,7 @@ step() {
     code=$?
     # A child that read a password (sudo) can leave the tty without newline
     # translation, which prints the error dump as a staircase.
-    [[ -t 1 ]] && stty sane 2>/dev/null
+    if [[ -t 1 ]]; then stty sane 2>/dev/null || true; fi
     fail "$label"
     printf '\n%s%sFailed: %s (exit %d)%s\n\n' "$C_RED" "$C_BOLD" "$label" "$code" "$C_RESET" >&2
     cat "$log" >&2
@@ -61,7 +61,7 @@ soft_step() {
     return 0
   fi
 
-  [[ -t 1 ]] && stty sane 2>/dev/null
+  if [[ -t 1 ]]; then stty sane 2>/dev/null || true; fi
   fail "$label"
   SOFT_FAILURES="${SOFT_FAILURES:-}${SOFT_FAILURES:+, }$label"
   sed 's/^/    /' "$log" >&2

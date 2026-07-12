@@ -34,7 +34,7 @@ link_skill() {
   local src="$1" dst_dir="$2"
   local name
   name="$(basename "$src")"
-  [[ "$name" == _* ]] && return 0          # skip shared/helper folders
+  case "$name" in _*) return 0 ;; esac     # skip shared/helper folders
   [[ -f "$src/SKILL.md" ]] || return 0     # only real skills
   ln -sfn "$src" "$dst_dir/$name"
 }
@@ -51,7 +51,7 @@ brain_count=0
 skipped=()
 for skill in "$BRAIN_SKILLS"/*/; do
   name="$(basename "${skill%/}")"
-  [[ "$name" == _* ]] && continue
+  case "$name" in _*) continue ;; esac
   [[ -f "${skill%/}/SKILL.md" ]] || continue
   # Skip if a global dotfiles skill already owns this name (can't have two)
   if [[ -e "$DOTFILES_SKILLS/$name" ]]; then
@@ -78,8 +78,8 @@ make_agents_link() {
   ( cd "$dir" && ln -sfn "$claude" AGENTS.md )
   echo "    $target -> $claude"
 }
-[[ -f "$BRAIN/CLAUDE.MD" ]]        && make_agents_link "$BRAIN" "CLAUDE.MD"
-[[ -f "$BRAIN/fiction/CLAUDE.md" ]] && make_agents_link "$BRAIN/fiction" "CLAUDE.md"
+if [[ -f "$BRAIN/CLAUDE.MD" ]]; then make_agents_link "$BRAIN" "CLAUDE.MD"; fi
+if [[ -f "$BRAIN/fiction/CLAUDE.md" ]]; then make_agents_link "$BRAIN/fiction" "CLAUDE.md"; fi
 
 echo "==> Flattening global Claude config into $CODEX_HOME_DIR/AGENTS.md"
 # Codex does not expand Claude's @path imports, so resolve them recursively

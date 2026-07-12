@@ -37,26 +37,37 @@ have_casks="$(brew list --cask -1 2>/dev/null || true)"
 have_vscode="$(command -v code >/dev/null 2>&1 && code --list-extensions 2>/dev/null || true)"
 outdated="$(brew outdated --quiet 2>/dev/null || true)"
 
-missing() {
-  # $1 = newline-separated installed list. Reads wanted names on stdin.
-  local installed="$1" want
-  while read -r want; do
-    [ -n "$want" ] || continue
-    grep -qxF "${want##*/}" <<<"$installed" || printf '%s\n' "$want"
-  done
-}
+# Plain loops in the parent shell. An earlier version built these lists inside
+# command substitutions whose last command could exit nonzero on an empty input,
+# which under set -e killed the whole run without printing anything.
+have() { grep -qxF "$2" <<<"$1"; }
 
-new_formulae="$(entries brew   | missing "$have_formulae")"
-new_casks="$(entries cask      | missing "$have_casks")"
-new_vscode="$(entries vscode   | missing "$have_vscode")"
+new_formulae=""
+for f in $(entries brew); do
+  have "$have_formulae" "${f##*/}" || new_formulae="$new_formulae $f"
+done
 
-# Only upgrade things the Brewfile actually asks for.
+new_casks=""
+for c in $(entries cask); do
+  have "$have_casks" "$c" || new_casks="$new_casks $c"
+done
+
+new_vscode=""
+for e in $(entries vscode); do
+  have "$have_vscode" "$e" || new_vscode="$new_vscode $e"
+done
+
+# Only upgrade things the Brewfile actually asks for. Note the if: a bare
+# `test && assign` returns 1 when the test fails, which set -e treats as fatal.
 wanted_names="$( { entries brew; entries cask; } | sed 's|.*/||' )"
-upgrades="$(printf '%s\n' $outdated | while read -r o; do
-  [ -n "$o" ] && grep -qxF "$o" <<<"$wanted_names" && printf '%s\n' "$o"
-done)"
+upgrades=""
+for o in $outdated; do
+  if have "$wanted_names" "$o"; then
+    upgrades="$upgrades $o"
+  fi
+done
 
-count() { [ -z "$1" ] && echo 0 || printf '%s\n' "$1" | wc -l | tr -d ' '; }
+count() { set -- $1; echo $#; }
 n_formulae=$(count "$new_formulae")
 n_casks=$(count "$new_casks")
 n_vscode=$(count "$new_vscode")
@@ -68,14 +79,14 @@ if [ "$total" -eq 0 ]; then
   exit 0
 fi
 
-oneline() { printf '%s\n' "$1" | sed 's|.*/||' | tr '\n' ' '; }
+oneline() { printf '%s' "$1" | sed 's|[^ ]*/||g' | sed 's/^ *//'; }
 
 echo
 note "Plan"
-[ "$n_formulae" -gt 0 ] && note "  $n_formulae formulae:   $(oneline "$new_formulae")"
-[ "$n_casks"    -gt 0 ] && note "  $n_casks apps:       $(oneline "$new_casks")"
-[ "$n_upgrades" -gt 0 ] && note "  $n_upgrades upgrades:   $(oneline "$upgrades")"
-[ "$n_vscode"   -gt 0 ] && note "  $n_vscode VS Code extensions"
+if [ "$n_formulae" -gt 0 ]; then note "  $n_formulae formulae:  $(oneline "$new_formulae")"; fi
+if [ "$n_casks"    -gt 0 ]; then note "  $n_casks apps:      $(oneline "$new_casks")"; fi
+if [ "$n_upgrades" -gt 0 ]; then note "  $n_upgrades upgrades:  $(oneline "$upgrades")"; fi
+if [ "$n_vscode"   -gt 0 ]; then note "  $n_vscode VS Code extensions"; fi
 echo
 
 # Casks install into /Applications, which needs admin rights. Ask once, up
