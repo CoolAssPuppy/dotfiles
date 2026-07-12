@@ -10,7 +10,8 @@ brew "git-filter-repo"
 brew "gh"
 
 # Languages and runtimes
-brew "node"
+# Node itself is managed by nvm (dev-install.sh installs the LTS), not Homebrew.
+# Installing brew "node" too would shadow-conflict with nvm's copy on PATH.
 brew "nvm"
 brew "deno"
 brew "bun"
