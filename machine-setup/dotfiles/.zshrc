@@ -102,3 +102,7 @@ compinit
 
 # Machine-specific config, not tracked in dotfiles
 for f in ~/.zshrc.d/*.zsh(N); do [ -r "$f" ] && . "$f"; done
+setopt interactivecomments
+
+# OpenClaw Completion
+[ -f "/Users/prashant/.openclaw/completions/openclaw.zsh" ] && source "/Users/prashant/.openclaw/completions/openclaw.zsh"
