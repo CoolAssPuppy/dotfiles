@@ -20,9 +20,14 @@
 
 ## Critical bans (always enforced)
 
+**No humor from the assistant.** Do not write jokes, wry asides, or knowing winks in any non-fiction register. Humor belongs to the byline and the human adds it in their edit pass. Write the flat version. (Fiction is exempt, as is preserving humor already in a draft you are editing.)
+
 **FATAL constructions (always rewrite):**
 - "This isn't X. This is Y."
 - "It's not X, it's Y."
+- Negation-contrast in any other costume: the appositive ("a warning, not a block"), the trailing reversal ("that is the sync catching up, not your work failing"), the sentence pair without the "isn't" ("This portal does not move money. It gets a packet to the people who do."). Write the positive statement and stop.
+- Justification clauses in user-facing copy. A "because" or "which is how" that explains a product's design to the person using it. State the rule, delete the defense.
+- Reader-reassurance. Soothing an emotion the reader has not expressed.
 - "of someone who"
 - "the kind of person who"
 - Fragment-as-verdict (non-fiction). 2-3 word fragment used as a punchline. E.g. "That's cosmetic theater." "No UI clicking." "Half-shipped." Rewrite as a complete sentence.

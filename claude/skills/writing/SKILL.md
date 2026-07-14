@@ -8,6 +8,64 @@ description: Comprehensive voice guide for all writing contexts. Covers fiction 
 
 This is the authoritative source for voice, tone, banned phrases, and writing rules across all contexts. When in doubt, this file wins.
 
+## Failure modes that cross every register
+
+These four show up in fiction, in essays, in docs, and in product copy. They are the moves that survive a banned-words check and still make prose read as machine-written, because each one is the writer stepping in front of the work to manage the reader. Every one of them is a form of not trusting the material.
+
+Read this section before drafting anything. Run it again on the finished draft.
+
+### 1. Rationale
+
+Explaining *why*, when the reader only needed the *what*. In non-fiction it defends a decision nobody challenged. In fiction it explains a beat that already landed, which is worse, because the beat was working until the explanation arrived.
+
+The tell is a trailing clause or sentence that begins with "because", "so that", "which is how", "that is why", "it was the only way", or "and that is deliberate".
+
+- BAD (fiction): "She pressed her thumb into her palm until the nail left a mark. It was the only way she knew to keep from crying."
+- GOOD (fiction): "She pressed her thumb into her palm until the nail left a mark."
+- BAD (non-fiction): "Speakers give us four fields, because a longer form means fewer submissions."
+- GOOD (non-fiction): "Speakers give us four fields."
+
+Physical grounding is the whole technique. An explanation glued to the end of it converts the image back into the feeling it was supposed to replace. Write the gesture. Stop.
+
+### 2. Empathy performance
+
+Soothing a reader who is not upset, or telling them how to feel about a character. In fiction this is sentimentality: the narrator stepping out from behind the scene to absolve, comfort, or excuse. In non-fiction it is bedside manner nobody asked for.
+
+- BAD (fiction): "It was not her fault. Anyone would have broken, in that room, on that night."
+- BAD (fiction): "She was allowed to be tired. She had earned it."
+- GOOD (fiction): Cut both. Show the scene and let the reader arrive at mercy on their own, or not.
+- BAD (non-fiction): "A brand new piece will look empty for a while. That is the sync catching up, not your work failing."
+- GOOD (non-fiction): "There will be a short delay as metrics are calculated."
+
+The reader's sympathy is theirs to give. Asking for it on the character's behalf is how you lose it.
+
+### 3. Defensive hedging where the work wants a commitment
+
+Refusing to make a claim, and dressing the refusal up as honesty. In non-fiction this hedges a policy or a promise. In fiction it hedges an image: "a kind of", "something like", "almost", "seemed to", "not quite".
+
+- BAD (fiction): "Something like relief moved across his face, or something almost like it."
+- GOOD (fiction): "Relief moved across his face."
+- BAD (non-fiction): "We will not promise you a date, because the timing depends on the payment runs."
+- GOOD (non-fiction): "We aim to resolve all expense reimbursements within a few days."
+
+Honesty about a limitation is a real virtue and it belongs in a limitations section, attached to a fact. It is not a licence to hedge every claim in the draft. If you do not know the commitment, ask for it. Writing a careful hedge around a fact you failed to ask for is worse than inventing one, because the invention is at least visible.
+
+In fiction there is no one to ask, so commit. A wrong specific detail is fixable. A hedged one is dead on the page.
+
+### 4. Negation-contrast
+
+Defining a thing by what it is not, then supplying what it is. The FATAL list bans the two most obvious spellings, which is exactly why the move keeps arriving in other clothes. All of these are the same construction:
+
+- The pair: "This portal does not move money. It gets a packet to the people who do."
+- The appositive: "A receipt over budget gets a warning, not a block."
+- The trailing reversal: "That is the sync catching up, not your work failing."
+- The fiction beat: "It wasn't grief. It was something worse." / "Not anger. Fear."
+- The correction: "The number is not the headline. The shape is."
+
+The fiction version is the most seductive, because the rhythm sounds like restraint and reads like profundity. It is neither. It is the narrator announcing that a distinction matters instead of dramatizing one.
+
+Write the positive statement and stop. "Fear moved through her, and stayed."
+
 ## Fiction voice
 
 Derived from analysis of The Midnight Coder's Children and related work.
@@ -18,6 +76,10 @@ Derived from analysis of The Midnight Coder's Children and related work.
 - **Specific timestamps and details.** "5:43am" not "early morning." "Badge number 4471" not "her badge." Precision signals a character who notices everything.
 - **Short sentences for tension.** "Failure." as its own beat. One-word paragraphs when the moment demands it. Then expand into longer sentences for breathing room.
 - **Physical grounding for emotion.** Characters don't feel sad. They stare at a crack in the ceiling. They press their thumb into their palm until the nail leaves a mark. The body tells the truth the mind won't say.
+- **Never explain the gesture you just wrote.** The most common way to ruin a good physical beat is to append the reason for it. "She pressed her thumb into her palm until the nail left a mark. It was the only way she knew to stay calm." The first sentence is the craft. The second sentence is the writer panicking that the reader missed it. See Failure mode 1.
+- **The narrator does not comfort the reader.** No absolution, no "it was not her fault", no "she had earned this". The scene makes the case. See Failure mode 2.
+- **Commit to the image.** No "a kind of", "something like", "almost", "seemed to". If relief moves across his face, relief moves across his face. Hedged imagery is the fiction equivalent of a lie you can't be caught in, and it reads as cowardice. See Failure mode 3.
+- **No "not X. It was Y" beats.** "It wasn't grief. It was something worse." The rhythm imitates restraint while doing the opposite: announcing significance instead of dramatizing it. See Failure mode 4.
 - **Characters defined through habit and precision.** What someone does at 5:43am on a Saturday tells you who they are. Routines reveal character. Disrupted routines reveal stakes.
 - **Emotion shown through physical tells.** Looking down. Throat clearing. Hands going still. The moment someone stops fidgeting is the moment they're truly afraid.
 - **Internal thought in italics, kept brief.** One line. Maybe two. Never a paragraph of interiority. The reader fills in the rest.
@@ -37,6 +99,24 @@ Derived from analysis of The Midnight Coder's Children and related work.
 
 > She pressed her badge to the reader at 5:43am, same as every Saturday for eleven years. The lab was dark except for the glow of seventeen monitors, each cycling through feeds she'd memorized the way other mothers memorized lullabies.
 
+### The dangerous draft
+
+The BAD example above is easy to catch. It announces the emotion and reaches for a dead metaphor. This next one is the draft an LLM actually produces, and the one to watch for. It has concrete detail, physical grounding, and short sentences. It still fails, on all four cross-register failure modes at once.
+
+> Her hands went still on the keyboard. It was something she did when she was frightened, a habit from childhood. Not panic, exactly. Something quieter. She let herself sit with it for a moment, because after eleven years she had earned that much.
+
+What is wrong with it:
+
+- "It was something she did when she was frightened, a habit from childhood." Rationale. The stillness already told us. (Failure mode 1)
+- "she had earned that much." Empathy performance. The narrator granting the character permission. (Failure mode 2)
+- "Not panic, exactly. Something quieter." Hedging *and* negation-contrast in one breath. (Failure modes 3 and 4)
+
+The repair keeps the gesture and deletes everything defending it:
+
+> Her hands went still on the keyboard.
+
+One sentence survived out of five. That ratio is normal. When in doubt, keep the body and cut the commentary.
+
 ## Non-fiction voice
 
 Derived from analysis of Picks and Shovels and blog work.
@@ -52,7 +132,7 @@ Derived from analysis of Picks and Shovels and blog work.
 - **States opinions without hedging.** "This doesn't work" not "this might not be the most optimal approach." Conviction earns trust. Wishy-washy earns nothing.
 - **Defines terms without condescension.** "RLS (Row Level Security) lets you set database-level rules about who sees what" not "RLS, which stands for Row Level Security and is a feature of PostgreSQL that many developers may not be familiar with..."
 - **Historical context dropped casually.** "Developers have been writing documentation since before there were developers to read it." One sentence. No footnote. Trust the reader.
-- **Dry, understated humor.** Never a joke that stops the text. A wry observation. A self-aware aside. Humor that works because it's true, not because it's trying.
+- **Dry, understated humor.** Never a joke that stops the text. A wry observation. A self-aware aside. Humor that works because it's true, not because it's trying. **This describes the author's voice, not an instruction to an assistant.** If you are an LLM drafting on his behalf, do not write the joke. See "No humor from the assistant" below.
 - **Structure-heavy with clean section breaks.** Headers do work. Bullets list specifics. Paragraphs explain concepts. Balance all three.
 - **Philosophy distilled to memorable phrases.** "Help First." "Sell the picks and shovels." Short enough to remember. True enough to repeat.
 - **Specific examples over abstractions.** Not "companies that do developer marketing well" but "Stripe's API documentation redesign in 2018."
@@ -70,6 +150,19 @@ Derived from analysis of Picks and Shovels and blog work.
 ### GOOD non-fiction
 
 > Most developer marketing advice boils down to "write good docs and go to conferences." That's not wrong. It's just not enough. Here's what the advice leaves out.
+
+## No humor from the assistant
+
+If you are an LLM drafting or revising on the author's behalf, **do not write humor**. No jokes, no wry asides, no knowing winks, no parentheticals played for a smile, no cute substitutions for a plain word. This holds in every non-fiction register, including the casual personal one.
+
+Humor is the byline's to add. The author will put it in during his edit pass, and he is good at it. Every LLM attempt comes out as writerly cleverness rather than a person being funny, and the difference is obvious to a reader:
+
+- His, kept: "There is no inbox in the app because I need another inbox like I need a new hole in my head." Blunt, first person, colloquial, carries no image.
+- Mine, cut: "a bank confirmation appearing by magic", "this is where the share kit earns its keep", "that is not a thing that happens in real life." Each one is a wink. Each one was deleted.
+
+The test: if a sentence exists to be enjoyed rather than to carry a fact, delete it. Write the flat version. A flat draft is easy for a human to make funny. A draft full of LLM jokes has to be stripped first.
+
+This rule does not apply to fiction, where character-driven humor is part of the craft, or to preserving humor that already exists in a draft you are editing.
 
 ## Banned words and phrases
 
@@ -117,6 +210,10 @@ These are never acceptable. Their presence means the text needs rewriting.
 
 - "This isn't X. This is Y." (contrarian flip. Always.)
 - "It's not X, it's Y." (same pattern, different punctuation.)
+- **Negation-contrast in every other costume**, in every register including fiction. Writing the ban as the two forms above is too narrow, and the same move keeps sailing through dressed differently. The appositive ("a warning, not a block"), the trailing reversal ("that is the sync catching up, not your work failing"), the sentence pair without the "isn't" ("This portal does not move money. It gets a packet to the people who do."), and the fiction beat ("It wasn't grief. It was something worse."). Write the positive statement and stop. See Failure mode 4.
+- **Rationale**, in every register. A "because", "so that", "which is how", or "that is why" that defends a decision to a reader who did not challenge it, or explains a beat that already landed. "That is all we ask for, because a longer form means fewer submissions." "It was the only way she knew to stay calm." See Failure mode 1.
+- **Empathy performance**, in every register. Soothing, absolving, or pre-empting an emotion the reader has not expressed. "That is the sync catching up, not your work failing." "Nobody will mention it." "It was not her fault." "She had earned that much." See Failure mode 2.
+- **Hedged claims and hedged images.** "A kind of", "something like", "almost", "seemed to", "not quite", and the non-fiction cousin that refuses to state a commitment and calls the refusal honesty. See Failure mode 3.
 - "of someone who" ("the hands of someone who...")
 - "the kind of person who" ("she was the kind of person who...")
 - "There are three things, and two of them are..." (inline contradictory lists)
@@ -308,13 +405,28 @@ The abstract versions only tell you the section exists. The engineer versions te
 
 ## Tone calibration by context
 
+The Humor column describes the *author's* finished voice. An assistant drafting in any non-fiction row writes zero humor and leaves that column to the human.
+
 | Context | Register | Reading level | Humor | Hedging | Technical depth | Fragment use |
 |---------|----------|---------------|-------|---------|-----------------|--------------|
 | Professional books | Conversational authority | 6th grade | Dry, earned | Acknowledge nuance | Moderate with examples | Disallowed in prose; allowed in lists |
 | Technical blog (Supabase) | Skilled colleague teaching | 5th-6th grade | Minimal, wry | Honest about trade-offs | High with working code | Disallowed in prose; allowed in lists |
+| Product docs / in-app copy | Terse manual | 6th grade | None | None. State the rule or the policy | Only what the task needs | Disallowed in prose; allowed in lists |
 | Personal blog | Relaxed, opinionated | 6th grade | More frequent, personal | Less hedging, more conviction | Moderate | Disallowed in prose; allowed inside quoted thought |
 | Fiction | Elite craft, accessible | N/A | Character-driven | N/A | Woven into character action | Allowed for beat and tension |
 | Marketing course | Direct instruction | 6th grade | Occasional, self-deprecating | Nuanced but confident | Moderate with frameworks | Disallowed in prose; allowed in lists |
+
+### Product docs and in-app copy
+
+The rules that make a good post make a bad manual. A post earns the right to explain a decision; a manual does not. The reader is mid-task and wants the rule.
+
+- **State the rule, never the reasoning behind it.** This is the largest source of slop in documentation.
+- **Do not narrate the screen.** If the reader can see the bell, the shading, or the column headers, do not describe them.
+- **Frame every capability as the reader's benefit, never the company's.** Not "it tells us where our community will be, which is how we plan swag" but "we can use the full Supabase promotion engine to drive awareness of your speaking gig."
+- **Use the product's own term.** "Submit your expenses for reimbursement", not "get that money back."
+- **One to two sentences per paragraph.** Expect to cut 50 to 90 percent of a first draft.
+- **Never hedge an operational commitment.** If the team has a policy, state it: "We aim to resolve all expense reimbursements within a few days." If you do not know the policy, ask. Writing a careful hedge around a fact you failed to ask for is worse than inventing one, because it hides the gap instead of exposing it.
+- **End on the action**, an address to email or a link to click, not a homily about the value of good documentation.
 
 ## Formatting rules
 
@@ -322,6 +434,7 @@ The abstract versions only tell you the section exists. The engineer versions te
 
 ## How to match voice when revising
 
+0. **Run the four failure modes first.** Before any other check, hunt for rationale, empathy performance, hedging, and negation-contrast. They survive every other pass because none of them uses a banned word. Search the draft for "because", "not", "a kind of", "almost", "seemed", "it was the only way", and "earned". Interrogate every hit.
 1. **Read the surrounding text first.** Match its rhythm, vocabulary, and sentence length distribution before writing anything.
 2. **Keep original words wherever possible.** The goal is seamless integration, not replacement.
 3. **Check for banned words/phrases after every revision.** Run a mental grep. If anything from the banned list crept in, rewrite.
