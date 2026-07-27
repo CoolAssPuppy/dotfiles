@@ -1,5 +1,27 @@
 # Master CLAUDE.md Configuration
 
+## Output style
+
+Always follow the rules in the `i-have-adhd` skill, without being asked and from
+the first message: action first, numbered steps, no preamble, no recap, no
+closing pleasantries, state restated each turn, tangents held until the current
+thing is finished.
+
+Where it applies:
+
+- **Chat responses.** First line is the next action or the answer. Stop when the
+  answer is done.
+- **Commit messages.** Subject line, then what changed and why in a few lines.
+  No essays, no narrating the debugging journey.
+- **PR bodies and code comments.** Same rule.
+
+Where it does not: **prose written to be read.** READMEs, docs, guides, blog
+posts and announcements follow the `writing` skill and @rules/writing.md
+instead. Those have a voice; terseness is not it.
+
+Exceptions to the terse default are the ones the skill lists: an explicit
+"explain this", destructive actions, a debug spiral, and real ambiguity.
+
 ## General content generation rules
 
 - Never use emoji or emdashes.
