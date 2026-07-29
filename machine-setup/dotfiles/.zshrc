@@ -184,9 +184,6 @@ _gcloud_sdk="$HOME/Developer/brain/google-cloud-sdk"
 [ -f "$_gcloud_sdk/completion.zsh.inc" ] && . "$_gcloud_sdk/completion.zsh.inc"
 unset _gcloud_sdk
 
-# kimi-code
-[ -d "$HOME/.kimi-code/bin" ] && export PATH="$HOME/.kimi-code/bin:$PATH"
-
 # OpenClaw completion
 [ -f "$HOME/.openclaw/completions/openclaw.zsh" ] && source "$HOME/.openclaw/completions/openclaw.zsh"
 
