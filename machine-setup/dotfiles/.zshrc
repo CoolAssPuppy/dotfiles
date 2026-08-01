@@ -6,6 +6,7 @@ export CLAUDE_CODE_NO_FLICKER=1
 
 # Aliases
 alias ls='ls -GpFh'
+alias cloyo='claude --dangerously-skip-permissions'
 alias killdev='lsof -ti:3000,3001,3002,4000,5000,5173,8000,8080 2>/dev/null | xargs kill -9 2>/dev/null; pkill -f "next dev" 2>/dev/null; pkill -f "turbo dev" 2>/dev/null; pkill -f "vite" 2>/dev/null; echo "Dev servers killed"'
 
 # Git branch in prompt
@@ -104,5 +105,8 @@ compinit
 for f in ~/.zshrc.d/*.zsh(N); do [ -r "$f" ] && . "$f"; done
 setopt interactivecomments
 
-# OpenClaw Completion
-[ -f "/Users/prashant/.openclaw/completions/openclaw.zsh" ] && source "/Users/prashant/.openclaw/completions/openclaw.zsh"
+# command prompt for remote server connections
+  if [[ -n "${SSH_CONNECTION:-}" ]]; then
+    PROMPT='%F{yellow}[home-server]%f %F{cyan}%~%f %# '
+  fi
+
