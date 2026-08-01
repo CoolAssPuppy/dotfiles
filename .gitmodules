@@ -1,0 +1,3 @@
+[submodule "claude/skills/i-have-adhd"]
+	path = claude/skills/i-have-adhd
+	url = https://github.com/ayghri/i-have-adhd

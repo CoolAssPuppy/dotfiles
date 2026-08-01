@@ -39,6 +39,21 @@
 
 **AI writing tells:** All phrases from the Wikipedia Signs of AI Writing Guide.
 
+**Paragraph closers (always cut).** A paragraph may not end on a sentence that restates, evaluates, or lands the paragraph. Delete the last sentence and check whether any information was lost. If nothing was lost, it was a closer, and it stays deleted. This is the most frequent tell and the hardest to see, because the closing line always feels like the best sentence in the paragraph. It is the only one doing no work. E.g. "It's the receipt." "That's a kindness, and kindness retains users." "...which is the data's way of saying the file is noise."
+
+**Transitional imperatives (always cut).** "Sit with what that means." "Now put yourself in their chair." "Read that next to the earlier finding." Cut the instruction. Start the next paragraph with its own first sentence.
+
+## Shape (applies to any piece longer than a few paragraphs)
+
+Word bans and sentence-level fixes do not touch shape, which is the level most editing never reaches. Generated prose is even. Human prose is lopsided, because the writer cared unevenly.
+
+- **Asymmetry, by ratio not word count.** Longest section at least 3x the shortest. Longest paragraph at least 5x the shortest and over 150 words. At least two single-sentence paragraphs. Hit these by cutting the short one down, never by padding the long one. Sections that all land between 250 and 350 words are the default output shape of a language model.
+- **One digression.** Leave in one passage that does not fully serve the thesis. Zero waste is a machine signal. It has to be real; a manufactured tangent is worse than the tight version.
+- **One unverifiable thing.** Every non-fiction piece needs a specific detail nobody can look up: a conversation, a room, a thing somebody said. **Never invent one.** If the draft has none, say so and ask.
+- **Clumpy rhythm.** Runs of three long sentences, then a fragment, then two more long ones. Short-long-short-long is regular variation and still reads as generated.
+
+Full treatment with examples lives in the `/writing` skill under "Failure modes that cross every register" and "Shape".
+
 ## Project-specific overrides
 
 - The `/writing` skill at `~/.claude/skills/writing/SKILL.md` is the authoritative voice guide. Loaded on demand when invoked or when Claude detects a writing task.

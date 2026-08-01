@@ -10,7 +10,7 @@ This is the authoritative source for voice, tone, banned phrases, and writing ru
 
 ## Failure modes that cross every register
 
-These four show up in fiction, in essays, in docs, and in product copy. They are the moves that survive a banned-words check and still make prose read as machine-written, because each one is the writer stepping in front of the work to manage the reader. Every one of them is a form of not trusting the material.
+These five show up in fiction, in essays, in docs, and in product copy. They are the moves that survive a banned-words check and still make prose read as machine-written, because each one is the writer stepping in front of the work to manage the reader. Every one of them is a form of not trusting the material.
 
 Read this section before drafting anything. Run it again on the finished draft.
 
@@ -65,6 +65,71 @@ Defining a thing by what it is not, then supplying what it is. The FATAL list ba
 The fiction version is the most seductive, because the rhythm sounds like restraint and reads like profundity. It is neither. It is the narrator announcing that a distinction matters instead of dramatizing one.
 
 Write the positive statement and stop. "Fear moved through her, and stayed."
+
+### 5. The paragraph closer
+
+Ending a paragraph on a sentence that restates, evaluates, or lands the paragraph. This is the most common of the five and the hardest to see, because the closing line always feels like the best sentence in the paragraph. It usually is. That is the problem: it is the only sentence doing no work.
+
+The other four failure modes are the writer managing the reader. This one is the writer unable to leave an idea unresolved. A model cannot walk away from a paragraph. People do it constantly, because they are already thinking about the next thing.
+
+- BAD: "...the model got more accurate after they removed the variable, which is the data's way of saying the file is noise."
+- GOOD: "...the model got more accurate after they removed the variable."
+- BAD: "A blog post is easy to fake. A changelog is hard to fake. It's the receipt."
+- GOOD: "A blog post is easy to fake. A changelog is hard to fake."
+- BAD: "The migration path sits next to the announcement. That's a kindness, and kindness retains users."
+- GOOD: "The migration path sits next to the announcement."
+
+The test: delete the last sentence of the paragraph. If no information is lost, it was a closer. Leave it deleted.
+
+If the closer is the only good line in the paragraph, the closer *is* the paragraph. Cut the setup instead and let it stand alone.
+
+Watch for the stacked version, where two or three closers pile up because none of them felt sufficient: "That's what the commons looks like when it gets polluted. Maintainers stop trusting the channel and start raising the cost of entry." Both go.
+
+## Shape
+
+The five failure modes above are sentence-level. Shape is the level above that, and it is the level most editing never reaches. A piece can contain zero banned words and zero closers and still read as generated, because every paragraph is the same length, every section does the same job, and nothing is out of place.
+
+Machine prose is even. Human prose is lopsided, because the writer cared unevenly and it shows.
+
+### Asymmetry
+
+Use ratios, not fixed word counts, so the rule survives across a 900-word post and a 5,000-word essay:
+
+1. The longest section runs at least **three times** the shortest section.
+2. The longest paragraph runs at least **five times** the shortest, and clears 150 words.
+3. At least two single-sentence paragraphs.
+
+Do not satisfy these by padding the long one. Satisfy them by cutting the short one down to the single thing it needs to say, and by letting the section you actually care about run.
+
+A draft where every section lands between 250 and 350 words is the default output shape of a language model. If you measure a draft and find that pattern, the draft needs restructuring, not editing.
+
+### One digression
+
+Leave in one passage per piece that does not fully serve the thesis. A story that half-lands. An aside about something adjacent. A grudge in a parenthetical.
+
+This will feel like bad writing, and every editing instinct will say cut it. Zero waste is the strongest machine signal there is. Real people write around a subject before they land on it, and the residue of that is what makes prose read as thought rather than as output.
+
+The digression has to be real. Manufacturing a fake tangent produces something worse than the tight version, because now the prose is both padded and inauthentic.
+
+### One unverifiable thing
+
+Every non-fiction piece needs at least one specific detail that cannot be looked up. A conversation, a room, a thing somebody said, a mistake made in a particular quarter.
+
+"Stripe's changelog is the model here" is verifiable in ten seconds and does nothing for authorship. "A founder I worked with refused to build solution pages" cannot be checked by anyone, which is exactly why it reads as human.
+
+**Never invent one.** If the draft has none, say so and ask the author for it. A fabricated anecdote in a piece that trades on the author's judgment is a worse outcome than a piece with no anecdote.
+
+### Rhythm
+
+Sentence length should be clumpy, not alternating. Short-long-short-long is varied on paper and still reads as generated, because the variation is regular. Real rhythm arrives in runs: three long sentences in a row, then a fragment, then two more long ones.
+
+The same applies to structural devices. If every section opens with a scene and closes with a takeaway, the regularity is the tell, no matter how good each individual scene and takeaway is.
+
+### Transitional imperatives
+
+"Sit with what that means." "Now put yourself in their chair." "Read that next to the earlier finding." These are how a model changes subject. People just change subject.
+
+Cut the instruction and start the next paragraph with its own first sentence.
 
 ## Fiction voice
 
