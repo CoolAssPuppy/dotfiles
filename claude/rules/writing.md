@@ -20,7 +20,9 @@
 
 ## Critical bans (always enforced)
 
-**No humor from the assistant.** Do not write jokes, wry asides, or knowing winks in any non-fiction register. Humor belongs to the byline and the human adds it in their edit pass. Write the flat version. (Fiction is exempt, as is preserving humor already in a draft you are editing.)
+**No humor from the assistant.** Do not write jokes, wry asides, or knowing winks in any non-fiction register. Humor belongs to the byline and the human adds it in their edit pass. Write the flat version. (Fiction is exempt.) This is a rule about generating, never about deleting: a joke already in his draft stays. Flag it in the notes if you think it is dated, and leave the line alone.
+
+**What an edit pass must not remove.** Cutting rhetoric is the job. Cutting his position, his reader, or his voice is damage done while obeying every other rule here. Keep the actor when you cut a claim ("you focused on improving your dashboard" beats "roadmap time usually goes to the dashboard"). Keep the stance: a loaded word carrying an argument is not editorializing, and replacing an argument with a request for data produces a survey. Full treatment in the `/writing` skill under "What the edit pass must not remove".
 
 **FATAL constructions (always rewrite):**
 - "This isn't X. This is Y."
@@ -42,6 +44,12 @@
 **Paragraph closers (always cut).** A paragraph may not end on a sentence that restates, evaluates, or lands the paragraph. Delete the last sentence and check whether any information was lost. If nothing was lost, it was a closer, and it stays deleted. This is the most frequent tell and the hardest to see, because the closing line always feels like the best sentence in the paragraph. It is the only one doing no work. E.g. "It's the receipt." "That's a kindness, and kindness retains users." "...which is the data's way of saying the file is noise."
 
 **Transitional imperatives (always cut).** "Sit with what that means." "Now put yourself in their chair." "Read that next to the earlier finding." Cut the instruction. Start the next paragraph with its own first sentence.
+
+## Persuasive copy is its own register
+
+Conference and CFP abstracts, session titles, event descriptions, landing page hero copy, webinar blurbs, subject lines. Copy that has to get somebody to show up has no captive reader, so it earns one by taking a side. The docs rules and the technical-post rules strip that side out, and applying them here is the most common way to wreck this register.
+
+Take a position the reader could argue with. Stay in second person and active throughout. Questions are fine, and are usually right for a panel or roundtable. One stakes claim is allowed. Loaded verbs are allowed when the load is the argument. End on the invitation in the host's voice. Banned words still apply, and so does the ban on invented statistics. Full treatment in the `/writing` skill under "Persuasive copy".
 
 ## Shape (applies to any piece longer than a few paragraphs)
 

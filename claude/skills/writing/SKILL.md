@@ -85,6 +85,30 @@ If the closer is the only good line in the paragraph, the closer *is* the paragr
 
 Watch for the stacked version, where two or three closers pile up because none of them felt sufficient: "That's what the commons looks like when it gets polluted. Maintainers stop trusting the channel and start raising the cost of entry." Both go.
 
+## What the edit pass must not remove
+
+The five failure modes above describe bad drafting. This section describes bad editing, which is the more expensive mistake, because the draft was working before you touched it.
+
+An edit pass that removes rhetoric is doing its job. An edit pass that removes the author's position, his reader, or his voice is doing damage while obeying every other rule in this file. Four things survive every cut.
+
+**Agency.** When you cut a claim, keep the actor. The most common repair error is converting a second-person sentence into an impersonal one, because the impersonal version sounds more defensible.
+
+- BAD (assistant's edit): "Roadmap time usually goes to the dashboard."
+- GOOD (author's original): "In the before times, you focused on improving your dashboard."
+
+Both carry the same fact. Only one has a person in it. Direct address is already a rule in the non-fiction voice, and it is the first casualty of a de-editorializing pass.
+
+**Stance.** Persuasive writing has to assert something the reader can disagree with. Replacing an argument with a request for information produces a survey.
+
+- BAD (assistant's edit): "What share of your traffic is agents? Bring a number if you have one."
+- GOOD (author's original): "What share of energy should you devote to appeasing agents?"
+
+"Appeasing" is loaded and the load is the argument. A loaded word carrying a position is fine. Editorializing is a loaded word carrying nothing, bolted onto a fact that was already complete.
+
+**The author's jokes.** "In the before times" is a joke. It is his byline, so it is his call. The no-humor rule governs what an assistant writes, never what an assistant deletes. If a joke reads as dated or off-register, say so in the notes and leave it in the draft.
+
+**Stakes, in copy that has to recruit somebody.** "It's the existential product question of our time" is pre-labeled importance in a technical post and it is the pitch in a conference abstract. Check the register before applying a ban that was written for a different one.
+
 ## Shape
 
 The five failure modes above are sentence-level. Shape is the level above that, and it is the level most editing never reaches. A piece can contain zero banned words and zero closers and still read as generated, because every paragraph is the same length, every section does the same job, and nothing is out of place.
@@ -220,6 +244,8 @@ Derived from analysis of Picks and Shovels and blog work.
 
 If you are an LLM drafting or revising on the author's behalf, **do not write humor**. No jokes, no wry asides, no knowing winks, no parentheticals played for a smile, no cute substitutions for a plain word. This holds in every non-fiction register, including the casual personal one.
 
+**This is a rule about generating, never about deleting.** A joke already in the author's draft stays in the author's draft. It carries his byline and it is his to keep or kill. If it reads as dated, off-register, or likely to age badly, say so in the notes and leave the line alone. Cutting his humor while citing this rule inverts it.
+
 Humor is the byline's to add. The author will put it in during his edit pass, and he is good at it. Every LLM attempt comes out as writerly cleverness rather than a person being funny, and the difference is obvious to a reader:
 
 - His, kept: "There is no inbox in the app because I need another inbox like I need a new hole in my head." Blunt, first person, colloquial, carries no image.
@@ -283,7 +309,7 @@ These are never acceptable. Their presence means the text needs rewriting.
 - "the kind of person who" ("she was the kind of person who...")
 - "There are three things, and two of them are..." (inline contradictory lists)
 - **Fragment-as-verdict** (non-fiction only). State a problem, then drop a two- or three-word fragment as the punchline. "That's cosmetic theater." "No UI clicking." "Half-shipped." "Inconsistent." Rewrite as a complete sentence with subject and verb. "The warning is cosmetic, not protective." "Every Notion change went through a tool call instead of the UI."
-- **Pre-labeled importance**. "The biggest single failure." "The most critical issue." "The number one thing." "The single most important X." Do not announce that what follows is the biggest or most important. Let the content earn its weight. If it does not earn the weight, the label is a lie.
+- **Pre-labeled importance**. "The biggest single failure." "The most critical issue." "The number one thing." "The single most important X." Do not announce that what follows is the biggest or most important. Let the content earn its weight. If it does not earn the weight, the label is a lie. Scoped exception: persuasive copy gets one stakes claim, since attendance is the thing it has to earn. See "Persuasive copy".
 
 ### Banned openers
 
@@ -480,6 +506,7 @@ The Humor column describes the *author's* finished voice. An assistant drafting 
 | Personal blog | Relaxed, opinionated | 6th grade | More frequent, personal | Less hedging, more conviction | Moderate | Disallowed in prose; allowed inside quoted thought |
 | Fiction | Elite craft, accessible | N/A | Character-driven | N/A | Woven into character action | Allowed for beat and tension |
 | Marketing course | Direct instruction | 6th grade | Occasional, self-deprecating | Nuanced but confident | Moderate with frameworks | Disallowed in prose; allowed in lists |
+| Persuasive copy (abstracts, titles, landing pages) | Opinionated host recruiting a room | 6th grade | Author's, kept | Take a side | Only enough to prove the problem is real | Disallowed in prose; allowed in titles |
 
 ### Product docs and in-app copy
 
@@ -492,6 +519,20 @@ The rules that make a good post make a bad manual. A post earns the right to exp
 - **One to two sentences per paragraph.** Expect to cut 50 to 90 percent of a first draft.
 - **Never hedge an operational commitment.** If the team has a policy, state it: "We aim to resolve all expense reimbursements within a few days." If you do not know the policy, ask. Writing a careful hedge around a fact you failed to ask for is worse than inventing one, because it hides the gap instead of exposing it.
 - **End on the action**, an address to email or a link to click, not a homily about the value of good documentation.
+
+### Persuasive copy
+
+Copy whose job is to get somebody to show up, click, or sign up. Conference and CFP abstracts, session and talk titles, event descriptions, landing page hero copy, webinar blurbs, email subject lines.
+
+Docs speak to a reader who is already mid-task. A technical post reports a result to a reader who already opened it. Persuasive copy has no captive reader at all, so it has to earn one with a position. The docs rules and the technical-post rules both strip that position out, and applying them here is the most common way to ruin this register.
+
+- **Take a side.** The copy asserts something a reader could argue with. Asking the audience what they think, or asking them to bring their data, is a survey, and nobody clears their calendar for a survey.
+- **Second person, active, all the way through.** "You focused on improving your dashboard." "Who do you optimize for?" "What should you defund?" The reader is in every sentence.
+- **Questions are allowed and often correct**, particularly for a panel or roundtable, where the thing being advertised is a conversation. The blog rule against question-form headings does not apply.
+- **One stakes claim is allowed.** "It's the existential product question of our time" earns attendance. Keep it to one, and only where the author will defend it in the room.
+- **Loaded verbs are allowed when the load is the argument.** "Appeasing agents" tells the reader where the host stands, which is the job.
+- **End on the invitation, in the host's voice.** "Let's chat about what you're going to do about it." A clipped imperative reads as a form field.
+- **Everything on the banned words list still applies.** No "unlock", no "reimagine", no tricolons for cadence, no invented statistics in the title.
 
 ## Formatting rules
 

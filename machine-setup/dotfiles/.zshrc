@@ -178,15 +178,6 @@ else
 fi
 unset _zcompdump _zcompdump_mtime
 
-# Google Cloud SDK
-_gcloud_sdk="$HOME/Developer/brain/google-cloud-sdk"
-[ -f "$_gcloud_sdk/path.zsh.inc" ] && . "$_gcloud_sdk/path.zsh.inc"
-[ -f "$_gcloud_sdk/completion.zsh.inc" ] && . "$_gcloud_sdk/completion.zsh.inc"
-unset _gcloud_sdk
-
-# OpenClaw completion
-[ -f "$HOME/.openclaw/completions/openclaw.zsh" ] && source "$HOME/.openclaw/completions/openclaw.zsh"
-
 # Ghostty: change background color based on working directory
 if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
   _ghostty_update_bg() {
@@ -205,8 +196,8 @@ if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
   _ghostty_update_bg
 fi
 
-# Machine-specific config, not tracked in dotfiles
-for f in ~/.zshrc.d/*.zsh(N); do [ -r "$f" ] && . "$f"; done
+# Load private machine-specific configuration
+[[ -r ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # command prompt for remote server connections
 if [[ -n "${SSH_CONNECTION:-}" ]]; then

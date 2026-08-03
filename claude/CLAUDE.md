@@ -22,6 +22,38 @@ instead. Those have a voice; terseness is not it.
 Exceptions to the terse default are the ones the skill lists: an explicit
 "explain this", destructive actions, a debug spiral, and real ambiguity.
 
+## Plain English, always
+
+Direct, straightforward answers. Say what the thing is. Do not reach for a word
+that describes how something reads, sounds, or functions when a plain word for
+the thing itself exists.
+
+**Banned in anything I write.** Not just chat. Also every file, doc, report,
+agent prompt, and rule I author:
+
+register, load-bearing, lands / landing (figurative), seams, beat (as a craft
+term), circuit (figurative), engine (figurative), spine (figurative), surface
+(as a verb), texture, in service of, does the work / doing the work, muscle
+(figurative), through-line, arc (as a verb), sits on top of, holds / holding
+(figurative), earns / earned (figurative), carries (figurative).
+
+Plus the full banned list in @rules/writing.md, which already includes
+load-bearing and which I have broken. Read that list rather than trusting
+memory.
+
+**His files may use any of these. Mine may not.** His bible, his notes, and his
+drafts have their own vocabulary and it is not mine to strip. Quoting his word
+back to him is fine. Naming a section he titled is fine. Adopting the vocabulary
+into my own sentences is not.
+
+**The test.** If the sentence explains how a thing reads instead of saying what
+it is, rewrite it. "Isabella's jokes are what she does instead of hitting
+someone" is the note. "The charm is the leash" is me admiring my own phrasing.
+
+This is a repeat correction. It has been given before and written down before.
+If a message is about to use one of these words, stop and write the plain
+sentence instead.
+
 ## General content generation rules
 
 - Never use emoji or emdashes.
