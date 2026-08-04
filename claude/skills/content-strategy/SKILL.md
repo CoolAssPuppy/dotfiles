@@ -1,29 +1,34 @@
 ---
 user-invocable: true
 name: content-strategy
-description: Creates content marketing strategies for technical products. Covers content types, inside-out vs outside-in approaches, content funnel alignment, distribution, SEO, quality standards, and the Help First philosophy. Use when planning content calendars, creating editorial strategies, scaling content production, or building content programs for technical audiences.
+description: Creates content marketing strategies for technical products. Covers content pillars, editorial calendars, content briefs, inside-out vs outside-in approaches, funnel alignment, distribution, SEO, quality standards, metrics, and the Help First philosophy. Use when planning content calendars, creating editorial strategies, scaling content production, or building content programs for technical audiences.
 metadata:
   author: prashant-sridharan
-  version: "1.0"
+  version: "3.0"
   source: "Picks and Shovels by Prashant Sridharan"
 ---
 
 # Content strategy
 
-This skill helps create content marketing strategies for technical products based on the methodology from "Picks and Shovels."
+Create content marketing strategies for technical products. A strategy must connect content to business objectives while genuinely serving the developer audience. Content that only serves the company fails.
 
 ## Core principle: Help First
 
 Content marketing for technical audiences starts from a place of genuine helpfulness. Technical buyers hate overt marketing but love learning. If you build a reputation for producing excellent technical content, they will seek you out.
 
-> Help First means leading with value, not with a sales pitch.
+Help First means leading with value, not with a sales pitch.
 
----
-user-invocable: true
+## Voice and style
+
+Apply the voice rules in the `writing` skill.
+
+- Write at a 5th grade reading level. Short sentences. Easy to understand by everyone, including people new to the English language.
+- Be specific about topics, not vague themes.
+- Every piece of content must have a clear purpose.
 
 ## Inside-out vs outside-in content
 
-Understanding this distinction is crucial:
+Understanding this distinction is crucial.
 
 ### Inside-out content
 
@@ -34,77 +39,135 @@ Content about you and your products:
 - Documentation
 - Feature deep dives
 
-**Audience:** Existing users and active evaluators
-**Purpose:** Conversion and retention
-**Reach:** Narrow (people already interested)
+Audience: existing users and active evaluators.
+Purpose: conversion and retention.
+Reach: narrow, people already interested.
 
 ### Outside-in content
 
 Content that addresses audience interests broadly:
 - Industry trends and analysis
-- Problem-solving guides (not product-specific)
+- Problem-solving guides that are not product-specific
 - Technology comparisons
 - Best practices and patterns
 - Historical context on technical topics
 
-**Audience:** Broad community
-**Purpose:** Awareness and trust-building
-**Reach:** Wide (anyone interested in the topic)
+Audience: broad community.
+Purpose: awareness and trust-building.
+Reach: wide, anyone interested in the topic.
 
 ### Balance recommendation
 
 For content marketing focused on growth:
-- 70% outside-in content (attract new audience)
-- 30% inside-out content (convert interested prospects)
-
----
-user-invocable: true
+- 70% outside-in content to attract a new audience
+- 30% inside-out content to convert interested prospects
 
 ## Content and the buyer funnel
-
-Different content serves different stages:
 
 ### Upper funnel (awareness)
 
 Buyers conducting broad research. Low purchase intent.
 
-**Content types:**
-- Thought leadership posts
-- Industry analysis
-- Trend explainers
-- Foundational tutorials
-- Conference talks
+Content types: thought leadership posts, industry analysis, trend explainers, foundational tutorials, conference talks.
 
-**Goal:** Earn attention and credibility
+Goal: earn attention and credibility.
 
 ### Middle funnel (consideration)
 
 Buyers with a specific problem researching solutions.
 
-**Content types:**
-- Problem/solution posts
-- Comparison guides
-- Architecture patterns
-- Case studies
-- Benchmarks
+Content types: problem and solution posts, comparison guides, architecture patterns, case studies, benchmarks.
 
-**Goal:** Position your product as a solution
+Goal: position your product as a solution.
 
 ### Lower funnel (decision)
 
 Buyers ready to evaluate and choose.
 
-**Content types:**
-- Product tutorials
-- Getting started guides
-- Documentation
-- Demo videos
-- Integration guides
+Content types: product tutorials, getting started guides, documentation, demo videos, integration guides.
 
-**Goal:** Remove friction to adoption
+Goal: remove friction to adoption.
 
----
-user-invocable: true
+## Strategy structure
+
+Produce the strategy in these three parts.
+
+### 1. Content pillars
+
+Define 3 to 5 content pillars. Each pillar is a thematic area that:
+- Aligns with your product positioning
+- Addresses real developer needs
+- You can credibly own
+
+For each pillar, define:
+
+**Pillar name:** [Clear, descriptive name]
+
+**Purpose:** Why this pillar matters to your audience and business.
+
+**Target keywords:** 5 to 10 keywords you want to rank for in this area.
+
+**Content types:** What formats work for this pillar (tutorials, guides, comparisons, thought leadership, case studies).
+
+**Publishing cadence:** How often you will publish in this pillar.
+
+**Owner:** Who is responsible for this pillar.
+
+### 2. Editorial calendar
+
+Create a 12-week calendar with this structure:
+
+| Week | Pillar | Content type | Title | Target keyword | Author | Status |
+|------|--------|--------------|-------|----------------|--------|--------|
+| 1 | | | | | | |
+| 2 | | | | | | |
+| ... | | | | | | |
+
+Distribution across pillars should be roughly even unless business priorities dictate otherwise.
+
+Also plan coverage across these dimensions:
+- By funnel stage: awareness, consideration, decision
+- By content type: blog posts, tutorials, videos, case studies
+- By audience segment: different buyer personas and use cases
+- By product area: balance across your portfolio
+
+For each week, track the content piece and type, target keyword or topic, owner and status, distribution channels, and success metric.
+
+### 3. Content brief template
+
+For each piece of content, create a brief:
+
+**Metadata:**
+- Author:
+- Due date:
+- Target length:
+- Content type:
+
+**Audience and objective:**
+- Target audience:
+- Primary objective (what should the reader do after reading?):
+
+**Keywords:**
+- Primary keyword:
+- Secondary keywords:
+
+**Outline:**
+- H1: [Title]
+  - H2: [Section]
+    - Key points to cover
+  - H2: [Section]
+    - Key points to cover
+
+**Internal linking:**
+- Link to: [Relevant existing content]
+- Link from: [Content that should link to this]
+
+**Call to action:**
+- Primary CTA:
+- Secondary CTA:
+
+**References:**
+- [Sources to cite or consult]
 
 ## Content types that work
 
@@ -121,16 +184,14 @@ Complete, searchable, accurate. Often your most important content.
 For technical products, often the most visited content.
 
 ### 5. Case studies
-Real companies, real problems, real solutions.
-
-**Two types:**
-- **A Side:** Polished, visual case study for website
-- **B Side:** Technical Q&A with the implementation lead
+Real companies, real problems, real solutions. Two types:
+- A Side: polished, visual case study for the website
+- B Side: technical question and answer with the implementation lead
 
 ### 6. Technical blog posts
 Deep dives demonstrating expertise.
 
-**Best practices:**
+Best practices:
 - Write for readers, not search engines
 - Provide unique perspective or insight
 - Include working code examples
@@ -140,94 +201,46 @@ Deep dives demonstrating expertise.
 ### 7. Benchmarks and comparisons
 Technical buyers love data. Be honest.
 
-**Best practices:**
-- Show where you win AND where competitors win
+Best practices:
+- Show where you win and where competitors win
 - Provide full methodology
 - Use realistic workloads
 - Update when conditions change
 
-**Key principle:** Truth builds trust.
+Truth builds trust.
 
 ### 8. Video content
 More engaging than text for many topics.
 
-**Best practices:**
-- Talent on screen (picture-in-picture)
+Best practices:
+- Talent on screen, picture-in-picture
 - Invest in production quality
 - Experiment with thumbnails and descriptions
 
 ### 9. Templates and starter kits
-Pre-built solutions users can customize.
-
-**Benefits:**
-- Natural SEO advantages
-- Community contributions
-- Vertical-specific targeting
-- Low-friction adoption
+Pre-built solutions users can customize. Natural SEO advantages, community contributions, vertical-specific targeting, low-friction adoption.
 
 ### 10. Original research
-Content AI cannot replicate.
-
-**Types:**
-- Anonymized usage pattern analysis
-- State-of-industry reports
-- Benchmark standards
-- Survey results
+Content that cannot be generated from what already exists: anonymized usage pattern analysis, state-of-industry reports, benchmark standards, survey results.
 
 ### 11. Courses
-Educational content that builds expertise.
-
-**Benefits:**
-- Natural SEO advantages
-- Email capture opportunity
-- Demonstrates expertise
-- Builds product familiarity
-
----
-user-invocable: true
+Educational content that builds expertise. Natural SEO advantages, email capture, demonstrates expertise, builds product familiarity.
 
 ## Content mix by type
 
-Define your portfolio with percentages:
+Define your portfolio with percentages.
 
-**Documentation (X%):**
-- Getting started guide requirements
-- API reference standards
-- Tutorial depth and format
-- Update frequency
+**Documentation (X%):** getting started guide requirements, API reference standards, tutorial depth and format, update frequency.
 
-**Technical blog posts (X%):**
-- Ideal length and depth
-- Code example requirements
-- Author voice (company vs individual)
-- Publication frequency
+**Technical blog posts (X%):** ideal length and depth, code example requirements, author voice (company or individual), publication frequency.
 
-**Tutorials and guides (X%):**
-- Step-by-step format
-- Prerequisite handling
-- Code repository requirements
-- Video companion strategy
+**Tutorials and guides (X%):** step-by-step format, prerequisite handling, code repository requirements, video companion strategy.
 
-**Case studies (X%):**
-- Customer story format
-- Technical depth required
-- Metrics to include
-- Approval process considerations
+**Case studies (X%):** customer story format, technical depth required, metrics to include, approval process considerations.
 
-**Video content (X%):**
-- Demo format and length
-- Tutorial series structure
-- Conference talk repurposing
-- Platform strategy (YouTube, embedded, both)
+**Video content (X%):** demo format and length, tutorial series structure, conference talk repurposing, platform strategy.
 
-**Sample code and templates (X%):**
-- Repository structure
-- Maintenance commitment
-- Technology coverage
-- Starter template strategy
-
----
-user-invocable: true
+**Sample code and templates (X%):** repository structure, maintenance commitment, technology coverage, starter template strategy.
 
 ## Distribution strategy
 
@@ -235,73 +248,35 @@ Creating content is half the battle. Distribution matters.
 
 ### Owned channels
 
-**Company blog:**
-- Publishing frequency
-- SEO optimization approach
-- Internal linking strategy
-- Email integration
+**Company blog:** publishing frequency, SEO approach, internal linking strategy, email integration.
 
-**Documentation site:**
-- Search optimization
-- Cross-linking to blog
-- Feedback mechanisms
+**Documentation site:** search optimization, cross-linking to blog, feedback mechanisms.
 
-**YouTube channel:**
-- Channel positioning
-- Playlist structure
-- Thumbnail and title conventions
-- Description template with links
+**YouTube channel:** channel positioning, playlist structure, thumbnail and title conventions, description template with links.
 
-**Email newsletter:**
-- Your own list strategy
-- Segmentation approach
-- Content repurposing
+**Email newsletter:** list strategy, segmentation approach, content repurposing.
 
 ### Social channels
 
-**Twitter/X:**
-- Content thread strategy
-- Code snippet formatting
-- Engagement tactics
-- Posting schedule
+**Twitter:** content thread strategy, code snippet formatting, engagement tactics, posting schedule.
 
-**LinkedIn:**
-- B2B and enterprise focus
-- Thought leadership positioning
-- Employee advocacy
+**LinkedIn:** B2B and enterprise focus, thought leadership positioning, employee advocacy.
 
-**Reddit:**
-- Subreddit identification
-- Participation guidelines (value first, never spam)
-- What to share and what to avoid
+**Reddit:** subreddit identification, participation guidelines (value first, never spam), what to share and what to avoid.
 
-**Discord/Slack communities:**
-- Direct engagement
-- Support integration
-- Community content
+**Discord and Slack communities:** direct engagement, support integration, community content.
 
 ### Earned channels
 
-**Developer platforms (Dev.to, Hashnode):**
-- Syndication vs original content
-- Community engagement approach
-- Author profile strategy
+**Developer platforms:** syndication versus original content, community engagement, author profile strategy.
 
-**Hacker News:**
-- Technical substance required
-- Community expectations
+**Hacker News:** technical substance required, community expectations.
 
-**Third-party newsletters:**
-- Guest features
-- Sponsored placements
+**Third-party newsletters:** guest features, sponsored placements.
 
-**Podcasts:**
-- Guest appearances
-- Relationship building
+**Podcasts:** guest appearances, relationship building.
 
-**Conference talks:**
-- CFP submissions
-- Talk repurposing
+**Conference talks:** CFP submissions, talk repurposing.
 
 ### Paid channels
 
@@ -310,9 +285,6 @@ Creating content is half the battle. Distribution matters.
 - Content syndication
 - Event sponsorships
 
----
-user-invocable: true
-
 ## SEO strategy
 
 ### Core principles
@@ -320,20 +292,20 @@ user-invocable: true
 - Write for readers first, search engines second
 - Unique perspective beats keyword optimization
 - Technical depth signals expertise
-- Internal linking improves discoverability
+- Internal linking improves how easily content is found
 
 ### Keyword strategy by funnel
 
-**High-intent keywords (bottom of funnel):**
+High-intent keywords (bottom of funnel):
 - "[Product] vs [Competitor]"
 - "[Product] tutorial"
 - "[Product] pricing"
 
-**Problem-aware keywords (middle of funnel):**
+Problem-aware keywords (middle of funnel):
 - "How to [solve problem your product solves]"
 - "[Technology] best practices"
 
-**Unaware keywords (top of funnel):**
+Unaware keywords (top of funnel):
 - "[Broader topic] guide"
 - "[Industry trend] explained"
 
@@ -351,91 +323,63 @@ user-invocable: true
 - Schema markup for code samples
 - XML sitemap
 
----
-user-invocable: true
-
-## Content calendar framework
-
-Plan content across these dimensions:
-
-### By funnel stage
-Ensure coverage across awareness, consideration, decision.
-
-### By content type
-Mix blog posts, tutorials, videos, case studies.
-
-### By audience segment
-Cover different buyer personas and use cases.
-
-### By product area
-Balance coverage across your product portfolio.
-
-### 12-week calendar template
-
-For each week, track:
-- Content piece title and type
-- Target keyword or topic
-- Owner and status
-- Distribution channels
-- Success metric
-
-### Frequency recommendations
+## Frequency recommendations
 
 Based on team size:
-- **Solo/small team:** 1-2 quality posts per week
-- **Medium team:** 2-4 posts per week
-- **Dedicated team:** Daily or near-daily
+- Solo or small team: 1 to 2 quality posts per week
+- Medium team: 2 to 4 posts per week
+- Dedicated team: daily or near-daily
 
-**Quality over quantity.** One excellent post beats five mediocre ones.
-
----
-user-invocable: true
+Quality over quantity. One excellent post beats five mediocre ones.
 
 ## Quality standards
 
 Every piece of content must:
 - Include working code that runs without modification
-- Explain the "why" not just the "how"
-- Acknowledge tradeoffs and limitations honestly
+- Explain the why, not just the how
+- Acknowledge trade-offs and limitations honestly
 - Link to related content and next steps
 - Include clear feedback mechanisms
 - Be technically reviewed before publication
 
-### Content review checklist
+### Review checklist
 
 - [ ] Code tested and working
-- [ ] Technical accuracy verified by expert
+- [ ] Technical accuracy verified by an expert
 - [ ] SEO basics covered (title, meta, headers)
 - [ ] Links functional
-- [ ] Clear call-to-action
+- [ ] Clear call to action
 - [ ] Accessible (alt text, readable formatting)
-
----
-user-invocable: true
+- [ ] Does it help readers solve a real problem?
+- [ ] Is the perspective unique or valuable?
+- [ ] Does it respect the reader's time?
+- [ ] Is the CTA relevant and unobtrusive?
+- [ ] Is it internally linked to related content?
+- [ ] Is it optimized for search without being spammy?
 
 ## Success metrics
 
-### Traffic metrics
+### Traffic
 
 - Organic search traffic by content type
 - Referral traffic by source
 - Documentation page views
 
-### Engagement metrics
+### Engagement
 
 - Time on page by content type
 - Scroll depth
 - Code copy events
 - Video watch time
-- GitHub repo clones
+- Repository clones
 
-### Conversion metrics
+### Conversion
 
 - Signups attributed to content
 - Documentation to signup rate
 - Content-assisted activations
 
-### Quality metrics
+### Quality
 
 - Return visitor rate
 - Content feedback scores
@@ -443,40 +387,34 @@ user-invocable: true
 
 ### Attribution
 
-Track lead source through the entire journey:
-- First touch (how they found you)
-- Last touch (what converted them)
-- Multi-touch (full journey)
+Track lead source through the entire journey: first touch, last touch, and the full multi-touch path.
 
----
-user-invocable: true
+## What not to do
 
-## Content quality checklist
+Voice and banned-language rules live in the `writing` skill. Skill-specific rules:
 
-Before publishing:
+- Do not create pillars that are too broad. "Developer productivity" means nothing.
+- Do not plan content without clear objectives
+- Do not skip keyword research
+- Do not create content calendars you cannot sustain
+- Do not use marketing jargon. "Thought leadership" as a pillar is lazy.
+- Do not use "comprehensive guide to" in every title
+- Do not lead with the product. Start with the problem.
+- Do not publish thin content with no unique value or insight
+- Do not leave outdated code examples in place
+- Do not stuff keywords
+- Do not ignore existing content. Update and repurpose it.
+- Do not publish without a distribution plan
+- Do not publish sporadically. Inconsistency undermines trust.
 
-- [ ] Does it help readers solve a real problem?
-- [ ] Is the technical content accurate?
-- [ ] Are code examples tested and working?
-- [ ] Is the perspective unique or valuable?
-- [ ] Does it respect the reader's time?
-- [ ] Is the CTA relevant and non-intrusive?
-- [ ] Has it been reviewed by a technical expert?
-- [ ] Is it internally linked to related content?
-- [ ] Is it optimized for search without being spammy?
+Apply the Help First principle throughout. Every piece should solve a real problem, even if the reader never becomes a customer.
 
----
-user-invocable: true
+## Inputs needed
 
-## Common content mistakes
-
-1. **Leading with product:** Start with the problem, not your solution
-2. **Thin content:** No unique value or insight
-3. **Outdated examples:** Code that no longer works
-4. **Keyword stuffing:** Obvious SEO manipulation
-5. **Ignoring existing content:** Not updating or repurposing
-6. **No distribution plan:** Great content nobody sees
-7. **Inconsistent publishing:** Sporadic posts undermine trust
-8. **Wrong voice:** Too corporate, too casual, or inconsistent
-
-Apply the "Help First" principle throughout: every piece should solve a real problem, even if the reader never becomes a customer.
+Provide the following:
+- Company or product positioning, or a link to the positioning framework
+- Target audience, primary and secondary
+- Business objectives for the quarter or year
+- Existing content inventory
+- Team capacity, meaning how much you can realistically produce
+- What competitors are publishing

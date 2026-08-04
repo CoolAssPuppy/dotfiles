@@ -10,11 +10,15 @@ TIMESTAMP="$(date +%Y%m%d-%H%M%S)"
 BACKUP_DIR="$TARGET_DIR/backups/pre-symlink-$TIMESTAMP"
 BACKED_UP=false
 
+# "skills" is deliberately absent. Linking the whole directory would make
+# ~/.claude/skills an alias for this repo, leaving no room for the skills that
+# live in ~/Developer/brain/.claude/skills and no way to publish either set to
+# Codex. scripts/sync-agent-skills.sh links skills individually instead, and
+# runs at the end of this script.
 ITEMS=(
   "CLAUDE.md"
   "agents"
   "commands"
-  "skills"
   "docs"
   "rules"
 )
@@ -80,3 +84,14 @@ fi
 
 echo ""
 echo "All symlinks verified."
+
+SYNC_SKILLS="$SCRIPT_DIR/../scripts/sync-agent-skills.sh"
+if [ -x "$SYNC_SKILLS" ]; then
+  echo ""
+  # A nonzero exit means unresolved duplicates or target collisions, which are
+  # reported in full. Neither should stop the rest of the setup.
+  "$SYNC_SKILLS" || echo "Skill sync finished with items needing a decision. See above."
+else
+  echo ""
+  echo "SKIP skills (scripts/sync-agent-skills.sh not found or not executable)"
+fi
