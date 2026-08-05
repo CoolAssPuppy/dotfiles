@@ -172,10 +172,17 @@ target.
    those files by relative path.
 4. Run the validator, then the installer's dry run, then the installer.
 
-To add one from a public repository instead, use
-`npx skills add <source> -g -a codex`, then run the installer. Pass `-a codex`
-or the CLI picks agents by what it finds installed, and one that cannot do a
-global install fails the whole command. It picks up the new directory in `~/.agents/skills` and
+To add one from a public repository instead:
+
+```bash
+npx skills add <source> -g -a codex -s <skill> -y
+```
+
+then run the installer. Two flags matter. `-a codex` or the CLI picks agents by
+what it finds installed, and one that cannot do a global install fails the whole
+command. `-s` takes a single skill, so repeat the flag rather than passing a
+comma-separated list: `-s a -s b`, never `-s a,b`. The full set of CLI
+surprises is in `brain/scripts/skills-provenance/README.md`. It picks up the new directory in `~/.agents/skills` and
 links it everywhere, including back into `brain/skills`.
 
 ## Invoking a skill

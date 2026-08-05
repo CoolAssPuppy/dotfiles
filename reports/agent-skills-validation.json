@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T10:24:19+01:00",
+  "generated_at": "2026-08-05T10:26:42+01:00",
   "yaml_backend": "builtin",
   "sources": [
     {
@@ -359,7 +359,7 @@
         }
       ],
       "digest": "2e9364002cb06205419a6df40152490b082b7ea8b62cca0c406618a7694e7f8f",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:24:30+01:00"
     },
     {
       "name": "content-strategy",

@@ -1,6 +1,6 @@
 # Agent skills inventory
 
-Generated 2026-08-05T10:24:19+01:00 by `scripts/validate-agent-skills.py`.
+Generated 2026-08-05T10:26:42+01:00 by `scripts/validate-agent-skills.py`.
 Do not edit by hand. Regenerate instead.
 
 ## Sources
