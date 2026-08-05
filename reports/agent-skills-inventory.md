@@ -1,18 +1,18 @@
 # Agent skills inventory
 
-Generated 2026-08-05T10:07:13+01:00 by `scripts/validate-agent-skills.py`.
+Generated 2026-08-05T10:24:19+01:00 by `scripts/validate-agent-skills.py`.
 Do not edit by hand. Regenerate instead.
 
 ## Sources
 
 | Source | Path | Skills | Anomalies |
 | --- | --- | --- | --- |
-| canonical | `/Users/prashant/Developer/brain/skills` | 109 | 1 |
+| canonical | `/Users/prashant/Developer/brain/skills` | 110 | 1 |
 
 ## Totals
 
-- 109 skills across 109 unique names
-- 90 pass, 19 warn, 0 fail
+- 110 skills across 110 unique names
+- 91 pass, 19 warn, 0 fail
 - 0 duplicate names, 0 unresolved conflicts
 - 1 anomalies in the source directories
 
@@ -33,6 +33,7 @@ Do not edit by hand. Regenerate instead.
 | `cmo-coaching` | canonical | Generate a CMO coaching report grading executive presence, judgment, and leadership awareness. Surveys Slack, Linear, and Notion, then saves to personal Notion. | pass | user-invocable | none | unique |
 | `competitive-analysis` | canonical | Conducts competitive analysis and creates battle cards for technical products. Covers competitor identification, public research, product teardowns, go-to-mark… | pass | user-invocable | none | unique |
 | `competitive-battlecard` | canonical | Generates comprehensive competitive battlecards for developer products that help sales and marketing teams position against specific competitors. Covers compan… | pass | user-invocable | none | unique |
+| `connect-recommend` | canonical | Use this skill when the user asks about Stripe Connect configuration, charge patterns, Dashboard access, or how to get started with Connect, is building a mark… | pass | none | none | unique |
 | `content-strategy` | canonical | Creates content marketing strategies for technical products. Covers content pillars, editorial calendars, content briefs, inside-out vs outside-in approaches,… | pass | user-invocable | none | unique |
 | `daily-meta-checkin` | canonical | Pull the live Midnight Coders Meta ad numbers, cross-check them against Stripe and PostHog, and return a bottom line plus a numbered list of what to do next. | pass | user-invocable | none | unique |
 | `data-storytelling` | canonical | Transform data into compelling narratives using visualization, context, and persuasive structure. Use when presenting analytics to stakeholders, creating data… | pass | none | none | unique |

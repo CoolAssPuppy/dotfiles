@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-08-05T10:07:13+01:00",
+  "generated_at": "2026-08-05T10:24:19+01:00",
   "yaml_backend": "builtin",
   "sources": [
     {
       "label": "canonical",
       "path": "/Users/prashant/Developer/brain/skills",
-      "skill_count": 109,
+      "skill_count": 110,
       "anomaly_count": 1
     }
   ],
   "totals": {
-    "skills": 109,
-    "unique_names": 109,
+    "skills": 110,
+    "unique_names": 110,
     "duplicate_names": 0,
     "unresolved_conflicts": 0,
     "failing": 0,
     "warning": 19,
-    "passing": 90,
+    "passing": 91,
     "anomalies": 1
   },
   "anomalies": [
@@ -46,7 +46,7 @@
       "conflict": false,
       "findings": [],
       "digest": "9d6b13c0b87db1c2b3a520a1d99d3ca49ebda9814c4baaf418b0b6f96018cbf1",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "ai-search-visibility-aeo-geo-llmo",
@@ -64,7 +64,7 @@
       "conflict": false,
       "findings": [],
       "digest": "00dce83e54163d1953a13273ddc0902cda36a1907b62a184de73473c78c2f363",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "animation-vocabulary",
@@ -82,7 +82,7 @@
       "conflict": false,
       "findings": [],
       "digest": "39319fc9a33c15be08666b3685f58666f042ff36bb902b7814c0834a5ba99df4",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "apple-design",
@@ -100,7 +100,7 @@
       "conflict": false,
       "findings": [],
       "digest": "8b94db67cb9edaad5f1501010804caa610131f1d2dfda0a27664b2e858deade3",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "bar-raiser",
@@ -128,7 +128,7 @@
         }
       ],
       "digest": "f005d8f9dfb58c8a237552511d6cb6adca74c30fc4a9eb74cce913d76dad31cc",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "blog-post-ideation",
@@ -156,7 +156,7 @@
         }
       ],
       "digest": "f1236b029843b76a6258bca8b309784b3528964d31d0e08f1061a276c3e3ca36",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "bofu-seo-aeo-strategy",
@@ -174,7 +174,7 @@
       "conflict": false,
       "findings": [],
       "digest": "5c8ec334198bfa0037d560f5c807abc71f03bf56036d452e7e72f9a922a58329",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "campaign-analyzer",
@@ -192,7 +192,7 @@
       "conflict": false,
       "findings": [],
       "digest": "c41f26a219eaf0e6ed24f50d3ffbe3ff3f178881e77eeb03eb3371c3304a4525",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "case-study",
@@ -231,7 +231,7 @@
         }
       ],
       "digest": "93d600b993363ce89ef0ce8eab9f200749345354c137edb539784440a5117bd0",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "channel-copple",
@@ -249,7 +249,7 @@
       "conflict": false,
       "findings": [],
       "digest": "893f06100883db66ec5f7e9b7062ebecaa13991bddb4f3b6d9a79549dab14334",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "cmo-coaching",
@@ -277,7 +277,7 @@
         }
       ],
       "digest": "04311d194d1474a2f3aaceb49eb8c4d3425e6730da1164255fc2fb2c37392b4b",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "competitive-analysis",
@@ -305,7 +305,7 @@
         }
       ],
       "digest": "05a3c175ac6e8401efc581282773b42705ae0c74b0a2e3e8dab643db248f88b7",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "competitive-battlecard",
@@ -333,6 +333,32 @@
         }
       ],
       "digest": "5e9810697cbd3e53f411f68f9c709beea7e4166ed08bc9d5a5131100d1f4357c",
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
+    },
+    {
+      "name": "connect-recommend",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/connect-recommend",
+      "skill_file": "SKILL.md",
+      "description": "Use this skill when the user asks about Stripe Connect configuration, charge\n patterns, Dashboard access, or how to get started with Connect, is building a\n marketplace, platform, multi-vendor store, gig platform, or subscription\n platform, needs to pay out sellers, vendors, or providers, mentions split\n payments, revenue sharing, multi-party payments, or similar payment\n distribution concepts, provides a company URL or business description for a\n recommendation, builds SaaS that routes money between parties (for example,\n POS, booking, invoicing \u2014 not operational SaaS without payment routing), asks\n about onboarding or KYC for merchants, sellers, and vendors, mentions\n connected account Dashboard or responsibility configurations, or asks about\n payment flows, white-label payments, or embedded payments.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 1,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "reference-site-absolute",
+          "message": "references/decision-matrix.md: link '/connect/embedded-appearance-options' is root-relative with no file extension, so it reads as a path on a website rather than on disk. Nothing resolves it locally.",
+          "document": "references/decision-matrix.md",
+          "target": "/connect/embedded-appearance-options"
+        }
+      ],
+      "digest": "2e9364002cb06205419a6df40152490b082b7ea8b62cca0c406618a7694e7f8f",
       "git_last_commit": null
     },
     {
@@ -361,7 +387,7 @@
         }
       ],
       "digest": "59aaf2b210a5f19209509fbb2d42ca25317dcf6c847d92c50cb4467993cab61b",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "daily-meta-checkin",
@@ -389,7 +415,7 @@
         }
       ],
       "digest": "a4b46f953ee648197a5c2476af36d5c2931edd52c064d32e87a74e3dd42b3a8b",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "data-storytelling",
@@ -407,7 +433,7 @@
       "conflict": false,
       "findings": [],
       "digest": "eca30a8c6e0931beb9688484381eae2864358158edf6bfed1072927d2b2ff582",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "data-visualization",
@@ -435,7 +461,7 @@
         }
       ],
       "digest": "64055493de5ff4afed716cc871018cf6e020338b76d3e7ed5c2985707cb43cec",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "deploy-to-vercel",
@@ -453,7 +479,7 @@
       "conflict": false,
       "findings": [],
       "digest": "22f11cf8052c20a0fbcd0624b44a64dca8a0f629e736dec6cf7901679a63684f",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "developer-persona",
@@ -492,7 +518,7 @@
         }
       ],
       "digest": "11bf788d0a950a8b2720c7aa313905964202d7f6d88ee64bf24999a63c762ab2",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "emil-design-eng",
@@ -510,7 +536,7 @@
       "conflict": false,
       "findings": [],
       "digest": "8bdf9e4e6de7a4969147bf4828a4ad2c5aacd9fba4b690b250a85e0467ca387d",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "event-brief",
@@ -549,7 +575,7 @@
         }
       ],
       "digest": "22acf5cab9316847445bf6386f5735cbdb4503473e8ab920fd89c9337d2503b8",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "fiction-devedit",
@@ -588,7 +614,7 @@
         }
       ],
       "digest": "f356f660b48f1952da4b576d4beada7cdc86bc41c4c6b90c3a3b3f5e74b9ffb1",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "fiction-diagnostic",
@@ -627,7 +653,7 @@
         }
       ],
       "digest": "a742898b4d6856be36c696988a02e3df5d2b792103a0de00a55d69b5dc515756",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "fiction-editing",
@@ -666,7 +692,7 @@
         }
       ],
       "digest": "9b4c2e6be3aa3739c5f6f5bfa8d80631f5efac47a4f4d490def88e3fe5cad08c",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "finance-copy-trading",
@@ -702,7 +728,7 @@
         }
       ],
       "digest": "e6db01b34fa00feb35362058c6c57b76249166a848a143906a8b58c3a20fb83b",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "finance-earnings-catalyst",
@@ -738,7 +764,7 @@
         }
       ],
       "digest": "860228a99e3381b8d31a4ca726243927af072fb6c8360c71f1b83445028b5419",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "finance-iron-condor",
@@ -774,7 +800,7 @@
         }
       ],
       "digest": "0c81adc9c842e0b9ef0e5a6da6a6377fc414ca0c14b44cc2722d64e4917523b1",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "finance-iv-rank",
@@ -810,7 +836,7 @@
         }
       ],
       "digest": "442fa9938f9def4fc3830c93bcb424e8767094dd2c1bc06d6f0672ef67480138",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "finance-macro-regime",
@@ -846,7 +872,7 @@
         }
       ],
       "digest": "2bb5cfb8c076d8fd71f149134101d5aa74aeebeee77200af672a285a7478261f",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "finance-master",
@@ -882,7 +908,7 @@
         }
       ],
       "digest": "a684a523c7d84ba70f88b6f1c5c93ba0d4bd18a98628c90ec6abdaec0c0f4cbf",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "finance-momentum-breakout",
@@ -918,7 +944,7 @@
         }
       ],
       "digest": "84dd1cc4df5cb3e680433fee5ccf3074247ac74e97daf99ba3310d6dc9fb2cdb",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "finance-options-flow",
@@ -954,7 +980,7 @@
         }
       ],
       "digest": "e20f8d13b65371999c47743224118cdf1c5c0530bc25ce1af3099a60f1ac632e",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "finance-pre-market-prep",
@@ -990,7 +1016,7 @@
         }
       ],
       "digest": "505d8661a742952e49106ea9c168d6e2989e850ceb1f361ac3cf026f097a5674",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "finance-risk-of-ruin",
@@ -1026,7 +1052,7 @@
         }
       ],
       "digest": "62d363277db8e106dd66d954fbddd2673b6ebc1333de0c63db9c8d46ef26c942",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "finance-short-squeeze",
@@ -1062,7 +1088,7 @@
         }
       ],
       "digest": "7442e1de71f301c0214fd947ba465c585236bce57f9a93942cfd937f2ec2c1bd",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "finance-trade-journal",
@@ -1098,7 +1124,7 @@
         }
       ],
       "digest": "be63ee2af3492e9f967d2d952fb7a3806f55bb8f418fe478faf3fe933afc661e",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "finance-trailing-stop",
@@ -1134,7 +1160,7 @@
         }
       ],
       "digest": "f6eeeb10d8a817471902f32f2c0c7b7370601f673a0385cc45f76746745e950b",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "finance-wheel",
@@ -1170,7 +1196,7 @@
         }
       ],
       "digest": "b2e73babf906ceed7e3154ee69b21a1f2781cb14b5554d656627e7cad3243b69",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "find-animation-opportunities",
@@ -1188,7 +1214,7 @@
       "conflict": false,
       "findings": [],
       "digest": "15dc983ce2cd00489fcdc4a92e2752d47e1620f7619038b00eb84c2b97d50597",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "find-skills",
@@ -1206,7 +1232,7 @@
       "conflict": false,
       "findings": [],
       "digest": "1c27b1774a4ec17ad4556a72e3c0168beab3af0183b2c1b8aa9e320af3ff41ce",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "generate-ranking-video",
@@ -1234,7 +1260,7 @@
         }
       ],
       "digest": "20608a2a94e398515d1369f322998b2d58b3d3ae2347b6c216d71124a833554b",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "go-to-market",
@@ -1273,7 +1299,7 @@
         }
       ],
       "digest": "59e717775f451ffb4c1e8dd20351097701f26de97b255390e39e87ad6b3db480",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "google-ads-account-audit",
@@ -1291,7 +1317,7 @@
       "conflict": false,
       "findings": [],
       "digest": "8e2798a673e2f989cf0a504891b21ec8ca603d00149dc42514d4d4a6b8a64333",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "google-ads-campaign-builder",
@@ -1309,7 +1335,7 @@
       "conflict": false,
       "findings": [],
       "digest": "e24a94d86406e03b9949a799471f56a0a7a441d42239c74d47609b9cf9d1f3f5",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "google-ads-keyword-engine",
@@ -1327,7 +1353,7 @@
       "conflict": false,
       "findings": [],
       "digest": "39012b8bed9c08e9a251e13d193cd25da353f388f079f5a5ce07295677319b9a",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "google-ads-optimizer",
@@ -1345,7 +1371,7 @@
       "conflict": false,
       "findings": [],
       "digest": "6579e67d2d0303df877c23d3d3c72b271fb9680edb538d984e7efec0f5707c88",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "google-ads-scripts",
@@ -1363,7 +1389,7 @@
       "conflict": false,
       "findings": [],
       "digest": "802e4e118d68bf4ab9328da358b8129cb405c481060349e25e7d7d8e8810dc54",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "google-merchant-center",
@@ -1381,7 +1407,7 @@
       "conflict": false,
       "findings": [],
       "digest": "b05605d4646dcc6d453fc749453c08fd2a7b8efdeafb49e85cea1fe1aff751cf",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "gtm-strategy",
@@ -1409,7 +1435,7 @@
         }
       ],
       "digest": "7d0944c1a9114a58a5e4db0e73841255c2c1ecde20ea9d857e64c3d71e832eb2",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "humanize",
@@ -1445,7 +1471,7 @@
         }
       ],
       "digest": "7244e140a6c227b501b38c56c23b68a4b84c1e300266efa1dc64c271cd94cdc3",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "impeccable",
@@ -1472,7 +1498,7 @@
         }
       ],
       "digest": "9cd6643a2d9dedd35126ffc62a165a4f469de594328ea292ada6001a59c148a2",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "improve-animations",
@@ -1490,7 +1516,7 @@
       "conflict": false,
       "findings": [],
       "digest": "32f23d860467841f5b07cef198fb53efc70f2adaaa6144cf1a3434d782aed246",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "ios-deployment",
@@ -1508,7 +1534,7 @@
       "conflict": false,
       "findings": [],
       "digest": "b2a018aa66661e5295918424ca5d4a163b442d783f18136b8b8d832059c0cb4e",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "launch",
@@ -1536,7 +1562,7 @@
         }
       ],
       "digest": "7daea8b20bef29fedf769a194c7fad4106c564f8d47ef02fde0e1d14082cb46e",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "lifecycle-email",
@@ -1575,7 +1601,7 @@
         }
       ],
       "digest": "8ad348409d358e5447937e2fd6efcc22143122ad33534b8c9c06ba4217f761d3",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "lifecycle-marketing",
@@ -1603,7 +1629,7 @@
         }
       ],
       "digest": "cddb810a636f0cfd1e29a23157bbde1f066b71d2d554e31d453379d7f04149c2",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "link-building-digital-pr",
@@ -1621,7 +1647,7 @@
       "conflict": false,
       "findings": [],
       "digest": "53e74a850cbb55bfc7d77c0d411b7e6c5a85645ff6f2da8ed7d9a51b34339c19",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "local-seo-google-business-profile",
@@ -1639,7 +1665,7 @@
       "conflict": false,
       "findings": [],
       "digest": "c1f424cadd93431fcbf7b074defefc094a302ab917d8d1d74c6c691d1e46e06a",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "macos-deployment",
@@ -1676,7 +1702,7 @@
         }
       ],
       "digest": "4eea52c4bbb433001c873e8a97b82c4068532f3a936df9d5f03b354f8fe96cad",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "meta-ads-account-audit",
@@ -1694,7 +1720,7 @@
       "conflict": false,
       "findings": [],
       "digest": "ffb7a8ed5dab3c0d06eabcd3847e3ce737d00d6a4ebb30b64b6424d58b2bb376",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "meta-ads-campaign-builder",
@@ -1712,7 +1738,7 @@
       "conflict": false,
       "findings": [],
       "digest": "1db5be92c7b23c37505260ccde7c853062d2fba883433c19ccaf49d6a1f744e7",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "meta-ads-creative-engine",
@@ -1730,7 +1756,7 @@
       "conflict": false,
       "findings": [],
       "digest": "ddc1950e2a2765c70bdeb40111a0e9c3b81ff46a70c6e700dc0a6e2f860454b1",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "meta-ads-optimizer",
@@ -1748,7 +1774,7 @@
       "conflict": false,
       "findings": [],
       "digest": "6f3664e45c3177c15c8f4f312b366a57cf48ddcd0f5e2166dab5a21e80c14606",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "meta-ads-playbook",
@@ -1766,7 +1792,7 @@
       "conflict": false,
       "findings": [],
       "digest": "aab524894306069643562ab289169bee7deebd6d19954c6659e917b48ffb7bc6",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "meta-ads-tracking-setup",
@@ -1784,7 +1810,7 @@
       "conflict": false,
       "findings": [],
       "digest": "8b580c5a8fa4414fdbc92bfb9c110cb913a3199f4b42529e75dad72c7f7d2876",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "midnight-coders",
@@ -1812,7 +1838,7 @@
         }
       ],
       "digest": "6a4396c8a0e87a73b90a121cc5dac795de7ca78f74b2d8bc71e9748c53bdfcbf",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "no-use-effect",
@@ -1840,7 +1866,7 @@
         }
       ],
       "digest": "a26b63df8acba7ba8ffbd852cc4d56fb7b7dd12ad7c9872bf2886bf5a1260d2d",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "on-page-seo-aeo-optimization",
@@ -1858,7 +1884,7 @@
       "conflict": false,
       "findings": [],
       "digest": "b0f0681fe42d6324d976a18c66e56705287de670cded9399574f9b05291b8996",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "paid-media-reporter",
@@ -1876,7 +1902,7 @@
       "conflict": false,
       "findings": [],
       "digest": "758e931cc7763dce05201a2cabfb42b6dbf239de5d4ba5f2ed9aa1dbddda362f",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "paid-search-ads-playbook",
@@ -1894,7 +1920,7 @@
       "conflict": false,
       "findings": [],
       "digest": "7935304d26204c80e943e6af10ad23b8ca51ec6775ef0e329c0cc490cc214eb9",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "portugal-nationality",
@@ -1922,7 +1948,7 @@
         }
       ],
       "digest": "52d7e681088f43e75ac8d13a9add0c860b784f5b6e9ee68398cdef2ee792a8c0",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "positioning-framework",
@@ -1961,7 +1987,7 @@
         }
       ],
       "digest": "8ae6a1acce54de191dc14b3274cd5a29fb8e12c1caee95509bc3cf6f61f6abad",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "prepare-videos-for-social",
@@ -1989,7 +2015,7 @@
         }
       ],
       "digest": "9a19c156995b769fc5b8a6c9336822ed4bb571790d4f01ace3f13a6e58e3fe14",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "prepare-viral-short",
@@ -2017,7 +2043,7 @@
         }
       ],
       "digest": "e57c8c4f331960cd8c9170f21847e8225a648e92bb9021b11e292e4be906657f",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "prfaq",
@@ -2056,7 +2082,7 @@
         }
       ],
       "digest": "985145c7ad9dbb5d29b9424a3ada6ce0af462568a5879731c01604f516c040a7",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "product-detail-page",
@@ -2095,7 +2121,7 @@
         }
       ],
       "digest": "1cace4a9536706a30035ed6c07c09e2bd0c6dc8b8bc36e7acf594cbe0a5592a5",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "product-launch-blog",
@@ -2134,7 +2160,7 @@
         }
       ],
       "digest": "20bcb875058c950f7e82002d13acc1e3ea9140cb57c5adad7dd58b07b8ecd723",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "product-naming",
@@ -2173,7 +2199,7 @@
         }
       ],
       "digest": "660d24c5b9936bc971bbf2d1f94520f401b0eaeaea2f14b67fff2494689ed336",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "prompt-picker",
@@ -2191,7 +2217,7 @@
       "conflict": false,
       "findings": [],
       "digest": "298333198ca12d5b2c6339561ba0d076cb4aa497c61f046209824e7f98154384",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "remotion-best-practices",
@@ -2218,7 +2244,7 @@
         }
       ],
       "digest": "39ab4a236431bcbfb7b0d876ddd243759ee18623b127f4235c642012ff22ae4b",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "remotion-video",
@@ -2246,7 +2272,7 @@
         }
       ],
       "digest": "05a3da7c5cfabdfd060a616d6bfc533709178c13cf3854b30f501f3bf60c77b8",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "review-animations",
@@ -2274,7 +2300,7 @@
         }
       ],
       "digest": "c92905bff59c3007d07c2638a2a83d5d71c901feef108cce1da0bf3c7cafd579",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "sales-email",
@@ -2313,7 +2339,7 @@
         }
       ],
       "digest": "066123f5bae0e276ffcc8fa7cf4172bef530b4afed47719e1238a08c24bae2cd",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "search-reddit",
@@ -2341,7 +2367,7 @@
         }
       ],
       "digest": "d18b4720f43cf39b8b6ba2e07fa853845346f719f92d0a7a1303c1257955cfbf",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "seo-aeo-content-strategy",
@@ -2359,7 +2385,7 @@
       "conflict": false,
       "findings": [],
       "digest": "6cf6de4e80653d06beb541c8a06293c24210620d0070a2ffd394473fe5f4fea1",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "seo-keyword-research-intent-mapping",
@@ -2377,7 +2403,7 @@
       "conflict": false,
       "findings": [],
       "digest": "fd091e5cec1d9b892ebf67944634a9faa2020ab15f084812c518bb3316e4b837",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "seo-max-kt",
@@ -2395,7 +2421,7 @@
       "conflict": false,
       "findings": [],
       "digest": "0f10c3e843a799090f48c6d47b4e0ef991e6c71191c049e41f17d1c9879d1235",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "seo-reporting-measurement",
@@ -2413,7 +2439,7 @@
       "conflict": false,
       "findings": [],
       "digest": "721df75187fb73f18363cc2875e79404ea2225113a52cc480a4830febeeb2203",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "source-command-new-blog",
@@ -2431,7 +2457,7 @@
       "conflict": false,
       "findings": [],
       "digest": "8d557108a16e272aab6b8be14b1af2c2929f81ad38dd352e89fc0ba5403d5e7f",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "source-command-verify-supabase",
@@ -2459,7 +2485,7 @@
         }
       ],
       "digest": "8b37862177d98529047d5e6f5a153a2e309acdd939a435bec03241f9000bacb5",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "strategic-nerds",
@@ -2487,7 +2513,7 @@
         }
       ],
       "digest": "d7faf525507798729b2e96efe49b9eb4ccaa38c55fda45d02010beefbf825059",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "stripe-best-practices",
@@ -2504,8 +2530,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "25b6113aed376a0cb96d4697fed98ea5f00f915086dc8b13f4cf8b5338ce2185",
-      "git_last_commit": null
+      "digest": "050bf17c4eba25375c4813b877c1bb998f18971715f77ba5edeee6ead622cbf3",
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "stripe-directory",
@@ -2533,7 +2559,7 @@
         }
       ],
       "digest": "58d8c458beaa92877ed2f0a622af65a0a91e2804efcc4188ac87a35780015361",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "stripe-docs",
@@ -2561,7 +2587,7 @@
         }
       ],
       "digest": "7f8b47057d65cdc55c60ed870bf6ad508907e5d981fca77781b4964de54d985f",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "stripe-projects",
@@ -2588,8 +2614,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "a53a28a78e6561d15dd1aadaf552217bfa2f9dbb2ef57aa9cd7a9caf93ef5eed",
-      "git_last_commit": null
+      "digest": "d75347f4e465c0e78032f7cb28b7bcd406cde9a34826b780958b059423fba778",
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "supabase",
@@ -2607,7 +2633,7 @@
       "conflict": false,
       "findings": [],
       "digest": "a3cb1c4eb642395100d3447a8a68141e19603060f664fbaaa77b1120d62a232d",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "supabase-postgres-best-practices",
@@ -2625,7 +2651,7 @@
       "conflict": false,
       "findings": [],
       "digest": "c20a12d0e664c182130e75dfed6af46d81623930d15935f27353a39429724306",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "tech-debt-audit",
@@ -2653,7 +2679,7 @@
         }
       ],
       "digest": "210a98298b3f6ba8b4e4c1c9d6b505eb1ef8ec153be6e71f1e2b7a8c859cb42f",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "technical-seo-ai-crawler-audit",
@@ -2671,7 +2697,7 @@
       "conflict": false,
       "findings": [],
       "digest": "93000d1d1a5a94f401029e66fcb4eef76c2ce48984fd599aede71fffdd4f38a9",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "thought-leadership-blog",
@@ -2710,7 +2736,7 @@
         }
       ],
       "digest": "771e622fb2029da808ed586669983c3c38e321d6160ae53ee061a5abb51c3058",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "upgrade-stripe",
@@ -2727,8 +2753,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "46bb3c16878f93b953ed901b950686d64f04f90c67400bf31e1a0d7790d889df",
-      "git_last_commit": null
+      "digest": "f4aa17ac21714309e3cafa4eb15b032b3d8ff8623c8731944ccbcaf6766fdb49",
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "vercel-composition-patterns",
@@ -2755,7 +2781,7 @@
         }
       ],
       "digest": "5b3564ca435f4714d5e65023351e1999e4744818603a9cfb6a6f6a61b7d84918",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "vercel-react-best-practices",
@@ -2782,7 +2808,7 @@
         }
       ],
       "digest": "1d197fcdae7cf3210a1305dacca0206f5787775abcb93baf5565f907d3fb536c",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "vercel-react-native-skills",
@@ -2809,7 +2835,7 @@
         }
       ],
       "digest": "b4b0af9b853227db681fd5b8a9e5f5ddd1603af1f6ab388e06ff12c1f6f3aadb",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "voice-of-supabase",
@@ -2827,7 +2853,7 @@
       "conflict": false,
       "findings": [],
       "digest": "c5f896b8d518ce8a38da7c07fb4719d0d3024b1d53e165cc6face56b0997e7ac",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "web-design-guidelines",
@@ -2845,7 +2871,7 @@
       "conflict": false,
       "findings": [],
       "digest": "a6a44d5498f7e8f68289902f3dedfc6f38ae0cee1e96527c80724cf27f727c2a",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "webinar-planning",
@@ -2873,7 +2899,7 @@
         }
       ],
       "digest": "171a84c3ddd8bf1b28da74643a1d94f545d5d691f64347622f9ac258cd3d721e",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "weekly-report",
@@ -2901,7 +2927,7 @@
         }
       ],
       "digest": "817dcdc3badf6ca292ff1281f4f6fb3fe088dde66ffaf2c0a25ed83d8e58b2fb",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
       "name": "writing",
@@ -2929,7 +2955,7 @@
         }
       ],
       "digest": "bb5521bc80de3512fd63652be33610f94ff7818212bdbe0e4d92482bad5dfd8b",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-05T10:07:51+01:00"
     }
   ]
 }

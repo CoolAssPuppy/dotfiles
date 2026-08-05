@@ -498,6 +498,18 @@ def check_references(skill: dict, findings: Findings) -> None:
             if not clean:
                 continue
             if os.path.isabs(clean):
+                # A root-relative link with no file extension is a path on some
+                # website, not on this disk. Stripe's skills link their own docs
+                # that way, as /connect/embedded-appearance-options. Nothing is
+                # broken locally, so it is worth reporting but not failing on.
+                # A real filesystem reference carries an extension.
+                if not os.path.splitext(clean)[1]:
+                    findings.add("info", "reference-site-absolute",
+                                 f"{rel_doc}: link '{clean}' is root-relative with no file "
+                                 "extension, so it reads as a path on a website rather "
+                                 "than on disk. Nothing resolves it locally.",
+                                 document=rel_doc, target=clean)
+                    continue
                 findings.add("error", "reference-absolute",
                              f"{rel_doc}: link '{clean}' is an absolute path and will "
                              "not survive being symlinked or cloned elsewhere",

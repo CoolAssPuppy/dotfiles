@@ -41,7 +41,7 @@ added, renamed, or removed.
 
 ### Why the skills CLI keeps its own directory
 
-Twenty skills came from `npx skills`. The CLI records each one in
+Twenty-one skills came from `npx skills`. The CLI records each one in
 `~/.agents/.skill-lock.json` and, on `npx skills update`, deletes whatever sits
 at `~/.agents/skills/<name>` and writes a fresh directory in its place. A
 symlink there does not survive that, and the thing it pointed at is left stale
@@ -114,12 +114,14 @@ recorded at install time. A skill that still matches is safe to update. A skill
 whose hash has drifted was edited locally, and `npx skills update` would
 overwrite that edit silently, so it is left out and named in the report.
 
-Three skills are drifted today. `scripts/upstream-patches/` holds a patch for
-each, with four ways to clear it.
+One skill is drifted today, and its change is sanctioned: a `.reapply` marker
+in `scripts/upstream-patches/` tells the script to update the skill and then put
+the change back. An unsanctioned drift is skipped instead, and named.
 
-Five Stripe skills carry no upstream hash, so drift cannot be detected for them
+Six Stripe skills carry no upstream hash, so drift cannot be detected for them
 and the CLI cannot update them either. Refresh those by hand with
-`npx skills add https://docs.stripe.com -g -y`.
+`npx skills add https://docs.stripe.com -g -a codex -y`, which takes all six;
+`-s` does not work on a well-known source.
 
 The CLI has no dry-run mode. `--dry-run` reports what would be fetched and stops
 before fetching.
@@ -170,8 +172,10 @@ target.
    those files by relative path.
 4. Run the validator, then the installer's dry run, then the installer.
 
-To add one from a public repository instead, use `npx skills add <source> -g`,
-then run the installer. It picks up the new directory in `~/.agents/skills` and
+To add one from a public repository instead, use
+`npx skills add <source> -g -a codex`, then run the installer. Pass `-a codex`
+or the CLI picks agents by what it finds installed, and one that cannot do a
+global install fails the whole command. It picks up the new directory in `~/.agents/skills` and
 links it everywhere, including back into `brain/skills`.
 
 ## Invoking a skill
