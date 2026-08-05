@@ -5,12 +5,12 @@ set -euo pipefail
 # instructions work in both tools.
 #
 # What this does (all idempotent, safe to re-run):
-#   1. Links every global skill in dotfiles/claude/skills into ~/.codex/skills
-#   2. Links the brain repo's project-local skills into ~/.codex/skills
-#      (Codex only discovers skills globally, so project skills become global)
-#   3. Creates AGENTS.md -> CLAUDE.md symlinks in the brain repo so Codex reads
+#   1. Links every canonical skill into ~/.codex/skills. The canonical directory
+#      is ~/Developer/brain/skills; there is no second source any more. Codex
+#      only discovers skills globally, so every skill becomes global.
+#   2. Creates AGENTS.md -> CLAUDE.md symlinks in the brain repo so Codex reads
 #      the same project instructions Claude Code does
-#   4. Flattens the global Claude config (dotfiles/claude/CLAUDE.md + every
+#   3. Flattens the global Claude config (dotfiles/claude/CLAUDE.md + every
 #      @rules/*.md it imports, recursively) into ~/.codex/AGENTS.md so Codex
 #      honors the same global rules. Codex does not expand @-imports, so we
 #      inline them here. Re-run this script after editing any rule file.
@@ -21,48 +21,31 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 DOTFILES_CLAUDE="$REPO_ROOT/claude"
-DOTFILES_SKILLS="$DOTFILES_CLAUDE/skills"
 BRAIN="${BRAIN:-$(cd "$REPO_ROOT/.." && pwd)/brain}"
-BRAIN_SKILLS="$BRAIN/.claude/skills"
+CANONICAL_SKILLS="${SKILLS_CANONICAL:-$BRAIN/skills}"
 CODEX_HOME_DIR="${CODEX_HOME:-$HOME/.codex}"
 CODEX_SKILLS="$CODEX_HOME_DIR/skills"
 
-mkdir -p "$CODEX_SKILLS"
-
-link_skill() {
-  # $1 = absolute path to a skill folder, $2 = destination dir
-  local src="$1" dst_dir="$2"
-  local name
-  name="$(basename "$src")"
-  case "$name" in _*) return 0 ;; esac     # skip shared/helper folders
-  [[ -f "$src/SKILL.md" ]] || return 0     # only real skills
-  ln -sfn "$src" "$dst_dir/$name"
-}
-
-echo "==> Linking global dotfiles skills into $CODEX_SKILLS"
-global_count=0
-for skill in "$DOTFILES_SKILLS"/*/; do
-  link_skill "${skill%/}" "$CODEX_SKILLS" && global_count=$((global_count + 1))
-done
-echo "    linked $global_count global skills"
-
-echo "==> Linking brain project skills into $CODEX_SKILLS (skipping name collisions)"
-brain_count=0
-skipped=()
-for skill in "$BRAIN_SKILLS"/*/; do
-  name="$(basename "${skill%/}")"
-  case "$name" in _*) continue ;; esac
-  [[ -f "${skill%/}/SKILL.md" ]] || continue
-  # Skip if a global dotfiles skill already owns this name (can't have two)
-  if [[ -e "$DOTFILES_SKILLS/$name" ]]; then
-    skipped+=("$name")
-    continue
-  fi
-  link_skill "${skill%/}" "$CODEX_SKILLS" && brain_count=$((brain_count + 1))
-done
-echo "    linked $brain_count brain skills"
-if ((${#skipped[@]})); then
-  echo "    skipped (name already used by a global skill): ${skipped[*]}"
+echo "==> Linking canonical skills into $CODEX_SKILLS"
+LINK_SKILLS="$BRAIN/scripts/link-skills.sh"
+if [[ -x "$LINK_SKILLS" ]]; then
+  # The canonical installer knows how to resolve a skill the skills CLI owns to
+  # its real directory, so no chains form and nothing gets linked to itself.
+  "$LINK_SKILLS" --target "$CODEX_SKILLS" \
+    || echo "    link-skills.sh reported items needing a decision. See above."
+else
+  echo "    WARN: $LINK_SKILLS not found; falling back to a plain link pass"
+  mkdir -p "$CODEX_SKILLS"
+  count=0
+  for skill in "$CANONICAL_SKILLS"/*/; do
+    name="$(basename "${skill%/}")"
+    case "$name" in _*) continue ;; esac
+    [[ -f "${skill%/}/SKILL.md" ]] || continue
+    target="$(cd -P "${skill%/}" && pwd -P)"
+    ln -sfn "$target" "$CODEX_SKILLS/$name"
+    count=$((count + 1))
+  done
+  echo "    linked $count skills"
 fi
 
 echo "==> Creating AGENTS.md symlinks in the brain repo"

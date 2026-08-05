@@ -43,9 +43,10 @@ except ImportError:  # pragma: no cover
 
 YAML_BACKEND = "pyyaml" if _yaml else "builtin"
 
+# One canonical directory now. Entries are real directories for skills written
+# locally, and symlinks into ~/.agents/skills for skills the skills CLI owns.
 DEFAULT_SOURCES = [
-    ("dotfiles", "~/Developer/dotfiles/claude/skills"),
-    ("brain", "~/Developer/brain/.claude/skills"),
+    ("canonical", "~/Developer/brain/skills"),
 ]
 
 REPORT_DIR = "~/Developer/dotfiles/reports"
@@ -512,7 +513,7 @@ def check_references(skill: dict, findings: Findings) -> None:
                                  "skill when symlinked",
                                  document=rel_doc, target=clean, resolved=resolved,
                                  recommendation=(
-                                     f"sync-agent-skills.sh links the shared '{sibling}/' "
+                                     f"link-skills.sh links the shared '{sibling}/' "
                                      "directory into both targets so this path still "
                                      "resolves. To make the skill self-contained, inline "
                                      "the shared content or copy it into the skill."

@@ -1,8 +1,22 @@
 # Third-party agent skills
 
-Skills installed from external providers (Stripe, Supabase, etc.) and committed to this dotfiles repo so they ship with `~/.claude/skills/` on every machine you clone to.
+## These have moved
 
-Promoting these to the global Claude Code path means a fresh machine gets all the partner skills automatically once dotfiles is cloned and the symlinks are wired up by `setup.sh`. No per-machine reinstall.
+As of 2026-08-05 no skill is stored in this repo. `claude/skills/` is a
+directory of symlinks that `brain/scripts/link-skills.sh` creates, alongside
+`~/.claude/skills` and `~/.agents/skills`.
+
+The third-party skills below now live at `~/.agents/skills/<name>`, which is
+where the skills CLI writes them and the only place `npx skills update` can
+reach. `brain/skills/<name>` is a symlink pointing there.
+
+That means they no longer ship with a dotfiles clone. A rebuilt machine gets
+them back by reinstalling from source. The commands are in
+`brain/scripts/skills-provenance/README.md`, transcribed from the lock file
+copy kept next to it. Read `../README-agent-skills.md` for the whole layout.
+
+Everything below this line is history, kept because it is the only record of
+where some of these came from.
 
 ## How they got here
 

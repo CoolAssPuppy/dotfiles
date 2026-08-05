@@ -24,10 +24,14 @@ Thumbs.db
 *.swo
 *~
 
-# Third-party agent skill installer artifacts
-# Tools like Stripe's and Supabase's installers detect every AI tool the
-# user might run and dump per-tool symlinks into claude/skills/.<tool>/.
-# Block those — the canonical content lives at claude/skills/<name>/.
-# See claude/AGENT_SKILLS.md for the full list of committed partner skills.
+# Generated agent skill links
+# Skills are authored in ~/Developer/brain/skills and published here by
+# brain/scripts/link-skills.sh, one absolute symlink per skill. Absolute paths
+# do not survive a clone, and the installer recreates the whole directory on any
+# machine, so none of it is committed. i-have-adhd is a submodule and is
+# tracked through .gitmodules, not this rule.
+# Read README-agent-skills.md for the layout.
+claude/skills/*
+!claude/skills/i-have-adhd
 claude/skills/.*/
 claude/skills/skills/
