@@ -203,3 +203,6 @@ fi
 if [[ -n "${SSH_CONNECTION:-}" ]]; then
   PROMPT='%F{yellow}[home-server]%f %F{cyan}%~%f %# '
 fi
+
+# kimi-code
+export PATH="/Users/prashant/.kimi-code/bin:$PATH"
