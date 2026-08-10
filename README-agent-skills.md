@@ -63,13 +63,6 @@ skills reference as `../_shared/voice.md`. It is not a skill, so it has no
 underscore alongside the skills, which keeps those relative paths resolving
 wherever the skills are read from.
 
-### Not a skill
-
-`claude/skills/i-have-adhd` is a git submodule holding a Claude Code plugin. Its
-`SKILL.md` sits at `skills/i-have-adhd/` inside the submodule, so a flat skill
-directory cannot hold it. It stays here and Claude Code loads it as the plugin
-`i-have-adhd:i-have-adhd`.
-
 ## Linking
 
 ```bash

@@ -28,10 +28,8 @@ Thumbs.db
 # Skills are authored in ~/Developer/brain/skills and published here by
 # brain/scripts/link-skills.sh, one absolute symlink per skill. Absolute paths
 # do not survive a clone, and the installer recreates the whole directory on any
-# machine, so none of it is committed. i-have-adhd is a submodule and is
-# tracked through .gitmodules, not this rule.
+# machine, so none of it is committed.
 # Read README-agent-skills.md for the layout.
 claude/skills/*
-!claude/skills/i-have-adhd
 claude/skills/.*/
 claude/skills/skills/
