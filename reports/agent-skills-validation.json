@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-08-18T23:40:10+01:00",
+  "generated_at": "2026-09-13T15:53:20+01:00",
   "yaml_backend": "builtin",
   "sources": [
     {
       "label": "canonical",
       "path": "/Users/prashant/Developer/brain/skills",
-      "skill_count": 111,
+      "skill_count": 137,
       "anomaly_count": 1
     }
   ],
   "totals": {
-    "skills": 111,
-    "unique_names": 111,
+    "skills": 137,
+    "unique_names": 137,
     "duplicate_names": 0,
     "unresolved_conflicts": 0,
     "failing": 0,
-    "warning": 19,
-    "passing": 92,
+    "warning": 26,
+    "passing": 111,
     "anomalies": 1
   },
   "anomalies": [
@@ -85,6 +85,52 @@
       "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
+      "name": "app-store-screenshots",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/app-store-screenshots",
+      "skill_file": "SKILL.md",
+      "description": "Write, capture, and render App Store screenshots for an iOS, iPadOS, or macOS app. Headline copy comes first and follows the pain, shift, proof, feature sequence; captures come from the simulator with a clean status bar or from a Mac window; a Pillow script renders the text over the capture at Apple's exact pixel sizes. Use when asked to make, redo, rewrite, or review App Store screenshots, listing images, or store page copy, or when a raw simulator capture is about to be uploaded as a screenshot.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 1,
+      "claude_features": [
+        "user-invocable"
+      ],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "claude-only-frontmatter",
+          "message": "frontmatter key 'user-invocable' is Claude-specific. Codex has no /slash invocation registry; the flag is inert.",
+          "feature": "user-invocable",
+          "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
+        }
+      ],
+      "digest": "fca27a918b0d68f1f81581e0289f355f0cf02b3b98a4047d6f30d68b42f55794",
+      "git_last_commit": null
+    },
+    {
+      "name": "appkit-interop",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/appkit-interop",
+      "skill_file": "SKILL.md",
+      "description": "Bridge macOS SwiftUI into AppKit narrowly. Use when implementing representables, reaching NSWindow or panels, handling menus, or using the responder chain.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "57f5a83b09a548fafc32198bcb25a938a8d7d7f8d707abccc19ffdb138ed590a",
+      "git_last_commit": null
+    },
+    {
       "name": "apple-design",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/apple-design",
@@ -101,6 +147,24 @@
       "findings": [],
       "digest": "8b94db67cb9edaad5f1501010804caa610131f1d2dfda0a27664b2e858deade3",
       "git_last_commit": "2026-08-05T10:07:51+01:00"
+    },
+    {
+      "name": "aside-browser",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/aside-browser",
+      "skill_file": "SKILL.md",
+      "description": "Read when you need a browser, or have to work across user's logged-in websites (e.g. Gmail, Slack, cloud consoles, etc.), or have to refer personal contexts like memory and browsing history.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "03b1f4a43cc2eeef0a47e3a5fd823ef0484a47d38b4e834b7b9dd229b246a55b",
+      "git_last_commit": null
     },
     {
       "name": "bar-raiser",
@@ -199,7 +263,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/case-study",
       "skill_file": "SKILL.md",
-      "description": "Create customer case studies that demonstrate product value through real success stories. The customer is the hero.",
+      "description": "Create customer case studies from verified customer evidence. Use when interviewing a customer, structuring a success story, or drafting a case study for sales, marketing, or a public site. The customer is the hero.",
       "status": "warn",
       "errors": 0,
       "warnings": 1,
@@ -230,8 +294,8 @@
           "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         }
       ],
-      "digest": "93d600b993363ce89ef0ce8eab9f200749345354c137edb539784440a5117bd0",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "f271d6b1b3a85818a5842cbaa5e21aca6f526dda0293205b16c241d32eef65aa",
+      "git_last_commit": "2026-09-12T09:18:49+01:00"
     },
     {
       "name": "channel-copple",
@@ -256,7 +320,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/cmo-coaching",
       "skill_file": "SKILL.md",
-      "description": "Generate a CMO coaching report grading executive presence, judgment, and leadership awareness. Surveys Slack, Linear, and Notion, then saves to personal Notion.",
+      "description": "Generate a CMO coaching report from the user's Slack, Linear, and Notion activity. Use when the user asks for feedback on executive presence, judgment, leadership awareness, or operating habits, then save the report to personal Notion.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -276,8 +340,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "04311d194d1474a2f3aaceb49eb8c4d3425e6730da1164255fc2fb2c37392b4b",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "642eb4dca50eb832e688ff8c7e0f6bfcd16b15b3f58ffa0b3a728bb819ac9753",
+      "git_last_commit": "2026-09-12T09:18:49+01:00"
     },
     {
       "name": "competitive-analysis",
@@ -390,11 +454,29 @@
       "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
+      "name": "core-data-expert",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/core-data-expert",
+      "skill_file": "SKILL.md",
+      "description": "Expert Core Data guidance (iOS/macOS): stack setup, fetch requests & NSFetchedResultsController, saving/merge conflicts, threading & Swift Concurrency, batch operations & persistent history, migrations, performance, and NSPersistentCloudKitContainer/CloudKit sync.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "2880c21c17efb303234d2c939312bea9c61bf51350de5ab60a4ca45b61506c38",
+      "git_last_commit": null
+    },
+    {
       "name": "daily-meta-checkin",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/daily-meta-checkin",
       "skill_file": "SKILL.md",
-      "description": "Pull the live Midnight Coders Meta ad numbers, cross-check them against Stripe and PostHog, and return a bottom line plus a numbered list of what to do next.",
+      "description": "Pull the current Midnight Coders Meta ad numbers, cross-check them against Stripe and PostHog, and return a bottom line plus a numbered list of what to do next. Use for a daily campaign check, tracking diagnosis, or spend decision.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -414,8 +496,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "843ae06f1154e3da72898b49f223c4d21ac9796a3972e405ec51b409ff4ae08a",
-      "git_last_commit": "2026-08-14T15:17:18+01:00"
+      "digest": "c675d50b73b73e036242b9f80c8bba85953c5ab688c8f9dd626f44310cf45fcb",
+      "git_last_commit": "2026-09-12T09:18:49+01:00"
     },
     {
       "name": "data-storytelling",
@@ -525,7 +607,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/emil-design-eng",
       "skill_file": "SKILL.md",
-      "description": "This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great.",
+      "description": "Apply Emil Kowalski's design engineering principles to UI polish, component design, animation decisions, and interaction details. Use when reviewing or refining a frontend interface that needs precise visual and motion guidance.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -535,7 +617,7 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "8bdf9e4e6de7a4969147bf4828a4ad2c5aacd9fba4b690b250a85e0467ca387d",
+      "digest": "80bdbda5bd8a553aa437b8ce0b7e992680a57bb22548851f5c12229476091dd3",
       "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
@@ -543,7 +625,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/event-brief",
       "skill_file": "SKILL.md",
-      "description": "Plan and execute conference or event participation with clear objectives, staffing, messaging, and success criteria.",
+      "description": "Plan conference and event participation with clear objectives, staffing, messaging, logistics, and success criteria. Use when preparing an event brief, booth plan, speaker plan, or post-event review.",
       "status": "warn",
       "errors": 0,
       "warnings": 1,
@@ -574,8 +656,8 @@
           "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         }
       ],
-      "digest": "22acf5cab9316847445bf6386f5735cbdb4503473e8ab920fd89c9337d2503b8",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "0fa598cd6590540a2d825f40d86424ab59281f20df617b422ef780031d11ea33",
+      "git_last_commit": "2026-09-12T09:18:49+01:00"
     },
     {
       "name": "fiction-devedit",
@@ -1492,6 +1574,24 @@
       "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
+      "name": "ios-app-intents",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/ios-app-intents",
+      "skill_file": "SKILL.md",
+      "description": "Design App Intents, app entities, and App Shortcuts for iOS system surfaces. Use when exposing app actions or content to Shortcuts, Siri, Spotlight, widgets, or controls.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "e82a175672109df9a0f3b8d14e7c9cb950283298bd8a2c87d702555fe4b1b0f8",
+      "git_last_commit": null
+    },
+    {
       "name": "ios-deployment",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/ios-deployment",
@@ -1900,7 +2000,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/portugal-nationality",
       "skill_file": "SKILL.md",
-      "description": "Monitor Portuguese nationality law (Lei da Nacionalidade) for legislative, constitutional, and presidential actions. Creates a Notion page with findings if news is found.",
+      "description": "Monitor Portuguese nationality law for legislative, constitutional, and presidential actions. Use when checking for changes to Lei da Nacionalidade; create a Notion page only when there is a relevant new finding.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -1920,15 +2020,15 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "52d7e681088f43e75ac8d13a9add0c860b784f5b6e9ee68398cdef2ee792a8c0",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "f07ae163fe653e87333582e8ce844392d932df26a2d22233182417551f2a99e7",
+      "git_last_commit": "2026-09-12T09:18:49+01:00"
     },
     {
       "name": "positioning-framework",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/positioning-framework",
       "skill_file": "SKILL.md",
-      "description": "Define product positioning in the competitive landscape with messaging pillars using Aristotle's rhetorical framework.",
+      "description": "Define product positioning and messaging pillars using Aristotle's rhetorical framework. Use when clarifying a product's audience, problem, differentiation, proof, and message hierarchy.",
       "status": "warn",
       "errors": 0,
       "warnings": 1,
@@ -1959,8 +2059,8 @@
           "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         }
       ],
-      "digest": "8ae6a1acce54de191dc14b3274cd5a29fb8e12c1caee95509bc3cf6f61f6abad",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "0ccfc8971aa303269e45f6c04f09e597327f30388a7519094ccc3871985c843a",
+      "git_last_commit": "2026-09-12T09:18:49+01:00"
     },
     {
       "name": "prepare-videos-for-social",
@@ -1987,8 +2087,8 @@
           "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
         }
       ],
-      "digest": "9a19c156995b769fc5b8a6c9336822ed4bb571790d4f01ace3f13a6e58e3fe14",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "ca64b0802020439f48156b1edefdc16c17b6b16339819dcbca35965d9f43c1b3",
+      "git_last_commit": "2026-08-25T16:50:10+01:00"
     },
     {
       "name": "prepare-viral-short",
@@ -2208,7 +2308,7 @@
       "conflict": false,
       "findings": [],
       "digest": "d8cf0a5e072741aa64bad1ee057b706429561cccf2f83f8db6f8de69dce27fc5",
-      "git_last_commit": null
+      "git_last_commit": "2026-08-18T23:55:41+01:00"
     },
     {
       "name": "remotion-best-practices",
@@ -2270,7 +2370,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/review-animations",
       "skill_file": "SKILL.md",
-      "description": "Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. Default to flagging; approval is earned.",
+      "description": "Review animation and motion code against Emil Kowalski's design engineering principles. Use when reviewing a motion diff or interaction implementation and produce concrete findings with suggested fixes.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -2290,7 +2390,7 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "c92905bff59c3007d07c2638a2a83d5d71c901feef108cce1da0bf3c7cafd579",
+      "digest": "a07941bc127ccf2b1e502690937033ae763a0499f3ec7d57d6b531eb7f31c0f4",
       "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
@@ -2375,8 +2475,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "6cf6de4e80653d06beb541c8a06293c24210620d0070a2ffd394473fe5f4fea1",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "924a5001488ba78233e2bfc750a92eb86d020461c45efd395b50fc01c2badb88",
+      "git_last_commit": "2026-09-12T09:18:49+01:00"
     },
     {
       "name": "seo-keyword-research-intent-mapping",
@@ -2433,6 +2533,24 @@
       "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
+      "name": "signing-entitlements",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/signing-entitlements",
+      "skill_file": "SKILL.md",
+      "description": "Inspect macOS signing, entitlements, and Gatekeeper issues. Use when diagnosing code signing, sandbox, hardened runtime, or trust failures.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "803ab1d09ee781fa847c6c501bff8954a4e8ace19a855ee9606af8bcd950586c",
+      "git_last_commit": null
+    },
+    {
       "name": "source-command-new-blog",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/source-command-new-blog",
@@ -2477,6 +2595,46 @@
       ],
       "digest": "8b37862177d98529047d5e6f5a153a2e309acdd939a435bec03241f9000bacb5",
       "git_last_commit": "2026-08-05T10:07:51+01:00"
+    },
+    {
+      "name": "spm-build-analysis",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/spm-build-analysis",
+      "skill_file": "SKILL.md",
+      "description": "Analyze Swift Package Manager dependencies, package plugins, module variants, and CI-oriented build overhead that slow Xcode builds. Use when a developer suspects packages, plugins, or dependency graph shape are hurting clean or incremental build performance, mentions SPM slowness, package resolution time, build plugin overhead, duplicate module builds from configuration drift, circular dependencies between modules, oversized modules needing splitting, or modularization best practices.",
+      "status": "warn",
+      "errors": 0,
+      "warnings": 2,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [
+        "SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when symlinked",
+        "SKILL.md: link '../xcode-compilation-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md; it does not follow the skill when symlinked"
+      ],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../xcode-project-analyzer/SKILL.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md",
+          "recommendation": "link-skills.sh links the shared 'xcode-project-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        },
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../xcode-compilation-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../xcode-compilation-analyzer/SKILL.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md",
+          "recommendation": "link-skills.sh links the shared 'xcode-compilation-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        }
+      ],
+      "digest": "45ed08e562c620a76d12f8db81e26e879b70c7e8277e58fc8e5be730464dfe9b",
+      "git_last_commit": null
     },
     {
       "name": "strategic-nerds",
@@ -2643,6 +2801,463 @@
       "findings": [],
       "digest": "c20a12d0e664c182130e75dfed6af46d81623930d15935f27353a39429724306",
       "git_last_commit": "2026-08-05T10:07:51+01:00"
+    },
+    {
+      "name": "swift-audit",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/swift-audit",
+      "skill_file": "SKILL.md",
+      "description": "Audit a whole Swift codebase by running the installed Swift agent skills (Hudson Pro series, van der Lee Expert series, Xcode build optimization set, OpenAI iOS and macOS plugin skills) over it in a planned, parallel sweep, then merging everything into one findings report. Use when asked to audit, review, health-check, or modernize an iOS or macOS project, or for a Swift 6, SwiftUI, SwiftData, Core Data, testing, or build-time review of an entire project.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 20,
+      "claude_features": [
+        "user-invocable"
+      ],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "claude-only-frontmatter",
+          "message": "frontmatter key 'user-invocable' is Claude-specific. Codex has no /slash invocation registry; the flag is inert.",
+          "feature": "user-invocable",
+          "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "SKILL.md: names `scripts/link-skills.sh` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "SKILL.md",
+          "target": "scripts/link-skills.sh",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/project-audit-checks.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/project-audit-checks.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/build-settings-best-practices.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/build-settings-best-practices.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/spm-analysis-checks.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/spm-analysis-checks.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/views.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/views.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/state-management.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/state-management.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/code-smells.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/code-smells.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/mv-patterns.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/mv-patterns.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/navigationstack.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/navigationstack.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/liquid-glass.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/liquid-glass.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/bug-patterns.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/bug-patterns.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/sendable.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/sendable.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/core-rules.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/core-rules.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/fundamentals.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/fundamentals.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/project-audit.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/project-audit.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/windowing.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/windowing.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/representables.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/representables.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/api-snippets.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/api-snippets.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/passes.md: names `references/first-pass-checklist.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/passes.md",
+          "target": "references/first-pass-checklist.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        }
+      ],
+      "digest": "49eb512d269e6b3deb59d01dd2c250d6a4be542e20ba1ba766cc14fb26add01b",
+      "git_last_commit": null
+    },
+    {
+      "name": "swift-concurrency",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/swift-concurrency",
+      "skill_file": "SKILL.md",
+      "description": "Diagnose Swift Concurrency issues, refactor callback-based code to async/await, and guide Swift 6 migration when working with tasks, actors, @MainActor, Sendable, data races, thread safety, or concurrency-related compiler and linter warnings.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "1bb4ef9485915c8012302552f5f13be2b3a1df268d66524573328691c860ec8d",
+      "git_last_commit": null
+    },
+    {
+      "name": "swift-concurrency-pro",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/swift-concurrency-pro",
+      "skill_file": "SKILL.md",
+      "description": "Reviews Swift code for concurrency correctness, modern API usage, and common async/await pitfalls. Use when reading, writing, or reviewing Swift concurrency code.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "63e3b21fc7fd6fde5994a0b5a129e806eb7c4365ad17855d5aeccfe8d48f5406",
+      "git_last_commit": null
+    },
+    {
+      "name": "swift-testing-expert",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/swift-testing-expert",
+      "skill_file": "SKILL.md",
+      "description": "Expert guidance for Swift Testing: test structure, #expect/#require macros, traits and tags, parameterized tests, test plans, parallel execution, async waiting patterns, and XCTest migration. Use when writing new Swift tests, modernizing XCTest suites, debugging flaky tests, or improving test quality and maintainability in Apple-platform or Swift server projects.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "a365c14fecc99445fe3837fb6f654db233d86d2b6efd764fc8712fb67b074cb5",
+      "git_last_commit": null
+    },
+    {
+      "name": "swift-testing-pro",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/swift-testing-pro",
+      "skill_file": "SKILL.md",
+      "description": "Writes, reviews, and improves Swift Testing code using modern APIs and best practices. Use when reading, writing, or reviewing projects that use Swift Testing.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "a5852fe56887bfab7973b9e5de4ac35ad7efdb9559ba84191811c65842f45b17",
+      "git_last_commit": null
+    },
+    {
+      "name": "swiftdata-pro",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/swiftdata-pro",
+      "skill_file": "SKILL.md",
+      "description": "Writes, reviews, and improves SwiftData code using modern APIs and best practices. Use when reading, writing, or reviewing projects that use SwiftData.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "92f7583d57c738cb8ea30f25e08b2c059a8f16f0c4ac455f0cd8c38bdac09b90",
+      "git_last_commit": null
+    },
+    {
+      "name": "swiftui-expert-skill",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/swiftui-expert-skill",
+      "skill_file": "SKILL.md",
+      "description": "Use when writing, reviewing, or refactoring SwiftUI code for iOS or macOS, including state management and `@Observable` data flow, view composition and invalidation/performance, lists and `ForEach` identity, environment usage, localization, animations, Liquid Glass adoption, migrating soft-deprecated APIs, or Instruments `.trace` capture/analysis for hangs, hitches, CPU hotspots, or",
+      "status": "warn",
+      "errors": 0,
+      "warnings": 2,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "SKILL.md:54 contains a system absolute path '/tmp/stop-trace'",
+          "document": "SKILL.md",
+          "line": 54,
+          "path": "/tmp/stop-trace",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
+        },
+        {
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "references/trace-recording.md:62 contains a system absolute path '/tmp/stop-trace'",
+          "document": "references/trace-recording.md",
+          "line": 62,
+          "path": "/tmp/stop-trace",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
+        }
+      ],
+      "digest": "465aede0e8dbca67a40bd8ffa1ac38e540cde0e3f29fe516b92cdc765d55ad6a",
+      "git_last_commit": null
+    },
+    {
+      "name": "swiftui-liquid-glass",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/swiftui-liquid-glass",
+      "skill_file": "SKILL.md",
+      "description": "Implement and review iOS 26+ SwiftUI Liquid Glass UI. Use when adopting Liquid Glass or checking its correctness, performance, and design fit.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "0bc5cfb7e3eee7c390659587ae5888db1dd0df8342c74dd6b186f3d01dfec686",
+      "git_last_commit": null
+    },
+    {
+      "name": "swiftui-patterns",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/swiftui-patterns",
+      "skill_file": "SKILL.md",
+      "description": "Build macOS SwiftUI scenes and components with desktop patterns. Use when shaping windows, commands, toolbars, settings, split views, or inspectors.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 1,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "SKILL.md: names `references/run-button-bootstrap.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "SKILL.md",
+          "target": "references/run-button-bootstrap.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        }
+      ],
+      "digest": "4c0e5ce639eba25dbe100305b124ad1b1668f24021bab5747b721533d361ffe1",
+      "git_last_commit": null
+    },
+    {
+      "name": "swiftui-performance-audit",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/swiftui-performance-audit",
+      "skill_file": "SKILL.md",
+      "description": "Audit SwiftUI runtime performance from code first. Use when diagnosing slow rendering, janky scrolling, expensive updates, or profiling needs.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "f686c4ab38ec393d512ca0acdad82945d8a0d2865547565f6183f87d538f118d",
+      "git_last_commit": null
+    },
+    {
+      "name": "swiftui-pro",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/swiftui-pro",
+      "skill_file": "SKILL.md",
+      "description": "Comprehensively reviews SwiftUI code for best practices on modern APIs, maintainability, and performance. Use when reading, writing, or reviewing SwiftUI projects.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "e1bd9e3ffdea3062b928dad3692465be779aa450da312725aa1b6452a8e19701",
+      "git_last_commit": null
+    },
+    {
+      "name": "swiftui-ui-patterns",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/swiftui-ui-patterns",
+      "skill_file": "SKILL.md",
+      "description": "Build and refactor SwiftUI UI with component patterns and examples. Use when shaping navigation, state, layouts, controls, or screen composition.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 4,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/components-index.md: names `references/webview.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/components-index.md",
+          "target": "references/webview.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/components-index.md: names `references/composer.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/components-index.md",
+          "target": "references/composer.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/components-index.md: names `references/text-input.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/components-index.md",
+          "target": "references/text-input.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/components-index.md: names `references/design-system.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/components-index.md",
+          "target": "references/design-system.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        }
+      ],
+      "digest": "6ad6c8a18d951b1c4d2c03697d95cb1060f7d856c1c481942aba940486f1f0cd",
+      "git_last_commit": null
+    },
+    {
+      "name": "swiftui-view-refactor",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/swiftui-view-refactor",
+      "skill_file": "SKILL.md",
+      "description": "Refactor SwiftUI view files into stable, testable structure. Use when splitting large views, tightening data flow, or cleaning Observation ownership.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "0c61733010d4ef5450df8f73170914c4ab73b845de4621e43528b43f33f24618",
+      "git_last_commit": null
     },
     {
       "name": "tech-debt-audit",
@@ -2843,8 +3458,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "c5f896b8d518ce8a38da7c07fb4719d0d3024b1d53e165cc6face56b0997e7ac",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "66f95177c6e80ebd7dde594e0b9f3fc51eda4ffdfca4df4d3f380e862090f149",
+      "git_last_commit": "2026-09-12T09:18:49+01:00"
     },
     {
       "name": "web-design-guidelines",
@@ -2897,7 +3512,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/weekly-report",
       "skill_file": "SKILL.md",
-      "description": "Generate a weekly status report from Linear, Slack, and Notion, dedup against prior reports, and save it to the work Notion database.",
+      "description": "Generate a weekly status report from Linear, Slack, and Notion. Use when the user asks for the weekly work summary; compare it with prior reports, remove duplicates, and save the result to the work Notion database.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -2917,15 +3532,33 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "817dcdc3badf6ca292ff1281f4f6fb3fe088dde66ffaf2c0a25ed83d8e58b2fb",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "3bab35d3a6c092036fc4e2c25ba95acbddfa3fc9df2c281e3dc76ef5abd4ddef",
+      "git_last_commit": "2026-09-12T09:18:49+01:00"
+    },
+    {
+      "name": "window-management",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/window-management",
+      "skill_file": "SKILL.md",
+      "description": "Customize macOS SwiftUI windows and scene behavior. Use when tuning window chrome, drag regions, placement, restoration, launch behavior, or borderless windows.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "95e82b59c4b1af0820a9fa36c1ace16f154334480603d7375bf1623bb5b09575",
+      "git_last_commit": null
     },
     {
       "name": "writing",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/writing",
       "skill_file": "SKILL.md",
-      "description": "Comprehensive voice guide for all writing contexts. Covers fiction voice, non-fiction voice, banned words/phrases, BAD/GOOD examples, and tone calibration. Use when writing, revising, or reviewing any content to match the author's established voice.",
+      "description": "Apply the author's writing rules when drafting, revising, or reviewing fiction, non-fiction, product copy, or persuasive copy. Use the relevant context section and references only.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -2945,8 +3578,238 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "bb5521bc80de3512fd63652be33610f94ff7818212bdbe0e4d92482bad5dfd8b",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "09fb602a7260741c3ad3b536f6f1abf1a6935d365fc030c5050d4b977cb5d47f",
+      "git_last_commit": "2026-09-12T09:18:49+01:00"
+    },
+    {
+      "name": "xcode-build-benchmark",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/xcode-build-benchmark",
+      "skill_file": "SKILL.md",
+      "description": "Benchmark Xcode clean and incremental builds with repeatable inputs, timing summaries, and timestamped `.build-benchmark/` artifacts. Use when a developer wants a baseline, wants to compare before and after changes, asks to measure build performance, mentions build times, build duration, how long builds take, or wants to know if builds got faster or slower.",
+      "status": "warn",
+      "errors": 0,
+      "warnings": 4,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [
+        "SKILL.md: link '../xcode-compilation-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md; it does not follow the skill when symlinked",
+        "SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when symlinked",
+        "SKILL.md: link '../spm-build-analysis/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md; it does not follow the skill when symlinked",
+        "SKILL.md: link '../xcode-build-orchestrator/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-build-orchestrator/SKILL.md; it does not follow the skill when symlinked"
+      ],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../xcode-compilation-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../xcode-compilation-analyzer/SKILL.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md",
+          "recommendation": "link-skills.sh links the shared 'xcode-compilation-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        },
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../xcode-project-analyzer/SKILL.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md",
+          "recommendation": "link-skills.sh links the shared 'xcode-project-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        },
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../spm-build-analysis/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../spm-build-analysis/SKILL.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md",
+          "recommendation": "link-skills.sh links the shared 'spm-build-analysis/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        },
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../xcode-build-orchestrator/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-build-orchestrator/SKILL.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../xcode-build-orchestrator/SKILL.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/xcode-build-orchestrator/SKILL.md",
+          "recommendation": "link-skills.sh links the shared 'xcode-build-orchestrator/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        }
+      ],
+      "digest": "25eb1d11352980ab4f1ae379056becad2ecd45d49acf09c51d7a1aeffe1c9c95",
+      "git_last_commit": null
+    },
+    {
+      "name": "xcode-build-fixer",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/xcode-build-fixer",
+      "skill_file": "SKILL.md",
+      "description": "Apply approved Xcode build optimization changes following best practices, then re-benchmark to verify improvement. Use when a developer has an approved optimization plan from xcode-build-orchestrator, wants to apply specific build fixes, needs help implementing build setting changes, script phase guards, source-level compilation fixes, or SPM restructuring that was recommended by an analysis skill.",
+      "status": "warn",
+      "errors": 0,
+      "warnings": 3,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [
+        "SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when symlinked",
+        "SKILL.md: link '../xcode-compilation-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md; it does not follow the skill when symlinked",
+        "SKILL.md: link '../spm-build-analysis/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md; it does not follow the skill when symlinked"
+      ],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../xcode-project-analyzer/SKILL.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md",
+          "recommendation": "link-skills.sh links the shared 'xcode-project-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        },
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../xcode-compilation-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../xcode-compilation-analyzer/SKILL.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md",
+          "recommendation": "link-skills.sh links the shared 'xcode-compilation-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        },
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../spm-build-analysis/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../spm-build-analysis/SKILL.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md",
+          "recommendation": "link-skills.sh links the shared 'spm-build-analysis/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        }
+      ],
+      "digest": "1d913324337651e456664bc451d4f5ec023eec4434e5e615816ecf91921485cd",
+      "git_last_commit": null
+    },
+    {
+      "name": "xcode-build-orchestrator",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/xcode-build-orchestrator",
+      "skill_file": "SKILL.md",
+      "description": "Orchestrate Xcode build optimization by benchmarking first, running the specialist analysis skills, prioritizing findings, requesting explicit approval, delegating approved fixes to xcode-build-fixer, and re-benchmarking after changes. Use when a developer wants an end-to-end build optimization workflow, asks to speed up Xcode builds, wants a full build audit, or needs a recommend-first optimization pass covering compilation, project settings, and packages.",
+      "status": "warn",
+      "errors": 0,
+      "warnings": 4,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [
+        "SKILL.md: link '../xcode-compilation-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md; it does not follow the skill when symlinked",
+        "SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when symlinked",
+        "SKILL.md: link '../spm-build-analysis/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md; it does not follow the skill when symlinked",
+        "SKILL.md: link '../xcode-build-fixer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-build-fixer/SKILL.md; it does not follow the skill when symlinked"
+      ],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../xcode-compilation-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../xcode-compilation-analyzer/SKILL.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md",
+          "recommendation": "link-skills.sh links the shared 'xcode-compilation-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        },
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../xcode-project-analyzer/SKILL.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md",
+          "recommendation": "link-skills.sh links the shared 'xcode-project-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        },
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../spm-build-analysis/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../spm-build-analysis/SKILL.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md",
+          "recommendation": "link-skills.sh links the shared 'spm-build-analysis/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        },
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../xcode-build-fixer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-build-fixer/SKILL.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../xcode-build-fixer/SKILL.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/xcode-build-fixer/SKILL.md",
+          "recommendation": "link-skills.sh links the shared 'xcode-build-fixer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        }
+      ],
+      "digest": "adfb8b05bfb9723d27403956c5b0fa8cce030a69b18e91ffcda5220ce24934a5",
+      "git_last_commit": null
+    },
+    {
+      "name": "xcode-compilation-analyzer",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/xcode-compilation-analyzer",
+      "skill_file": "SKILL.md",
+      "description": "Analyze Swift and mixed-language compile hotspots using build timing summaries and Swift frontend diagnostics, then produce a recommend-first source-level optimization plan. Use when a developer reports slow compilation, type-checking warnings, expensive clean-build compile phases, long CompileSwiftSources tasks, warn-long-function-bodies output, or wants to speed up Swift type checking.",
+      "status": "warn",
+      "errors": 0,
+      "warnings": 1,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [
+        "SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when symlinked"
+      ],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../xcode-project-analyzer/SKILL.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md",
+          "recommendation": "link-skills.sh links the shared 'xcode-project-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        }
+      ],
+      "digest": "30a35865dcbe3eca1f2d049127e393616037d155acb5a30356b363ec1fb63937",
+      "git_last_commit": null
+    },
+    {
+      "name": "xcode-project-analyzer",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/xcode-project-analyzer",
+      "skill_file": "SKILL.md",
+      "description": "Audit Xcode project configuration, build settings, scheme behavior, and script phases to find build-time improvements with explicit approval gates. Use when a developer wants project-level build analysis, slow incremental builds, guidance on target dependencies, build settings review, run script phase analysis, parallelization improvements, or module-map and DEFINES_MODULE configuration.",
+      "status": "warn",
+      "errors": 0,
+      "warnings": 1,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [
+        "SKILL.md: link '../spm-build-analysis/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md; it does not follow the skill when symlinked"
+      ],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../spm-build-analysis/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../spm-build-analysis/SKILL.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md",
+          "recommendation": "link-skills.sh links the shared 'spm-build-analysis/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        }
+      ],
+      "digest": "a97a40f1025d22fa68b8ec68b50f365058b10010baa2ffe2cf7755e97d4e7785",
+      "git_last_commit": null
     }
   ]
 }

@@ -1,18 +1,18 @@
 # Agent skills inventory
 
-Generated 2026-08-18T23:40:10+01:00 by `scripts/validate-agent-skills.py`.
+Generated 2026-09-13T15:53:20+01:00 by `scripts/validate-agent-skills.py`.
 Do not edit by hand. Regenerate instead.
 
 ## Sources
 
 | Source | Path | Skills | Anomalies |
 | --- | --- | --- | --- |
-| canonical | `/Users/prashant/Developer/brain/skills` | 111 | 1 |
+| canonical | `/Users/prashant/Developer/brain/skills` | 137 | 1 |
 
 ## Totals
 
-- 111 skills across 111 unique names
-- 92 pass, 19 warn, 0 fail
+- 137 skills across 137 unique names
+- 111 pass, 26 warn, 0 fail
 - 0 duplicate names, 0 unresolved conflicts
 - 1 anomalies in the source directories
 
@@ -23,25 +23,29 @@ Do not edit by hand. Regenerate instead.
 | `ad-spend-allocator` | canonical | Optimize budget allocation across paid media channels using Marketing Efficiency Ratio (MER), marginal ROAS analysis, diminishing returns modeling, and increme… | pass | none | none | unique |
 | `ai-search-visibility-aeo-geo-llmo` | canonical | AI search and citation behavior change quickly. The frameworks below use the best available public data as of early 2026 (Google surfaces, ChatGPT, Perplexity,… | pass | none | none | unique |
 | `animation-vocabulary` | canonical | Reverse-lookup glossary that turns a vague description of a web animation or motion effect into its exact term ("the bouncy thing when a popover opens" → Pop i… | pass | none | none | unique |
+| `app-store-screenshots` | canonical | Write, capture, and render App Store screenshots for an iOS, iPadOS, or macOS app. Headline copy comes first and follows the pain, shift, proof, feature sequen… | pass | user-invocable | none | unique |
+| `appkit-interop` | canonical | Bridge macOS SwiftUI into AppKit narrowly. Use when implementing representables, reaching NSWindow or panels, handling menus, or using the responder chain. | pass | none | none | unique |
 | `apple-design` | canonical | Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing gesture-driven UI, spring animations, d… | pass | none | none | unique |
+| `aside-browser` | canonical | Read when you need a browser, or have to work across user's logged-in websites (e.g. Gmail, Slack, cloud consoles, etc.), or have to refer personal contexts li… | pass | none | none | unique |
 | `bar-raiser` | canonical | Evaluates candidates against Supabase's Bar Raiser framework using an interview transcript and interviewer notes. Produces a hire or no-hire feedback document… | pass | user-invocable | none | unique |
 | `blog-post-ideation` | canonical | Generates data-driven blog post ideas for developer products based on market research and community insights. Use when planning content calendars, identifying… | pass | user-invocable | none | unique |
 | `bofu-seo-aeo-strategy` | canonical | Plan, write, and maintain content that wins purchase-near buyers in both organic search and AI answer engines. BOFU content is structurally different from TOFU… | pass | none | none | unique |
 | `campaign-analyzer` | canonical | Analyze paid media performance across dimensions, funnels, cohorts, and channels — turning data into actionable insights and business narratives. | pass | none | none | unique |
-| `case-study` | canonical | Create customer case studies that demonstrate product value through real success stories. The customer is the hero. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
+| `case-study` | canonical | Create customer case studies from verified customer evidence. Use when interviewing a customer, structuring a success story, or drafting a case study for sales… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `channel-copple` | canonical | Rewrite or edit content in the voice of Paul Copplestone (Supabase CEO, "Copple"). Trigger on "channel Copple", "make this sound like Copple", "edit this the w… | pass | none | none | unique |
-| `cmo-coaching` | canonical | Generate a CMO coaching report grading executive presence, judgment, and leadership awareness. Surveys Slack, Linear, and Notion, then saves to personal Notion. | pass | user-invocable | none | unique |
+| `cmo-coaching` | canonical | Generate a CMO coaching report from the user's Slack, Linear, and Notion activity. Use when the user asks for feedback on executive presence, judgment, leaders… | pass | user-invocable | none | unique |
 | `competitive-analysis` | canonical | Conducts competitive analysis and creates battle cards for technical products. Covers competitor identification, public research, product teardowns, go-to-mark… | pass | user-invocable | none | unique |
 | `competitive-battlecard` | canonical | Generates comprehensive competitive battlecards for developer products that help sales and marketing teams position against specific competitors. Covers compan… | pass | user-invocable | none | unique |
 | `connect-recommend` | canonical | Use this skill when the user asks about Stripe Connect configuration, charge patterns, Dashboard access, or how to get started with Connect, is building a mark… | pass | none | none | unique |
 | `content-strategy` | canonical | Creates content marketing strategies for technical products. Covers content pillars, editorial calendars, content briefs, inside-out vs outside-in approaches,… | pass | user-invocable | none | unique |
-| `daily-meta-checkin` | canonical | Pull the live Midnight Coders Meta ad numbers, cross-check them against Stripe and PostHog, and return a bottom line plus a numbered list of what to do next. | pass | user-invocable | none | unique |
+| `core-data-expert` | canonical | Expert Core Data guidance (iOS/macOS): stack setup, fetch requests & NSFetchedResultsController, saving/merge conflicts, threading & Swift Concurrency, batch o… | pass | none | none | unique |
+| `daily-meta-checkin` | canonical | Pull the current Midnight Coders Meta ad numbers, cross-check them against Stripe and PostHog, and return a bottom line plus a numbered list of what to do next… | pass | user-invocable | none | unique |
 | `data-storytelling` | canonical | Transform data into compelling narratives using visualization, context, and persuasive structure. Use when presenting analytics to stakeholders, creating data… | pass | none | none | unique |
 | `data-visualization` | canonical | Create effective data visualizations with Python (matplotlib, seaborn, plotly). Use when building charts, choosing the right chart type for a dataset, creating… | pass | user-invocable | none | unique |
 | `deploy-to-vercel` | canonical | Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live"… | pass | none | none | unique |
 | `developer-persona` | canonical | Create detailed developer persona profiles that are specific, realistic, and actionable for targeting decisions. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
-| `emil-design-eng` | canonical | This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great. | pass | none | none | unique |
-| `event-brief` | canonical | Plan and execute conference or event participation with clear objectives, staffing, messaging, and success criteria. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
+| `emil-design-eng` | canonical | Apply Emil Kowalski's design engineering principles to UI polish, component design, animation decisions, and interaction details. Use when reviewing or refinin… | pass | none | none | unique |
+| `event-brief` | canonical | Plan conference and event participation with clear objectives, staffing, messaging, logistics, and success criteria. Use when preparing an event brief, booth p… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `fiction-devedit` | canonical | Generate a comprehensive developmental editorial letter for a fiction manuscript, written as though by a senior developmental editor at Penguin Books. Locates… | warn (0E/1W) | none | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `fiction-diagnostic` | canonical | Diagnose a fiction manuscript for the developmental and line-level problems an editor would catch, but at draft stage. Covers what a first chapter must contain… | warn (0E/1W) | none | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `fiction-editing` | canonical | Turn editorial feedback into a SUGGESTED-EDITS.md of concrete, in-voice rewrites for a fiction manuscript. Locates the manuscript and the feedback, maps each a… | warn (0E/1W) | none | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
@@ -73,6 +77,7 @@ Do not edit by hand. Regenerate instead.
 | `humanize` | canonical | Remove signs of AI-generated writing from text. Use when editing or reviewing text to make it sound more natural and human-written. Based on Wikipedia's compre… | pass | allowed-tools, user-invocable | none | unique |
 | `impeccable` | canonical | Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwis… | pass | none | none | unique |
 | `improve-animations` | canonical | Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-contained implementation plans for other ag… | pass | none | none | unique |
+| `ios-app-intents` | canonical | Design App Intents, app entities, and App Shortcuts for iOS system surfaces. Use when exposing app actions or content to Shortcuts, Siri, Spotlight, widgets, o… | pass | none | none | unique |
 | `ios-deployment` | canonical | Ship an iOS app from the command line without opening Xcode. Covers archive, IPA export, App Store Connect API authentication, TestFlight upload (debug builds)… | pass | none | none | unique |
 | `launch` | canonical | Plans and executes product launches for technical products. Covers launch tiers, sine wave timing, naming conventions, pre-launch preparation, launch day execu… | pass | user-invocable | none | unique |
 | `lifecycle-email` | canonical | Write automated lifecycle emails: upsell, onboarding, re-engagement, retention, and milestone sequences for technical audiences. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
@@ -91,8 +96,8 @@ Do not edit by hand. Regenerate instead.
 | `on-page-seo-aeo-optimization` | canonical | Turn a draft or existing page into something both Google *and* AI answer engines can index, rank, and cite. This skill operates at the single-page level — keyw… | pass | none | none | unique |
 | `paid-media-reporter` | canonical | Build performance reports, dashboards, and stakeholder communications that turn ad data into business narratives — client reports, QBRs, audit deliverables, an… | pass | none | none | unique |
 | `paid-search-ads-playbook` | canonical | Google and Microsoft paid search planning: structure, keywords, match types, negatives, RSAs, bidding lens, and landing-page alignment for conversion-focused s… | pass | none | none | unique |
-| `portugal-nationality` | canonical | Monitor Portuguese nationality law (Lei da Nacionalidade) for legislative, constitutional, and presidential actions. Creates a Notion page with findings if new… | pass | user-invocable | none | unique |
-| `positioning-framework` | canonical | Define product positioning in the competitive landscape with messaging pillars using Aristotle's rhetorical framework. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
+| `portugal-nationality` | canonical | Monitor Portuguese nationality law for legislative, constitutional, and presidential actions. Use when checking for changes to Lei da Nacionalidade; create a N… | pass | user-invocable | none | unique |
+| `positioning-framework` | canonical | Define product positioning and messaging pillars using Aristotle's rhetorical framework. Use when clarifying a product's audience, problem, differentiation, pr… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `prepare-videos-for-social` | canonical | Edit a talking-head recording down to its good takes and burn TikTok/Reels-style captions on it, matching the Midnight Coder's Children video series. Cuts fals… | warn (0E/1W) | none | none | unique |
 | `prepare-viral-short` | canonical | End-to-end workflow for creating viral AI YouTube shorts. Covers niche selection, channel setup, content creation methods, and analytics optimization. | pass | user-invocable | none | unique |
 | `prfaq` | canonical | Write or review an Amazon-style PRFAQ that rallies a team around the customer's problem before a line of code gets written. Drafts the mock press release plus… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
@@ -103,15 +108,17 @@ Do not edit by hand. Regenerate instead.
 | `reconcile-checking-ledger` | canonical | Reconcile a personal checking ledger or budget spreadsheet against bank movements, including ledgers that summarize transactions by month and category. Use for… | pass | none | none | unique |
 | `remotion-best-practices` | canonical | Best practices for Remotion - Video creation in React | warn (0E/1W) | none | none | unique |
 | `remotion-video` | canonical | Build videos with Remotion. Covers timing architecture, animation patterns, component structure, and styling guidelines. | pass | user-invocable | none | unique |
-| `review-animations` | canonical | Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. Default to flagging; approval is earned. | pass | disable-model-invocation | none | unique |
+| `review-animations` | canonical | Review animation and motion code against Emil Kowalski's design engineering principles. Use when reviewing a motion diff or interaction implementation and prod… | pass | disable-model-invocation | none | unique |
 | `sales-email` | canonical | Write concise, relevant sales emails: cold outreach, warm follow-ups, event follow-ups, and nurture campaigns. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `search-reddit` | canonical | Find Reddit discussions where Prashant can add value by sharing Strategic Nerds blog posts. Requires human-driven Playwright browsing. | pass | user-invocable | none | unique |
 | `seo-aeo-content-strategy` | canonical | Design content systems that earn both Google rankings *and* AI citations. The core insight: AI answer engines read content differently than humans — they extra… | pass | none | none | unique |
 | `seo-keyword-research-intent-mapping` | canonical | Build a keyword universe that reflects how both humans *and* AI answer engines search. Traditional keyword research looks at standalone terms; modern research… | pass | none | none | unique |
 | `seo-max-kt` | canonical | Long-form SEO and AEO methodology bundle; read SEO_AND_AEO_KT.md for the full corpus. | pass | none | none | unique |
 | `seo-reporting-measurement` | canonical | Build reports that stakeholders trust, rooted in data sources that are actually reliable. Modern SEO measurement has to reckon with a very specific constraint:… | pass | none | none | unique |
+| `signing-entitlements` | canonical | Inspect macOS signing, entitlements, and Gatekeeper issues. Use when diagnosing code signing, sandbox, hardened runtime, or trust failures. | pass | none | none | unique |
 | `source-command-new-blog` | canonical | Research and create data-driven blog posts using Picks and Shovels methodology | pass | none | none | unique |
 | `source-command-verify-supabase` | canonical | Comprehensive Supabase security and best practices verification | warn (0E/1W) | none | none | unique |
+| `spm-build-analysis` | canonical | Analyze Swift Package Manager dependencies, package plugins, module variants, and CI-oriented build overhead that slow Xcode builds. Use when a developer suspe… | warn (0E/2W) | none | SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when s… | unique |
 | `strategic-nerds` | canonical | Find 3-5 online discussions where Prashant can add value by sharing Strategic Nerds blog posts. Creates a Notion page with opportunities and suggested replies. | pass | user-invocable | none | unique |
 | `stripe-best-practices` | canonical | Guides Stripe integration decisions across API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), bi… | pass | none | none | unique |
 | `stripe-directory` | canonical | Use when the user wants to find businesses, software, service providers, or partners for a specific industry, workflow, pain point, capability, or job to be do… | pass | allowed-tools | none | unique |
@@ -119,6 +126,19 @@ Do not edit by hand. Regenerate instead.
 | `stripe-projects` | canonical | Use when the user wants to provision infrastructure or third-party services using Stripe Projects. Triggers: "I need a database", "set up auth", "add caching",… | pass | allowed-tools | none | unique |
 | `supabase` | canonical | Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libr… | pass | none | none | unique |
 | `supabase-postgres-best-practices` | canonical | Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or… | pass | none | none | unique |
+| `swift-audit` | canonical | Audit a whole Swift codebase by running the installed Swift agent skills (Hudson Pro series, van der Lee Expert series, Xcode build optimization set, OpenAI iO… | pass | user-invocable | none | unique |
+| `swift-concurrency` | canonical | Diagnose Swift Concurrency issues, refactor callback-based code to async/await, and guide Swift 6 migration when working with tasks, actors, @MainActor, Sendab… | pass | none | none | unique |
+| `swift-concurrency-pro` | canonical | Reviews Swift code for concurrency correctness, modern API usage, and common async/await pitfalls. Use when reading, writing, or reviewing Swift concurrency co… | pass | none | none | unique |
+| `swift-testing-expert` | canonical | Expert guidance for Swift Testing: test structure, #expect/#require macros, traits and tags, parameterized tests, test plans, parallel execution, async waiting… | pass | none | none | unique |
+| `swift-testing-pro` | canonical | Writes, reviews, and improves Swift Testing code using modern APIs and best practices. Use when reading, writing, or reviewing projects that use Swift Testing. | pass | none | none | unique |
+| `swiftdata-pro` | canonical | Writes, reviews, and improves SwiftData code using modern APIs and best practices. Use when reading, writing, or reviewing projects that use SwiftData. | pass | none | none | unique |
+| `swiftui-expert-skill` | canonical | Use when writing, reviewing, or refactoring SwiftUI code for iOS or macOS, including state management and `@Observable` data flow, view composition and invalid… | warn (0E/2W) | none | none | unique |
+| `swiftui-liquid-glass` | canonical | Implement and review iOS 26+ SwiftUI Liquid Glass UI. Use when adopting Liquid Glass or checking its correctness, performance, and design fit. | pass | none | none | unique |
+| `swiftui-patterns` | canonical | Build macOS SwiftUI scenes and components with desktop patterns. Use when shaping windows, commands, toolbars, settings, split views, or inspectors. | pass | none | none | unique |
+| `swiftui-performance-audit` | canonical | Audit SwiftUI runtime performance from code first. Use when diagnosing slow rendering, janky scrolling, expensive updates, or profiling needs. | pass | none | none | unique |
+| `swiftui-pro` | canonical | Comprehensively reviews SwiftUI code for best practices on modern APIs, maintainability, and performance. Use when reading, writing, or reviewing SwiftUI proje… | pass | none | none | unique |
+| `swiftui-ui-patterns` | canonical | Build and refactor SwiftUI UI with component patterns and examples. Use when shaping navigation, state, layouts, controls, or screen composition. | pass | none | none | unique |
+| `swiftui-view-refactor` | canonical | Refactor SwiftUI view files into stable, testable structure. Use when splitting large views, tightening data flow, or cleaning Observation ownership. | pass | none | none | unique |
 | `tech-debt-audit` | canonical | Thorough, user-invoked tech debt and architecture audit of the current codebase. Produces TECH_DEBT_AUDIT.md with file-cited findings, severity, effort estimat… | pass | disable-model-invocation | none | unique |
 | `technical-seo-ai-crawler-audit` | canonical | Diagnose and prioritize the technical issues blocking a site from being crawled, indexed, ranked, and cited. Modern technical SEO has two audiences: Google's c… | pass | none | none | unique |
 | `thought-leadership-blog` | canonical | Write thought leadership blog posts establishing company perspective on industry trends and technical philosophy. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
@@ -129,8 +149,14 @@ Do not edit by hand. Regenerate instead.
 | `voice-of-supabase` | canonical | Write a Supabase product release blog post in the house voice. Trigger any time the artifact is a public technical writeup about something Supabase is shipping… | pass | none | none | unique |
 | `web-design-guidelines` | canonical | Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site… | pass | none | none | unique |
 | `webinar-planning` | canonical | Plans and executes technical webinars for developer audiences, and generates the complete asset package. Covers content structure, planning timelines, landing… | pass | user-invocable | none | unique |
-| `weekly-report` | canonical | Generate a weekly status report from Linear, Slack, and Notion, dedup against prior reports, and save it to the work Notion database. | pass | user-invocable | none | unique |
-| `writing` | canonical | Comprehensive voice guide for all writing contexts. Covers fiction voice, non-fiction voice, banned words/phrases, BAD/GOOD examples, and tone calibration. Use… | pass | user-invocable | none | unique |
+| `weekly-report` | canonical | Generate a weekly status report from Linear, Slack, and Notion. Use when the user asks for the weekly work summary; compare it with prior reports, remove dupli… | pass | user-invocable | none | unique |
+| `window-management` | canonical | Customize macOS SwiftUI windows and scene behavior. Use when tuning window chrome, drag regions, placement, restoration, launch behavior, or borderless windows. | pass | none | none | unique |
+| `writing` | canonical | Apply the author's writing rules when drafting, revising, or reviewing fiction, non-fiction, product copy, or persuasive copy. Use the relevant context section… | pass | user-invocable | none | unique |
+| `xcode-build-benchmark` | canonical | Benchmark Xcode clean and incremental builds with repeatable inputs, timing summaries, and timestamped `.build-benchmark/` artifacts. Use when a developer want… | warn (0E/4W) | none | SKILL.md: link '../xcode-compilation-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md; it does not follow the skil… | unique |
+| `xcode-build-fixer` | canonical | Apply approved Xcode build optimization changes following best practices, then re-benchmark to verify improvement. Use when a developer has an approved optimiz… | warn (0E/3W) | none | SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when s… | unique |
+| `xcode-build-orchestrator` | canonical | Orchestrate Xcode build optimization by benchmarking first, running the specialist analysis skills, prioritizing findings, requesting explicit approval, delega… | warn (0E/4W) | none | SKILL.md: link '../xcode-compilation-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md; it does not follow the skil… | unique |
+| `xcode-compilation-analyzer` | canonical | Analyze Swift and mixed-language compile hotspots using build timing summaries and Swift frontend diagnostics, then produce a recommend-first source-level opti… | warn (0E/1W) | none | SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when s… | unique |
+| `xcode-project-analyzer` | canonical | Audit Xcode project configuration, build settings, scheme behavior, and script phases to find build-time improvements with explicit approval gates. Use when a… | warn (0E/1W) | none | SKILL.md: link '../spm-build-analysis/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md; it does not follow the skill when symlinked | unique |
 
 ## Anomalies
 
@@ -232,8 +258,63 @@ Do not edit by hand. Regenerate instead.
 - **warn** `absolute-path` SKILL.md:240 contains a system absolute path '/tmp/current-types.ts'
   - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
 
+### `spm-build-analysis` (canonical)
+
+- **warn** `reference-escapes-skill` SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'xcode-project-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+- **warn** `reference-escapes-skill` SKILL.md: link '../xcode-compilation-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'xcode-compilation-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+
+### `swiftui-expert-skill` (canonical)
+
+- **warn** `absolute-path` SKILL.md:54 contains a system absolute path '/tmp/stop-trace'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+- **warn** `absolute-path` references/trace-recording.md:62 contains a system absolute path '/tmp/stop-trace'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+
 ### `thought-leadership-blog` (canonical)
 
 - **warn** `reference-escapes-skill` SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked
   - Smallest fix: link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+
+### `xcode-build-benchmark` (canonical)
+
+- **warn** `reference-escapes-skill` SKILL.md: link '../xcode-compilation-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'xcode-compilation-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+- **warn** `reference-escapes-skill` SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'xcode-project-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+- **warn** `reference-escapes-skill` SKILL.md: link '../spm-build-analysis/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'spm-build-analysis/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+- **warn** `reference-escapes-skill` SKILL.md: link '../xcode-build-orchestrator/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-build-orchestrator/SKILL.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'xcode-build-orchestrator/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+
+### `xcode-build-fixer` (canonical)
+
+- **warn** `reference-escapes-skill` SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'xcode-project-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+- **warn** `reference-escapes-skill` SKILL.md: link '../xcode-compilation-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'xcode-compilation-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+- **warn** `reference-escapes-skill` SKILL.md: link '../spm-build-analysis/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'spm-build-analysis/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+
+### `xcode-build-orchestrator` (canonical)
+
+- **warn** `reference-escapes-skill` SKILL.md: link '../xcode-compilation-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'xcode-compilation-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+- **warn** `reference-escapes-skill` SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'xcode-project-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+- **warn** `reference-escapes-skill` SKILL.md: link '../spm-build-analysis/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'spm-build-analysis/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+- **warn** `reference-escapes-skill` SKILL.md: link '../xcode-build-fixer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-build-fixer/SKILL.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'xcode-build-fixer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+
+### `xcode-compilation-analyzer` (canonical)
+
+- **warn** `reference-escapes-skill` SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'xcode-project-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+
+### `xcode-project-analyzer` (canonical)
+
+- **warn** `reference-escapes-skill` SKILL.md: link '../spm-build-analysis/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/spm-build-analysis/SKILL.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'spm-build-analysis/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
 
