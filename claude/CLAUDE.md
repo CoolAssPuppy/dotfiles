@@ -73,6 +73,17 @@ Use this on every coding session.
 - Diff behavior between main and your changes when relevant.
 - Ask: "Would a staff engineer approve this?"
 
+### Verify before commit and push
+- Keep implementation, test repair, and review fixes local until the change is ready.
+- Before `git commit`, run the repository's complete required local validation and get a zero exit code. Use the repository's full gate when it defines one.
+- If the current machine cannot run a required check, leave the work uncommitted. Move it to a machine with the required tools or report the limitation to the maintainer.
+- After the last fix, rerun the complete required validation from the beginning. The successful run must cover the exact files in the commit.
+- Create one final commit after verification. Do not create checkpoint, CI probe, empty, tick, or "fix CI" commits.
+- Push once when the commit and pull request description are ready for review. Hosted CI confirms the local result. Do not use hosted CI as a debugging loop.
+- A later push requires review feedback or a verified issue that could not be reproduced locally. Batch the corrections, rerun the required local checks, and push once.
+- Do not manually dispatch or rerun hosted workflows unless the maintainer asks. Read the existing run logs before any remote action.
+- Inspect the repository's workflow triggers before a push when their cost or deployment effect is unclear. Never bypass verification hooks.
+
 ### Elegance, balanced
 - For non-trivial changes, pause and ask "is there a more elegant way?"
 - If a fix feels hacky: "Knowing everything I know now, implement the elegant solution."
