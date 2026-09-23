@@ -32,38 +32,13 @@ Before allowing any commit, verify:
 - ✅ No `any` types or unjustified assertions
 - ✅ Factory functions used (no `let`/`beforeEach`)
 
-## Verifying TDD Compliance Retrospectively
+## Verifying TDD compliance
 
-To verify that code was developed test-first, examine git history:
+Each change lands as one commit made after full local validation, so git history does not show the RED, GREEN, and REFACTOR steps. Check test-first development while the work happens instead:
 
-```bash
-# Check if test was written before implementation
-git log -p --follow src/features/payment/payment-processor.ts
-git log -p --follow src/features/payment/payment-processor.test.ts
-
-# Look for:
-# ✅ GOOD: Test commit comes BEFORE implementation commit
-# ❌ BAD: Implementation committed without corresponding test
-# ❌ BAD: Test and implementation in same commit without clear RED phase
-```
-
-**During code review, check:**
-- Was there a failing test before each production code change?
-- Do commit messages indicate RED-GREEN-REFACTOR progression?
-- Are refactoring commits separate from feature commits?
-
-**Example good commit sequence:**
-```
-feat(test): add test for payment validation (RED)
-feat: implement payment validation (GREEN)
-refactor: extract payment validation constants (REFACTOR)
-```
-
-**Example bad commit sequence:**
-```
-feat: add payment validation with tests
-```
-(Combined test+implementation suggests test wasn't written first)
+- Run each new test and see it fail before writing the production code it demands.
+- Note the failing test and its failure message in `tasks/todo.md` as the step is checked off.
+- In review, confirm every production change has a test that covers its behavior and would fail without it.
 
 ## TDD Example Workflow
 
@@ -176,7 +151,7 @@ const processOrder = (order: Order): ProcessedOrder => {
 
 ## Refactoring - The Critical Third Step
 
-Evaluating refactoring opportunities is not optional - it's the third step in the TDD cycle. After achieving a green state and committing your work, you MUST assess whether the code can be improved. However, only refactor if there's clear value - if the code is already clean and expresses intent well, move on to the next test.
+Evaluating refactoring opportunities is not optional - it's the third step in the TDD cycle. After achieving a green state, you must assess whether the code can be improved. However, only refactor if there's clear value - if the code is already clean and expresses intent well, move on to the next test.
 
 ### What is Refactoring?
 
@@ -245,15 +220,9 @@ const processOrder = (order: Order): ProcessedOrder => {
 
 ### Refactoring Guidelines
 
-#### 1. Commit Before Refactoring
+#### 1. Keep a safe point before refactoring
 
-Always commit your working code before starting any refactoring. This gives you a safe point to return to:
-
-```bash
-git add .
-git commit -m "feat: add payment validation"
-# Now safe to refactor
-```
+Do not commit before refactoring. Commits happen once, after full validation. If you want a way back, stash or copy the green state (`git stash push --keep-index` or a scratch branch you delete afterwards), and run the tests after every refactoring step.
 
 #### 2. Look for Useful Abstractions Based on Semantic Meaning
 
@@ -513,24 +482,17 @@ const validatePaymentAmount = (amount: number): void => {
 // Tests continue to pass without modification because external API unchanged
 ```
 
-#### 5. Verify and Commit After Refactoring
+#### 5. Verify after refactoring
 
-**CRITICAL**: After every refactoring:
-
-1. Run all tests - they must pass without modification
-2. Run static analysis (linting, type checking) - must pass
-3. Commit the refactoring separately from feature changes
+After every refactoring, run all tests (they must pass without modification) and static analysis (linting, type checking):
 
 ```bash
-# After refactoring
-npm test          # All tests must pass
-npm run lint      # All linting must pass
-npm run typecheck # TypeScript must be happy
-
-# Only then commit
-git add .
-git commit -m "refactor: extract payment validation helpers"
+npm test
+npm run lint
+npm run typecheck
 ```
+
+The refactoring ships in the same final commit as the feature it belongs to.
 
 ### Refactoring Checklist
 
@@ -543,7 +505,6 @@ Before considering refactoring complete, verify:
 - [ ] Code is more readable than before
 - [ ] Any duplication removed was duplication of knowledge, not just code
 - [ ] No speculative abstractions were created
-- [ ] The refactoring is committed separately from feature changes
 
 ### Example Refactoring Session
 
@@ -567,9 +528,6 @@ const calculateOrderTotal = (order: Order): number => {
   const shipping = itemsTotal > 50 ? 0 : order.shipping;
   return itemsTotal + shipping;
 };
-
-// Commit the working version
-// git commit -m "feat: implement order total calculation with free shipping"
 
 // Assess refactoring opportunities:
 // - The variable names could be clearer
@@ -599,9 +557,6 @@ const calculateOrderTotal = (order: Order): number => {
 // Run tests - they still pass!
 // Run linting - all clean!
 // Run type checking - no errors!
-
-// Now commit the refactoring
-// git commit -m "refactor: extract order total calculation helpers"
 ```
 
 ### Example: When NOT to Refactor
@@ -632,8 +587,7 @@ const applyDiscount = (price: number, discountRate: number): number => {
 //
 // Conclusion: No refactoring needed. This is fine as-is.
 
-// Commit and move to the next test
-// git commit -m "feat: add discount calculation"
+// Move on to the next test
 ```
 
 **Pattern for Refactoring Assessment:**
@@ -642,16 +596,17 @@ After every green test, explicitly assess:
 
 1. **Naming**: Are variable/function names clear?
 2. **Magic values**: Are constants extracted where needed?
-3. **Structure**: Is complexity manageable (nesting ≤2, function <30 lines)?
+3. **Structure**: Is complexity manageable (nesting 2 levels or less, functions under about 30-40 lines)?
 4. **Duplication**: Is knowledge (not just code) repeated?
 5. **Purity**: Are functions pure where possible?
 
-If all are satisfied → **No refactoring needed, commit and move on**
+If all are satisfied → **No refactoring needed, move on to the next test**
 
 If issues found → Classify priority and refactor if high value
 
 ## Commit Guidelines
 
+- Make one commit per change, after the repository's full local validation passes. No checkpoint, "fix CI", or RED/GREEN/REFACTOR step commits.
 - Each commit should represent a complete, working change
 - Use conventional commits format:
   ```

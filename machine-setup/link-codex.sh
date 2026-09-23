@@ -14,6 +14,8 @@ set -euo pipefail
 #      @rules/*.md it imports, recursively) into ~/.codex/AGENTS.md so Codex
 #      honors the same global rules. Codex does not expand @-imports, so we
 #      inline them here. Re-run this script after editing any rule file.
+#   4. Generates ~/.codex/agents/*.toml from claude/agents/*.md with
+#      scripts/sync-codex-agents.py, so Codex gets the same subagents.
 #
 # It never touches ~/.codex/skills/.system (Codex-managed built-in skills).
 
@@ -112,5 +114,8 @@ for i, (path, text) in enumerate(order):
 open(out_path, "w", encoding="utf-8").write("\n".join(parts) + "\n")
 print(f"    wrote {out_path} ({len(order)} files inlined)")
 PY
+
+echo "==> Generating Codex agents in $CODEX_HOME_DIR/agents"
+CODEX_HOME="$CODEX_HOME_DIR" python3 "$REPO_ROOT/scripts/sync-codex-agents.py" | sed 's/^/    /'
 
 echo "==> Done."

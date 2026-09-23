@@ -135,9 +135,9 @@ const updatedCart = {
 - **Files**: `kebab-case.ts` for all TypeScript files
 - **Test files**: `*.test.ts` or `*.spec.ts`
 
-## No Comments in Code
+## Comments explain why, not what
 
-Code should be self-documenting through clear naming and structure. Comments indicate that the code itself is not clear enough.
+Clear names and structure should say what the code does, so do not write comments that narrate it. Do write JSDoc comments on every public function and on complex logic, and comment business rules and constraints the code cannot show on its own (see `rules/code-style.md`, "Documentation standards").
 
 ```typescript
 // Avoid: Comments explaining what the code does
@@ -207,7 +207,7 @@ const processPayment = (payment: Payment): ProcessedPayment => {
 };
 ```
 
-**Exception**: JSDoc comments for public APIs are acceptable when generating documentation, but the code should still be self-explanatory without them.
+The examples above remove comments that restate the code. A public `processPayment` would still get a JSDoc comment, and the 3D Secure threshold would get a comment naming the rule or regulation it comes from.
 
 ## Prefer Options Objects
 

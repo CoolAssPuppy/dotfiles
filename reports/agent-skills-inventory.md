@@ -1,18 +1,18 @@
 # Agent skills inventory
 
-Generated 2026-09-13T15:53:20+01:00 by `scripts/validate-agent-skills.py`.
+Generated 2026-09-23T12:49:10+01:00 by `scripts/validate-agent-skills.py`.
 Do not edit by hand. Regenerate instead.
 
 ## Sources
 
 | Source | Path | Skills | Anomalies |
 | --- | --- | --- | --- |
-| canonical | `/Users/prashant/Developer/brain/skills` | 137 | 1 |
+| canonical | `/Users/prashant/Developer/brain/skills` | 132 | 1 |
 
 ## Totals
 
-- 137 skills across 137 unique names
-- 111 pass, 26 warn, 0 fail
+- 132 skills across 132 unique names
+- 106 pass, 26 warn, 0 fail
 - 0 duplicate names, 0 unresolved conflicts
 - 1 anomalies in the source directories
 
@@ -21,23 +21,23 @@ Do not edit by hand. Regenerate instead.
 | Skill | Source | Description | Status | Claude-specific features | Codex concerns | Duplicate / conflict |
 | --- | --- | --- | --- | --- | --- | --- |
 | `ad-spend-allocator` | canonical | Optimize budget allocation across paid media channels using Marketing Efficiency Ratio (MER), marginal ROAS analysis, diminishing returns modeling, and increme… | pass | none | none | unique |
-| `ai-search-visibility-aeo-geo-llmo` | canonical | AI search and citation behavior change quickly. The frameworks below use the best available public data as of early 2026 (Google surfaces, ChatGPT, Perplexity,… | pass | none | none | unique |
+| `ai-search-visibility-aeo-geo-llmo` | canonical | Measure and improve how a brand appears in AI answer engines (ChatGPT, Perplexity, Google AI Overviews and AI Mode, Copilot, Gemini). Use for AI visibility bas… | pass | none | none | unique |
 | `animation-vocabulary` | canonical | Reverse-lookup glossary that turns a vague description of a web animation or motion effect into its exact term ("the bouncy thing when a popover opens" → Pop i… | pass | none | none | unique |
 | `app-store-screenshots` | canonical | Write, capture, and render App Store screenshots for an iOS, iPadOS, or macOS app. Headline copy comes first and follows the pain, shift, proof, feature sequen… | pass | user-invocable | none | unique |
 | `appkit-interop` | canonical | Bridge macOS SwiftUI into AppKit narrowly. Use when implementing representables, reaching NSWindow or panels, handling menus, or using the responder chain. | pass | none | none | unique |
 | `apple-design` | canonical | Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing gesture-driven UI, spring animations, d… | pass | none | none | unique |
 | `aside-browser` | canonical | Read when you need a browser, or have to work across user's logged-in websites (e.g. Gmail, Slack, cloud consoles, etc.), or have to refer personal contexts li… | pass | none | none | unique |
-| `bar-raiser` | canonical | Evaluates candidates against Supabase's Bar Raiser framework using an interview transcript and interviewer notes. Produces a hire or no-hire feedback document… | pass | user-invocable | none | unique |
+| `bar-raiser` | canonical | Evaluates candidates against Supabase's Bar Raiser framework using an interview transcript and interviewer notes. Produces a hire or no-hire feedback document… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `blog-post-ideation` | canonical | Generates data-driven blog post ideas for developer products based on market research and community insights. Use when planning content calendars, identifying… | pass | user-invocable | none | unique |
 | `bofu-seo-aeo-strategy` | canonical | Plan, write, and maintain content that wins purchase-near buyers in both organic search and AI answer engines. BOFU content is structurally different from TOFU… | pass | none | none | unique |
 | `campaign-analyzer` | canonical | Analyze paid media performance across dimensions, funnels, cohorts, and channels — turning data into actionable insights and business narratives. | pass | none | none | unique |
 | `case-study` | canonical | Create customer case studies from verified customer evidence. Use when interviewing a customer, structuring a success story, or drafting a case study for sales… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `channel-copple` | canonical | Rewrite or edit content in the voice of Paul Copplestone (Supabase CEO, "Copple"). Trigger on "channel Copple", "make this sound like Copple", "edit this the w… | pass | none | none | unique |
 | `cmo-coaching` | canonical | Generate a CMO coaching report from the user's Slack, Linear, and Notion activity. Use when the user asks for feedback on executive presence, judgment, leaders… | pass | user-invocable | none | unique |
-| `competitive-analysis` | canonical | Conducts competitive analysis and creates battle cards for technical products. Covers competitor identification, public research, product teardowns, go-to-mark… | pass | user-invocable | none | unique |
-| `competitive-battlecard` | canonical | Generates comprehensive competitive battlecards for developer products that help sales and marketing teams position against specific competitors. Covers compan… | pass | user-invocable | none | unique |
+| `competitive-analysis` | canonical | Conducts competitive analysis for technical products across a competitive set, including the status quo and build-it-yourself, using public research, product t… | pass | user-invocable | none | unique |
+| `competitive-battlecard` | canonical | Writes a full battlecard document about one named competitor for sales and marketing teams, with company facts, strengths and weaknesses, how each side wins, o… | pass | user-invocable | none | unique |
 | `connect-recommend` | canonical | Use this skill when the user asks about Stripe Connect configuration, charge patterns, Dashboard access, or how to get started with Connect, is building a mark… | pass | none | none | unique |
-| `content-strategy` | canonical | Creates content marketing strategies for technical products. Covers content pillars, editorial calendars, content briefs, inside-out vs outside-in approaches,… | pass | user-invocable | none | unique |
+| `content-strategy` | canonical | Creates content marketing strategies for technical products using the Help First approach from Picks and Shovels, producing content pillars, a 12-week editoria… | pass | user-invocable | none | unique |
 | `core-data-expert` | canonical | Expert Core Data guidance (iOS/macOS): stack setup, fetch requests & NSFetchedResultsController, saving/merge conflicts, threading & Swift Concurrency, batch o… | pass | none | none | unique |
 | `daily-meta-checkin` | canonical | Pull the current Midnight Coders Meta ad numbers, cross-check them against Stripe and PostHog, and return a bottom line plus a numbered list of what to do next… | pass | user-invocable | none | unique |
 | `data-storytelling` | canonical | Transform data into compelling narratives using visualization, context, and persuasive structure. Use when presenting analytics to stakeholders, creating data… | pass | none | none | unique |
@@ -66,20 +66,20 @@ Do not edit by hand. Regenerate instead.
 | `find-animation-opportunities` | canonical | Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't. Read-only; it proposes motion with exact values, it doe… | pass | none | none | unique |
 | `find-skills` | canonical | Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express in… | pass | none | none | unique |
 | `generate-ranking-video` | canonical | Create viral ranking countdown videos in PolarRanks style. Overlays ranked lists on background video clips. Works for any topic -- books, people, places, movie… | pass | user-invocable | none | unique |
-| `go-to-market` | canonical | Create structured launch plans with measurable objectives. Scales by launch tier from major to minor. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
+| `go-to-market` | canonical | Writes a one-document launch plan for a single product or feature launch, with tier, measurable objectives, audience, key messages, tier-scaled tactics, owners… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `google-ads-account-audit` | canonical | Systematic 70+ checkpoint audit covering tracking, structure, keywords, ads, bidding, budgets, audiences, and competitive positioning — with ICE-prioritized re… | pass | none | none | unique |
 | `google-ads-campaign-builder` | canonical | Build and configure Google Ads campaigns across all 10+ campaign types — from campaign type selection through settings, targeting, creatives, and launch. | pass | none | none | unique |
 | `google-ads-keyword-engine` | canonical | Research, evaluate, mine, and manage keywords for Google Ads — from initial discovery through ongoing search term optimization and negative keyword management. | pass | none | none | unique |
 | `google-ads-optimizer` | canonical | Optimize running Google Ads campaigns — bid strategy tuning, budget reallocation, Quality Score improvement, ad copy iteration, audience refinement, placement… | pass | none | none | unique |
 | `google-ads-scripts` | canonical | Select, implement, and manage Google Ads scripts to automate PPC tasks at scale — n-gram analysis, bid management, budget pacing, anomaly detection, and perfor… | pass | none | none | unique |
 | `google-merchant-center` | canonical | Optimize product feeds for Shopping and Performance Max campaigns — from fixing disapprovals to building custom label strategies that power profitability-based… | pass | none | none | unique |
-| `gtm-strategy` | canonical | Develops go-to-market strategies for technical products. Covers product-led growth (PLG), sales-led growth (SLG), open-source models, and hybrid approaches. Us… | pass | user-invocable | none | unique |
+| `gtm-strategy` | canonical | Develops go-to-market strategy for technical products by choosing and combining product-led, sales-led, open-source, and hybrid motions, including PLG funnels,… | pass | user-invocable | none | unique |
 | `humanize` | canonical | Remove signs of AI-generated writing from text. Use when editing or reviewing text to make it sound more natural and human-written. Based on Wikipedia's compre… | pass | allowed-tools, user-invocable | none | unique |
 | `impeccable` | canonical | Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwis… | pass | none | none | unique |
 | `improve-animations` | canonical | Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-contained implementation plans for other ag… | pass | none | none | unique |
 | `ios-app-intents` | canonical | Design App Intents, app entities, and App Shortcuts for iOS system surfaces. Use when exposing app actions or content to Shortcuts, Siri, Spotlight, widgets, o… | pass | none | none | unique |
 | `ios-deployment` | canonical | Ship an iOS app from the command line without opening Xcode. Covers archive, IPA export, App Store Connect API authentication, TestFlight upload (debug builds)… | pass | none | none | unique |
-| `launch` | canonical | Plans and executes product launches for technical products. Covers launch tiers, sine wave timing, naming conventions, pre-launch preparation, launch day execu… | pass | user-invocable | none | unique |
+| `launch` | canonical | Plans and runs a full product launch campaign for technical products, from launch tier and sine wave timing through pre-launch preparation, launch day, channel… | pass | user-invocable | none | unique |
 | `lifecycle-email` | canonical | Write automated lifecycle emails: upsell, onboarding, re-engagement, retention, and milestone sequences for technical audiences. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `lifecycle-marketing` | canonical | Designs lifecycle marketing programs for technical products across email, in-app, and social channels. Covers behavioral triggers, sequence design, upsell/rete… | pass | user-invocable | none | unique |
 | `link-building-digital-pr` | canonical | Build backlinks, earned media, and brand mentions that move both traditional rankings and AI visibility. The dominant modern tactic is digital PR anchored to o… | pass | none | none | unique |
@@ -89,14 +89,10 @@ Do not edit by hand. Regenerate instead.
 | `meta-ads-campaign-builder` | canonical | Build and configure Meta Ads campaigns across all ODAX objectives — from objective selection through audience strategy, placement, budget, and creative launch. | pass | none | none | unique |
 | `meta-ads-creative-engine` | canonical | Build a systematic creative testing, production, and rotation pipeline for Meta Ads — prevent fatigue, scale winners, and maintain performance through structur… | pass | none | none | unique |
 | `meta-ads-optimizer` | canonical | Optimize running Meta Ads campaigns — audience refinement, budget scaling, learning phase management, placement optimization, automation rules, and creative ro… | pass | none | none | unique |
-| `meta-ads-playbook` | canonical | Meta ads planning playbook: objectives, structure, audiences, creative, testing cadence, Pixel/CAPI measurement. Does not assume live Marketing API access. | pass | none | none | unique |
 | `meta-ads-tracking-setup` | canonical | Implement and validate Meta Pixel + Conversions API (CAPI) for maximum signal quality — the single biggest lever for Meta Ads performance via the Andromeda ran… | pass | none | none | unique |
-| `midnight-coders` | canonical | Find influencers, book reviewers, and content creators for The Midnight Coder's Children. Creates a Notion page with leads and suggested outreach. | pass | user-invocable | none | unique |
 | `no-use-effect` | canonical | Enforce the no-useEffect rule when writing or reviewing React code. ACTIVATE when writing React components, refactoring existing useEffect calls, reviewing PRs… | pass | user-invocable | none | unique |
 | `on-page-seo-aeo-optimization` | canonical | Turn a draft or existing page into something both Google *and* AI answer engines can index, rank, and cite. This skill operates at the single-page level — keyw… | pass | none | none | unique |
 | `paid-media-reporter` | canonical | Build performance reports, dashboards, and stakeholder communications that turn ad data into business narratives — client reports, QBRs, audit deliverables, an… | pass | none | none | unique |
-| `paid-search-ads-playbook` | canonical | Google and Microsoft paid search planning: structure, keywords, match types, negatives, RSAs, bidding lens, and landing-page alignment for conversion-focused s… | pass | none | none | unique |
-| `portugal-nationality` | canonical | Monitor Portuguese nationality law for legislative, constitutional, and presidential actions. Use when checking for changes to Lei da Nacionalidade; create a N… | pass | user-invocable | none | unique |
 | `positioning-framework` | canonical | Define product positioning and messaging pillars using Aristotle's rhetorical framework. Use when clarifying a product's audience, problem, differentiation, pr… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `prepare-videos-for-social` | canonical | Edit a talking-head recording down to its good takes and burn TikTok/Reels-style captions on it, matching the Midnight Coder's Children video series. Cuts fals… | warn (0E/1W) | none | none | unique |
 | `prepare-viral-short` | canonical | End-to-end workflow for creating viral AI YouTube shorts. Covers niche selection, channel setup, content creation methods, and analytics optimization. | pass | user-invocable | none | unique |
@@ -113,18 +109,16 @@ Do not edit by hand. Regenerate instead.
 | `search-reddit` | canonical | Find Reddit discussions where Prashant can add value by sharing Strategic Nerds blog posts. Requires human-driven Playwright browsing. | pass | user-invocable | none | unique |
 | `seo-aeo-content-strategy` | canonical | Design content systems that earn both Google rankings *and* AI citations. The core insight: AI answer engines read content differently than humans — they extra… | pass | none | none | unique |
 | `seo-keyword-research-intent-mapping` | canonical | Build a keyword universe that reflects how both humans *and* AI answer engines search. Traditional keyword research looks at standalone terms; modern research… | pass | none | none | unique |
-| `seo-max-kt` | canonical | Long-form SEO and AEO methodology bundle; read SEO_AND_AEO_KT.md for the full corpus. | pass | none | none | unique |
-| `seo-reporting-measurement` | canonical | Build reports that stakeholders trust, rooted in data sources that are actually reliable. Modern SEO measurement has to reckon with a very specific constraint:… | pass | none | none | unique |
+| `seo-max-kt` | canonical | Senior SEO and AEO operator playbook covering strategy, audits, content, local, links, measurement, and AI answer-engine visibility, plus which specialist SEO… | pass | none | none | unique |
+| `seo-reporting-measurement` | canonical | Build SEO and AI-visibility reports, KPI hierarchies, dashboards, and algorithm-update diagnoses for stakeholders. Use for weekly, monthly, or quarterly SEO re… | pass | none | none | unique |
 | `signing-entitlements` | canonical | Inspect macOS signing, entitlements, and Gatekeeper issues. Use when diagnosing code signing, sandbox, hardened runtime, or trust failures. | pass | none | none | unique |
 | `source-command-new-blog` | canonical | Research and create data-driven blog posts using Picks and Shovels methodology | pass | none | none | unique |
-| `source-command-verify-supabase` | canonical | Comprehensive Supabase security and best practices verification | warn (0E/1W) | none | none | unique |
+| `source-command-verify-supabase` | canonical | Comprehensive Supabase security and best practices verification | pass | none | none | unique |
 | `spm-build-analysis` | canonical | Analyze Swift Package Manager dependencies, package plugins, module variants, and CI-oriented build overhead that slow Xcode builds. Use when a developer suspe… | warn (0E/2W) | none | SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when s… | unique |
-| `strategic-nerds` | canonical | Find 3-5 online discussions where Prashant can add value by sharing Strategic Nerds blog posts. Creates a Notion page with opportunities and suggested replies. | pass | user-invocable | none | unique |
 | `stripe-best-practices` | canonical | Guides Stripe integration decisions across API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), bi… | pass | none | none | unique |
 | `stripe-directory` | canonical | Use when the user wants to find businesses, software, service providers, or partners for a specific industry, workflow, pain point, capability, or job to be do… | pass | allowed-tools | none | unique |
 | `stripe-docs` | canonical | Use when the user or agent needs to read, search, or look up Stripe documentation or API reference. Prefer this over curl or WebFetch for any docs.stripe.com c… | pass | allowed-tools | none | unique |
 | `stripe-projects` | canonical | Use when the user wants to provision infrastructure or third-party services using Stripe Projects. Triggers: "I need a database", "set up auth", "add caching",… | pass | allowed-tools | none | unique |
-| `supabase` | canonical | Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libr… | pass | none | none | unique |
 | `supabase-postgres-best-practices` | canonical | Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or… | pass | none | none | unique |
 | `swift-audit` | canonical | Audit a whole Swift codebase by running the installed Swift agent skills (Hudson Pro series, van der Lee Expert series, Xcode build optimization set, OpenAI iO… | pass | user-invocable | none | unique |
 | `swift-concurrency` | canonical | Diagnose Swift Concurrency issues, refactor callback-based code to async/await, and guide Swift 6 migration when working with tasks, actors, @MainActor, Sendab… | pass | none | none | unique |
@@ -142,13 +136,14 @@ Do not edit by hand. Regenerate instead.
 | `tech-debt-audit` | canonical | Thorough, user-invoked tech debt and architecture audit of the current codebase. Produces TECH_DEBT_AUDIT.md with file-cited findings, severity, effort estimat… | pass | disable-model-invocation | none | unique |
 | `technical-seo-ai-crawler-audit` | canonical | Diagnose and prioritize the technical issues blocking a site from being crawled, indexed, ranked, and cited. Modern technical SEO has two audiences: Google's c… | pass | none | none | unique |
 | `thought-leadership-blog` | canonical | Write thought leadership blog posts establishing company perspective on industry trends and technical philosophy. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
+| `typesafe-ai` | canonical | Build AI-powered software with TypeSafe: small units of AI intelligence you can use like programming primitives. Its System One models, including Jev, turn nat… | pass | none | none | unique |
 | `upgrade-stripe` | canonical | Guide for upgrading Stripe API versions and SDKs | pass | none | none | unique |
 | `vercel-composition-patterns` | canonical | React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reu… | pass | none | none | unique |
 | `vercel-react-best-practices` | canonical | React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js… | pass | none | none | unique |
 | `vercel-react-native-skills` | canonical | React Native and Expo best practices for building performant mobile apps. Use when building React Native components, optimizing list performance, implementing… | pass | none | none | unique |
 | `voice-of-supabase` | canonical | Write a Supabase product release blog post in the house voice. Trigger any time the artifact is a public technical writeup about something Supabase is shipping… | pass | none | none | unique |
 | `web-design-guidelines` | canonical | Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site… | pass | none | none | unique |
-| `webinar-planning` | canonical | Plans and executes technical webinars for developer audiences, and generates the complete asset package. Covers content structure, planning timelines, landing… | pass | user-invocable | none | unique |
+| `webinar-planning` | canonical | Plans technical webinars for developer audiences and writes the full asset package, from landing page and email sequence to promotion, run of show, and lead fo… | pass | user-invocable | none | unique |
 | `weekly-report` | canonical | Generate a weekly status report from Linear, Slack, and Notion. Use when the user asks for the weekly work summary; compare it with prior reports, remove dupli… | pass | user-invocable | none | unique |
 | `window-management` | canonical | Customize macOS SwiftUI windows and scene behavior. Use when tuning window chrome, drag regions, placement, restoration, launch behavior, or borderless windows. | pass | none | none | unique |
 | `writing` | canonical | Apply the author's writing rules when drafting, revising, or reviewing fiction, non-fiction, product copy, or persuasive copy. Use the relevant context section… | pass | user-invocable | none | unique |
@@ -165,6 +160,11 @@ Do not edit by hand. Regenerate instead.
 | canonical | `_shared` | no-skill-file | directory contains neither SKILL.md nor skill.md |
 
 ## Findings
+
+### `bar-raiser` (canonical)
+
+- **warn** `reference-escapes-skill` SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
 
 ### `case-study` (canonical)
 
@@ -252,11 +252,6 @@ Do not edit by hand. Regenerate instead.
 
 - **warn** `reference-escapes-skill` SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked
   - Smallest fix: link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
-
-### `source-command-verify-supabase` (canonical)
-
-- **warn** `absolute-path` SKILL.md:240 contains a system absolute path '/tmp/current-types.ts'
-  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
 
 ### `spm-build-analysis` (canonical)
 

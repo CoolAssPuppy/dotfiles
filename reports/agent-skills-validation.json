@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-09-13T15:53:20+01:00",
+  "generated_at": "2026-09-23T12:49:10+01:00",
   "yaml_backend": "builtin",
   "sources": [
     {
       "label": "canonical",
       "path": "/Users/prashant/Developer/brain/skills",
-      "skill_count": 137,
+      "skill_count": 132,
       "anomaly_count": 1
     }
   ],
   "totals": {
-    "skills": 137,
-    "unique_names": 137,
+    "skills": 132,
+    "unique_names": 132,
     "duplicate_names": 0,
     "unresolved_conflicts": 0,
     "failing": 0,
     "warning": 26,
-    "passing": 111,
+    "passing": 106,
     "anomalies": 1
   },
   "anomalies": [
@@ -45,15 +45,15 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "9d6b13c0b87db1c2b3a520a1d99d3ca49ebda9814c4baaf418b0b6f96018cbf1",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "ca32330c515a177d7cc695557d17cbc99650efa4033f584de0ddc6934ea28d7b",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "ai-search-visibility-aeo-geo-llmo",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/ai-search-visibility-aeo-geo-llmo",
       "skill_file": "SKILL.md",
-      "description": "AI search and citation behavior change quickly. The frameworks below use the best available public data as of early 2026 (Google surfaces, ChatGPT, Perplexity, Gemini, and large-sample studies). Re-check assumptions as platforms update.",
+      "description": "Measure and improve how a brand appears in AI answer engines (ChatGPT, Perplexity, Google AI Overviews and AI Mode, Copilot, Gemini). Use for AI visibility baselines, AI crawler access checks, platform-by-platform citation strategy, brand mention planning, and llms.txt. Citation statistics in this skill are dated; check current platform behavior before quoting them.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -63,8 +63,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "00dce83e54163d1953a13273ddc0902cda36a1907b62a184de73473c78c2f363",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "ca94b8f7aa9451a3183c47594dd791e7f751388a7e19084a67bd94c0266bdfb2",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "animation-vocabulary",
@@ -110,7 +110,7 @@
         }
       ],
       "digest": "fca27a918b0d68f1f81581e0289f355f0cf02b3b98a4047d6f30d68b42f55794",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "appkit-interop",
@@ -128,7 +128,7 @@
       "conflict": false,
       "findings": [],
       "digest": "57f5a83b09a548fafc32198bcb25a938a8d7d7f8d707abccc19ffdb138ed590a",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "apple-design",
@@ -164,7 +164,7 @@
       "conflict": false,
       "findings": [],
       "digest": "03b1f4a43cc2eeef0a47e3a5fd823ef0484a47d38b4e834b7b9dd229b246a55b",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "bar-raiser",
@@ -172,14 +172,16 @@
       "path": "/Users/prashant/Developer/brain/skills/bar-raiser",
       "skill_file": "SKILL.md",
       "description": "Evaluates candidates against Supabase's Bar Raiser framework using an interview transcript and interviewer notes. Produces a hire or no-hire feedback document in Prashant's voice, matching the format he pastes directly into Notion. Use this skill whenever the user provides an interview transcript and asks for a Bar Raiser evaluation, asks to \"run bar raiser\" on a candidate, shares raw interview notes and wants them polished into the standard format, or asks for a values-based assessment of a candidate. Also use when the user asks how to interpret a candidate's answers against Supabase values (Egoless, Truth Seeking, Kaizen, Batteries Included, Undeniable, Willing to Do the Schlep).",
-      "status": "pass",
+      "status": "warn",
       "errors": 0,
-      "warnings": 0,
+      "warnings": 1,
       "notes": 1,
       "claude_features": [
         "user-invocable"
       ],
-      "codex_concerns": [],
+      "codex_concerns": [
+        "SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked"
+      ],
       "duplicate": false,
       "conflict": false,
       "findings": [
@@ -189,10 +191,19 @@
           "message": "frontmatter key 'user-invocable' is Claude-specific. Codex has no /slash invocation registry; the flag is inert.",
           "feature": "user-invocable",
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
+        },
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../_shared/voice.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/_shared/voice.md",
+          "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         }
       ],
-      "digest": "f005d8f9dfb58c8a237552511d6cb6adca74c30fc4a9eb74cce913d76dad31cc",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "d35997a62d9c6fcbbeae449f056a075f8658e48ec008e2816f7884d178056cca",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "blog-post-ideation",
@@ -219,8 +230,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "f1236b029843b76a6258bca8b309784b3528964d31d0e08f1061a276c3e3ca36",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "aad42812af3071e6fab3a128ce7ff7a3953a0b5051c35722d2e2e503cd53ed0f",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "bofu-seo-aeo-strategy",
@@ -237,8 +248,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "5c8ec334198bfa0037d560f5c807abc71f03bf56036d452e7e72f9a922a58329",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "0a867cd69f01b41e2f854c8d5e1bf67cccc39f644db30c423291e984a2351d9d",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "campaign-analyzer",
@@ -255,8 +266,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "c41f26a219eaf0e6ed24f50d3ffbe3ff3f178881e77eeb03eb3371c3304a4525",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "f65359f464f0825b28a82b9d6ccd78d8efc2778b13632c71a99bd7ef5ad632b3",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "case-study",
@@ -294,8 +305,8 @@
           "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         }
       ],
-      "digest": "f271d6b1b3a85818a5842cbaa5e21aca6f526dda0293205b16c241d32eef65aa",
-      "git_last_commit": "2026-09-12T09:18:49+01:00"
+      "digest": "3a42a2c2e04735c3a607dfa9ab2caadff54b1a6cbfae442e38cdcb5453835e9d",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "channel-copple",
@@ -312,8 +323,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "893f06100883db66ec5f7e9b7062ebecaa13991bddb4f3b6d9a79549dab14334",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "fe172427aa9232b763a543f165482bbf535d4ebeca6a79b30cda167304c65e5e",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "cmo-coaching",
@@ -348,7 +359,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/competitive-analysis",
       "skill_file": "SKILL.md",
-      "description": "Conducts competitive analysis and creates battle cards for technical products. Covers competitor identification, public research, product teardowns, go-to-market analysis, customer intelligence, sales enablement materials, and honest comparison frameworks. Use when analyzing competitors, creating battle cards, preparing sales collateral, or developing differentiation strategies.",
+      "description": "Conducts competitive analysis for technical products across a competitive set, including the status quo and build-it-yourself, using public research, product teardowns, go-to-market analysis, and customer intelligence, and ends with a short scannable battle card. Use when analyzing several competitors, building differentiation strategy, or preparing competitive talking points. For a full battlecard document on one named competitor, use competitive-battlecard.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -368,15 +379,15 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "05a3c175ac6e8401efc581282773b42705ae0c74b0a2e3e8dab643db248f88b7",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "241cba5581cba6df8561d96272b1d14ce12d38c80a45ac72690453ea743f0250",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "competitive-battlecard",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/competitive-battlecard",
       "skill_file": "SKILL.md",
-      "description": "Generates comprehensive competitive battlecards for developer products that help sales and marketing teams position against specific competitors. Covers company overview, strengths/weaknesses analysis, objection handling, pricing comparison, and when-to-choose guidance. Use when creating battlecard documents for individual competitors, preparing sales enablement materials, or equipping teams with competitor-specific talking points.",
+      "description": "Writes a full battlecard document about one named competitor for sales and marketing teams, with company facts, strengths and weaknesses, how each side wins, objection handling, capability and pricing tables, and when-to-choose guidance, formatted for Notion. Use when someone asks for a battlecard on a specific competitor. For analysis across several competitors or for differentiation strategy, use competitive-analysis.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -396,8 +407,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "5e9810697cbd3e53f411f68f9c709beea7e4166ed08bc9d5a5131100d1f4357c",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "599e9e973432c8ee0c6ffad7c1bdbefa8ada22c28c2608913f059dcc3fa18707",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "connect-recommend",
@@ -430,7 +441,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/content-strategy",
       "skill_file": "SKILL.md",
-      "description": "Creates content marketing strategies for technical products. Covers content pillars, editorial calendars, content briefs, inside-out vs outside-in approaches, funnel alignment, distribution, SEO, quality standards, metrics, and the Help First philosophy. Use when planning content calendars, creating editorial strategies, scaling content production, or building content programs for technical audiences.",
+      "description": "Creates content marketing strategies for technical products using the Help First approach from Picks and Shovels, producing content pillars, a 12-week editorial calendar, and content briefs. Use when planning a content program, editorial calendar, or content briefs for technical audiences.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -450,8 +461,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "59aaf2b210a5f19209509fbb2d42ca25317dcf6c847d92c50cb4467993cab61b",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "48ed4d5dba9ba6ae93cedd676366e9afae1d07169d96bdbc4f0706bac2ec4ff7",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "core-data-expert",
@@ -469,7 +480,7 @@
       "conflict": false,
       "findings": [],
       "digest": "2880c21c17efb303234d2c939312bea9c61bf51350de5ab60a4ca45b61506c38",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "daily-meta-checkin",
@@ -496,8 +507,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "c675d50b73b73e036242b9f80c8bba85953c5ab688c8f9dd626f44310cf45fcb",
-      "git_last_commit": "2026-09-12T09:18:49+01:00"
+      "digest": "707cd2ededa19e6e196a8a540e3efdf421387e5427b28c7e4b2d7ec55e4760c7",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "data-storytelling",
@@ -514,8 +525,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "eca30a8c6e0931beb9688484381eae2864358158edf6bfed1072927d2b2ff582",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "b383fa7722df33fa2cb68a050a097e370760eeb297b3112bb8af870cbb3d7a3a",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "data-visualization",
@@ -599,8 +610,8 @@
           "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         }
       ],
-      "digest": "11bf788d0a950a8b2720c7aa313905964202d7f6d88ee64bf24999a63c762ab2",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "dca818e563ae3e4d6af9b9c6a9bf813caba1670623eab47cfe2a9c8480690959",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "emil-design-eng",
@@ -656,8 +667,8 @@
           "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         }
       ],
-      "digest": "0fa598cd6590540a2d825f40d86424ab59281f20df617b422ef780031d11ea33",
-      "git_last_commit": "2026-09-12T09:18:49+01:00"
+      "digest": "05f2818f241b2f06a8378b6c3b638929f645633d9e9bd7517e30dd2a00e0cc7c",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "fiction-devedit",
@@ -686,8 +697,8 @@
           "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         }
       ],
-      "digest": "6c2b2ef0d218964edfd0766d282dd17c55605f8270d6fcb44bf74b71d2c42b48",
-      "git_last_commit": "2026-08-07T08:20:14+01:00"
+      "digest": "e1975e9508babd26e9d265bdc55acb8d1c519884cf81bbc44f322582b58611de",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "fiction-diagnostic",
@@ -716,8 +727,8 @@
           "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         }
       ],
-      "digest": "0e204f6a49b72fb9676e0e0d47b59b1d67d2b69ae89316e5f307b07641b20237",
-      "git_last_commit": "2026-08-07T08:20:14+01:00"
+      "digest": "9151e8bf970a11e6f8c954f139d3f7712e33352e7f89e42e0c5458a94bccaf3f",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "fiction-editing",
@@ -890,8 +901,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "442fa9938f9def4fc3830c93bcb424e8767094dd2c1bc06d6f0672ef67480138",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "4c24646b36ab2ce71647cd9c4e1c1ca8cbaf482488dd71a688e4072c8fb74252",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "finance-macro-regime",
@@ -926,8 +937,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "2bb5cfb8c076d8fd71f149134101d5aa74aeebeee77200af672a285a7478261f",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "bc881256a1c8ab192e54d6385379013279127cc936866cebafbe2c14669a9da0",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "finance-master",
@@ -962,8 +973,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "a684a523c7d84ba70f88b6f1c5c93ba0d4bd18a98628c90ec6abdaec0c0f4cbf",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "38d4b3e73de69de99680557649ae520f0baa0264acd3680f286b3e66ee8de34d",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "finance-momentum-breakout",
@@ -1034,8 +1045,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "e20f8d13b65371999c47743224118cdf1c5c0530bc25ce1af3099a60f1ac632e",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "fc0c9f5d25b1b85bfaca6cc46bcde90f310b83dede1091d10008e6ca0e606d7b",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "finance-pre-market-prep",
@@ -1070,8 +1081,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "505d8661a742952e49106ea9c168d6e2989e850ceb1f361ac3cf026f097a5674",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "e9a2eb0bebe05ffc97fd249f3f778e71d249423f5523c66c2b20ba151f54c097",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "finance-risk-of-ruin",
@@ -1106,8 +1117,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "62d363277db8e106dd66d954fbddd2673b6ebc1333de0c63db9c8d46ef26c942",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "ffc6b37a0295efa755d7826a817be1762ce6a588fdbeaa1adb8762f9bd49dd7c",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "finance-short-squeeze",
@@ -1142,8 +1153,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "7442e1de71f301c0214fd947ba465c585236bce57f9a93942cfd937f2ec2c1bd",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "e879dd3e3d354114202076de7c8feca3325e0fa11b5a09f9470c3414fdc9bd8a",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "finance-trade-journal",
@@ -1178,8 +1189,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "be63ee2af3492e9f967d2d952fb7a3806f55bb8f418fe478faf3fe933afc661e",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "6aba0a2030bbc1bb58afcd80c6538e0da5033effb16250a7f6f3cf04be0922af",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "finance-trailing-stop",
@@ -1214,8 +1225,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "f6eeeb10d8a817471902f32f2c0c7b7370601f673a0385cc45f76746745e950b",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "b7a21e75273977d9057f9bad302a1d3ce58d9b88de3f5ecdaeae8f8fb771bbe2",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "finance-wheel",
@@ -1322,7 +1333,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/go-to-market",
       "skill_file": "SKILL.md",
-      "description": "Create structured launch plans with measurable objectives. Scales by launch tier from major to minor.",
+      "description": "Writes a one-document launch plan for a single product or feature launch, with tier, measurable objectives, audience, key messages, tier-scaled tactics, owners, timeline, and success metrics. Use when someone asks for a GTM plan or launch plan for a specific launch. For the full launch campaign playbook, use launch. For choosing a product-led, sales-led, open-source, or hybrid motion, use gtm-strategy.",
       "status": "warn",
       "errors": 0,
       "warnings": 1,
@@ -1353,8 +1364,8 @@
           "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         }
       ],
-      "digest": "59e717775f451ffb4c1e8dd20351097701f26de97b255390e39e87ad6b3db480",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "7db604032fd3e27c465e1ccf8e5da2157b6f597d92495cb16196741c23a78dce",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "google-ads-account-audit",
@@ -1371,8 +1382,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "8e2798a673e2f989cf0a504891b21ec8ca603d00149dc42514d4d4a6b8a64333",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "d1ab569c7c23c2abae9110b94fec46daf1516530030a62a62927c3db6c408ebe",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "google-ads-campaign-builder",
@@ -1389,8 +1400,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "e24a94d86406e03b9949a799471f56a0a7a441d42239c74d47609b9cf9d1f3f5",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "6d2cf953449c3bad458284ae55b28ed0f6255d723402ef5e797d2e8a63e8d4f4",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "google-ads-keyword-engine",
@@ -1407,8 +1418,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "39012b8bed9c08e9a251e13d193cd25da353f388f079f5a5ce07295677319b9a",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "96c280d45c8884e922dffc9259419e94ccef8086c2b19e9f016cb33599ae13b2",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "google-ads-optimizer",
@@ -1425,8 +1436,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "6579e67d2d0303df877c23d3d3c72b271fb9680edb538d984e7efec0f5707c88",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "f16607cb84b12a39fe76de5e22157850d5cc25fd07e442ccf6c01636a7528ab0",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "google-ads-scripts",
@@ -1443,8 +1454,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "802e4e118d68bf4ab9328da358b8129cb405c481060349e25e7d7d8e8810dc54",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "0735437c48397c0914d20aa9be0914b96f332d213b3680fb627c839c4c153bf4",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "google-merchant-center",
@@ -1461,15 +1472,15 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "b05605d4646dcc6d453fc749453c08fd2a7b8efdeafb49e85cea1fe1aff751cf",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "2c6a4a41646680bc2cfd7e6c926443e722d758f34771deb442d70e6bfe6d2c83",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "gtm-strategy",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/gtm-strategy",
       "skill_file": "SKILL.md",
-      "description": "Develops go-to-market strategies for technical products. Covers product-led growth (PLG), sales-led growth (SLG), open-source models, and hybrid approaches. Use when planning acquisition models, designing PLG funnels, building sales motions, or combining bottom-up and top-down strategies.",
+      "description": "Develops go-to-market strategy for technical products by choosing and combining product-led, sales-led, open-source, and hybrid motions, including PLG funnels, the PLG-to-sales handoff, and open-source conversion. Use when deciding how a product acquires and converts customers. For planning a specific launch, use go-to-market or launch.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -1489,8 +1500,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "7d0944c1a9114a58a5e4db0e73841255c2c1ecde20ea9d857e64c3d71e832eb2",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "7fdd070ec9dcb9c0a4fafbe65acb4592c57efdfe6b544bcd89453305551e3b5b",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "humanize",
@@ -1525,8 +1536,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "7244e140a6c227b501b38c56c23b68a4b84c1e300266efa1dc64c271cd94cdc3",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "0a2f4c7692ee7ad24a1f3c878c7d64fb86f254554dcc69b423978725b5ad56cf",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "impeccable",
@@ -1589,14 +1600,14 @@
       "conflict": false,
       "findings": [],
       "digest": "e82a175672109df9a0f3b8d14e7c9cb950283298bd8a2c87d702555fe4b1b0f8",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "ios-deployment",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/ios-deployment",
       "skill_file": "SKILL.md",
-      "description": "Ship an iOS app from the command line without opening Xcode. Covers archive, IPA export, App Store Connect API authentication, TestFlight upload (debug builds), and App Store submission (release builds). First-pass workflow inspired by the macos-deployment skill. Use when scaffolding a new iOS app, sending a build to TestFlight, or submitting to the App Store.",
+      "description": "Ship an iOS app from the command line without opening Xcode. Covers archive, IPA export, App Store Connect API authentication, TestFlight upload (debug builds), and App Store submission (release builds). Use when scaffolding a new iOS app, sending a build to TestFlight, or submitting to the App Store.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -1606,15 +1617,15 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "b2a018aa66661e5295918424ca5d4a163b442d783f18136b8b8d832059c0cb4e",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "b8ac918b8a89bc6d5aa90e10cf04624dce6e5be9018a5a110b9450c8a53cf711",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "launch",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/launch",
       "skill_file": "SKILL.md",
-      "description": "Plans and executes product launches for technical products. Covers launch tiers, sine wave timing, naming conventions, pre-launch preparation, launch day execution, channel strategies, and post-launch activities. Use when launching new products, features, major releases, or planning go-to-market campaigns.",
+      "description": "Plans and runs a full product launch campaign for technical products, from launch tier and sine wave timing through pre-launch preparation, launch day, channel tactics, and post-launch follow-up. Use when running a launch end to end. For a one-page launch plan, use go-to-market. For naming the thing being launched, use product-naming.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -1634,8 +1645,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "7daea8b20bef29fedf769a194c7fad4106c564f8d47ef02fde0e1d14082cb46e",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "757f6b0a36c39e71862646d88a0aeb809f706a6773c093001492f5b511ab4781",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "lifecycle-email",
@@ -1673,8 +1684,8 @@
           "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         }
       ],
-      "digest": "8ad348409d358e5447937e2fd6efcc22143122ad33534b8c9c06ba4217f761d3",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "fcf70cd2d63196f742ffb08e38825adc499df4768f1b114f566b451a2395825f",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "lifecycle-marketing",
@@ -1701,8 +1712,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "cddb810a636f0cfd1e29a23157bbde1f066b71d2d554e31d453379d7f04149c2",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "0ac2e8366cd66c342cd2647e37d41dcc16b62dc1941214c7efbf7d00fa2322be",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "link-building-digital-pr",
@@ -1719,8 +1730,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "53e74a850cbb55bfc7d77c0d411b7e6c5a85645ff6f2da8ed7d9a51b34339c19",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "3a68058d755440f795919dca75a0ac94dddb3a5d5108f2686b7840d9778445b8",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "local-seo-google-business-profile",
@@ -1737,8 +1748,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "c1f424cadd93431fcbf7b074defefc094a302ab917d8d1d74c6c691d1e46e06a",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "5d2e3493fcc44cf0e6133214996d441e5ded561896bc7beb033d0d81b22fbe3d",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "macos-deployment",
@@ -1774,8 +1785,8 @@
           "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
         }
       ],
-      "digest": "4eea52c4bbb433001c873e8a97b82c4068532f3a936df9d5f03b354f8fe96cad",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "4941b48fd312c3f344494b587a84d63b564c2073a347c42a95e776d66a80a6ff",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "meta-ads-account-audit",
@@ -1792,8 +1803,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "ffb7a8ed5dab3c0d06eabcd3847e3ce737d00d6a4ebb30b64b6424d58b2bb376",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "0861e8a69ac8fb4a2a64d8e67e74012cc1304624520159a086ac9495b9f7ba66",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "meta-ads-campaign-builder",
@@ -1810,8 +1821,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "1db5be92c7b23c37505260ccde7c853062d2fba883433c19ccaf49d6a1f744e7",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "ef38cd500d4da266817e56e5b0a3de31c15fcc7f78939291eceae8c3ed5d60a6",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "meta-ads-creative-engine",
@@ -1828,8 +1839,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "ddc1950e2a2765c70bdeb40111a0e9c3b81ff46a70c6e700dc0a6e2f860454b1",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "3f9232bfa8843a9ffe0852a687443ef7ea0fba2700476180c603aa7d3dbfeb49",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "meta-ads-optimizer",
@@ -1846,26 +1857,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "6f3664e45c3177c15c8f4f312b366a57cf48ddcd0f5e2166dab5a21e80c14606",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
-    },
-    {
-      "name": "meta-ads-playbook",
-      "source": "canonical",
-      "path": "/Users/prashant/Developer/brain/skills/meta-ads-playbook",
-      "skill_file": "SKILL.md",
-      "description": "Meta ads planning playbook: objectives, structure, audiences, creative, testing cadence, Pixel/CAPI measurement. Does not assume live Marketing API access.",
-      "status": "pass",
-      "errors": 0,
-      "warnings": 0,
-      "notes": 0,
-      "claude_features": [],
-      "codex_concerns": [],
-      "duplicate": false,
-      "conflict": false,
-      "findings": [],
-      "digest": "aab524894306069643562ab289169bee7deebd6d19954c6659e917b48ffb7bc6",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "95bb09e1fb7b4ed8fff3fa38193ecb88bedbde47814831cf764a8e073e57a02b",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "meta-ads-tracking-setup",
@@ -1882,36 +1875,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "8b580c5a8fa4414fdbc92bfb9c110cb913a3199f4b42529e75dad72c7f7d2876",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
-    },
-    {
-      "name": "midnight-coders",
-      "source": "canonical",
-      "path": "/Users/prashant/Developer/brain/skills/midnight-coders",
-      "skill_file": "SKILL.md",
-      "description": "Find influencers, book reviewers, and content creators for The Midnight Coder's Children. Creates a Notion page with leads and suggested outreach.",
-      "status": "pass",
-      "errors": 0,
-      "warnings": 0,
-      "notes": 1,
-      "claude_features": [
-        "user-invocable"
-      ],
-      "codex_concerns": [],
-      "duplicate": false,
-      "conflict": false,
-      "findings": [
-        {
-          "severity": "info",
-          "code": "claude-only-frontmatter",
-          "message": "frontmatter key 'user-invocable' is Claude-specific. Codex has no /slash invocation registry; the flag is inert.",
-          "feature": "user-invocable",
-          "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
-        }
-      ],
-      "digest": "6a4396c8a0e87a73b90a121cc5dac795de7ca78f74b2d8bc71e9748c53bdfcbf",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "8dd4433ff5916cfb3d460e84743f9b1ae72d9094994e705451f8ada92cb03dd3",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "no-use-effect",
@@ -1938,8 +1903,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "a26b63df8acba7ba8ffbd852cc4d56fb7b7dd12ad7c9872bf2886bf5a1260d2d",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "fae0d79f18a227e73a78f0a9a7ca24b20c70984316699bad3f7c932fc4f34d8c",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "on-page-seo-aeo-optimization",
@@ -1956,8 +1921,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "b0f0681fe42d6324d976a18c66e56705287de670cded9399574f9b05291b8996",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "11db326da9cfce71b76b2cbd5e83b1729864d0e785aee7bad1ac41b7ee0a03e7",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "paid-media-reporter",
@@ -1974,54 +1939,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "758e931cc7763dce05201a2cabfb42b6dbf239de5d4ba5f2ed9aa1dbddda362f",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
-    },
-    {
-      "name": "paid-search-ads-playbook",
-      "source": "canonical",
-      "path": "/Users/prashant/Developer/brain/skills/paid-search-ads-playbook",
-      "skill_file": "SKILL.md",
-      "description": "Google and Microsoft paid search planning: structure, keywords, match types, negatives, RSAs, bidding lens, and landing-page alignment for conversion-focused spend.",
-      "status": "pass",
-      "errors": 0,
-      "warnings": 0,
-      "notes": 0,
-      "claude_features": [],
-      "codex_concerns": [],
-      "duplicate": false,
-      "conflict": false,
-      "findings": [],
-      "digest": "7935304d26204c80e943e6af10ad23b8ca51ec6775ef0e329c0cc490cc214eb9",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
-    },
-    {
-      "name": "portugal-nationality",
-      "source": "canonical",
-      "path": "/Users/prashant/Developer/brain/skills/portugal-nationality",
-      "skill_file": "SKILL.md",
-      "description": "Monitor Portuguese nationality law for legislative, constitutional, and presidential actions. Use when checking for changes to Lei da Nacionalidade; create a Notion page only when there is a relevant new finding.",
-      "status": "pass",
-      "errors": 0,
-      "warnings": 0,
-      "notes": 1,
-      "claude_features": [
-        "user-invocable"
-      ],
-      "codex_concerns": [],
-      "duplicate": false,
-      "conflict": false,
-      "findings": [
-        {
-          "severity": "info",
-          "code": "claude-only-frontmatter",
-          "message": "frontmatter key 'user-invocable' is Claude-specific. Codex has no /slash invocation registry; the flag is inert.",
-          "feature": "user-invocable",
-          "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
-        }
-      ],
-      "digest": "f07ae163fe653e87333582e8ce844392d932df26a2d22233182417551f2a99e7",
-      "git_last_commit": "2026-09-12T09:18:49+01:00"
+      "digest": "ce6ac0e5c9acf698f320fe12a0d51def5d25492054e6b0a8750143303aa3643d",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "positioning-framework",
@@ -2059,8 +1978,8 @@
           "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         }
       ],
-      "digest": "0ccfc8971aa303269e45f6c04f09e597327f30388a7519094ccc3871985c843a",
-      "git_last_commit": "2026-09-12T09:18:49+01:00"
+      "digest": "c2679d7031dcf13f216bbc6e145f71aa50cd94f50b68e8d549d2c909d4163feb",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "prepare-videos-for-social",
@@ -2087,8 +2006,8 @@
           "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
         }
       ],
-      "digest": "ca64b0802020439f48156b1edefdc16c17b6b16339819dcbca35965d9f43c1b3",
-      "git_last_commit": "2026-08-25T16:50:10+01:00"
+      "digest": "d85402e05424d5ef62edd0314f8d0537f5a82c5bd16f8572441793b47b8dee45",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "prepare-viral-short",
@@ -2154,8 +2073,8 @@
           "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         }
       ],
-      "digest": "985145c7ad9dbb5d29b9424a3ada6ce0af462568a5879731c01604f516c040a7",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "79c47bf03ca6de3e384bfda9f6cd82b24cb0e626126f7a08941f9fb468922827",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "product-detail-page",
@@ -2271,8 +2190,8 @@
           "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         }
       ],
-      "digest": "660d24c5b9936bc971bbf2d1f94520f401b0eaeaea2f14b67fff2494689ed336",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "bdebbbeeda9f7aca40b19926f8da4a3c48c4d81f2aef5eb5303086811bd75499",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "prompt-picker",
@@ -2289,8 +2208,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "298333198ca12d5b2c6339561ba0d076cb4aa497c61f046209824e7f98154384",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "51a9e6418f33a3cf64f7366c9273445d6a38331fd8d885b292258cd5e34f70fb",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "reconcile-checking-ledger",
@@ -2307,8 +2226,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "d8cf0a5e072741aa64bad1ee057b706429561cccf2f83f8db6f8de69dce27fc5",
-      "git_last_commit": "2026-08-18T23:55:41+01:00"
+      "digest": "e205d6b1fbf1af71db157407b65b3518073b3529755daa246fa8dc4350da99b4",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "remotion-best-practices",
@@ -2457,8 +2376,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "d18b4720f43cf39b8b6ba2e07fa853845346f719f92d0a7a1303c1257955cfbf",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "efb57b965b971c8ef7ecca6db1892e4ea3296ed7a76347b6280293184a891e92",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "seo-aeo-content-strategy",
@@ -2475,8 +2394,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "924a5001488ba78233e2bfc750a92eb86d020461c45efd395b50fc01c2badb88",
-      "git_last_commit": "2026-09-12T09:18:49+01:00"
+      "digest": "91ecce93f78e63e3306fe1c7d4776dd570ff40f457a8ccff51416f5c37e73650",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "seo-keyword-research-intent-mapping",
@@ -2493,15 +2412,15 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "fd091e5cec1d9b892ebf67944634a9faa2020ab15f084812c518bb3316e4b837",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "6a7df147aa2730bc74e23d21cedad85dbf97a699a6005aa78848bc888518319d",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "seo-max-kt",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/seo-max-kt",
       "skill_file": "SKILL.md",
-      "description": "Long-form SEO and AEO methodology bundle; read SEO_AND_AEO_KT.md for the full corpus.",
+      "description": "Senior SEO and AEO operator playbook covering strategy, audits, content, local, links, measurement, and AI answer-engine visibility, plus which specialist SEO skill to use for each job. Use when a search or AI-search question spans several of these areas, when planning an SEO program, or when choosing between the individual SEO skills. Read SEO_AND_AEO_KT.md for the full text.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -2511,15 +2430,15 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "0f10c3e843a799090f48c6d47b4e0ef991e6c71191c049e41f17d1c9879d1235",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "5d0a46da14e484e1a7f19e72b6896842c410181ad2ff92cec208b9d812bdf42d",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "seo-reporting-measurement",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/seo-reporting-measurement",
       "skill_file": "SKILL.md",
-      "description": "Build reports that stakeholders trust, rooted in data sources that are actually reliable. Modern SEO measurement has to reckon with a very specific constraint: **the primary data source (GSC) is ~75% incomplete**, and the AI visibility layer is **probabilistic**, not deterministic. Building reports that ignore these realities produces false confidence.",
+      "description": "Build SEO and AI-visibility reports, KPI hierarchies, dashboards, and algorithm-update diagnoses for stakeholders. Use for weekly, monthly, or quarterly SEO reports, attribution questions, traffic-drop investigations, and reporting AI visibility with sample sizes.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -2529,8 +2448,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "721df75187fb73f18363cc2875e79404ea2225113a52cc480a4830febeeb2203",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "aa3b3b9f43a0dfde287bb6fbf6005e7de7187a0f17357e1c9db067bb7b00bffb",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "signing-entitlements",
@@ -2548,7 +2467,7 @@
       "conflict": false,
       "findings": [],
       "digest": "803ab1d09ee781fa847c6c501bff8954a4e8ace19a855ee9606af8bcd950586c",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "source-command-new-blog",
@@ -2565,8 +2484,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "8d557108a16e272aab6b8be14b1af2c2929f81ad38dd352e89fc0ba5403d5e7f",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "b91296d08c1c9f0d40497b614a9d3bcf42d545ee80470ea57fc3dd23fef43e83",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "source-command-verify-supabase",
@@ -2574,27 +2493,17 @@
       "path": "/Users/prashant/Developer/brain/skills/source-command-verify-supabase",
       "skill_file": "SKILL.md",
       "description": "Comprehensive Supabase security and best practices verification",
-      "status": "warn",
+      "status": "pass",
       "errors": 0,
-      "warnings": 1,
+      "warnings": 0,
       "notes": 0,
       "claude_features": [],
       "codex_concerns": [],
       "duplicate": false,
       "conflict": false,
-      "findings": [
-        {
-          "severity": "warn",
-          "code": "absolute-path",
-          "message": "SKILL.md:240 contains a system absolute path '/tmp/current-types.ts'",
-          "document": "SKILL.md",
-          "line": 240,
-          "path": "/tmp/current-types.ts",
-          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
-        }
-      ],
-      "digest": "8b37862177d98529047d5e6f5a153a2e309acdd939a435bec03241f9000bacb5",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "findings": [],
+      "digest": "a69efb2147f003ec635c2d3aaffe3860dba82ac3b12843f48be73d058c7db90d",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "spm-build-analysis",
@@ -2634,35 +2543,7 @@
         }
       ],
       "digest": "45ed08e562c620a76d12f8db81e26e879b70c7e8277e58fc8e5be730464dfe9b",
-      "git_last_commit": null
-    },
-    {
-      "name": "strategic-nerds",
-      "source": "canonical",
-      "path": "/Users/prashant/Developer/brain/skills/strategic-nerds",
-      "skill_file": "SKILL.md",
-      "description": "Find 3-5 online discussions where Prashant can add value by sharing Strategic Nerds blog posts. Creates a Notion page with opportunities and suggested replies.",
-      "status": "pass",
-      "errors": 0,
-      "warnings": 0,
-      "notes": 1,
-      "claude_features": [
-        "user-invocable"
-      ],
-      "codex_concerns": [],
-      "duplicate": false,
-      "conflict": false,
-      "findings": [
-        {
-          "severity": "info",
-          "code": "claude-only-frontmatter",
-          "message": "frontmatter key 'user-invocable' is Claude-specific. Codex has no /slash invocation registry; the flag is inert.",
-          "feature": "user-invocable",
-          "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
-        }
-      ],
-      "digest": "d7faf525507798729b2e96efe49b9eb4ccaa38c55fda45d02010beefbf825059",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "stripe-best-practices",
@@ -2764,24 +2645,6 @@
         }
       ],
       "digest": "d75347f4e465c0e78032f7cb28b7bcd406cde9a34826b780958b059423fba778",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
-    },
-    {
-      "name": "supabase",
-      "source": "canonical",
-      "path": "/Users/prashant/Developer/brain/skills/supabase",
-      "skill_file": "SKILL.md",
-      "description": "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, @supabase/ssr) in Next.js, React, SvelteKit, Astro, Remix; auth issues (login, logout, sessions, JWT, cookies, getSession, getUser, getClaims, RLS); Supabase CLI or MCP server; schema changes, migrations, security audits, Postgres extensions (pg_graphql, pg_cron, pg_vector).",
-      "status": "pass",
-      "errors": 0,
-      "warnings": 0,
-      "notes": 0,
-      "claude_features": [],
-      "codex_concerns": [],
-      "duplicate": false,
-      "conflict": false,
-      "findings": [],
-      "digest": "a3cb1c4eb642395100d3447a8a68141e19603060f664fbaaa77b1120d62a232d",
       "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
@@ -2980,7 +2843,7 @@
         }
       ],
       "digest": "49eb512d269e6b3deb59d01dd2c250d6a4be542e20ba1ba766cc14fb26add01b",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "swift-concurrency",
@@ -2998,7 +2861,7 @@
       "conflict": false,
       "findings": [],
       "digest": "1bb4ef9485915c8012302552f5f13be2b3a1df268d66524573328691c860ec8d",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "swift-concurrency-pro",
@@ -3016,7 +2879,7 @@
       "conflict": false,
       "findings": [],
       "digest": "63e3b21fc7fd6fde5994a0b5a129e806eb7c4365ad17855d5aeccfe8d48f5406",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "swift-testing-expert",
@@ -3034,7 +2897,7 @@
       "conflict": false,
       "findings": [],
       "digest": "a365c14fecc99445fe3837fb6f654db233d86d2b6efd764fc8712fb67b074cb5",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "swift-testing-pro",
@@ -3052,7 +2915,7 @@
       "conflict": false,
       "findings": [],
       "digest": "a5852fe56887bfab7973b9e5de4ac35ad7efdb9559ba84191811c65842f45b17",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "swiftdata-pro",
@@ -3070,7 +2933,7 @@
       "conflict": false,
       "findings": [],
       "digest": "92f7583d57c738cb8ea30f25e08b2c059a8f16f0c4ac455f0cd8c38bdac09b90",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "swiftui-expert-skill",
@@ -3107,7 +2970,7 @@
         }
       ],
       "digest": "465aede0e8dbca67a40bd8ffa1ac38e540cde0e3f29fe516b92cdc765d55ad6a",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "swiftui-liquid-glass",
@@ -3125,7 +2988,7 @@
       "conflict": false,
       "findings": [],
       "digest": "0bc5cfb7e3eee7c390659587ae5888db1dd0df8342c74dd6b186f3d01dfec686",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "swiftui-patterns",
@@ -3152,7 +3015,7 @@
         }
       ],
       "digest": "4c0e5ce639eba25dbe100305b124ad1b1668f24021bab5747b721533d361ffe1",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "swiftui-performance-audit",
@@ -3170,7 +3033,7 @@
       "conflict": false,
       "findings": [],
       "digest": "f686c4ab38ec393d512ca0acdad82945d8a0d2865547565f6183f87d538f118d",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "swiftui-pro",
@@ -3188,7 +3051,7 @@
       "conflict": false,
       "findings": [],
       "digest": "e1bd9e3ffdea3062b928dad3692465be779aa450da312725aa1b6452a8e19701",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "swiftui-ui-patterns",
@@ -3239,7 +3102,7 @@
         }
       ],
       "digest": "6ad6c8a18d951b1c4d2c03697d95cb1060f7d856c1c481942aba940486f1f0cd",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "swiftui-view-refactor",
@@ -3257,7 +3120,7 @@
       "conflict": false,
       "findings": [],
       "digest": "0c61733010d4ef5450df8f73170914c4ab73b845de4621e43528b43f33f24618",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "tech-debt-audit",
@@ -3284,8 +3147,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "210a98298b3f6ba8b4e4c1c9d6b505eb1ef8ec153be6e71f1e2b7a8c859cb42f",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "27875beb03d2e40562fc0a4de468e94a8e3d80af5e501cd3613e1de78978d0d0",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "technical-seo-ai-crawler-audit",
@@ -3302,8 +3165,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "93000d1d1a5a94f401029e66fcb4eef76c2ce48984fd599aede71fffdd4f38a9",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "1792b6c478b1f9255468fe4211a0ae85109dcba0cb336c955dcaa7f60c9bbd5d",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "thought-leadership-blog",
@@ -3341,8 +3204,26 @@
           "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         }
       ],
-      "digest": "771e622fb2029da808ed586669983c3c38e321d6160ae53ee061a5abb51c3058",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "be89f125ab654cbe8bb84af927883fc7f0382a731a2b1c32302edb56dac262e2",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
+    },
+    {
+      "name": "typesafe-ai",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/typesafe-ai",
+      "skill_file": "SKILL.md",
+      "description": "Build AI-powered software with TypeSafe: small units of AI intelligence you\n can use like programming primitives. Its System One models, including Jev,\n turn natural language and application state into typed judgments and\n probabilities that code can combine. Use when a feature needs programmable\n common sense, when brainstorming what AI could make possible in an app, or\n when an LLM prompt-and-parse step could become a structured decision.\n Applications include routing, ranking, extraction, verification, and\n interactive experiences; these are starting points, not the limits.\n Read live docs and cookbooks to find useful patterns and discover new combinations.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "9cd84c5e535dec8dec59917c110f9c00b4a61faadb86b432ec7e41051170af12",
+      "git_last_commit": null
     },
     {
       "name": "upgrade-stripe",
@@ -3458,8 +3339,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "66f95177c6e80ebd7dde594e0b9f3fc51eda4ffdfca4df4d3f380e862090f149",
-      "git_last_commit": "2026-09-12T09:18:49+01:00"
+      "digest": "15e5acbbd217e9766b778b96c4a1282d7007b85d406b6298df2bfb2e57d83999",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "web-design-guidelines",
@@ -3484,7 +3365,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/webinar-planning",
       "skill_file": "SKILL.md",
-      "description": "Plans and executes technical webinars for developer audiences, and generates the complete asset package. Covers content structure, planning timelines, landing pages, email sequences, social promotion, paid advertising, graphics specs, execution checklists, lead follow-up segmentation, platform setup, metrics, and content repurposing. Use when planning product deep-dives, customer stories, migration workshops, partner integrations, or lead generation programs.",
+      "description": "Plans technical webinars for developer audiences and writes the full asset package, from landing page and email sequence to promotion, run of show, and lead follow-up. Use when planning any developer webinar, including product deep dives, customer stories, migration workshops, and partner sessions.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -3504,8 +3385,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "171a84c3ddd8bf1b28da74643a1d94f545d5d691f64347622f9ac258cd3d721e",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "digest": "11f96e2b4a3832d4c5c1c5193abd2ab557594180fae93501de46138750e15c8f",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "weekly-report",
@@ -3551,7 +3432,7 @@
       "conflict": false,
       "findings": [],
       "digest": "95e82b59c4b1af0820a9fa36c1ace16f154334480603d7375bf1623bb5b09575",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "writing",
@@ -3578,8 +3459,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "09fb602a7260741c3ad3b536f6f1abf1a6935d365fc030c5050d4b977cb5d47f",
-      "git_last_commit": "2026-09-12T09:18:49+01:00"
+      "digest": "411cda76dfb3375f1efe53d4efacb0c1006cfb121d31e7cb2a21128d569c082c",
+      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "xcode-build-benchmark",
@@ -3639,7 +3520,7 @@
         }
       ],
       "digest": "25eb1d11352980ab4f1ae379056becad2ecd45d49acf09c51d7a1aeffe1c9c95",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "xcode-build-fixer",
@@ -3689,7 +3570,7 @@
         }
       ],
       "digest": "1d913324337651e456664bc451d4f5ec023eec4434e5e615816ecf91921485cd",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "xcode-build-orchestrator",
@@ -3749,7 +3630,7 @@
         }
       ],
       "digest": "adfb8b05bfb9723d27403956c5b0fa8cce030a69b18e91ffcda5220ce24934a5",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "xcode-compilation-analyzer",
@@ -3779,7 +3660,7 @@
         }
       ],
       "digest": "30a35865dcbe3eca1f2d049127e393616037d155acb5a30356b363ec1fb63937",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     },
     {
       "name": "xcode-project-analyzer",
@@ -3809,7 +3690,7 @@
         }
       ],
       "digest": "a97a40f1025d22fa68b8ec68b50f365058b10010baa2ffe2cf7755e97d4e7785",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-15T00:22:26+01:00"
     }
   ]
 }

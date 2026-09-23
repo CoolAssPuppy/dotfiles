@@ -24,7 +24,6 @@ Analyze the most recent content from these categories:
 2. **Product Marketing**
    - Product Hunt discussions
    - ProductLed blog
-   - OpenView Partners content
    - First Round Review
    - Reforge articles
 
@@ -62,12 +61,9 @@ Look for:
 
 ## Phase 2: Picks and Shovels Framework Application
 
-### Core Principles from Picks and Shovels
-1. **Sell to the sellers** - Target those building/selling, not end users
-2. **Infrastructure over features** - Focus on foundational tools
-3. **Recurring problems** - Address persistent, not one-time issues
-4. **Multiplicative value** - Solutions that scale with customer growth
-5. **Technical moats** - Deep technical content others can't easily replicate
+### Core principles from Picks and Shovels
+1. **Help First.** Lead with useful technical content. Every post should solve a real problem even if the reader never becomes a customer.
+2. **Outside-in first.** Most posts address what the target developers care about broadly. Product-specific inside-out posts are for converting people who are already interested. See the `content-strategy` skill.
 
 ### Content Opportunity Scoring
 Rate each potential topic (1-10) on:
@@ -129,13 +125,13 @@ Distribution Strategy:
    - Case studies or examples
    - Benchmarks or comparisons
 
-### Writing Guidelines (STRICT)
+### Writing guidelines
 
 #### Style Rules
 - **Headers**: Sentence case only (not Title Case)
 - **Language**: Plain spoken, no florid prose
 - **Forbidden**: No emoji, no em-dashes (—), no exclamation points
-- **Tone**: Professional but conversational, like Salman Rushdie's clarity
+- **Tone**: Professional but conversational
 - **Level**: 6th grade reading level for clarity
 
 #### Structure Rules
@@ -147,36 +143,16 @@ Distribution Strategy:
 - **Sentences**: Under 20 words when possible
 
 #### Content Requirements
-- **ZERO filler**: Every sentence must add value
+- **No filler**: Every sentence must add value
 - **Evidence-based**: Support claims with data/examples
 - **Actionable**: Reader can implement immediately
 - **Scannable**: Use bullet points, numbered lists
 - **Visual breaks**: Subheadings every 150-200 words
 
-### Writing Process
-
-#### Draft 1: Structure and Ideas
-- Outline main arguments
-- Gather supporting evidence
-- Write without editing
-
-#### Draft 2: Clarity and Flow
-- Simplify complex sentences
-- Improve transitions
-- Check logical flow
-- Remove redundancy
-
-#### Draft 3: Polish and Optimize
-- Tighten every sentence
-- Verify all claims
-- Optimize for SEO
-- Add internal links
-
-#### Draft 4: Final Review
-- Read aloud for flow
-- Check against style guide
-- Verify word count
-- Final fact-check
+### Before delivering each post
+- Every claim is verified or cut
+- The post follows the style and structure rules above
+- The word count is within target
 
 ### SEO Optimization
 
@@ -211,7 +187,7 @@ Distribution Strategy:
 
 ### Repurposing Strategy
 1. **LinkedIn**: Extract 3-5 key insights as posts
-2. **Twitter/X**: Create thread from main points
+2. **Twitter**: Create thread from main points
 3. **Newsletter**: Condense to 500-word summary
 4. **Podcast**: Talking points for guest appearances
 5. **Webinar**: Expand into 30-minute presentation
@@ -281,7 +257,6 @@ Blog Proposals:
 
 Final Deliverables:
 - 3 complete blog posts (1500 words each)
-- Multiple drafts showing revision process
 - SEO metadata for each
 - Distribution plan for each
 - Repurposing suggestions
