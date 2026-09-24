@@ -85,7 +85,7 @@ Autonomous agents that handle specific development tasks:
 
 | Agent | Purpose |
 |-------|---------|
-| `tdd-guardian` | Enforces test-driven development practices |
+| `test-guardian` | Plans tests and checks them against the E2E-first testing rules |
 | `ts-enforcer` | TypeScript best practices and type safety |
 | `docs-guardian` | Documentation quality standards |
 | `refactor-scan` | Identifies code improvement opportunities |

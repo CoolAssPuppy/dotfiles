@@ -6,18 +6,18 @@ This directory contains specifications for specialized Claude Code agents that w
 
 ### Development Process Agents
 
-#### `tdd-guardian`
-**Purpose**: Ensures strict Test-Driven Development compliance throughout the coding process.
+#### `test-guardian`
+**Purpose**: Plans tests before code and checks them after, against `rules/testing.md` (E2E by default, table-driven isolated tests for logic with many cases).
 
 **Use proactively when**:
 - Planning to implement a new feature
 - About to write any production code
 
 **Use reactively when**:
-- Code has been written (verify TDD was followed)
-- Tests are green (assess refactoring opportunities)
+- Code has been written (check the tests follow the rules)
+- Before the final commit
 
-**Core responsibility**: Enforce RED-GREEN-REFACTOR cycle, verify tests written first.
+**Core responsibility**: Every feature has an E2E test with an artifact; logic with many cases has a test table from a failure list; no tests written after the code.
 
 ---
 
@@ -38,7 +38,7 @@ This directory contains specifications for specialized Claude Code agents that w
 ---
 
 #### `refactor-scan`
-**Purpose**: Assesses refactoring opportunities after tests pass (TDD's third step).
+**Purpose**: Assesses refactoring opportunities after tests pass.
 
 **Use proactively when**:
 - Tests just turned green
@@ -150,16 +150,16 @@ Only the main agent can start a subagent. Subagents cannot start each other, so 
    - Invoke `use-case-data-patterns`: Analyze existing patterns before implementing
 
 2. **For each step in plan**
-   - Invoke `tdd-guardian`: RED (failing test)
-   - Write minimal code: GREEN (tests pass)
-   - Invoke `refactor-scan`: REFACTOR (assess improvements)
+   - Invoke `test-guardian`: plan the E2E test or failure list
+   - Write the test, then the code until it passes
+   - Invoke `refactor-scan`: assess improvements
 
 3. **When architectural decision arises**
    - Invoke `adr`: Create ADR for significant decisions
 
 4. **Before commits/PRs**
    - Invoke `ts-enforcer`: Verify TypeScript compliance
-   - Invoke `tdd-guardian`: Verify TDD compliance
+   - Invoke `test-guardian`: Check tests and E2E artifacts
 
 5. **When learning occurs**
    - Invoke `learn`: Document in CLAUDE.md if significant
@@ -249,7 +249,7 @@ When creating a new agent specification:
 These agents work together to create a comprehensive development workflow:
 
 - **Analysis**: use-case-data-patterns maps use cases to implementation patterns
-- **Quality**: tdd-guardian + ts-enforcer ensure code quality
+- **Quality**: test-guardian + ts-enforcer ensure code quality
 - **Improvement**: refactor-scan optimizes code after tests pass
 - **Knowledge**: learn + adr + docs-guardian preserve knowledge
 

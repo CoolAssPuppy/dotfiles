@@ -67,7 +67,7 @@ The `adr` agent creates Architecture Decision Records (ADRs) for significant arc
 3. **Standard Patterns from CLAUDE.md**
    - Using factory functions (already documented)
    - Immutability (already a rule)
-   - TDD process (already required)
+   - Testing order (already required)
 
 4. **Implementation Details with No Alternatives Considered**
    - Straightforward code choices
@@ -330,13 +330,13 @@ We'll have a job queue.
 
 ```markdown
 # Bad: Already documented in CLAUDE.md
-# ADR-031: Follow TDD
+# ADR-031: Use E2E tests by default
 
 ## Decision
-We will follow Test-Driven Development.
+We will use end-to-end tests as the default test type.
 ```
 
-**Why bad**: TDD is already a non-negotiable practice in CLAUDE.md. Doesn't need an ADR.
+**Why bad**: The testing order is already a rule in `rules/testing.md`. Doesn't need an ADR.
 
 ## Success Criteria
 

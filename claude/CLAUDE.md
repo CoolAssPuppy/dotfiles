@@ -68,6 +68,12 @@ Use this on every coding session.
 - Given a bug report, fix it. Don't ask for hand-holding.
 - Start from the logs, errors, and failing tests, then resolve them. Fix failing CI without being told how.
 
+### Tests
+- NEVER write unit tests after you write the code.
+- End-to-end tests are the default. Use them to prove features work. Every E2E run must end by producing an artifact (a screenshot, recording, log, or output file) that anyone can check and that the same run reproduces.
+- Isolated tests are only for logic with many cases: parsers, money, dates, permissions, state machines. FIRST write down every way it could fail, THEN write the tests from that list, THEN the code.
+- No coverage targets. Mock only what you do not control, never the project's own code.
+
 ### Verify before done
 - Never mark a task complete without proving it works. Run tests, check logs, demonstrate correctness.
 - Diff behavior between main and your changes when relevant.
@@ -102,12 +108,12 @@ Use this on every coding session.
 ## Commands
 
 - Before making changes, check package.json for existing npm scripts and use them.
-- After code changes, run `npm test`, then `npm run lint`, then `npm run build` before calling the work complete.
+- After code changes, run the repository's test suite including its E2E tests, then `npm run lint`, then `npm run build` before calling the work complete.
 
 ## Rules (loaded with this file)
 
 - @rules/code-style.md - File structure, naming, imports, anti-patterns, OOP, modularity
-- @rules/testing.md - TDD philosophy and quick reference
+- @rules/testing.md - E2E-first testing, isolated tests for logic with many cases
 - @rules/security.md - RLS, auth, data protection, secrets, code security
 - @rules/typescript.md - Strict mode, Vercel build, no `any`, tech stack preferences
 - @rules/git.md - Commit style and .gitignore template
@@ -121,5 +127,5 @@ Read these only when you need depth beyond the rules above:
 - `~/.claude/docs/testing.md` - Full testing methodology with examples
 - `~/.claude/docs/code-style.md` - Detailed code style guidelines
 - `~/.claude/docs/typescript.md` - TypeScript guidelines
-- `~/.claude/docs/workflow.md` - Development workflow (TDD playbook, refactoring, commits)
+- `~/.claude/docs/workflow.md` - Development workflow (testing order, refactoring, commits)
 - `~/.claude/docs/working-with-claude.md` - Claude collaboration guide

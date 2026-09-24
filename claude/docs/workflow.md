@@ -1,157 +1,28 @@
 # Development Workflow
 
-## TDD Process - THE FUNDAMENTAL PRACTICE
+## Testing order
 
-**CRITICAL**: TDD is not optional. Every feature, every bug fix, every change MUST follow this process:
+The rules are in `~/.claude/rules/testing.md` and the examples in `~/.claude/docs/testing.md`. For each step in a plan:
 
-Follow Red-Green-Refactor strictly:
+1. **Decide the test.** A feature or user flow gets an E2E test. Logic with many cases (parsers, money, dates, permissions, state machines) gets an isolated, table-driven test. Glue code gets no test of its own.
+2. **Write the test first.** For isolated logic, write the failure list, turn it into a test table, and run it to see every row fail. For a feature, write the E2E flow and its final artifact step.
+3. **Write the code** until the test passes.
+4. **Assess refactoring.** Improve the structure only if it adds value, with the tests still passing.
+5. **Run the E2E suite** and record the command, exit code, and artifact path in `tasks/todo.md` as the step is checked off.
 
-1. **Red**: Write a failing test for the desired behavior. NO PRODUCTION CODE until you have a failing test.
-2. **Green**: Write the MINIMUM code to make the test pass. Resist the urge to write more than needed.
-3. **Refactor**: Assess the code for improvement opportunities. If refactoring would add value, clean up the code while keeping tests green. If the code is already clean and expressive, move on.
+## Quality gates
 
-**Common TDD Violations to Avoid:**
-
-- Writing production code without a failing test first
-- Writing multiple tests before making the first one pass
-- Writing more production code than needed to pass the current test
-- Skipping the refactor assessment step when code could be improved
-- Adding functionality "while you're there" without a test driving it
-
-**Remember**: If you're typing production code and there isn't a failing test demanding that code, you're not doing TDD.
-
-## TDD Quality Gates
-
-Before allowing any commit, verify:
-- ✅ All production code has a test that demanded it
-- ✅ Tests verify behavior, not implementation
-- ✅ Implementation is minimal (only what's needed)
-- ✅ Refactoring assessment completed (if tests green)
-- ✅ All tests pass
-- ✅ TypeScript strict mode satisfied
-- ✅ No `any` types or unjustified assertions
-- ✅ Factory functions used (no `let`/`beforeEach`)
-
-## Verifying TDD compliance
-
-Each change lands as one commit made after full local validation, so git history does not show the RED, GREEN, and REFACTOR steps. Check test-first development while the work happens instead:
-
-- Run each new test and see it fail before writing the production code it demands.
-- Note the failing test and its failure message in `tasks/todo.md` as the step is checked off.
-- In review, confirm every production change has a test that covers its behavior and would fail without it.
-
-## TDD Example Workflow
-
-```typescript
-// Step 1: Red - Start with the simplest behavior
-describe("Order processing", () => {
-  it("should calculate total with shipping cost", () => {
-    const order = createOrder({
-      items: [{ price: 30, quantity: 1 }],
-      shippingCost: 5.99,
-    });
-
-    const processed = processOrder(order);
-
-    expect(processed.total).toBe(35.99);
-    expect(processed.shippingCost).toBe(5.99);
-  });
-});
-
-// Step 2: Green - Minimal implementation
-const processOrder = (order: Order): ProcessedOrder => {
-  const itemsTotal = order.items.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
-
-  return {
-    ...order,
-    shippingCost: order.shippingCost,
-    total: itemsTotal + order.shippingCost,
-  };
-};
-
-// Step 3: Red - Add test for free shipping behavior
-describe("Order processing", () => {
-  it("should calculate total with shipping cost", () => {
-    // ... existing test
-  });
-
-  it("should apply free shipping for orders over £50", () => {
-    const order = createOrder({
-      items: [{ price: 60, quantity: 1 }],
-      shippingCost: 5.99,
-    });
-
-    const processed = processOrder(order);
-
-    expect(processed.shippingCost).toBe(0);
-    expect(processed.total).toBe(60);
-  });
-});
-
-// Step 4: Green - NOW we can add the conditional because both paths are tested
-const processOrder = (order: Order): ProcessedOrder => {
-  const itemsTotal = order.items.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
-
-  const shippingCost = itemsTotal > 50 ? 0 : order.shippingCost;
-
-  return {
-    ...order,
-    shippingCost,
-    total: itemsTotal + shippingCost,
-  };
-};
-
-// Step 5: Add edge case tests to ensure 100% behavior coverage
-describe("Order processing", () => {
-  // ... existing tests
-
-  it("should charge shipping for orders exactly at £50", () => {
-    const order = createOrder({
-      items: [{ price: 50, quantity: 1 }],
-      shippingCost: 5.99,
-    });
-
-    const processed = processOrder(order);
-
-    expect(processed.shippingCost).toBe(5.99);
-    expect(processed.total).toBe(55.99);
-  });
-});
-
-// Step 6: Refactor - Extract constants and improve readability
-const FREE_SHIPPING_THRESHOLD = 50;
-
-const calculateItemsTotal = (items: OrderItem[]): number => {
-  return items.reduce((sum, item) => sum + item.price * item.quantity, 0);
-};
-
-const qualifiesForFreeShipping = (itemsTotal: number): boolean => {
-  return itemsTotal > FREE_SHIPPING_THRESHOLD;
-};
-
-const processOrder = (order: Order): ProcessedOrder => {
-  const itemsTotal = calculateItemsTotal(order.items);
-  const shippingCost = qualifiesForFreeShipping(itemsTotal)
-    ? 0
-    : order.shippingCost;
-
-  return {
-    ...order,
-    shippingCost,
-    total: itemsTotal + shippingCost,
-  };
-};
-```
+Before the final commit, verify:
+- Every feature in the change has an E2E test that passes and produces its artifact
+- Every piece of logic with many cases has a table-driven test written from a failure list
+- No test mocks the project's own code or checks that an internal function was called
+- All tests pass
+- TypeScript strict mode satisfied, no `any` types or unjustified assertions
+- Factory functions used for test data (no `let`/`beforeEach`)
 
 ## Refactoring - The Critical Third Step
 
-Evaluating refactoring opportunities is not optional - it's the third step in the TDD cycle. After achieving a green state, you must assess whether the code can be improved. However, only refactor if there's clear value - if the code is already clean and expresses intent well, move on to the next test.
+Evaluating refactoring opportunities is not optional. After the tests pass, you must assess whether the code can be improved. However, only refactor if there's clear value - if the code is already clean and expresses intent well, move on to the next test.
 
 ### What is Refactoring?
 
@@ -487,7 +358,7 @@ const validatePaymentAmount = (amount: number): void => {
 After every refactoring, run all tests (they must pass without modification) and static analysis (linting, type checking):
 
 ```bash
-npm test
+npm test          # or the repository's test command, including E2E
 npm run lint
 npm run typecheck
 ```
