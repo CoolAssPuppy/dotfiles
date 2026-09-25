@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-09-23T12:49:10+01:00",
+  "generated_at": "2026-09-25T21:20:47+01:00",
   "yaml_backend": "builtin",
   "sources": [
     {
       "label": "canonical",
       "path": "/Users/prashant/Developer/brain/skills",
-      "skill_count": 132,
+      "skill_count": 144,
       "anomaly_count": 1
     }
   ],
   "totals": {
-    "skills": 132,
-    "unique_names": 132,
+    "skills": 144,
+    "unique_names": 144,
     "duplicate_names": 0,
     "unresolved_conflicts": 0,
     "failing": 0,
-    "warning": 26,
-    "passing": 106,
+    "warning": 32,
+    "passing": 112,
     "anomalies": 1
   },
   "anomalies": [
@@ -1301,6 +1301,34 @@
       "git_last_commit": "2026-08-05T10:07:51+01:00"
     },
     {
+      "name": "general-video",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/general-video",
+      "skill_file": "SKILL.md",
+      "description": "Author or edit a custom HyperFrames composition when no specialized workflow fits, or when\n BRIEF.md sets flow: companion. Use for longer or multi-scene pieces, brand and sizzle reels,\n montages, static loops, static title cards, footage remixes, and freeform builds. Use\n motion-graphics instead for a short unnarrated motion-first unit, including an animated title.\n Route fresh creation through hyperframes before using this skill.",
+      "status": "warn",
+      "errors": 0,
+      "warnings": 1,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "scripts/lib/frame-packets-core.mjs:163 contains a system absolute path '/private/tmp'",
+          "document": "scripts/lib/frame-packets-core.mjs",
+          "line": 163,
+          "path": "/private/tmp",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
+        }
+      ],
+      "digest": "e45f4744d068ed128d355f2e81f50a381ff68cefa864f1009b5c64ac788b3f7b",
+      "git_last_commit": null
+    },
+    {
       "name": "generate-ranking-video",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/generate-ranking-video",
@@ -1540,6 +1568,451 @@
       "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
+      "name": "hyperframes",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/hyperframes",
+      "skill_file": "SKILL.md",
+      "description": "Mandatory entry point: read this first for any request to make, create, edit, animate, or render a\n video, animation, or motion graphic, including a promo, explainer, captioned clip, title card,\n overlay, slideshow or interactive deck, Remotion port, or any HyperFrames HTML composition. Also\n use it to inspect, diagnose, validate, preview, publish, or batch-render an existing HyperFrames\n project. Inputs may be a website URL, GitHub PR, Figma design or URL, text or brief, existing\n footage, or music. It resumes project state, captures intent when applicable, selects and installs\n the owning workflow, and routes domain capabilities. HyperFrames is the default output framework\n unless the user explicitly chooses another framework for the deliverable or asks only to record a\n browser session.",
+      "status": "warn",
+      "errors": 0,
+      "warnings": 1,
+      "notes": 17,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "SKILL.md: names `references/creator-editing-recipes.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "SKILL.md",
+          "target": "references/creator-editing-recipes.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/capability-menu.md: names `references/design-spec.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/capability-menu.md",
+          "target": "references/design-spec.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/capability-menu.md: names `scripts/analyze-beatgrid.py` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/capability-menu.md",
+          "target": "scripts/analyze-beatgrid.py",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/capability-menu.md: names `references/audio-reactive.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/capability-menu.md",
+          "target": "references/audio-reactive.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/capability-menu.md: names `scripts/extract-audio-data.py` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/capability-menu.md",
+          "target": "scripts/extract-audio-data.py",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/capability-menu.md: names `references/media-treatments.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/capability-menu.md",
+          "target": "references/media-treatments.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/capability-menu.md: names `references/operations.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/capability-menu.md",
+          "target": "references/operations.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/capability-menu.md: names `scripts/transcribe.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/capability-menu.md",
+          "target": "scripts/transcribe.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/capability-menu.md: names `scripts/transcript-cut.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/capability-menu.md",
+          "target": "scripts/transcript-cut.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/capability-menu.md: names `references/wiring-blocks.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/capability-menu.md",
+          "target": "references/wiring-blocks.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/capability-menu.md: names `references/preview-render.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/capability-menu.md",
+          "target": "references/preview-render.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/capability-menu.md: names `references/design-picker.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/capability-menu.md",
+          "target": "references/design-picker.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/frame-worker-core.md: names `scripts/frame-packets.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/frame-worker-core.md",
+          "target": "scripts/frame-packets.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/frame-worker-core.md: names `references/sub-compositions.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/frame-worker-core.md",
+          "target": "references/sub-compositions.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/frame-worker-core.md: names `references/determinism-rules.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/frame-worker-core.md",
+          "target": "references/determinism-rules.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/frame-worker-core.md: names `references/data-attributes.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/frame-worker-core.md",
+          "target": "references/data-attributes.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/production-loop.md: names `scripts/transcribe.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/production-loop.md",
+          "target": "scripts/transcribe.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "scripts/lib/frame-packets-core.mjs:163 contains a system absolute path '/private/tmp'",
+          "document": "scripts/lib/frame-packets-core.mjs",
+          "line": 163,
+          "path": "/private/tmp",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
+        }
+      ],
+      "digest": "9ba2d4bc10aa8811bedb744f56cf0c019d78e7fa3ffd6e573310457f05ba1dca",
+      "git_last_commit": null
+    },
+    {
+      "name": "hyperframes-animation",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/hyperframes-animation",
+      "skill_file": "SKILL.md",
+      "description": "All animation knowledge for HyperFrames \u2014 atomic motion rules, multi-phase scene blueprints, scene transitions, broader motion-design techniques, AND the seven runtime adapters (GSAP default, plus Lottie, Three.js, Anime.js, CSS keyframes, Web Animations API, TypeGPU). Use for any motion or animation task: pick 2-4 rules and compose, or load a blueprint, or look up runtime-specific API (e.g. GSAP eases / Lottie player / Three.js mixer). Also covers auditing an existing composition's choreography (animation map) and 24 named text-animation effects. HyperFrames-native: single paused timeline, seek-safe, deterministic.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 3,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "adapters/animate-text.md: names `references/motion-principles.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "adapters/animate-text.md",
+          "target": "references/motion-principles.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "adapters/animate-text.md: names `references/beat-direction.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "adapters/animate-text.md",
+          "target": "references/beat-direction.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "rules/sine-wave-loop.md: names `references/motion-language.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "rules/sine-wave-loop.md",
+          "target": "references/motion-language.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        }
+      ],
+      "digest": "fa5032f5b474eaf633d83c6923ca531fe096f40d134009594a5c8497baf28b4c",
+      "git_last_commit": null
+    },
+    {
+      "name": "hyperframes-audio",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/hyperframes-audio",
+      "skill_file": "SKILL.md",
+      "description": "Use when audio already placed in a HyperFrames composition needs to be mixed:\n fade-in/fade-out, crossfade, track gain or volume, volume automation, ducking,\n a music bed that fights a voiceover (voiceover carve), effects on a track\n (EQ, compressor, limiter, gate, saturation, delay, reverb, chorus, phaser,\n bitcrush), automation envelopes drawn on a track's volume or any effect\n parameter, or one submix bus carrying a chain, a fader and an automation clock\n for several tracks at once (`<hf-audio-group>`).\n Don't use for sourcing or generating audio \u2014 finding BGM, SFX, or making a\n voiceover is `/media-use`. Don't use for clip timing or track layout, which is\n `/hyperframes-core`.",
+      "status": "warn",
+      "errors": 0,
+      "warnings": 2,
+      "notes": 1,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "SKILL.md: names `references/creator-editing-recipes.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "SKILL.md",
+          "target": "references/creator-editing-recipes.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "scripts/carve.mjs:558 contains a system absolute path '/private/tmp'",
+          "document": "scripts/carve.mjs",
+          "line": 558,
+          "path": "/private/tmp",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
+        },
+        {
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "scripts/carve.test.mjs:185 contains a system absolute path '/private/tmp'",
+          "document": "scripts/carve.test.mjs",
+          "line": 185,
+          "path": "/private/tmp",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
+        }
+      ],
+      "digest": "020aac44feccf5a3cc38791860b9619d90622a7a4507dded728ece5d4824ae7e",
+      "git_last_commit": null
+    },
+    {
+      "name": "hyperframes-cli",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/hyperframes-cli",
+      "skill_file": "SKILL.md",
+      "description": "Use the HyperFrames CLI development loop: init, add, catalog, capture, lint, check, snapshot,\n compare, grade-compare, preview, play, present, beats, keyframes, single or batch render, publish,\n cloud, cloudrun, feedback, lambda, doctor, browser, info, upgrade, skills, compositions, timeline, history, docs,\n benchmark, telemetry, transcribe, auth, tts, and remove-background. Also use when diagnosing build\n or render failures. validate, inspect, and layout are deprecated aliases; use check. Covers local,\n HeyGen-hosted cloud, AWS Lambda, and Google Cloud Run rendering.",
+      "status": "warn",
+      "errors": 0,
+      "warnings": 4,
+      "notes": 2,
+      "claude_features": [],
+      "codex_concerns": [
+        "references/cloud.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked",
+        "references/cloudrun.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked",
+        "references/lambda.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked"
+      ],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "SKILL.md: names `references/creator-editing-recipes.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "SKILL.md",
+          "target": "references/creator-editing-recipes.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "SKILL.md: names `references/variables-and-media.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "SKILL.md",
+          "target": "references/variables-and-media.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "references/cloud.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked",
+          "document": "references/cloud.md",
+          "target": "../../hyperframes-core/references/variables-and-media.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md",
+          "recommendation": "link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        },
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "references/cloudrun.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked",
+          "document": "references/cloudrun.md",
+          "target": "../../hyperframes-core/references/variables-and-media.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md",
+          "recommendation": "link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        },
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "references/lambda.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked",
+          "document": "references/lambda.md",
+          "target": "../../hyperframes-core/references/variables-and-media.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md",
+          "recommendation": "link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        },
+        {
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "references/preview-render.md:92 contains a system absolute path '/tmp/hf-profile'",
+          "document": "references/preview-render.md",
+          "line": 92,
+          "path": "/tmp/hf-profile",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
+        }
+      ],
+      "digest": "596613c2220597cae47e029a573ce0bfedf67f8d79ddad110fbc81535af44f0d",
+      "git_last_commit": null
+    },
+    {
+      "name": "hyperframes-core",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/hyperframes-core",
+      "skill_file": "SKILL.md",
+      "description": "The HyperFrames composition contract \u2014 build one renderable project. Use for composition structure, the `data-*` timing attributes, `class=\"clip\"`, tracks, sub-compositions, variables, framework-owned media playback, deterministic-render rules, and validation. Read before writing composition HTML.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "18315df8e81b41f686c468512cb63587f915c5bfa68670eb4e5c1aeba051b5ed",
+      "git_last_commit": null
+    },
+    {
+      "name": "hyperframes-creative",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/hyperframes-creative",
+      "skill_file": "SKILL.md",
+      "description": "Non-animation creative direction for HyperFrames videos. Use for design spec (frame.md / design.md) handling, palettes, typography, narration, beat planning, audio-reactive visuals, composition patterns, and brand / style decisions. For atomic motion patterns and scene blueprints, use `hyperframes-animation`.",
+      "status": "warn",
+      "errors": 0,
+      "warnings": 2,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "references/typography.md:81 contains a system absolute path '/tmp/gfonts.json'",
+          "document": "references/typography.md",
+          "line": 81,
+          "path": "/tmp/gfonts.json",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
+        },
+        {
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "references/typography.md:81 contains a system absolute path '/tmp/fontquery.py'",
+          "document": "references/typography.md",
+          "line": 81,
+          "path": "/tmp/fontquery.py",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
+        }
+      ],
+      "digest": "2506ec21a6c5782a3949da28a6abaa36241723dcdfd4ddf01642e0581a6669f0",
+      "git_last_commit": null
+    },
+    {
+      "name": "hyperframes-keyframes",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/hyperframes-keyframes",
+      "skill_file": "SKILL.md",
+      "description": "Use when a HyperFrames composition needs a punch-in, punch-out, zoom, reframe,\n Ken Burns treatment, camera move, visual match/whip handoff, or other seek-safe\n 2D/3D keyframes; also for GSAP, CSS keyframes, Anime.js, WAAPI, FLIP, paths,\n masks, SVG morph/draw, text trails, 3D depth, or `hyperframes keyframes` diagnostics.\n Don't use for broad scene strategy, brand design, media sourcing, captions, or\n general video planning.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 1,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "SKILL.md: names `references/creator-editing-recipes.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "SKILL.md",
+          "target": "references/creator-editing-recipes.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        }
+      ],
+      "digest": "5b82c28ec508cb50839eccfc0f33d627eee75836fa6b5284cc179518c139777e",
+      "git_last_commit": null
+    },
+    {
+      "name": "hyperframes-registry",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/hyperframes-registry",
+      "skill_file": "SKILL.md",
+      "description": "Search, install, and wire registry blocks and components into HyperFrames compositions. Use BEFORE hand-building any named visual \u2014 whenever a brief, a user, or a storyboard names a look, effect, treatment, or transition such as CRT scanlines, glitch, chromatic aberration, film grain, a shimmer sweep, a chart, a code or terminal window, a map, or a confetti burst \u2014 because roughly 400 hosted items already cover many of them and the search ranks all of them with nothing installed, no project, and no account. Also use when running hyperframes add or hyperframes catalog, installing one item or every block matching a tag, wiring an installed item into index.html, or working with hyperframes.json. Covers discovery, install locations, block sub-composition wiring, component snippet merging, and authoring a new block or component to contribute upstream (idea \u2192 scaffold \u2192 validate \u2192 PR).",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "df44e962fc3986bfcde90b384f9dbe8b1eac079b663eeb2d619d1e942f3b81ca",
+      "git_last_commit": null
+    },
+    {
+      "name": "hyperframes-studio",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/hyperframes-studio",
+      "skill_file": "SKILL.md",
+      "description": "Use when building or editing a HyperFrames project that people open in\n Studio: how the timeline should be laid out so it reads well (one caption\n track, one element kind per track, every scene a sub-composition) and where\n captions and key content may sit (safe zones). Don't use for how to perform an\n individual edit (split, trim, retime, volume, copy, swap): that is\n `creator-editing-recipes.md` in `/hyperframes-core`.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "c5465f4276cc293d893334e664802bdbdc20cc57c801e1efab07c223e37d8dba",
+      "git_last_commit": null
+    },
+    {
       "name": "impeccable",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/impeccable",
@@ -1647,6 +2120,34 @@
       ],
       "digest": "757f6b0a36c39e71862646d88a0aeb809f706a6773c093001492f5b511ab4781",
       "git_last_commit": "2026-09-23T12:48:29+01:00"
+    },
+    {
+      "name": "launch-video",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/launch-video",
+      "skill_file": "SKILL.md",
+      "description": "Make a product launch video, and a fast homepage hero loop, from two inputs: where the video will run (placements and sizes) and a link to the product's repo or website for branding. Researches the product and brand, picks the selling point, writes the story and copy, builds a HyperFrames project with a Three.js chain-reaction world, a synthesized soundtrack and kinetic type, reviews rhythm frame by frame and in Studio, and delivers one file per placement. Use when asked for a launch video, product promo, Reel, TikTok, Short, social video series, animated homepage hero, or a video like the FutureNerds one.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 1,
+      "claude_features": [
+        "user-invocable"
+      ],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "claude-only-frontmatter",
+          "message": "frontmatter key 'user-invocable' is Claude-specific. Codex has no /slash invocation registry; the flag is inert.",
+          "feature": "user-invocable",
+          "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
+        }
+      ],
+      "digest": "c35f598a0c61fb5f7bc0aaa41ac45e1273b01eec9adbefee25f37af1f2306051",
+      "git_last_commit": null
     },
     {
       "name": "lifecycle-email",
@@ -1787,6 +2288,214 @@
       ],
       "digest": "4941b48fd312c3f344494b587a84d63b564c2073a347c42a95e776d66a80a6ff",
       "git_last_commit": "2026-09-23T12:48:29+01:00"
+    },
+    {
+      "name": "media-use",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/media-use",
+      "skill_file": "SKILL.md",
+      "description": "Agent Media OS, the single skill for every media need in a HyperFrames project. Resolve BGM, SFX, image, icon, brand logo, voice, color grade, or LUT into a frozen local file or paste-ready block + ledger record (one verb, `resolve`); generate via TTS / music / image models when the catalog misses; produce voiceover, transcription, captions, and background removal through one shared audio engine; operate on media (cut / reframe / transform); and reuse assets across projects. Also use for vague feedback that real footage looks dark, flat, boring, should feel retro/camcorder/print/ASCII, needs privacy, or needs a media reveal.",
+      "status": "warn",
+      "errors": 0,
+      "warnings": 5,
+      "notes": 18,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "audio/references/bgm.md: names `scripts/audio.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "audio/references/bgm.md",
+          "target": "scripts/audio.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "audio/references/bgm.md: names `scripts/lib/bgm.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "audio/references/bgm.md",
+          "target": "scripts/lib/bgm.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "audio/references/bgm.md: names `scripts/lyria-recipe.py` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "audio/references/bgm.md",
+          "target": "scripts/lyria-recipe.py",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "audio/references/bgm.md: names `scripts/wait-bgm.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "audio/references/bgm.md",
+          "target": "scripts/wait-bgm.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "audio/references/sfx.md: names `scripts/audio.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "audio/references/sfx.md",
+          "target": "scripts/audio.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "audio/references/sfx.md: names `scripts/lib/sfx.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "audio/references/sfx.md",
+          "target": "scripts/lib/sfx.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "audio/references/tts.md: names `scripts/heygen-tts.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "audio/references/tts.md",
+          "target": "scripts/heygen-tts.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/memory.md: names `references/intent-interview.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/memory.md",
+          "target": "references/intent-interview.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/meta.md: names `scripts/lib/coverage.test.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/meta.md",
+          "target": "scripts/lib/coverage.test.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/meta.md: names `scripts/lib/mflux-provider.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/meta.md",
+          "target": "scripts/lib/mflux-provider.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/meta.md: names `scripts/lib/codex-provider.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/meta.md",
+          "target": "scripts/lib/codex-provider.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/meta.md: names `scripts/lib/local-models.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/meta.md",
+          "target": "scripts/lib/local-models.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/meta.md: names `scripts/lib/local-run.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/meta.md",
+          "target": "scripts/lib/local-run.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/meta.md: names `scripts/lib/heygen-cli.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/meta.md",
+          "target": "scripts/lib/heygen-cli.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/operations.md: names `scripts/lib/local-models.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/operations.md",
+          "target": "scripts/lib/local-models.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/operations.md: names `scripts/lib/heygen-video-provider.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/operations.md",
+          "target": "scripts/lib/heygen-video-provider.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/operations.md: names `scripts/lib/heygen-cli.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/operations.md",
+          "target": "scripts/lib/heygen-cli.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/setup-providers.md: names `scripts/lib/local-models.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "references/setup-providers.md",
+          "target": "scripts/lib/local-models.mjs",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "audio/scripts/lib/tts.spawn.test.mjs:27 contains a system absolute path '/opt/node/lib/node_modules/npm/bin/npm-cli.js'",
+          "document": "audio/scripts/lib/tts.spawn.test.mjs",
+          "line": 27,
+          "path": "/opt/node/lib/node_modules/npm/bin/npm-cli.js",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
+        },
+        {
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "audio/scripts/lib/tts.spawn.test.mjs:28 contains a system absolute path '/opt/node/bin/node'",
+          "document": "audio/scripts/lib/tts.spawn.test.mjs",
+          "line": 28,
+          "path": "/opt/node/bin/node",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
+        },
+        {
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "audio/scripts/lib/tts.spawn.test.mjs:30 contains a system absolute path '/opt/node/lib/node_modules/npm/bin/npx-cli.js'",
+          "document": "audio/scripts/lib/tts.spawn.test.mjs",
+          "line": 30,
+          "path": "/opt/node/lib/node_modules/npm/bin/npx-cli.js",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
+        },
+        {
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "audio/scripts/lib/tts.test.mjs:99 contains a system absolute path '/tmp/x.wav'",
+          "document": "audio/scripts/lib/tts.test.mjs",
+          "line": 99,
+          "path": "/tmp/x.wav",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
+        },
+        {
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "audio/scripts/lib/tts.test.mjs:154 contains a system absolute path '/tmp/none.wav'",
+          "document": "audio/scripts/lib/tts.test.mjs",
+          "line": 154,
+          "path": "/tmp/none.wav",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
+        }
+      ],
+      "digest": "444ffc6f4ee564849a07865ff6e0264595b5900d312d4a351416c0fa4f5a36ff",
+      "git_last_commit": null
     },
     {
       "name": "meta-ads-account-audit",
@@ -3223,7 +3932,7 @@
       "conflict": false,
       "findings": [],
       "digest": "9cd84c5e535dec8dec59917c110f9c00b4a61faadb86b432ec7e41051170af12",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-24T08:54:28+01:00"
     },
     {
       "name": "upgrade-stripe",

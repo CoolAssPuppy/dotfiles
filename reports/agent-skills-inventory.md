@@ -1,18 +1,18 @@
 # Agent skills inventory
 
-Generated 2026-09-23T12:49:10+01:00 by `scripts/validate-agent-skills.py`.
+Generated 2026-09-25T21:20:47+01:00 by `scripts/validate-agent-skills.py`.
 Do not edit by hand. Regenerate instead.
 
 ## Sources
 
 | Source | Path | Skills | Anomalies |
 | --- | --- | --- | --- |
-| canonical | `/Users/prashant/Developer/brain/skills` | 132 | 1 |
+| canonical | `/Users/prashant/Developer/brain/skills` | 144 | 1 |
 
 ## Totals
 
-- 132 skills across 132 unique names
-- 106 pass, 26 warn, 0 fail
+- 144 skills across 144 unique names
+- 112 pass, 32 warn, 0 fail
 - 0 duplicate names, 0 unresolved conflicts
 - 1 anomalies in the source directories
 
@@ -65,6 +65,7 @@ Do not edit by hand. Regenerate instead.
 | `finance-wheel` | canonical | Runs the full three-phase options income cycle -- sell cash-secured puts, take assignment if necessary, sell covered calls. Picks strikes, monitors positions,… | pass | disable-model-invocation, user-invocable | none | unique |
 | `find-animation-opportunities` | canonical | Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't. Read-only; it proposes motion with exact values, it doe… | pass | none | none | unique |
 | `find-skills` | canonical | Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express in… | pass | none | none | unique |
+| `general-video` | canonical | Author or edit a custom HyperFrames composition when no specialized workflow fits, or when BRIEF.md sets flow: companion. Use for longer or multi-scene pieces,… | warn (0E/1W) | none | none | unique |
 | `generate-ranking-video` | canonical | Create viral ranking countdown videos in PolarRanks style. Overlays ranked lists on background video clips. Works for any topic -- books, people, places, movie… | pass | user-invocable | none | unique |
 | `go-to-market` | canonical | Writes a one-document launch plan for a single product or feature launch, with tier, measurable objectives, audience, key messages, tier-scaled tactics, owners… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `google-ads-account-audit` | canonical | Systematic 70+ checkpoint audit covering tracking, structure, keywords, ads, bidding, budgets, audiences, and competitive positioning — with ICE-prioritized re… | pass | none | none | unique |
@@ -75,16 +76,27 @@ Do not edit by hand. Regenerate instead.
 | `google-merchant-center` | canonical | Optimize product feeds for Shopping and Performance Max campaigns — from fixing disapprovals to building custom label strategies that power profitability-based… | pass | none | none | unique |
 | `gtm-strategy` | canonical | Develops go-to-market strategy for technical products by choosing and combining product-led, sales-led, open-source, and hybrid motions, including PLG funnels,… | pass | user-invocable | none | unique |
 | `humanize` | canonical | Remove signs of AI-generated writing from text. Use when editing or reviewing text to make it sound more natural and human-written. Based on Wikipedia's compre… | pass | allowed-tools, user-invocable | none | unique |
+| `hyperframes` | canonical | Mandatory entry point: read this first for any request to make, create, edit, animate, or render a video, animation, or motion graphic, including a promo, expl… | warn (0E/1W) | none | none | unique |
+| `hyperframes-animation` | canonical | All animation knowledge for HyperFrames — atomic motion rules, multi-phase scene blueprints, scene transitions, broader motion-design techniques, AND the seven… | pass | none | none | unique |
+| `hyperframes-audio` | canonical | Use when audio already placed in a HyperFrames composition needs to be mixed: fade-in/fade-out, crossfade, track gain or volume, volume automation, ducking, a… | warn (0E/2W) | none | none | unique |
+| `hyperframes-cli` | canonical | Use the HyperFrames CLI development loop: init, add, catalog, capture, lint, check, snapshot, compare, grade-compare, preview, play, present, beats, keyframes,… | warn (0E/4W) | none | references/cloud.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variabl… | unique |
+| `hyperframes-core` | canonical | The HyperFrames composition contract — build one renderable project. Use for composition structure, the `data-*` timing attributes, `class="clip"`, tracks, sub… | pass | none | none | unique |
+| `hyperframes-creative` | canonical | Non-animation creative direction for HyperFrames videos. Use for design spec (frame.md / design.md) handling, palettes, typography, narration, beat planning, a… | warn (0E/2W) | none | none | unique |
+| `hyperframes-keyframes` | canonical | Use when a HyperFrames composition needs a punch-in, punch-out, zoom, reframe, Ken Burns treatment, camera move, visual match/whip handoff, or other seek-safe… | pass | none | none | unique |
+| `hyperframes-registry` | canonical | Search, install, and wire registry blocks and components into HyperFrames compositions. Use BEFORE hand-building any named visual — whenever a brief, a user, o… | pass | none | none | unique |
+| `hyperframes-studio` | canonical | Use when building or editing a HyperFrames project that people open in Studio: how the timeline should be laid out so it reads well (one caption track, one ele… | pass | none | none | unique |
 | `impeccable` | canonical | Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwis… | pass | none | none | unique |
 | `improve-animations` | canonical | Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-contained implementation plans for other ag… | pass | none | none | unique |
 | `ios-app-intents` | canonical | Design App Intents, app entities, and App Shortcuts for iOS system surfaces. Use when exposing app actions or content to Shortcuts, Siri, Spotlight, widgets, o… | pass | none | none | unique |
 | `ios-deployment` | canonical | Ship an iOS app from the command line without opening Xcode. Covers archive, IPA export, App Store Connect API authentication, TestFlight upload (debug builds)… | pass | none | none | unique |
 | `launch` | canonical | Plans and runs a full product launch campaign for technical products, from launch tier and sine wave timing through pre-launch preparation, launch day, channel… | pass | user-invocable | none | unique |
+| `launch-video` | canonical | Make a product launch video, and a fast homepage hero loop, from two inputs: where the video will run (placements and sizes) and a link to the product's repo o… | pass | user-invocable | none | unique |
 | `lifecycle-email` | canonical | Write automated lifecycle emails: upsell, onboarding, re-engagement, retention, and milestone sequences for technical audiences. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `lifecycle-marketing` | canonical | Designs lifecycle marketing programs for technical products across email, in-app, and social channels. Covers behavioral triggers, sequence design, upsell/rete… | pass | user-invocable | none | unique |
 | `link-building-digital-pr` | canonical | Build backlinks, earned media, and brand mentions that move both traditional rankings and AI visibility. The dominant modern tactic is digital PR anchored to o… | pass | none | none | unique |
 | `local-seo-google-business-profile` | canonical | Help local and service-area businesses win the map pack, organic local results, and — increasingly — local answers in AI tools. Local search has its own rules:… | pass | none | none | unique |
 | `macos-deployment` | canonical | Ship a macOS app from the command line without opening Xcode. Covers debug builds, Developer ID signing, notarization, DMG packaging, Sparkle auto-updates, and… | warn (0E/2W) | none | none | unique |
+| `media-use` | canonical | Agent Media OS, the single skill for every media need in a HyperFrames project. Resolve BGM, SFX, image, icon, brand logo, voice, color grade, or LUT into a fr… | warn (0E/5W) | none | none | unique |
 | `meta-ads-account-audit` | canonical | Systematic 75+ checkpoint audit based on the Sam Tomlinson framework: ICP validation → signal infrastructure → account structure → audiences → creatives → meas… | pass | none | none | unique |
 | `meta-ads-campaign-builder` | canonical | Build and configure Meta Ads campaigns across all ODAX objectives — from objective selection through audience strategy, placement, budget, and creative launch. | pass | none | none | unique |
 | `meta-ads-creative-engine` | canonical | Build a systematic creative testing, production, and rotation pipeline for Meta Ads — prevent fatigue, scale winners, and maintain performance through structur… | pass | none | none | unique |
@@ -196,10 +208,45 @@ Do not edit by hand. Regenerate instead.
 - **warn** `reference-escapes-skill` SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked
   - Smallest fix: link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
 
+### `general-video` (canonical)
+
+- **warn** `absolute-path` scripts/lib/frame-packets-core.mjs:163 contains a system absolute path '/private/tmp'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+
 ### `go-to-market` (canonical)
 
 - **warn** `reference-escapes-skill` SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked
   - Smallest fix: link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+
+### `hyperframes` (canonical)
+
+- **warn** `absolute-path` scripts/lib/frame-packets-core.mjs:163 contains a system absolute path '/private/tmp'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+
+### `hyperframes-audio` (canonical)
+
+- **warn** `absolute-path` scripts/carve.mjs:558 contains a system absolute path '/private/tmp'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+- **warn** `absolute-path` scripts/carve.test.mjs:185 contains a system absolute path '/private/tmp'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+
+### `hyperframes-cli` (canonical)
+
+- **warn** `reference-escapes-skill` references/cloud.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+- **warn** `reference-escapes-skill` references/cloudrun.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+- **warn** `reference-escapes-skill` references/lambda.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+- **warn** `absolute-path` references/preview-render.md:92 contains a system absolute path '/tmp/hf-profile'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+
+### `hyperframes-creative` (canonical)
+
+- **warn** `absolute-path` references/typography.md:81 contains a system absolute path '/tmp/gfonts.json'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+- **warn** `absolute-path` references/typography.md:81 contains a system absolute path '/tmp/fontquery.py'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
 
 ### `lifecycle-email` (canonical)
 
@@ -211,6 +258,19 @@ Do not edit by hand. Regenerate instead.
 - **warn** `absolute-path` sparkle-setup.md:72 contains a system absolute path '/tmp/sparkle-private.pem'
   - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
 - **warn** `absolute-path` troubleshooting.md:64 contains a system absolute path '/tmp/sparkle-private.pem'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+
+### `media-use` (canonical)
+
+- **warn** `absolute-path` audio/scripts/lib/tts.spawn.test.mjs:27 contains a system absolute path '/opt/node/lib/node_modules/npm/bin/npm-cli.js'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+- **warn** `absolute-path` audio/scripts/lib/tts.spawn.test.mjs:28 contains a system absolute path '/opt/node/bin/node'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+- **warn** `absolute-path` audio/scripts/lib/tts.spawn.test.mjs:30 contains a system absolute path '/opt/node/lib/node_modules/npm/bin/npx-cli.js'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+- **warn** `absolute-path` audio/scripts/lib/tts.test.mjs:99 contains a system absolute path '/tmp/x.wav'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+- **warn** `absolute-path` audio/scripts/lib/tts.test.mjs:154 contains a system absolute path '/tmp/none.wav'
   - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
 
 ### `positioning-framework` (canonical)
