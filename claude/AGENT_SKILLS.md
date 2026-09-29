@@ -4,16 +4,12 @@
 
 As of 2026-08-05 no skill is stored in this repo. `claude/skills/` is a
 directory of symlinks that `brain/scripts/link-skills.sh` creates, alongside
-`~/.claude/skills` and `~/.agents/skills`.
+`~/.claude/skills`, `~/.agents/skills`, and `~/.codex/skills`.
 
-The third-party skills below now live at `~/.agents/skills/<name>`, which is
-where the skills CLI writes them and the only place `npx skills update` can
-reach. `brain/skills/<name>` is a symlink pointing there.
-
-That means they no longer ship with a dotfiles clone. A rebuilt machine gets
-them back by reinstalling from source. The commands are in
-`brain/scripts/skills-provenance/README.md`, transcribed from the lock file
-copy kept next to it. Read `../README-agent-skills.md` for the whole layout.
+Since 2026-09-29 the third-party skills below are committed copies in
+`brain/skills/<name>`, and `brain/scripts/skills-provenance/upstream.json`
+records where each came from. A rebuilt machine gets them with a pull of brain.
+Read `../README-agent-skills.md` for the whole layout.
 
 Everything below this line is history, kept because it is the only record of
 where some of these came from.

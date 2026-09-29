@@ -14,23 +14,19 @@ The canonical directory is flat. Every immediate child is one complete skill.
 ~/Developer/brain/skills/
 ```
 
-Two kinds of entry sit there:
+Every entry is a real directory, committed to the brain repo. That includes
+the 58 skills that came from other people's repositories;
+`brain/scripts/skills-provenance/upstream.json` records where each came from.
 
-| Entry | Meaning |
-| --- | --- |
-| a real directory | a skill written locally, versioned in the brain repo |
-| a symlink into `~/.agents/skills` | a skill installed by the skills CLI, which owns its real directory |
-
-Four agent directories read it, each holding one symlink per skill:
+Five agent directories read it, each holding one symlink per skill:
 
 | Directory | Read by |
 | --- | --- |
 | `~/.claude/skills` | Claude Code, globally |
-| `~/.agents/skills` | Codex, Amp, Cursor, Gemini CLI, and everything else that follows the `.agents` convention |
+| `~/.agents/skills` | Amp, Cursor, Gemini CLI, and everything else that follows the `.agents` convention |
+| `~/.codex/skills` | Codex |
 | `~/Developer/brain/.claude/skills` | Claude Code, inside the brain repo |
 | `~/Developer/dotfiles/claude/skills` | Claude Code, inside this repo |
-
-`machine-setup/link-codex.sh` adds a fifth, `~/.codex/skills`.
 
 Every link uses an absolute target and points at the real directory, never at
 another symlink, so nothing resolves through a chain.
@@ -39,21 +35,13 @@ Nothing is ever copied. Edit a skill in `brain/skills` and every agent sees the
 change immediately. There is no build step. Run the installer when a skill is
 added, renamed, or removed.
 
-### Why the skills CLI keeps its own directory
+### Skills from other repositories
 
-Twenty-one skills came from `npx skills`. The CLI records each one in
-`~/.agents/.skill-lock.json` and, on `npx skills update`, deletes whatever sits
-at `~/.agents/skills/<name>` and writes a fresh directory in its place. A
-symlink there does not survive that, and the thing it pointed at is left stale
-without a word.
-
-So the CLI keeps its real directories where it expects them, and
-`brain/skills/<name>` is a symlink pointing inward. The other agent directories
-link straight to `~/.agents/skills/<name>`. Updating stays a one-liner and
-nothing goes stale behind your back.
-
-`brain/scripts/skills-provenance/` records where each one came from and how to
-reinstall the set on a new machine.
+They are committed copies like every other skill, so another machine gets them
+with a pull and installs nothing. `brain/scripts/update-upstream-skills.sh`
+refreshes them from upstream on one machine, and the commit carries the change
+to the rest. The skills CLI only fetches, into a throwaway home directory, and
+its lock at `~/.agents/.skill-lock.json` stays empty.
 
 ### Shared material
 
@@ -77,11 +65,15 @@ Idempotent. A second run reports everything as unchanged. It will:
 - repoint its own links when a skill's real directory moves
 - repair a broken link that points somewhere it manages
 - delete its own links whose skill no longer exists
-- recognise a skill already sitting in `~/.agents/skills` as being home, and
-  leave it alone rather than link it to itself
+- convert a machine set up the old way: a skills-CLI copy in
+  `~/.agents/skills`, or any real folder identical to brain's, moves to
+  `~/.agents/skills-replaced-by-brain-<date>/` and becomes a link, and its
+  CLI lock entry is removed
+- report real skill folders that brain does not have as only on this machine,
+  and leave them alone
 
-It will never overwrite a real file or directory, and never replace a symlink
-pointing outside the directories it manages. Those are reported as collisions
+Apart from that conversion, it never overwrites a real file or directory, and
+never replaces a symlink pointing outside the directories it manages. Those are reported as collisions
 and skipped, and the script exits `1` so a collision does not pass unnoticed.
 
 | Flag | Effect |
@@ -97,27 +89,26 @@ installer, kept so old invocations keep working.
 
 ## Updating the skills that came from upstream
 
+Run it on one machine, read `git diff`, then commit and push brain:
+
 ```bash
-cd ~/Developer/brain
-./scripts/update-upstream-skills.sh
+~/Developer/brain/scripts/update-upstream-skills.sh --dry-run
+~/Developer/brain/scripts/update-upstream-skills.sh
 ```
 
-It hashes every installed skill and compares against the tree hash the lock file
-recorded at install time. A skill that still matches is safe to update. A skill
-whose hash has drifted was edited locally, and `npx skills update` would
-overwrite that edit silently, so it is left out and named in the report.
+It fetches every source into a throwaway home directory and compares the tree
+hash of each skill with the one recorded at import. A skill that brain has not
+edited takes the new version. An edited skill is skipped and named, unless
+`brain/scripts/upstream-patches/` holds a sanctioned patch for it, which is put
+back on the new version. `--dry-run` fetches, compares, and tries each patch,
+and writes nothing.
 
-One skill is drifted today, and its change is sanctioned: a `.reapply` marker
-in `scripts/upstream-patches/` tells the script to update the skill and then put
-the change back. An unsanctioned drift is skipped instead, and named.
+## Setting up another machine
 
-Six Stripe skills carry no upstream hash, so drift cannot be detected for them
-and the CLI cannot update them either. Refresh those by hand with
-`npx skills add https://docs.stripe.com -g -a codex -y`, which takes all six;
-`-s` does not work on a well-known source.
-
-The CLI has no dry-run mode. `--dry-run` reports what would be fetched and stops
-before fetching.
+```bash
+git -C ~/Developer/brain pull
+~/Developer/brain/scripts/link-skills.sh
+```
 
 ## Validating
 
@@ -165,18 +156,14 @@ target.
    those files by relative path.
 4. Run the validator, then the installer's dry run, then the installer.
 
-To add one from a public repository instead:
+To add one from someone else's repository instead:
 
 ```bash
-npx skills add <source> -g -a codex -s <skill> -y
+~/Developer/brain/scripts/update-upstream-skills.sh --add <owner/repo> <skill>
 ```
 
-then run the installer. Two flags matter. `-a codex` or the CLI picks agents by
-what it finds installed, and one that cannot do a global install fails the whole
-command. `-s` takes a single skill, so repeat the flag rather than passing a
-comma-separated list: `-s a -s b`, never `-s a,b`. The full set of CLI
-surprises is in `brain/scripts/skills-provenance/README.md`. It picks up the new directory in `~/.agents/skills` and
-links it everywhere, including back into `brain/skills`.
+It copies the skill into `brain/skills`, records its source in `upstream.json`,
+and links it everywhere. Read the new files, then commit brain.
 
 ## Invoking a skill
 
@@ -218,9 +205,9 @@ Neither pattern is currently present in any skill.
 | --- | --- |
 | `brain/skills/` | the canonical directory, flat, one skill per child |
 | `brain/scripts/link-skills.sh` | creates and repairs the symlinks |
-| `brain/scripts/update-upstream-skills.sh` | updates the skills the CLI owns, refusing to clobber local edits |
+| `brain/scripts/update-upstream-skills.sh` | refreshes and adds skills from other repositories, keeping local edits |
 | `brain/scripts/upstream-patches/` | local changes to upstream skills, one patch each |
-| `brain/scripts/skills-provenance/` | lock file copies and rebuild instructions |
+| `brain/scripts/skills-provenance/` | `upstream.json`, the source and imported hash of each upstream skill |
 | `scripts/validate-agent-skills.py` | validates skills, writes both reports |
 | `scripts/sync-agent-skills.sh` | forwarding shim to the installer |
 | `reports/agent-skills-validation.json` | generated, do not edit |

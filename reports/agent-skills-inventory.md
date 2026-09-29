@@ -1,18 +1,18 @@
 # Agent skills inventory
 
-Generated 2026-09-25T21:20:47+01:00 by `scripts/validate-agent-skills.py`.
+Generated 2026-09-29T04:55:00+01:00 by `scripts/validate-agent-skills.py`.
 Do not edit by hand. Regenerate instead.
 
 ## Sources
 
 | Source | Path | Skills | Anomalies |
 | --- | --- | --- | --- |
-| canonical | `/Users/prashant/Developer/brain/skills` | 144 | 1 |
+| canonical | `/Users/prashant/Developer/brain/skills` | 147 | 1 |
 
 ## Totals
 
-- 144 skills across 144 unique names
-- 112 pass, 32 warn, 0 fail
+- 147 skills across 147 unique names
+- 115 pass, 32 warn, 0 fail
 - 0 duplicate names, 0 unresolved conflicts
 - 1 anomalies in the source directories
 
@@ -104,6 +104,7 @@ Do not edit by hand. Regenerate instead.
 | `meta-ads-tracking-setup` | canonical | Implement and validate Meta Pixel + Conversions API (CAPI) for maximum signal quality — the single biggest lever for Meta Ads performance via the Andromeda ran… | pass | none | none | unique |
 | `no-use-effect` | canonical | Enforce the no-useEffect rule when writing or reviewing React code. ACTIVATE when writing React components, refactoring existing useEffect calls, reviewing PRs… | pass | user-invocable | none | unique |
 | `on-page-seo-aeo-optimization` | canonical | Turn a draft or existing page into something both Google *and* AI answer engines can index, rank, and cite. This skill operates at the single-page level — keyw… | pass | none | none | unique |
+| `optimise-github-actions` | canonical | Optimise GitHub Actions for cost and speed. Reads the billed minutes and wall-clock time of every workflow and job from the GitHub API, finds the waste, and ch… | pass | none | none | unique |
 | `paid-media-reporter` | canonical | Build performance reports, dashboards, and stakeholder communications that turn ad data into business narratives — client reports, QBRs, audit deliverables, an… | pass | none | none | unique |
 | `positioning-framework` | canonical | Define product positioning and messaging pillars using Aristotle's rhetorical framework. Use when clarifying a product's audience, problem, differentiation, pr… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `prepare-videos-for-social` | canonical | Edit a talking-head recording down to its good takes and burn TikTok/Reels-style captions on it, matching the Midnight Coder's Children video series. Cuts fals… | warn (0E/1W) | none | none | unique |
@@ -112,6 +113,7 @@ Do not edit by hand. Regenerate instead.
 | `product-detail-page` | canonical | Write copy for product landing pages, feature pages, and capability overviews for developer audiences. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `product-launch-blog` | canonical | Write product launch blog posts that lead with the announcement and balance excitement with technical substance. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `product-naming` | canonical | Run a naming exercise for an initiative, product, or feature. Decides whether the thing should be branded or described, runs the three-round process from Picks… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
+| `product-videos` | canonical | Plan, build and deliver a product's video series: feature spotlights, how-tos from real app screens, onboarding and product tours, store previews, launch and r… | pass | user-invocable | none | unique |
 | `prompt-picker` | canonical | Build a prompt library that reveals how a brand shows up across the full buyer journey in AI search systems. The library is designed for actual LLM visibility… | pass | none | none | unique |
 | `reconcile-checking-ledger` | canonical | Reconcile a personal checking ledger or budget spreadsheet against bank movements, including ledgers that summarize transactions by month and category. Use for… | pass | none | none | unique |
 | `remotion-best-practices` | canonical | Best practices for Remotion - Video creation in React | warn (0E/1W) | none | none | unique |
@@ -147,6 +149,7 @@ Do not edit by hand. Regenerate instead.
 | `swiftui-view-refactor` | canonical | Refactor SwiftUI view files into stable, testable structure. Use when splitting large views, tightening data flow, or cleaning Observation ownership. | pass | none | none | unique |
 | `tech-debt-audit` | canonical | Thorough, user-invoked tech debt and architecture audit of the current codebase. Produces TECH_DEBT_AUDIT.md with file-cited findings, severity, effort estimat… | pass | disable-model-invocation | none | unique |
 | `technical-seo-ai-crawler-audit` | canonical | Diagnose and prioritize the technical issues blocking a site from being crawled, indexed, ranked, and cited. Modern technical SEO has two audiences: Google's c… | pass | none | none | unique |
+| `test-audit` | canonical | Invoke whenever writing, changing, reviewing, or sweeping tests. Authoring gate for new tests plus audit workflow for low-value, implementation-coupled, or dup… | pass | none | none | unique |
 | `thought-leadership-blog` | canonical | Write thought leadership blog posts establishing company perspective on industry trends and technical philosophy. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `typesafe-ai` | canonical | Build AI-powered software with TypeSafe: small units of AI intelligence you can use like programming primitives. Its System One models, including Jev, turn nat… | pass | none | none | unique |
 | `upgrade-stripe` | canonical | Guide for upgrading Stripe API versions and SDKs | pass | none | none | unique |

@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-09-25T21:20:47+01:00",
+  "generated_at": "2026-09-29T04:55:00+01:00",
   "yaml_backend": "builtin",
   "sources": [
     {
       "label": "canonical",
       "path": "/Users/prashant/Developer/brain/skills",
-      "skill_count": 144,
+      "skill_count": 147,
       "anomaly_count": 1
     }
   ],
   "totals": {
-    "skills": 144,
-    "unique_names": 144,
+    "skills": 147,
+    "unique_names": 147,
     "duplicate_names": 0,
     "unresolved_conflicts": 0,
     "failing": 0,
     "warning": 32,
-    "passing": 112,
+    "passing": 115,
     "anomalies": 1
   },
   "anomalies": [
@@ -1326,7 +1326,7 @@
         }
       ],
       "digest": "e45f4744d068ed128d355f2e81f50a381ff68cefa864f1009b5c64ac788b3f7b",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-25T21:44:56+01:00"
     },
     {
       "name": "generate-ranking-video",
@@ -1729,7 +1729,7 @@
         }
       ],
       "digest": "9ba2d4bc10aa8811bedb744f56cf0c019d78e7fa3ffd6e573310457f05ba1dca",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-25T21:44:56+01:00"
     },
     {
       "name": "hyperframes-animation",
@@ -1772,7 +1772,7 @@
         }
       ],
       "digest": "fa5032f5b474eaf633d83c6923ca531fe096f40d134009594a5c8497baf28b4c",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-25T21:44:56+01:00"
     },
     {
       "name": "hyperframes-audio",
@@ -1817,7 +1817,7 @@
         }
       ],
       "digest": "020aac44feccf5a3cc38791860b9619d90622a7a4507dded728ece5d4824ae7e",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-25T21:44:56+01:00"
     },
     {
       "name": "hyperframes-cli",
@@ -1892,7 +1892,7 @@
         }
       ],
       "digest": "596613c2220597cae47e029a573ce0bfedf67f8d79ddad110fbc81535af44f0d",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-25T21:44:56+01:00"
     },
     {
       "name": "hyperframes-core",
@@ -1910,7 +1910,7 @@
       "conflict": false,
       "findings": [],
       "digest": "18315df8e81b41f686c468512cb63587f915c5bfa68670eb4e5c1aeba051b5ed",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-25T21:44:56+01:00"
     },
     {
       "name": "hyperframes-creative",
@@ -1947,7 +1947,7 @@
         }
       ],
       "digest": "2506ec21a6c5782a3949da28a6abaa36241723dcdfd4ddf01642e0581a6669f0",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-25T21:44:56+01:00"
     },
     {
       "name": "hyperframes-keyframes",
@@ -1974,7 +1974,7 @@
         }
       ],
       "digest": "5b82c28ec508cb50839eccfc0f33d627eee75836fa6b5284cc179518c139777e",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-25T21:44:56+01:00"
     },
     {
       "name": "hyperframes-registry",
@@ -1992,7 +1992,7 @@
       "conflict": false,
       "findings": [],
       "digest": "df44e962fc3986bfcde90b384f9dbe8b1eac079b663eeb2d619d1e942f3b81ca",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-25T21:44:56+01:00"
     },
     {
       "name": "hyperframes-studio",
@@ -2010,7 +2010,7 @@
       "conflict": false,
       "findings": [],
       "digest": "c5465f4276cc293d893334e664802bdbdc20cc57c801e1efab07c223e37d8dba",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-25T21:44:56+01:00"
     },
     {
       "name": "impeccable",
@@ -2146,8 +2146,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "c35f598a0c61fb5f7bc0aaa41ac45e1273b01eec9adbefee25f37af1f2306051",
-      "git_last_commit": null
+      "digest": "bc92aa00a471813a6635565ab0c4098955e4fc272e6c5bebd28876f4a5e188af",
+      "git_last_commit": "2026-09-26T16:14:32+01:00"
     },
     {
       "name": "lifecycle-email",
@@ -2495,7 +2495,7 @@
         }
       ],
       "digest": "444ffc6f4ee564849a07865ff6e0264595b5900d312d4a351416c0fa4f5a36ff",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-25T21:44:56+01:00"
     },
     {
       "name": "meta-ads-account-audit",
@@ -2632,6 +2632,24 @@
       "findings": [],
       "digest": "11db326da9cfce71b76b2cbd5e83b1729864d0e785aee7bad1ac41b7ee0a03e7",
       "git_last_commit": "2026-09-23T12:48:29+01:00"
+    },
+    {
+      "name": "optimise-github-actions",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/optimise-github-actions",
+      "skill_file": "SKILL.md",
+      "description": "Optimise GitHub Actions for cost and speed. Reads the billed minutes and wall-clock time of every workflow and job from the GitHub API, finds the waste, and changes the workflows without dropping the checks that matter. Typical waste is main re-running suites the pull request already passed, path filters that match every PR, small matrix jobs, missing caches, draft pushes, Docker builds, Windows and macOS multipliers, hung jobs and bots. Use this whenever the user says CI is slow or expensive, is over their Actions quota or paying overage, wants to \"reduce GitHub Actions minutes\", \"speed up CI\" or \"make CI cheaper\", asks \"why is our CI so expensive\", or wants a CI audit. Use it even if they only point at one slow job or one workflow file.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "5f4a764026062836c4fcbfbe46edaa9fcf98040b256e93c0d9d80fb3bf05ef60",
+      "git_last_commit": null
     },
     {
       "name": "paid-media-reporter",
@@ -2901,6 +2919,90 @@
       ],
       "digest": "bdebbbeeda9f7aca40b19926f8da4a3c48c4d81f2aef5eb5303086811bd75499",
       "git_last_commit": "2026-09-23T12:48:29+01:00"
+    },
+    {
+      "name": "product-videos",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/product-videos",
+      "skill_file": "SKILL.md",
+      "description": "Plan, build and deliver a product's video series: feature spotlights, how-tos from real app screens, onboarding and product tours, store previews, launch and role reels, and homepage loops. Sorted by who each video is for (parents, teachers, administrators, or the product's own audiences) and by kind (spotlight, how-to, onboarding), built by one cached command, reviewed against a fixed checklist, and delivered to a folder that holds only final files with a README of what was asked, what was made and what is still missing. Use when asked to make videos, how-to or tutorial videos, spotlights, an onboarding or product tour, store preview videos, more videos for a product, or to organize, audit or clean up finished videos.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 8,
+      "claude_features": [
+        "user-invocable"
+      ],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "claude-only-frontmatter",
+          "message": "frontmatter key 'user-invocable' is Claude-specific. Codex has no /slash invocation registry; the flag is inert.",
+          "feature": "user-invocable",
+          "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "SKILL.md: names `references/formats.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "SKILL.md",
+          "target": "references/formats.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "SKILL.md: names `references/story.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "SKILL.md",
+          "target": "references/story.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "SKILL.md: names `references/world.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "SKILL.md",
+          "target": "references/world.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "SKILL.md: names `references/audio.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "SKILL.md",
+          "target": "references/audio.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "SKILL.md: names `references/placements.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "SKILL.md",
+          "target": "references/placements.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "SKILL.md: names `references/review.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "SKILL.md",
+          "target": "references/review.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "SKILL.md: names `scripts/encode.sh` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "SKILL.md",
+          "target": "scripts/encode.sh",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        }
+      ],
+      "digest": "6c877bcae84973f03697647ad62ed3787cffe44d53b8137064b5dd793fbbad18",
+      "git_last_commit": "2026-09-26T16:14:32+01:00"
     },
     {
       "name": "prompt-picker",
@@ -3876,6 +3978,24 @@
       "findings": [],
       "digest": "1792b6c478b1f9255468fe4211a0ae85109dcba0cb336c955dcaa7f60c9bbd5d",
       "git_last_commit": "2026-09-23T12:48:29+01:00"
+    },
+    {
+      "name": "test-audit",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/test-audit",
+      "skill_file": "SKILL.md",
+      "description": "Invoke whenever writing, changing, reviewing, or sweeping tests. Authoring gate for new tests plus audit workflow for low-value, implementation-coupled, or duplicative tests and the test-only production seams they demand.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "1c493e8f99f4c5ac2b1d9e2928a88312cf72d823f1486106d9edfebf08d20c27",
+      "git_last_commit": null
     },
     {
       "name": "thought-leadership-blog",
