@@ -1,18 +1,18 @@
 # Agent skills inventory
 
-Generated 2026-09-29T04:55:00+01:00 by `scripts/validate-agent-skills.py`.
+Generated 2026-09-29T18:32:41-07:00 by `scripts/validate-agent-skills.py`.
 Do not edit by hand. Regenerate instead.
 
 ## Sources
 
 | Source | Path | Skills | Anomalies |
 | --- | --- | --- | --- |
-| canonical | `/Users/prashant/Developer/brain/skills` | 147 | 1 |
+| canonical | `/Users/prashant/Developer/brain/skills` | 148 | 1 |
 
 ## Totals
 
-- 147 skills across 147 unique names
-- 115 pass, 32 warn, 0 fail
+- 148 skills across 148 unique names
+- 116 pass, 32 warn, 0 fail
 - 0 duplicate names, 0 unresolved conflicts
 - 1 anomalies in the source directories
 
@@ -26,6 +26,7 @@ Do not edit by hand. Regenerate instead.
 | `app-store-screenshots` | canonical | Write, capture, and render App Store screenshots for an iOS, iPadOS, or macOS app. Headline copy comes first and follows the pain, shift, proof, feature sequen… | pass | user-invocable | none | unique |
 | `appkit-interop` | canonical | Bridge macOS SwiftUI into AppKit narrowly. Use when implementing representables, reaching NSWindow or panels, handling menus, or using the responder chain. | pass | none | none | unique |
 | `apple-design` | canonical | Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing gesture-driven UI, spring animations, d… | pass | none | none | unique |
+| `apple-hig` | canonical | Apple Human Interface Guidelines reference, updated for iPhone Duo and OS 27. Provides authoritative platform-specific design rules, component specifications,… | pass | none | none | unique |
 | `aside-browser` | canonical | Read when you need a browser, or have to work across user's logged-in websites (e.g. Gmail, Slack, cloud consoles, etc.), or have to refer personal contexts li… | pass | none | none | unique |
 | `bar-raiser` | canonical | Evaluates candidates against Supabase's Bar Raiser framework using an interview transcript and interviewer notes. Produces a hire or no-hire feedback document… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `blog-post-ideation` | canonical | Generates data-driven blog post ideas for developer products based on market research and community insights. Use when planning content calendars, identifying… | pass | user-invocable | none | unique |

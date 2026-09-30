@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-09-29T04:55:00+01:00",
+  "generated_at": "2026-09-29T18:32:41-07:00",
   "yaml_backend": "builtin",
   "sources": [
     {
       "label": "canonical",
       "path": "/Users/prashant/Developer/brain/skills",
-      "skill_count": 147,
+      "skill_count": 148,
       "anomaly_count": 1
     }
   ],
   "totals": {
-    "skills": 147,
-    "unique_names": 147,
+    "skills": 148,
+    "unique_names": 148,
     "duplicate_names": 0,
     "unresolved_conflicts": 0,
     "failing": 0,
     "warning": 32,
-    "passing": 115,
+    "passing": 116,
     "anomalies": 1
   },
   "anomalies": [
@@ -82,7 +82,7 @@
       "conflict": false,
       "findings": [],
       "digest": "39319fc9a33c15be08666b3685f58666f042ff36bb902b7814c0834a5ba99df4",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "app-store-screenshots",
@@ -128,7 +128,7 @@
       "conflict": false,
       "findings": [],
       "digest": "57f5a83b09a548fafc32198bcb25a938a8d7d7f8d707abccc19ffdb138ed590a",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "apple-design",
@@ -146,7 +146,42 @@
       "conflict": false,
       "findings": [],
       "digest": "8b94db67cb9edaad5f1501010804caa610131f1d2dfda0a27664b2e858deade3",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
+    },
+    {
+      "name": "apple-hig",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/apple-hig",
+      "skill_file": "SKILL.md",
+      "description": "Apple Human Interface Guidelines reference, updated for iPhone Duo and\n OS 27. Provides authoritative platform-specific design rules, component\n specifications, exact measurements, and interaction patterns for iOS,\n iPadOS, macOS, tvOS, visionOS, and watchOS. Use when designing, reviewing,\n auditing, or fixing any Apple platform UI, or when asked about specific HIG\n components, sizing, system behaviors, frameworks (HealthKit, SiriKit, ARKit,\n etc.), or platform conventions. Also use when the user is designing any\n digital interface and could benefit from established design principles, even\n without an explicit Apple platform context. Includes a guided /duo workflow\n that adapts an existing iOS app to iPhone Duo, plus opt-in enforce mode with\n independent review.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 2,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "process.md: names `sources/apple-hig-YYYY-MM-DD/inventory.json` under the shipped 'sources/' directory, but no such file is present",
+          "document": "process.md",
+          "target": "sources/apple-hig-YYYY-MM-DD/inventory.json",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "process.md: names `sources/apple-hig-YYYY-MM-DD/dispositions.md` under the shipped 'sources/' directory, but no such file is present",
+          "document": "process.md",
+          "target": "sources/apple-hig-YYYY-MM-DD/dispositions.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        }
+      ],
+      "digest": "0435e8bd0bf106c7f6959877ed72ae1231f28667537231a728b65be30752134b",
+      "git_last_commit": null
     },
     {
       "name": "aside-browser",
@@ -164,7 +199,7 @@
       "conflict": false,
       "findings": [],
       "digest": "03b1f4a43cc2eeef0a47e3a5fd823ef0484a47d38b4e834b7b9dd229b246a55b",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "bar-raiser",
@@ -434,7 +469,7 @@
         }
       ],
       "digest": "2e9364002cb06205419a6df40152490b082b7ea8b62cca0c406618a7694e7f8f",
-      "git_last_commit": "2026-08-05T10:24:30+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "content-strategy",
@@ -480,7 +515,7 @@
       "conflict": false,
       "findings": [],
       "digest": "2880c21c17efb303234d2c939312bea9c61bf51350de5ab60a4ca45b61506c38",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "daily-meta-checkin",
@@ -572,7 +607,7 @@
       "conflict": false,
       "findings": [],
       "digest": "22f11cf8052c20a0fbcd0624b44a64dca8a0f629e736dec6cf7901679a63684f",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "developer-persona",
@@ -629,7 +664,7 @@
       "conflict": false,
       "findings": [],
       "digest": "80bdbda5bd8a553aa437b8ce0b7e992680a57bb22548851f5c12229476091dd3",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "event-brief",
@@ -1280,7 +1315,7 @@
       "conflict": false,
       "findings": [],
       "digest": "15dc983ce2cd00489fcdc4a92e2752d47e1620f7619038b00eb84c2b97d50597",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "find-skills",
@@ -1298,7 +1333,7 @@
       "conflict": false,
       "findings": [],
       "digest": "1c27b1774a4ec17ad4556a72e3c0168beab3af0183b2c1b8aa9e320af3ff41ce",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "general-video",
@@ -1326,7 +1361,7 @@
         }
       ],
       "digest": "e45f4744d068ed128d355f2e81f50a381ff68cefa864f1009b5c64ac788b3f7b",
-      "git_last_commit": "2026-09-25T21:44:56+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "generate-ranking-video",
@@ -1729,7 +1764,7 @@
         }
       ],
       "digest": "9ba2d4bc10aa8811bedb744f56cf0c019d78e7fa3ffd6e573310457f05ba1dca",
-      "git_last_commit": "2026-09-25T21:44:56+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "hyperframes-animation",
@@ -1772,7 +1807,7 @@
         }
       ],
       "digest": "fa5032f5b474eaf633d83c6923ca531fe096f40d134009594a5c8497baf28b4c",
-      "git_last_commit": "2026-09-25T21:44:56+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "hyperframes-audio",
@@ -1817,7 +1852,7 @@
         }
       ],
       "digest": "020aac44feccf5a3cc38791860b9619d90622a7a4507dded728ece5d4824ae7e",
-      "git_last_commit": "2026-09-25T21:44:56+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "hyperframes-cli",
@@ -1892,7 +1927,7 @@
         }
       ],
       "digest": "596613c2220597cae47e029a573ce0bfedf67f8d79ddad110fbc81535af44f0d",
-      "git_last_commit": "2026-09-25T21:44:56+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "hyperframes-core",
@@ -1910,7 +1945,7 @@
       "conflict": false,
       "findings": [],
       "digest": "18315df8e81b41f686c468512cb63587f915c5bfa68670eb4e5c1aeba051b5ed",
-      "git_last_commit": "2026-09-25T21:44:56+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "hyperframes-creative",
@@ -1947,7 +1982,7 @@
         }
       ],
       "digest": "2506ec21a6c5782a3949da28a6abaa36241723dcdfd4ddf01642e0581a6669f0",
-      "git_last_commit": "2026-09-25T21:44:56+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "hyperframes-keyframes",
@@ -1974,7 +2009,7 @@
         }
       ],
       "digest": "5b82c28ec508cb50839eccfc0f33d627eee75836fa6b5284cc179518c139777e",
-      "git_last_commit": "2026-09-25T21:44:56+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "hyperframes-registry",
@@ -1992,7 +2027,7 @@
       "conflict": false,
       "findings": [],
       "digest": "df44e962fc3986bfcde90b384f9dbe8b1eac079b663eeb2d619d1e942f3b81ca",
-      "git_last_commit": "2026-09-25T21:44:56+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "hyperframes-studio",
@@ -2010,7 +2045,7 @@
       "conflict": false,
       "findings": [],
       "digest": "c5465f4276cc293d893334e664802bdbdc20cc57c801e1efab07c223e37d8dba",
-      "git_last_commit": "2026-09-25T21:44:56+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "impeccable",
@@ -2037,7 +2072,7 @@
         }
       ],
       "digest": "9cd6643a2d9dedd35126ffc62a165a4f469de594328ea292ada6001a59c148a2",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "improve-animations",
@@ -2055,7 +2090,7 @@
       "conflict": false,
       "findings": [],
       "digest": "32f23d860467841f5b07cef198fb53efc70f2adaaa6144cf1a3434d782aed246",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "ios-app-intents",
@@ -2073,7 +2108,7 @@
       "conflict": false,
       "findings": [],
       "digest": "e82a175672109df9a0f3b8d14e7c9cb950283298bd8a2c87d702555fe4b1b0f8",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "ios-deployment",
@@ -2495,7 +2530,7 @@
         }
       ],
       "digest": "444ffc6f4ee564849a07865ff6e0264595b5900d312d4a351416c0fa4f5a36ff",
-      "git_last_commit": "2026-09-25T21:44:56+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "meta-ads-account-audit",
@@ -2649,7 +2684,7 @@
       "conflict": false,
       "findings": [],
       "digest": "5f4a764026062836c4fcbfbe46edaa9fcf98040b256e93c0d9d80fb3bf05ef60",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "paid-media-reporter",
@@ -3065,7 +3100,7 @@
         }
       ],
       "digest": "39ab4a236431bcbfb7b0d876ddd243759ee18623b127f4235c642012ff22ae4b",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "remotion-video",
@@ -3121,7 +3156,7 @@
         }
       ],
       "digest": "a07941bc127ccf2b1e502690937033ae763a0499f3ec7d57d6b531eb7f31c0f4",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "sales-email",
@@ -3278,7 +3313,7 @@
       "conflict": false,
       "findings": [],
       "digest": "803ab1d09ee781fa847c6c501bff8954a4e8ace19a855ee9606af8bcd950586c",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "source-command-new-blog",
@@ -3354,7 +3389,7 @@
         }
       ],
       "digest": "45ed08e562c620a76d12f8db81e26e879b70c7e8277e58fc8e5be730464dfe9b",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "stripe-best-practices",
@@ -3372,7 +3407,7 @@
       "conflict": false,
       "findings": [],
       "digest": "050bf17c4eba25375c4813b877c1bb998f18971715f77ba5edeee6ead622cbf3",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "stripe-directory",
@@ -3400,7 +3435,7 @@
         }
       ],
       "digest": "58d8c458beaa92877ed2f0a622af65a0a91e2804efcc4188ac87a35780015361",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "stripe-docs",
@@ -3428,7 +3463,7 @@
         }
       ],
       "digest": "7f8b47057d65cdc55c60ed870bf6ad508907e5d981fca77781b4964de54d985f",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "stripe-projects",
@@ -3456,7 +3491,7 @@
         }
       ],
       "digest": "d75347f4e465c0e78032f7cb28b7bcd406cde9a34826b780958b059423fba778",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "supabase-postgres-best-practices",
@@ -3474,7 +3509,7 @@
       "conflict": false,
       "findings": [],
       "digest": "c20a12d0e664c182130e75dfed6af46d81623930d15935f27353a39429724306",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "swift-audit",
@@ -3672,7 +3707,7 @@
       "conflict": false,
       "findings": [],
       "digest": "1bb4ef9485915c8012302552f5f13be2b3a1df268d66524573328691c860ec8d",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "swift-concurrency-pro",
@@ -3690,7 +3725,7 @@
       "conflict": false,
       "findings": [],
       "digest": "63e3b21fc7fd6fde5994a0b5a129e806eb7c4365ad17855d5aeccfe8d48f5406",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "swift-testing-expert",
@@ -3708,7 +3743,7 @@
       "conflict": false,
       "findings": [],
       "digest": "a365c14fecc99445fe3837fb6f654db233d86d2b6efd764fc8712fb67b074cb5",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "swift-testing-pro",
@@ -3726,7 +3761,7 @@
       "conflict": false,
       "findings": [],
       "digest": "a5852fe56887bfab7973b9e5de4ac35ad7efdb9559ba84191811c65842f45b17",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "swiftdata-pro",
@@ -3744,7 +3779,7 @@
       "conflict": false,
       "findings": [],
       "digest": "92f7583d57c738cb8ea30f25e08b2c059a8f16f0c4ac455f0cd8c38bdac09b90",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "swiftui-expert-skill",
@@ -3781,7 +3816,7 @@
         }
       ],
       "digest": "465aede0e8dbca67a40bd8ffa1ac38e540cde0e3f29fe516b92cdc765d55ad6a",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "swiftui-liquid-glass",
@@ -3799,7 +3834,7 @@
       "conflict": false,
       "findings": [],
       "digest": "0bc5cfb7e3eee7c390659587ae5888db1dd0df8342c74dd6b186f3d01dfec686",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "swiftui-patterns",
@@ -3826,7 +3861,7 @@
         }
       ],
       "digest": "4c0e5ce639eba25dbe100305b124ad1b1668f24021bab5747b721533d361ffe1",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "swiftui-performance-audit",
@@ -3844,7 +3879,7 @@
       "conflict": false,
       "findings": [],
       "digest": "f686c4ab38ec393d512ca0acdad82945d8a0d2865547565f6183f87d538f118d",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "swiftui-pro",
@@ -3862,7 +3897,7 @@
       "conflict": false,
       "findings": [],
       "digest": "e1bd9e3ffdea3062b928dad3692465be779aa450da312725aa1b6452a8e19701",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "swiftui-ui-patterns",
@@ -3913,7 +3948,7 @@
         }
       ],
       "digest": "6ad6c8a18d951b1c4d2c03697d95cb1060f7d856c1c481942aba940486f1f0cd",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "swiftui-view-refactor",
@@ -3931,7 +3966,7 @@
       "conflict": false,
       "findings": [],
       "digest": "0c61733010d4ef5450df8f73170914c4ab73b845de4621e43528b43f33f24618",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "tech-debt-audit",
@@ -3995,7 +4030,7 @@
       "conflict": false,
       "findings": [],
       "digest": "1c493e8f99f4c5ac2b1d9e2928a88312cf72d823f1486106d9edfebf08d20c27",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "thought-leadership-blog",
@@ -4052,7 +4087,7 @@
       "conflict": false,
       "findings": [],
       "digest": "9cd84c5e535dec8dec59917c110f9c00b4a61faadb86b432ec7e41051170af12",
-      "git_last_commit": "2026-09-24T08:54:28+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "upgrade-stripe",
@@ -4070,7 +4105,7 @@
       "conflict": false,
       "findings": [],
       "digest": "f4aa17ac21714309e3cafa4eb15b032b3d8ff8623c8731944ccbcaf6766fdb49",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "vercel-composition-patterns",
@@ -4097,7 +4132,7 @@
         }
       ],
       "digest": "5b3564ca435f4714d5e65023351e1999e4744818603a9cfb6a6f6a61b7d84918",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "vercel-react-best-practices",
@@ -4124,7 +4159,7 @@
         }
       ],
       "digest": "1d197fcdae7cf3210a1305dacca0206f5787775abcb93baf5565f907d3fb536c",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "vercel-react-native-skills",
@@ -4151,7 +4186,7 @@
         }
       ],
       "digest": "b4b0af9b853227db681fd5b8a9e5f5ddd1603af1f6ab388e06ff12c1f6f3aadb",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "voice-of-supabase",
@@ -4187,7 +4222,7 @@
       "conflict": false,
       "findings": [],
       "digest": "a6a44d5498f7e8f68289902f3dedfc6f38ae0cee1e96527c80724cf27f727c2a",
-      "git_last_commit": "2026-08-05T10:07:51+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "webinar-planning",
@@ -4261,7 +4296,7 @@
       "conflict": false,
       "findings": [],
       "digest": "95e82b59c4b1af0820a9fa36c1ace16f154334480603d7375bf1623bb5b09575",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "writing",
@@ -4349,7 +4384,7 @@
         }
       ],
       "digest": "25eb1d11352980ab4f1ae379056becad2ecd45d49acf09c51d7a1aeffe1c9c95",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "xcode-build-fixer",
@@ -4399,7 +4434,7 @@
         }
       ],
       "digest": "1d913324337651e456664bc451d4f5ec023eec4434e5e615816ecf91921485cd",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "xcode-build-orchestrator",
@@ -4459,7 +4494,7 @@
         }
       ],
       "digest": "adfb8b05bfb9723d27403956c5b0fa8cce030a69b18e91ffcda5220ce24934a5",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "xcode-compilation-analyzer",
@@ -4489,7 +4524,7 @@
         }
       ],
       "digest": "30a35865dcbe3eca1f2d049127e393616037d155acb5a30356b363ec1fb63937",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
       "name": "xcode-project-analyzer",
@@ -4519,7 +4554,7 @@
         }
       ],
       "digest": "a97a40f1025d22fa68b8ec68b50f365058b10010baa2ffe2cf7755e97d4e7785",
-      "git_last_commit": "2026-09-15T00:22:26+01:00"
+      "git_last_commit": "2026-09-29T05:02:15+01:00"
     }
   ]
 }
