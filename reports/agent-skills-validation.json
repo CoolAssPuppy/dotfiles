@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T18:32:41-07:00",
+  "generated_at": "2026-10-15T17:33:28+01:00",
   "yaml_backend": "builtin",
   "sources": [
     {
@@ -181,7 +181,7 @@
         }
       ],
       "digest": "0435e8bd0bf106c7f6959877ed72ae1231f28667537231a728b65be30752134b",
-      "git_last_commit": null
+      "git_last_commit": "2026-09-29T18:33:34-07:00"
     },
     {
       "name": "aside-browser",
@@ -341,24 +341,6 @@
         }
       ],
       "digest": "3a42a2c2e04735c3a607dfa9ab2caadff54b1a6cbfae442e38cdcb5453835e9d",
-      "git_last_commit": "2026-09-23T12:48:29+01:00"
-    },
-    {
-      "name": "channel-copple",
-      "source": "canonical",
-      "path": "/Users/prashant/Developer/brain/skills/channel-copple",
-      "skill_file": "SKILL.md",
-      "description": "Rewrite or edit content in the voice of Paul Copplestone (Supabase CEO, \"Copple\"). Trigger on \"channel Copple\", \"make this sound like Copple\", \"edit this the way Copple would\", \"Copple pass\", or when drafting content that will carry his byline. Covers funding announcements, acquisition and team-joining posts, milestone posts, incident postmortems, strategy essays, and personal-blog-style essays. Also use as a final editing pass to strip rhetoric from any technical draft. Do not use for standard Supabase product release posts in the house voice (use /voice-of-supabase for those).",
-      "status": "pass",
-      "errors": 0,
-      "warnings": 0,
-      "notes": 0,
-      "claude_features": [],
-      "codex_concerns": [],
-      "duplicate": false,
-      "conflict": false,
-      "findings": [],
-      "digest": "fe172427aa9232b763a543f165482bbf535d4ebeca6a79b30cda167304c65e5e",
       "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
@@ -3494,11 +3476,11 @@
       "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
-      "name": "supabase-postgres-best-practices",
+      "name": "supabase",
       "source": "canonical",
-      "path": "/Users/prashant/Developer/brain/skills/supabase-postgres-best-practices",
+      "path": "/Users/prashant/Developer/brain/skills/supabase",
       "skill_file": "SKILL.md",
-      "description": "Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.",
+      "description": "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, @supabase/ssr) in Next.js, React, SvelteKit, Astro, Remix; auth issues (login, logout, sessions, JWT, cookies, getSession, getUser, getClaims, RLS); Supabase CLI or MCP server; schema changes, migrations, declarative schemas, security audits, Postgres extensions (pg_graphql, pg_cron, pg_vector); debugging and troubleshooting errors or unexpected behavior on Supabase projects (HTTP errors, Postgres errors, RLS surprises, permission denied, schema cache issues, timeouts, Edge Function crashes, Realtime drops, Storage failures) and reading or querying logs (Logs Explorer, ClickHouse).",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -3508,8 +3490,26 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "c20a12d0e664c182130e75dfed6af46d81623930d15935f27353a39429724306",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "3c95d48548a5d37f7e0a99b191e7cd6afb4f0184db733bfe5f740a0909fee4db",
+      "git_last_commit": "2026-10-06T21:06:20+01:00"
+    },
+    {
+      "name": "supabase-postgres-best-practices",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/supabase-postgres-best-practices",
+      "skill_file": "SKILL.md",
+      "description": "Postgres best practices maintained by Supabase, for Postgres running anywhere. Load this skill BEFORE writing or changing anything that lives in a Postgres database: creating or altering tables and columns (including choosing column types), schema design, migrations and declarative schema files, RLS policies and the tests that verify them, indexes, triggers, database functions, queues and scheduled jobs (pg_cron, pgmq), vector/semantic search (pgvector), and restoring dumps (pg_restore) or importing data. Also load it when diagnosing slow queries, high CPU, timeouts, EXPLAIN plans, connection exhaustion, locking, bloat, or rows visible to the wrong user or tenant. This is not just a performance guide \u2014 schema, migration, security, and SQL authoring tasks need these rules too, even for a one-column change or a single query.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "5766a8e9524c3c2a81041409be237c3baf515aa04a135871a21dd351682d173f",
+      "git_last_commit": "2026-10-06T21:06:20+01:00"
     },
     {
       "name": "swift-audit",
@@ -4015,6 +4015,24 @@
       "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
+      "name": "technical-writing",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/technical-writing",
+      "skill_file": "SKILL.md",
+      "description": "Write or edit technical content for developers in a direct, factual voice. Covers product release and feature announcement posts, changelog deep-dives, Hacker News launches, technical essays, company announcements (funding, team joining, milestones), incident postmortems, product docs, and in-app copy. Trigger on \"announce X\", \"write up the X launch\", \"draft the post for X\", \"we're shipping X tomorrow\", \"edit this post\", \"tighten this draft\", or any public technical writeup, even when the user does not say \"blog post\". Also use as a final edit pass to strip rhetoric from any technical draft. Do not use for persuasive copy such as conference abstracts or landing page heroes (use /writing) or for internal memos.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "fffc80ac150d9b95832316e8ef33f661cd8ea753ae01a02c16e65e27bbf2d9ea",
+      "git_last_commit": null
+    },
+    {
       "name": "test-audit",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/test-audit",
@@ -4187,24 +4205,6 @@
       ],
       "digest": "b4b0af9b853227db681fd5b8a9e5f5ddd1603af1f6ab388e06ff12c1f6f3aadb",
       "git_last_commit": "2026-09-29T05:02:15+01:00"
-    },
-    {
-      "name": "voice-of-supabase",
-      "source": "canonical",
-      "path": "/Users/prashant/Developer/brain/skills/voice-of-supabase",
-      "skill_file": "SKILL.md",
-      "description": "Write a Supabase product release blog post in the house voice. Trigger any time the artifact is a public technical writeup about something Supabase is shipping or has just shipped. This covers Launch Week posts, feature announcements, Hacker News launches, changelog deep-dives, and anything aimed at the Supabase blog. Use this even when the user does not explicitly say \"blog post\". Phrases like \"announce X\", \"write up the X launch\", \"draft the X post\", \"we're shipping X tomorrow\", or \"help me write the post for X\" all count. Do not use this for internal memos (use the memo skill) or non-Supabase company posts.",
-      "status": "pass",
-      "errors": 0,
-      "warnings": 0,
-      "notes": 0,
-      "claude_features": [],
-      "codex_concerns": [],
-      "duplicate": false,
-      "conflict": false,
-      "findings": [],
-      "digest": "15e5acbbd217e9766b778b96c4a1282d7007b85d406b6298df2bfb2e57d83999",
-      "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
       "name": "web-design-guidelines",

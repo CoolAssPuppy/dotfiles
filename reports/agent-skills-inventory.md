@@ -1,6 +1,6 @@
 # Agent skills inventory
 
-Generated 2026-09-29T18:32:41-07:00 by `scripts/validate-agent-skills.py`.
+Generated 2026-10-15T17:33:28+01:00 by `scripts/validate-agent-skills.py`.
 Do not edit by hand. Regenerate instead.
 
 ## Sources
@@ -33,7 +33,6 @@ Do not edit by hand. Regenerate instead.
 | `bofu-seo-aeo-strategy` | canonical | Plan, write, and maintain content that wins purchase-near buyers in both organic search and AI answer engines. BOFU content is structurally different from TOFU… | pass | none | none | unique |
 | `campaign-analyzer` | canonical | Analyze paid media performance across dimensions, funnels, cohorts, and channels — turning data into actionable insights and business narratives. | pass | none | none | unique |
 | `case-study` | canonical | Create customer case studies from verified customer evidence. Use when interviewing a customer, structuring a success story, or drafting a case study for sales… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
-| `channel-copple` | canonical | Rewrite or edit content in the voice of Paul Copplestone (Supabase CEO, "Copple"). Trigger on "channel Copple", "make this sound like Copple", "edit this the w… | pass | none | none | unique |
 | `cmo-coaching` | canonical | Generate a CMO coaching report from the user's Slack, Linear, and Notion activity. Use when the user asks for feedback on executive presence, judgment, leaders… | pass | user-invocable | none | unique |
 | `competitive-analysis` | canonical | Conducts competitive analysis for technical products across a competitive set, including the status quo and build-it-yourself, using public research, product t… | pass | user-invocable | none | unique |
 | `competitive-battlecard` | canonical | Writes a full battlecard document about one named competitor for sales and marketing teams, with company facts, strengths and weaknesses, how each side wins, o… | pass | user-invocable | none | unique |
@@ -134,7 +133,8 @@ Do not edit by hand. Regenerate instead.
 | `stripe-directory` | canonical | Use when the user wants to find businesses, software, service providers, or partners for a specific industry, workflow, pain point, capability, or job to be do… | pass | allowed-tools | none | unique |
 | `stripe-docs` | canonical | Use when the user or agent needs to read, search, or look up Stripe documentation or API reference. Prefer this over curl or WebFetch for any docs.stripe.com c… | pass | allowed-tools | none | unique |
 | `stripe-projects` | canonical | Use when the user wants to provision infrastructure or third-party services using Stripe Projects. Triggers: "I need a database", "set up auth", "add caching",… | pass | allowed-tools | none | unique |
-| `supabase-postgres-best-practices` | canonical | Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or… | pass | none | none | unique |
+| `supabase` | canonical | Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libr… | pass | none | none | unique |
+| `supabase-postgres-best-practices` | canonical | Postgres best practices maintained by Supabase, for Postgres running anywhere. Load this skill BEFORE writing or changing anything that lives in a Postgres dat… | pass | none | none | unique |
 | `swift-audit` | canonical | Audit a whole Swift codebase by running the installed Swift agent skills (Hudson Pro series, van der Lee Expert series, Xcode build optimization set, OpenAI iO… | pass | user-invocable | none | unique |
 | `swift-concurrency` | canonical | Diagnose Swift Concurrency issues, refactor callback-based code to async/await, and guide Swift 6 migration when working with tasks, actors, @MainActor, Sendab… | pass | none | none | unique |
 | `swift-concurrency-pro` | canonical | Reviews Swift code for concurrency correctness, modern API usage, and common async/await pitfalls. Use when reading, writing, or reviewing Swift concurrency co… | pass | none | none | unique |
@@ -150,6 +150,7 @@ Do not edit by hand. Regenerate instead.
 | `swiftui-view-refactor` | canonical | Refactor SwiftUI view files into stable, testable structure. Use when splitting large views, tightening data flow, or cleaning Observation ownership. | pass | none | none | unique |
 | `tech-debt-audit` | canonical | Thorough, user-invoked tech debt and architecture audit of the current codebase. Produces TECH_DEBT_AUDIT.md with file-cited findings, severity, effort estimat… | pass | disable-model-invocation | none | unique |
 | `technical-seo-ai-crawler-audit` | canonical | Diagnose and prioritize the technical issues blocking a site from being crawled, indexed, ranked, and cited. Modern technical SEO has two audiences: Google's c… | pass | none | none | unique |
+| `technical-writing` | canonical | Write or edit technical content for developers in a direct, factual voice. Covers product release and feature announcement posts, changelog deep-dives, Hacker… | pass | none | none | unique |
 | `test-audit` | canonical | Invoke whenever writing, changing, reviewing, or sweeping tests. Authoring gate for new tests plus audit workflow for low-value, implementation-coupled, or dup… | pass | none | none | unique |
 | `thought-leadership-blog` | canonical | Write thought leadership blog posts establishing company perspective on industry trends and technical philosophy. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `typesafe-ai` | canonical | Build AI-powered software with TypeSafe: small units of AI intelligence you can use like programming primitives. Its System One models, including Jev, turn nat… | pass | none | none | unique |
@@ -157,7 +158,6 @@ Do not edit by hand. Regenerate instead.
 | `vercel-composition-patterns` | canonical | React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reu… | pass | none | none | unique |
 | `vercel-react-best-practices` | canonical | React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js… | pass | none | none | unique |
 | `vercel-react-native-skills` | canonical | React Native and Expo best practices for building performant mobile apps. Use when building React Native components, optimizing list performance, implementing… | pass | none | none | unique |
-| `voice-of-supabase` | canonical | Write a Supabase product release blog post in the house voice. Trigger any time the artifact is a public technical writeup about something Supabase is shipping… | pass | none | none | unique |
 | `web-design-guidelines` | canonical | Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site… | pass | none | none | unique |
 | `webinar-planning` | canonical | Plans technical webinars for developer audiences and writes the full asset package, from landing page and email sequence to promotion, run of show, and lead fo… | pass | user-invocable | none | unique |
 | `weekly-report` | canonical | Generate a weekly status report from Linear, Slack, and Notion. Use when the user asks for the weekly work summary; compare it with prior reports, remove dupli… | pass | user-invocable | none | unique |
