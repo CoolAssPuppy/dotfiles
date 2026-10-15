@@ -129,7 +129,7 @@ if [[ -f "$APP_PREFS" ]]; then
     pbcopy < "$APP_PREFS"
     echo "$new_hash" > "$APP_PREFS_HASH"
     echo "    app-preferences.md changed ($(wc -c < "$APP_PREFS" | tr -d ' ') chars) and is on the clipboard."
-    echo "    Paste it into Claude (Settings > Profile) and ChatGPT (Settings > Personalization)."
+    echo "    Paste it into Claude: Settings > General > Instructions for Claude."
   else
     echo "    unchanged"
   fi
