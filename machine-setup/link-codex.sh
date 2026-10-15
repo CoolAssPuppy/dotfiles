@@ -118,4 +118,21 @@ PY
 echo "==> Generating Codex agents in $CODEX_HOME_DIR/agents"
 CODEX_HOME="$CODEX_HOME_DIR" python3 "$REPO_ROOT/scripts/sync-codex-agents.py" | sed 's/^/    /'
 
+echo "==> Checking the Claude and ChatGPT app preferences"
+# The chat apps cannot read files from disk, so their preference fields are
+# pasted by hand. Copy the source to the clipboard only when it has changed.
+APP_PREFS="$DOTFILES_CLAUDE/app-preferences.md"
+APP_PREFS_HASH="$CODEX_HOME_DIR/.app-preferences.sha"
+if [[ -f "$APP_PREFS" ]]; then
+  new_hash="$(shasum "$APP_PREFS" | cut -d' ' -f1)"
+  if [[ "$new_hash" != "$(cat "$APP_PREFS_HASH" 2>/dev/null)" ]] && command -v pbcopy >/dev/null; then
+    pbcopy < "$APP_PREFS"
+    echo "$new_hash" > "$APP_PREFS_HASH"
+    echo "    app-preferences.md changed ($(wc -c < "$APP_PREFS" | tr -d ' ') chars) and is on the clipboard."
+    echo "    Paste it into Claude (Settings > Profile) and ChatGPT (Settings > Personalization)."
+  else
+    echo "    unchanged"
+  fi
+fi
+
 echo "==> Done."

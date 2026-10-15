@@ -78,6 +78,7 @@ Use this on every coding session.
 - Never mark a task complete without proving it works. Run tests, check logs, demonstrate correctness.
 - Diff behavior between main and your changes when relevant.
 - Ask: "Would a staff engineer approve this?"
+- This applies to analysis, plans, and writing too, not only code. See @rules/ambition.md for what counts as an outside check.
 
 ### Verify before commit and push
 - Keep implementation, test repair, and review fixes local until the change is ready.
@@ -103,6 +104,7 @@ Use this on every coding session.
 - **Simplicity first.** Make every change as simple as possible and touch the minimum code.
 - **No laziness.** Find root causes. No temporary fixes.
 - **Minimal impact.** Change only what is necessary.
+- **Ambition is about framing and checking.** Aim high in how a problem is framed and verified. It is not permission to grow the scope of a change.
 - **Secure and fast by default.** Security and performance are part of every change. Follow the conventions of the community you are working in.
 
 ## Commands
@@ -119,6 +121,7 @@ Use this on every coding session.
 - @rules/git.md - Commit style and .gitignore template
 - @rules/supabase.md - Declarative schemas, types, MCP database usage
 - @rules/writing.md - Content generation, voice guidelines, banned phrases
+- @rules/ambition.md - Aim at the outcome, work at expert depth, check outside the model, bring in other fields
 
 ## Reference docs (read on demand)
 
