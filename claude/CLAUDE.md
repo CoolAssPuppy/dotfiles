@@ -122,6 +122,7 @@ Use this on every coding session.
 - @rules/supabase.md - Declarative schemas, types, MCP database usage
 - @rules/writing.md - Content generation, voice guidelines, banned phrases
 - @rules/ambition.md - Aim at the outcome, work at expert depth, check outside the model, bring in other fields
+- @~/.claude/notion-memory.md - Shared Notion memory pointer (local only, not in this repo)
 
 ## Reference docs (read on demand)
 

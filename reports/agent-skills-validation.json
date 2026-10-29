@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-15T17:33:28+01:00",
+  "generated_at": "2026-10-22T22:16:39+01:00",
   "yaml_backend": "builtin",
   "sources": [
     {
       "label": "canonical",
       "path": "/Users/prashant/Developer/brain/skills",
-      "skill_count": 148,
+      "skill_count": 154,
       "anomaly_count": 1
     }
   ],
   "totals": {
-    "skills": 148,
-    "unique_names": 148,
+    "skills": 154,
+    "unique_names": 154,
     "duplicate_names": 0,
     "unresolved_conflicts": 0,
-    "failing": 0,
-    "warning": 32,
-    "passing": 116,
+    "failing": 1,
+    "warning": 33,
+    "passing": 120,
     "anomalies": 1
   },
   "anomalies": [
@@ -81,8 +81,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "39319fc9a33c15be08666b3685f58666f042ff36bb902b7814c0834a5ba99df4",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "0058036865ecbb864fd0c4132efcc62425355d6e99c7e6ef6a936742d62a5dea",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "app-store-screenshots",
@@ -145,8 +145,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "8b94db67cb9edaad5f1501010804caa610131f1d2dfda0a27664b2e858deade3",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "0190417d092a0df447b000154e39733ea6d97efad6d3bec8a6ce3845aeb88914",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "apple-hig",
@@ -180,8 +180,8 @@
           "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
         }
       ],
-      "digest": "0435e8bd0bf106c7f6959877ed72ae1231f28667537231a728b65be30752134b",
-      "git_last_commit": "2026-09-29T18:33:34-07:00"
+      "digest": "1660b3a87517b2f8f332b8867a2615774e0487e46ae727fe8cd1f51857dad8a7",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "aside-browser",
@@ -450,8 +450,8 @@
           "target": "/connect/embedded-appearance-options"
         }
       ],
-      "digest": "2e9364002cb06205419a6df40152490b082b7ea8b62cca0c406618a7694e7f8f",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "e1ca5e07d5e287ba811fcfac7573a6f53729e5f1becbceeb8852e5062834d726",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "content-strategy",
@@ -645,8 +645,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "80bdbda5bd8a553aa437b8ce0b7e992680a57bb22548851f5c12229476091dd3",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "211260a1078fbc71ed35312e5b7942c3396fe15f72bbc20d2b78094641503dbd",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "event-brief",
@@ -1296,8 +1296,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "15dc983ce2cd00489fcdc4a92e2752d47e1620f7619038b00eb84c2b97d50597",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "465d087c41768e4f14ed640dd049036009f613feb55baaa5831b68b33178f9d2",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "find-skills",
@@ -1314,8 +1314,62 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "1c27b1774a4ec17ad4556a72e3c0168beab3af0183b2c1b8aa9e320af3ff41ce",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "913b9d37d0d54047dd65222bb8c67b2bf04e3cb87dcad1729068d7a8b2c8c396",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
+    },
+    {
+      "name": "fix-gitlab-vuln",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/fix-gitlab-vuln",
+      "skill_file": "SKILL.md",
+      "description": "Use when the user asks to fix, patch or upgrade a self-managed GitLab vulnerability (e.g. 'Please fix my GitLab vulnerability'), CVE-2026-110264 or the GitLab 19.5.1 critical patch release, across Omnibus, Docker, Helm chart and IaC deployments. Read-only inventory, approval gate, post-deploy checklist, focused PRs.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "010d10c4ff11539fadcbc5ae2b8ebcfd5fc7935aa93575e43ac3401bc305de6b",
+      "git_last_commit": null
+    },
+    {
+      "name": "fix-node-vuln",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/fix-node-vuln",
+      "skill_file": "SKILL.md",
+      "description": "Use when the user asks to fix, patch or upgrade a Node.js vulnerability (e.g. 'Please fix my Node vulnerability'), the October 21, 2026 Node.js security release, CVE-2026-111497 (Brotli RCE), or end-of-life Node 20, across Docker images, .nvmrc/.tool-versions, setup-node CI, Lambda and IaC. Read-only inventory, approval gate, regression tests, focused PRs.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "5cf85cb006ae02a43e7c050f230f7919b45da95584373264dc3592b3154c5201",
+      "git_last_commit": null
+    },
+    {
+      "name": "fix-php-vuln",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/fix-php-vuln",
+      "skill_file": "SKILL.md",
+      "description": "Use when the user asks to fix, patch or upgrade a PHP vulnerability (e.g. 'Please fix my PHP vulnerability'), PHP2Shell, CVE-2026-109618 or CVE-2026-109619, or to find vulnerable PHP versions in Dockerfiles, distro packages, source builds, setup-php CI, Helm/IaC or Ansible/Chef/Puppet. Read-only inventory, approval gate, regression tests, focused PRs.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "e8690dc2925a39be8d55bf958fa38d1230bfa2023a0ed8fe055d7ac700c6cfee",
+      "git_last_commit": null
     },
     {
       "name": "general-video",
@@ -1589,11 +1643,11 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/hyperframes",
       "skill_file": "SKILL.md",
-      "description": "Mandatory entry point: read this first for any request to make, create, edit, animate, or render a\n video, animation, or motion graphic, including a promo, explainer, captioned clip, title card,\n overlay, slideshow or interactive deck, Remotion port, or any HyperFrames HTML composition. Also\n use it to inspect, diagnose, validate, preview, publish, or batch-render an existing HyperFrames\n project. Inputs may be a website URL, GitHub PR, Figma design or URL, text or brief, existing\n footage, or music. It resumes project state, captures intent when applicable, selects and installs\n the owning workflow, and routes domain capabilities. HyperFrames is the default output framework\n unless the user explicitly chooses another framework for the deliverable or asks only to record a\n browser session.",
+      "description": "Read first to make, edit, animate or render any video with HyperFrames (HTML rendered to video), including launch films, explainers, music videos, charts, maps, vertical clips, title cards, captions and overlays. Holds the render contract, the work loop and what each kind of video needs.",
       "status": "warn",
       "errors": 0,
-      "warnings": 1,
-      "notes": 17,
+      "warnings": 2,
+      "notes": 1,
       "claude_features": [],
       "codex_concerns": [],
       "duplicate": false,
@@ -1602,151 +1656,32 @@
         {
           "severity": "info",
           "code": "asset-not-present",
-          "message": "SKILL.md: names `references/creator-editing-recipes.md` under the shipped 'references/' directory, but no such file is present",
-          "document": "SKILL.md",
-          "target": "references/creator-editing-recipes.md",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/capability-menu.md: names `references/design-spec.md` under the shipped 'references/' directory, but no such file is present",
-          "document": "references/capability-menu.md",
-          "target": "references/design-spec.md",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/capability-menu.md: names `scripts/analyze-beatgrid.py` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "references/capability-menu.md",
-          "target": "scripts/analyze-beatgrid.py",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/capability-menu.md: names `references/audio-reactive.md` under the shipped 'references/' directory, but no such file is present",
-          "document": "references/capability-menu.md",
-          "target": "references/audio-reactive.md",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/capability-menu.md: names `scripts/extract-audio-data.py` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "references/capability-menu.md",
-          "target": "scripts/extract-audio-data.py",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/capability-menu.md: names `references/media-treatments.md` under the shipped 'references/' directory, but no such file is present",
-          "document": "references/capability-menu.md",
-          "target": "references/media-treatments.md",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/capability-menu.md: names `references/operations.md` under the shipped 'references/' directory, but no such file is present",
-          "document": "references/capability-menu.md",
-          "target": "references/operations.md",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/capability-menu.md: names `scripts/transcribe.mjs` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "references/capability-menu.md",
-          "target": "scripts/transcribe.mjs",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/capability-menu.md: names `scripts/transcript-cut.mjs` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "references/capability-menu.md",
-          "target": "scripts/transcript-cut.mjs",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/capability-menu.md: names `references/wiring-blocks.md` under the shipped 'references/' directory, but no such file is present",
-          "document": "references/capability-menu.md",
-          "target": "references/wiring-blocks.md",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/capability-menu.md: names `references/preview-render.md` under the shipped 'references/' directory, but no such file is present",
-          "document": "references/capability-menu.md",
-          "target": "references/preview-render.md",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/capability-menu.md: names `references/design-picker.md` under the shipped 'references/' directory, but no such file is present",
-          "document": "references/capability-menu.md",
-          "target": "references/design-picker.md",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/frame-worker-core.md: names `scripts/frame-packets.mjs` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "references/frame-worker-core.md",
-          "target": "scripts/frame-packets.mjs",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/frame-worker-core.md: names `references/sub-compositions.md` under the shipped 'references/' directory, but no such file is present",
-          "document": "references/frame-worker-core.md",
-          "target": "references/sub-compositions.md",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/frame-worker-core.md: names `references/determinism-rules.md` under the shipped 'references/' directory, but no such file is present",
-          "document": "references/frame-worker-core.md",
-          "target": "references/determinism-rules.md",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/frame-worker-core.md: names `references/data-attributes.md` under the shipped 'references/' directory, but no such file is present",
-          "document": "references/frame-worker-core.md",
-          "target": "references/data-attributes.md",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/production-loop.md: names `scripts/transcribe.mjs` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "references/production-loop.md",
-          "target": "scripts/transcribe.mjs",
+          "message": "references/captions.md: names `assets/transcript.json` under the shipped 'assets/' directory, but no such file is present",
+          "document": "references/captions.md",
+          "target": "assets/transcript.json",
           "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
         },
         {
           "severity": "warn",
           "code": "absolute-path",
-          "message": "scripts/lib/frame-packets-core.mjs:163 contains a system absolute path '/private/tmp'",
-          "document": "scripts/lib/frame-packets-core.mjs",
-          "line": 163,
+          "message": "scripts/locate.mjs:57 contains a system absolute path '/tmp/locate-font.ttf'",
+          "document": "scripts/locate.mjs",
+          "line": 57,
+          "path": "/tmp/locate-font.ttf",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
+        },
+        {
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "scripts/lib/main-module.mjs:5 contains a system absolute path '/private/tmp'",
+          "document": "scripts/lib/main-module.mjs",
+          "line": 5,
           "path": "/private/tmp",
           "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
         }
       ],
-      "digest": "9ba2d4bc10aa8811bedb744f56cf0c019d78e7fa3ffd6e573310457f05ba1dca",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "37e22f208e4017b084c002031391418ebf5c444f37146614ba1f6ff1739787f9",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "hyperframes-animation",
@@ -1841,61 +1776,63 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/hyperframes-cli",
       "skill_file": "SKILL.md",
-      "description": "Use the HyperFrames CLI development loop: init, add, catalog, capture, lint, check, snapshot,\n compare, grade-compare, preview, play, present, beats, keyframes, single or batch render, publish,\n cloud, cloudrun, feedback, lambda, doctor, browser, info, upgrade, skills, compositions, timeline, history, docs,\n benchmark, telemetry, transcribe, auth, tts, and remove-background. Also use when diagnosing build\n or render failures. validate, inspect, and layout are deprecated aliases; use check. Covers local,\n HeyGen-hosted cloud, AWS Lambda, and Google Cloud Run rendering.",
+      "description": "The HyperFrames CLI by job - scaffold, check, look at frames, edit the timeline, preview, render locally or in the cloud, publish, project history - plus reading its JSON and recovering from build or render failures.",
       "status": "warn",
       "errors": 0,
-      "warnings": 4,
-      "notes": 2,
+      "warnings": 5,
+      "notes": 1,
       "claude_features": [],
       "codex_concerns": [
-        "references/cloud.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked",
-        "references/cloudrun.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked",
-        "references/lambda.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked"
+        "SKILL.md: link '../hyperframes/references/plugin-installation.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/plugin-installation.md; it does not follow the skill when symlinked",
+        "references/cloud.md: link '../../hyperframes/references/format.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/format.md; it does not follow the skill when symlinked",
+        "references/cloudrun.md: link '../../hyperframes/references/format.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/format.md; it does not follow the skill when symlinked",
+        "references/lambda.md: link '../../hyperframes/references/format.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/format.md; it does not follow the skill when symlinked"
       ],
       "duplicate": false,
       "conflict": false,
       "findings": [
         {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "SKILL.md: names `references/creator-editing-recipes.md` under the shipped 'references/' directory, but no such file is present",
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../hyperframes/references/plugin-installation.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/plugin-installation.md; it does not follow the skill when symlinked",
           "document": "SKILL.md",
-          "target": "references/creator-editing-recipes.md",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+          "target": "../hyperframes/references/plugin-installation.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/hyperframes/references/plugin-installation.md",
+          "recommendation": "link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         },
         {
           "severity": "info",
           "code": "asset-not-present",
-          "message": "SKILL.md: names `references/variables-and-media.md` under the shipped 'references/' directory, but no such file is present",
-          "document": "SKILL.md",
-          "target": "references/variables-and-media.md",
+          "message": "references/beats.md: names `references/film.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/beats.md",
+          "target": "references/film.md",
           "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
         },
         {
           "severity": "warn",
           "code": "reference-escapes-skill",
-          "message": "references/cloud.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked",
+          "message": "references/cloud.md: link '../../hyperframes/references/format.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/format.md; it does not follow the skill when symlinked",
           "document": "references/cloud.md",
-          "target": "../../hyperframes-core/references/variables-and-media.md",
-          "resolved": "/Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md",
+          "target": "../../hyperframes/references/format.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/hyperframes/references/format.md",
           "recommendation": "link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         },
         {
           "severity": "warn",
           "code": "reference-escapes-skill",
-          "message": "references/cloudrun.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked",
+          "message": "references/cloudrun.md: link '../../hyperframes/references/format.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/format.md; it does not follow the skill when symlinked",
           "document": "references/cloudrun.md",
-          "target": "../../hyperframes-core/references/variables-and-media.md",
-          "resolved": "/Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md",
+          "target": "../../hyperframes/references/format.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/hyperframes/references/format.md",
           "recommendation": "link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         },
         {
           "severity": "warn",
           "code": "reference-escapes-skill",
-          "message": "references/lambda.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked",
+          "message": "references/lambda.md: link '../../hyperframes/references/format.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/format.md; it does not follow the skill when symlinked",
           "document": "references/lambda.md",
-          "target": "../../hyperframes-core/references/variables-and-media.md",
-          "resolved": "/Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md",
+          "target": "../../hyperframes/references/format.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/hyperframes/references/format.md",
           "recommendation": "link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
         },
         {
@@ -1908,8 +1845,8 @@
           "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
         }
       ],
-      "digest": "596613c2220597cae47e029a573ce0bfedf67f8d79ddad110fbc81535af44f0d",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "f396f70efb4dd0feee441ef579ae80e11fb2625eb8b707d4c2b962e56023a214",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "hyperframes-core",
@@ -1998,18 +1935,38 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/hyperframes-registry",
       "skill_file": "SKILL.md",
-      "description": "Search, install, and wire registry blocks and components into HyperFrames compositions. Use BEFORE hand-building any named visual \u2014 whenever a brief, a user, or a storyboard names a look, effect, treatment, or transition such as CRT scanlines, glitch, chromatic aberration, film grain, a shimmer sweep, a chart, a code or terminal window, a map, or a confetti burst \u2014 because roughly 400 hosted items already cover many of them and the search ranks all of them with nothing installed, no project, and no account. Also use when running hyperframes add or hyperframes catalog, installing one item or every block matching a tag, wiring an installed item into index.html, or working with hyperframes.json. Covers discovery, install locations, block sub-composition wiring, component snippet merging, and authoring a new block or component to contribute upstream (idea \u2192 scaffold \u2192 validate \u2192 PR).",
-      "status": "pass",
+      "description": "About 450 ready-made HyperFrames blocks and components installed as editable source - transitions, overlays, titles, kinetic type, captions, charts, map overlays, 3D, camera moves. Use it before hand-building any named visual (CRT scanlines, glitch, film grain, a chart); also for hyperframes add and catalog.",
+      "status": "warn",
       "errors": 0,
-      "warnings": 0,
-      "notes": 0,
+      "warnings": 1,
+      "notes": 1,
       "claude_features": [],
-      "codex_concerns": [],
+      "codex_concerns": [
+        "SKILL.md: link '../hyperframes/references/plugin-installation.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/plugin-installation.md; it does not follow the skill when symlinked"
+      ],
       "duplicate": false,
       "conflict": false,
-      "findings": [],
-      "digest": "df44e962fc3986bfcde90b384f9dbe8b1eac079b663eeb2d619d1e942f3b81ca",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "findings": [
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../hyperframes/references/plugin-installation.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/plugin-installation.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../hyperframes/references/plugin-installation.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/hyperframes/references/plugin-installation.md",
+          "recommendation": "link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "references/discovery.md: names `references/runtimes.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "references/discovery.md",
+          "target": "references/runtimes.md",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        }
+      ],
+      "digest": "76f10d4784002e6d9e0d24aaaff9fb3bf4ceb79eb7a14cec99d1c1b4d7512736",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "hyperframes-studio",
@@ -2034,27 +1991,18 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/impeccable",
       "skill_file": "SKILL.md",
-      "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers websites, landing pages, dashboards, product UI, app shells, components, forms, settings, onboarding, and empty states. Handles UX review, visual hierarchy, information architecture, cognitive load, accessibility, performance, responsive behavior, theming, anti-patterns, typography, fonts, spacing, layout, alignment, color, motion, micro-interactions, UX copy, error states, edge cases, i18n, and reusable design systems or tokens. Also use for bland designs that need to become bolder or more delightful, loud designs that should become quieter, live browser iteration on UI elements, or ambitious visual effects that should feel technically extraordinary. Not for backend-only or non-UI tasks.",
+      "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, simplify, harden, animate, or otherwise improve a frontend interface: websites, landing pages, dashboards, product UI, components, forms, settings, onboarding, empty states, and native iOS or Android screens. Handles UX review, hierarchy, layout, typography, color, motion, UX copy, accessibility, responsive behavior, edge cases, and capturing or documenting design systems (DESIGN.md, tokens). Also for making bland UI bolder, loud UI quieter, or ambitious visual effects. Not for backend-only or non-UI tasks.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
-      "notes": 1,
+      "notes": 0,
       "claude_features": [],
       "codex_concerns": [],
       "duplicate": false,
       "conflict": false,
-      "findings": [
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "reference/live.md: names `scripts/build-sub-pages.js` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "reference/live.md",
-          "target": "scripts/build-sub-pages.js",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        }
-      ],
-      "digest": "9cd6643a2d9dedd35126ffc62a165a4f469de594328ea292ada6001a59c148a2",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "findings": [],
+      "digest": "dd68268956ea28aac560a7e7fe2f7b1cda7f5cfa331eacfcfac0f3b3cee952bc",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "improve-animations",
@@ -2071,8 +2019,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "32f23d860467841f5b07cef198fb53efc70f2adaaa6144cf1a3434d782aed246",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "524ea241e41d58bbdd8e288700fe24f5725e2a2f3ae7186ad7cebf9055058356",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "ios-app-intents",
@@ -2311,16 +2259,27 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/media-use",
       "skill_file": "SKILL.md",
-      "description": "Agent Media OS, the single skill for every media need in a HyperFrames project. Resolve BGM, SFX, image, icon, brand logo, voice, color grade, or LUT into a frozen local file or paste-ready block + ledger record (one verb, `resolve`); generate via TTS / music / image models when the catalog misses; produce voiceover, transcription, captions, and background removal through one shared audio engine; operate on media (cut / reframe / transform); and reuse assets across projects. Also use for vague feedback that real footage looks dark, flat, boring, should feel retro/camcorder/print/ASCII, needs privacy, or needs a media reveal.",
+      "description": "Get or make any media for a HyperFrames video - music, sound effects, images, icons, logos, voiceover, avatar and generated video, transcripts, cutouts, colour grades and looks - with HeyGen or free local tools, and mix placed audio. Also for footage that looks dark, flat or dull, or should be stylized or hidden.",
       "status": "warn",
       "errors": 0,
-      "warnings": 5,
-      "notes": 18,
+      "warnings": 9,
+      "notes": 12,
       "claude_features": [],
-      "codex_concerns": [],
+      "codex_concerns": [
+        "SKILL.md: link '../hyperframes/references/plugin-installation.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/plugin-installation.md; it does not follow the skill when symlinked"
+      ],
       "duplicate": false,
       "conflict": false,
       "findings": [
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../hyperframes/references/plugin-installation.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/plugin-installation.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../hyperframes/references/plugin-installation.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/hyperframes/references/plugin-installation.md",
+          "recommendation": "link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        },
         {
           "severity": "info",
           "code": "asset-not-present",
@@ -2380,90 +2339,69 @@
         {
           "severity": "info",
           "code": "asset-not-present",
-          "message": "references/memory.md: names `references/intent-interview.md` under the shipped 'references/' directory, but no such file is present",
-          "document": "references/memory.md",
-          "target": "references/intent-interview.md",
+          "message": "audio/references/tts.md: names `scripts/heygen-voice.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "document": "audio/references/tts.md",
+          "target": "scripts/heygen-voice.mjs",
           "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
         },
         {
           "severity": "info",
           "code": "asset-not-present",
-          "message": "references/meta.md: names `scripts/lib/coverage.test.mjs` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "references/meta.md",
-          "target": "scripts/lib/coverage.test.mjs",
+          "message": "audio/references/captions/motion.md: names `references/runtimes.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "audio/references/captions/motion.md",
+          "target": "references/runtimes.md",
           "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
         },
         {
           "severity": "info",
           "code": "asset-not-present",
-          "message": "references/meta.md: names `scripts/lib/mflux-provider.mjs` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "references/meta.md",
-          "target": "scripts/lib/mflux-provider.mjs",
+          "message": "audio/references/captions/motion.md: names `references/motion.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "audio/references/captions/motion.md",
+          "target": "references/motion.md",
           "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
         },
         {
           "severity": "info",
           "code": "asset-not-present",
-          "message": "references/meta.md: names `scripts/lib/codex-provider.mjs` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "references/meta.md",
-          "target": "scripts/lib/codex-provider.mjs",
+          "message": "audio/references/captions/motion.md: names `references/captions.md` under the shipped 'references/' directory, but no such file is present",
+          "document": "audio/references/captions/motion.md",
+          "target": "references/captions.md",
           "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
         },
         {
           "severity": "info",
           "code": "asset-not-present",
-          "message": "references/meta.md: names `scripts/lib/local-models.mjs` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "references/meta.md",
-          "target": "scripts/lib/local-models.mjs",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/meta.md: names `scripts/lib/local-run.mjs` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "references/meta.md",
-          "target": "scripts/lib/local-run.mjs",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/meta.md: names `scripts/lib/heygen-cli.mjs` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "references/meta.md",
-          "target": "scripts/lib/heygen-cli.mjs",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
-        },
-        {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/operations.md: names `scripts/lib/local-models.mjs` under the shipped 'scripts/' directory, but no such file is present",
+          "message": "references/operations.md: names `references/format.md` under the shipped 'references/' directory, but no such file is present",
           "document": "references/operations.md",
-          "target": "scripts/lib/local-models.mjs",
+          "target": "references/format.md",
           "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
         },
         {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/operations.md: names `scripts/lib/heygen-video-provider.mjs` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "references/operations.md",
-          "target": "scripts/lib/heygen-video-provider.mjs",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "audio/scripts/carve.test.mjs:185 contains a system absolute path '/private/tmp'",
+          "document": "audio/scripts/carve.test.mjs",
+          "line": 185,
+          "path": "/private/tmp",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
         },
         {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/operations.md: names `scripts/lib/heygen-cli.mjs` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "references/operations.md",
-          "target": "scripts/lib/heygen-cli.mjs",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "audio/scripts/lib/main-module.mjs:5 contains a system absolute path '/private/tmp'",
+          "document": "audio/scripts/lib/main-module.mjs",
+          "line": 5,
+          "path": "/private/tmp",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
         },
         {
-          "severity": "info",
-          "code": "asset-not-present",
-          "message": "references/setup-providers.md: names `scripts/lib/local-models.mjs` under the shipped 'scripts/' directory, but no such file is present",
-          "document": "references/setup-providers.md",
-          "target": "scripts/lib/local-models.mjs",
-          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+          "severity": "warn",
+          "code": "absolute-path",
+          "message": "audio/scripts/lib/python.test.mjs:64 contains a system absolute path '/home/u/.venvs/hf/bin/python'",
+          "document": "audio/scripts/lib/python.test.mjs",
+          "line": 64,
+          "path": "/home/u/.venvs/hf/bin/python",
+          "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
         },
         {
           "severity": "warn",
@@ -2495,24 +2433,24 @@
         {
           "severity": "warn",
           "code": "absolute-path",
-          "message": "audio/scripts/lib/tts.test.mjs:99 contains a system absolute path '/tmp/x.wav'",
+          "message": "audio/scripts/lib/tts.test.mjs:108 contains a system absolute path '/tmp/x.wav'",
           "document": "audio/scripts/lib/tts.test.mjs",
-          "line": 99,
+          "line": 108,
           "path": "/tmp/x.wav",
           "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
         },
         {
           "severity": "warn",
           "code": "absolute-path",
-          "message": "audio/scripts/lib/tts.test.mjs:154 contains a system absolute path '/tmp/none.wav'",
+          "message": "audio/scripts/lib/tts.test.mjs:163 contains a system absolute path '/tmp/none.wav'",
           "document": "audio/scripts/lib/tts.test.mjs",
-          "line": 154,
+          "line": 163,
           "path": "/tmp/none.wav",
           "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
         }
       ],
-      "digest": "444ffc6f4ee564849a07865ff6e0264595b5900d312d4a351416c0fa4f5a36ff",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "8661f86bb9635da9a3ee20dfe94ac70eef09e0ffdd0c80c3fa90a4c0c696183d",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "meta-ads-account-audit",
@@ -2605,6 +2543,42 @@
       "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
+      "name": "neon",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/neon",
+      "skill_file": "SKILL.md",
+      "description": "Overview of Neon, a complete set of cloud backend primitives around Lakebase\n Postgres: Auth, Object Storage, Functions, the AI Gateway, and Realtime. Start here to\n choose Neon for undecided login, files, APIs, and LLM calls, set up the CLI or\n MCP server, and follow the branch-first workflow. Use when building an app or\n backend on Neon, or when \"Neon\" or \"Lakebase Postgres\" is mentioned. Child\n skill neon-postgres wins for an existing DATABASE_URL, SQL, schema, inspect,\n or search. Child skill neon-auth wins for login, users, sessions, identity\n routing, and Managed Better Auth setup. Child skill neon-realtime wins for\n live queries in reactive apps and agents. Also use for object storage, S3,\n buckets, serverless functions, function triggers, cron, AI gateway, LLM calls,\n realtime, logs, Loki, Grafana, observability,\n postgres, database, backend, Claimable Neon, neon.new, or a no-signup database.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "56ba63b98c24fbf2402d6a2a0ff09435394a89b9493925bae8cfd27f7839b551",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
+    },
+    {
+      "name": "neon-postgres",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/neon-postgres",
+      "skill_file": "SKILL.md",
+      "description": "Guides and best practices for working with Lakebase Postgres on Neon:\n connections, pooled vs direct, schema migrations, branching, autoscaling,\n scale-to-zero, instant restore, read replicas, IP allow lists, logical\n replication, and Lakebase Search. Use when the work is an existing\n DATABASE_URL, SQL, schema, inspect, or search. New backends, Auth, files,\n Functions, and LLM calls go to the parent `neon` skill. Live queries, reactive\n UIs, and realtime data go to `neon-realtime`. Also use for\n \"@neondatabase/serverless\", \"@neondatabase/neon-js\", \"neon inspect db\",\n \"semantic search\", \"vector search\", \"full-text search\", \"BM25\", or\n \"hybrid search\".",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "bad0cc5c9d94101f8a22ba881e4570ef3dede2c560aaf1bb9dce9c562b3e1488",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
+    },
+    {
       "name": "no-use-effect",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/no-use-effect",
@@ -2665,8 +2639,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "5f4a764026062836c4fcbfbe46edaa9fcf98040b256e93c0d9d80fb3bf05ef60",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "2265812d2c5038bc69dbc27e88536650a5e16496b14bde826f0b77dbc021c032",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "paid-media-reporter",
@@ -3062,27 +3036,209 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/remotion-best-practices",
       "skill_file": "SKILL.md",
-      "description": "Best practices for Remotion - Video creation in React",
+      "description": "Router for all Remotion skills",
       "status": "warn",
       "errors": 0,
-      "warnings": 1,
-      "notes": 0,
+      "warnings": 3,
+      "notes": 20,
       "claude_features": [],
       "codex_concerns": [],
       "duplicate": false,
       "conflict": false,
       "findings": [
         {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-maps/techniques/cesium/TECHNIQUE.md: names `assets/CesiumFlythrough.tsx` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-maps/techniques/cesium/TECHNIQUE.md",
+          "target": "assets/CesiumFlythrough.tsx",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-maps/techniques/cesium/TECHNIQUE.md: names `assets/example-Root.tsx` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-maps/techniques/cesium/TECHNIQUE.md",
+          "target": "assets/example-Root.tsx",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-maps/techniques/cesium/TECHNIQUE.md: names `assets/flight-path.ts` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-maps/techniques/cesium/TECHNIQUE.md",
+          "target": "assets/flight-path.ts",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-maps/techniques/cesium/TECHNIQUE.md: names `assets/cesium-path.json` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-maps/techniques/cesium/TECHNIQUE.md",
+          "target": "assets/cesium-path.json",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-maps/techniques/cesium/TECHNIQUE.md: names `assets/city-path.json` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-maps/techniques/cesium/TECHNIQUE.md",
+          "target": "assets/city-path.json",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-maps/techniques/maptiler/TECHNIQUE.md: names `assets/MapTilerVectorElement.ts` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-maps/techniques/maptiler/TECHNIQUE.md",
+          "target": "assets/MapTilerVectorElement.ts",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-maps/techniques/maptiler/TECHNIQUE.md: names `assets/RiverReveal.tsx` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-maps/techniques/maptiler/TECHNIQUE.md",
+          "target": "assets/RiverReveal.tsx",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-maps/techniques/maptiler/TECHNIQUE.md: names `assets/CountryLabel.tsx` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-maps/techniques/maptiler/TECHNIQUE.md",
+          "target": "assets/CountryLabel.tsx",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-maps/techniques/maptiler/TECHNIQUE.md: names `assets/tokens.ts` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-maps/techniques/maptiler/TECHNIQUE.md",
+          "target": "assets/tokens.ts",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-maps/techniques/maptiler/TECHNIQUE.md: names `assets/example-Root.tsx` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-maps/techniques/maptiler/TECHNIQUE.md",
+          "target": "assets/example-Root.tsx",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-markup/remotion-maps/techniques/cesium/TECHNIQUE.md: names `assets/CesiumFlythrough.tsx` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-markup/remotion-maps/techniques/cesium/TECHNIQUE.md",
+          "target": "assets/CesiumFlythrough.tsx",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-markup/remotion-maps/techniques/cesium/TECHNIQUE.md: names `assets/example-Root.tsx` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-markup/remotion-maps/techniques/cesium/TECHNIQUE.md",
+          "target": "assets/example-Root.tsx",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-markup/remotion-maps/techniques/cesium/TECHNIQUE.md: names `assets/flight-path.ts` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-markup/remotion-maps/techniques/cesium/TECHNIQUE.md",
+          "target": "assets/flight-path.ts",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-markup/remotion-maps/techniques/cesium/TECHNIQUE.md: names `assets/cesium-path.json` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-markup/remotion-maps/techniques/cesium/TECHNIQUE.md",
+          "target": "assets/cesium-path.json",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-markup/remotion-maps/techniques/cesium/TECHNIQUE.md: names `assets/city-path.json` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-markup/remotion-maps/techniques/cesium/TECHNIQUE.md",
+          "target": "assets/city-path.json",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-markup/remotion-maps/techniques/maptiler/TECHNIQUE.md: names `assets/MapTilerVectorElement.ts` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-markup/remotion-maps/techniques/maptiler/TECHNIQUE.md",
+          "target": "assets/MapTilerVectorElement.ts",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-markup/remotion-maps/techniques/maptiler/TECHNIQUE.md: names `assets/RiverReveal.tsx` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-markup/remotion-maps/techniques/maptiler/TECHNIQUE.md",
+          "target": "assets/RiverReveal.tsx",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-markup/remotion-maps/techniques/maptiler/TECHNIQUE.md: names `assets/CountryLabel.tsx` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-markup/remotion-maps/techniques/maptiler/TECHNIQUE.md",
+          "target": "assets/CountryLabel.tsx",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-markup/remotion-maps/techniques/maptiler/TECHNIQUE.md: names `assets/tokens.ts` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-markup/remotion-maps/techniques/maptiler/TECHNIQUE.md",
+          "target": "assets/tokens.ts",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
+          "severity": "info",
+          "code": "asset-not-present",
+          "message": "remotion-markup/remotion-maps/techniques/maptiler/TECHNIQUE.md: names `assets/example-Root.tsx` under the shipped 'assets/' directory, but no such file is present",
+          "document": "remotion-markup/remotion-maps/techniques/maptiler/TECHNIQUE.md",
+          "target": "assets/example-Root.tsx",
+          "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
+        },
+        {
           "severity": "warn",
-          "code": "reference-missing-extension",
-          "message": "rules/voiceover.md: link './calculate-metadata' resolves only once '.md' is appended; on disk the link is dead",
-          "document": "rules/voiceover.md",
-          "target": "./calculate-metadata",
-          "recommendation": "Write it as './calculate-metadata.md'."
+          "code": "secret-suspected",
+          "message": "remotion-docs/REFERENCE.md:15 looks like a assigned-credential: 3e42\u2026 (32 chars, sha256:7ebbdbe0)",
+          "document": "remotion-docs/REFERENCE.md",
+          "line": 15,
+          "kind": "assigned-credential",
+          "fingerprint": "3e42\u2026 (32 chars, sha256:7ebbdbe0)",
+          "recommendation": "Confirm, then rotate the credential and replace it with an environment lookup."
+        },
+        {
+          "severity": "warn",
+          "code": "secret-suspected",
+          "message": "remotion-maps/techniques/mapbox/TECHNIQUE.md:101 looks like a assigned-credential: mapb\u2026 (17 chars, sha256:1ae18e81)",
+          "document": "remotion-maps/techniques/mapbox/TECHNIQUE.md",
+          "line": 101,
+          "kind": "assigned-credential",
+          "fingerprint": "mapb\u2026 (17 chars, sha256:1ae18e81)",
+          "recommendation": "Confirm, then rotate the credential and replace it with an environment lookup."
+        },
+        {
+          "severity": "warn",
+          "code": "secret-suspected",
+          "message": "remotion-markup/remotion-maps/techniques/mapbox/TECHNIQUE.md:101 looks like a assigned-credential: mapb\u2026 (17 chars, sha256:1ae18e81)",
+          "document": "remotion-markup/remotion-maps/techniques/mapbox/TECHNIQUE.md",
+          "line": 101,
+          "kind": "assigned-credential",
+          "fingerprint": "mapb\u2026 (17 chars, sha256:1ae18e81)",
+          "recommendation": "Confirm, then rotate the credential and replace it with an environment lookup."
         }
       ],
-      "digest": "39ab4a236431bcbfb7b0d876ddd243759ee18623b127f4235c642012ff22ae4b",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "543a4d67f79a90a0d67efb9c8ee6ce4988f1f86a16b27aae083f0db7cc830f77",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "remotion-video",
@@ -3137,8 +3293,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "a07941bc127ccf2b1e502690937033ae763a0499f3ec7d57d6b531eb7f31c0f4",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "90ea7d14732c91192c126a381e1f5e18df69470d755f8df1b19b8ee2d25d254a",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "sales-email",
@@ -3206,6 +3362,24 @@
       ],
       "digest": "efb57b965b971c8ef7ecca6db1892e4ea3296ed7a76347b6280293184a891e92",
       "git_last_commit": "2026-09-23T12:48:29+01:00"
+    },
+    {
+      "name": "security-audit",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/security-audit",
+      "skill_file": "SKILL.md",
+      "description": "Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons. Use for security questions, focused reviews, vulnerability research, security audits, or pen tests. Run the complete workflow only for explicit codebase audit or pen-test requests, full/comprehensive/end-to-end reviews, or requested report artifacts.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "ac796659de231c3ab76f6ee012836072bdc82928fb019199925c9062800e16c1",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "seo-aeo-content-strategy",
@@ -3378,7 +3552,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/stripe-best-practices",
       "skill_file": "SKILL.md",
-      "description": "Guides Stripe integration decisions across API selection (Checkout Sessions vs\n PaymentIntents), Connect platform setup (Accounts v2, controller properties),\n billing/subscriptions, tax and registrations (Stripe Tax, automatic_tax,\n product tax codes), Treasury financial accounts, integration options\n (Checkout, Payment Element), migrating from deprecated Stripe APIs, and\n security best practices (API key management, restricted keys, webhooks,\n OAuth). Use when building, modifying, or reviewing any Stripe integration,\n including accepting payments, building marketplaces, integrating Stripe,\n processing payments, setting up subscriptions, collecting sales tax, VAT, or\n GST, creating connected accounts, or implementing secure key handling.",
+      "description": "Guides Stripe integration decisions across development and test environment\n planning (separate sandboxes vs the shared test mode sandbox), API selection\n (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2,\n controller properties), billing/subscriptions, tax and registrations (Stripe\n Tax, automatic_tax, product tax codes), Treasury financial accounts,\n integration options (Checkout, Payment Element), migrating from deprecated\n Stripe APIs, and security best practices (API key management, API key\n permissions, webhooks, OAuth). Use when planning, building, modifying,\n testing, or reviewing any Stripe integration, including choosing a development\n environment, accepting payments, building marketplaces, integrating Stripe,\n processing payments, setting up subscriptions, collecting sales tax, VAT, or\n GST, creating connected accounts, or implementing secure key handling.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -3388,15 +3562,15 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "050bf17c4eba25375c4813b877c1bb998f18971715f77ba5edeee6ead622cbf3",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "977ce2278d5a836a86de78aade008b50397bb94e602505e969618aac69e71ae7",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "stripe-directory",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/stripe-directory",
       "skill_file": "SKILL.md",
-      "description": "Use when the user wants to find businesses, software, service providers, or\n partners for a specific industry, workflow, pain point, capability, or job to\n be done. Also use when the agent needs to programmatically purchase or consume\n a service. Use Stripe Directory to build a short relevant shortlist, even if\n the user does not mention Stripe Directory explicitly.",
+      "description": "Identifies external providers, merchants, nonprofits, platforms, APIs, and\n software services, and resolves the documented way to engage them \u2014 to pay,\n donate, subscribe, book, provision, or integrate with them. MUST be used\n BEFORE web search, model memory, or any other directory/vendor-lookup skill\n for ANY request that requires selecting, finding, or engaging an external\n provider or organization \u2014 whether a specific one is named (\"pay my Twilio\n bill\"), implied (\"donate to the Red Cross\"), or only a category is stated\n (\"set up a mailing client\", \"I need a database\", \"find me a CRM\"). Directory\n supplies verified recipients and their documented payment or engagement path.\n Results are ranked by agent-readiness (how reliably an agent can complete the\n interaction), relevance and popularity. Don't treat this as a search-only\n tool. Examples: \"setup a database\", \"find hosting\", \"pay X\", \"use Twilio\",\n \"donate $50 to the Red Cross\", \"book a table at Y\", \"subscribe to a CRM\".",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -3416,15 +3590,15 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "58d8c458beaa92877ed2f0a622af65a0a91e2804efcc4188ac87a35780015361",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "135e17ba02412ce6afc92feefa9b4d70e1e5ecab9cba6d9cb1378be5c8f9cbee",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "stripe-docs",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/stripe-docs",
       "skill_file": "SKILL.md",
-      "description": "Use when the user or agent needs to read, search, or look up Stripe\n documentation or API reference. Prefer this over curl or WebFetch for any\n docs.stripe.com content.",
+      "description": "Use when the user or agent needs to read, search, or look up Stripe\n documentation or API reference. Prefer this over curl or WebFetch for any\n docs.stripe.com content. Use to fetch gated documentation.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -3444,8 +3618,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "7f8b47057d65cdc55c60ed870bf6ad508907e5d981fca77781b4964de54d985f",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "ee4a51d34f11386fe6c9f991d5b2d32da69c851124a78a01403412bcf87e73d7",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "stripe-projects",
@@ -3472,8 +3646,8 @@
           "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
         }
       ],
-      "digest": "d75347f4e465c0e78032f7cb28b7bcd406cde9a34826b780958b059423fba778",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "1a4c53864ab1be5d07eac0b0eb9fc2bc367cc39472ae7b805c30f12161951f45",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "supabase",
@@ -3786,7 +3960,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/swiftui-expert-skill",
       "skill_file": "SKILL.md",
-      "description": "Use when writing, reviewing, or refactoring SwiftUI code for iOS or macOS, including state management and `@Observable` data flow, view composition and invalidation/performance, lists and `ForEach` identity, environment usage, localization, animations, Liquid Glass adoption, migrating soft-deprecated APIs, or Instruments `.trace` capture/analysis for hangs, hitches, CPU hotspots, or",
+      "description": "Use when writing, reviewing, or refactoring SwiftUI code for iOS or macOS, including state and `@Observable` data flow, view composition, resizable layouts, safe areas, display scale, performance, lists, environment, localization, animation, Liquid Glass, and API migration. Also use for iPhone Duo, foldable, or large-display layouts (`NavigationSplitView` on large displays, iPhone tab sidebar, two-column reflow, foldable grids, `ArrangementView`, `ReservedRegion`), hinge effects, vertical bars, `@State` initialization or synthesized-property diagnostics, `@ContentBuilder` ambiguity, `reorderable` drag/drop, custom `AsyncImage` `URLSession`, swipe actions outside List, item-bound `alert`/`confirmationDialog`, `ToolbarOverflowMenu`, `AnimatableValues`, Document APIs (`Document`/`DocumentReader`), and Instruments `.trace` capture or analysis.",
       "status": "warn",
       "errors": 0,
       "warnings": 2,
@@ -3799,9 +3973,9 @@
         {
           "severity": "warn",
           "code": "absolute-path",
-          "message": "SKILL.md:54 contains a system absolute path '/tmp/stop-trace'",
+          "message": "SKILL.md:57 contains a system absolute path '/tmp/stop-trace'",
           "document": "SKILL.md",
-          "line": 54,
+          "line": 57,
           "path": "/tmp/stop-trace",
           "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
         },
@@ -3815,8 +3989,8 @@
           "recommendation": "Use a path relative to the skill directory, or describe the location instead of hardcoding it."
         }
       ],
-      "digest": "465aede0e8dbca67a40bd8ffa1ac38e540cde0e3f29fe516b92cdc765d55ad6a",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "f3b7d0c68cca770cc3215f8e3381252122f37a28bd0f8294f05500670bb61eca",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "swiftui-liquid-glass",
@@ -3896,8 +4070,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "e1bd9e3ffdea3062b928dad3692465be779aa450da312725aa1b6452a8e19701",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "8799a7712e6192bab6362176fad871675ef84ba1d97ec2cc16885dcae8383371",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "swiftui-ui-patterns",
@@ -4030,25 +4204,47 @@
       "conflict": false,
       "findings": [],
       "digest": "fffc80ac150d9b95832316e8ef33f661cd8ea753ae01a02c16e65e27bbf2d9ea",
-      "git_last_commit": null
+      "git_last_commit": "2026-10-15T21:01:04+01:00"
     },
     {
       "name": "test-audit",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/test-audit",
       "skill_file": "SKILL.md",
-      "description": "Invoke whenever writing, changing, reviewing, or sweeping tests. Authoring gate for new tests plus audit workflow for low-value, implementation-coupled, or duplicative tests and the test-only production seams they demand.",
-      "status": "pass",
-      "errors": 0,
+      "description": "Writing/changing/reviewing/sweeping tests: reject duplicate or implementation-coupled proof; remove test-only production seams.",
+      "status": "fail",
+      "errors": 3,
       "warnings": 0,
       "notes": 0,
       "claude_features": [],
       "codex_concerns": [],
       "duplicate": false,
       "conflict": false,
-      "findings": [],
-      "digest": "1c493e8f99f4c5ac2b1d9e2928a88312cf72d823f1486106d9edfebf08d20c27",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "findings": [
+        {
+          "severity": "error",
+          "code": "reference-broken",
+          "message": "SKILL.md: link '../../../docs/help/testing/writing-tests.md' does not resolve to a file",
+          "document": "SKILL.md",
+          "target": "../../../docs/help/testing/writing-tests.md"
+        },
+        {
+          "severity": "error",
+          "code": "reference-broken",
+          "message": "SKILL.md: link '../openclaw-testing/SKILL.md' does not resolve to a file",
+          "document": "SKILL.md",
+          "target": "../openclaw-testing/SKILL.md"
+        },
+        {
+          "severity": "error",
+          "code": "reference-broken",
+          "message": "references/audit.md: link '../../openclaw-testing/SKILL.md' does not resolve to a file",
+          "document": "references/audit.md",
+          "target": "../../openclaw-testing/SKILL.md"
+        }
+      ],
+      "digest": "ac1e9414990b79fa8b113c2741e9dbbf9e96b77f0ab5f5639bb0eb1ab97edaa3",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "thought-leadership-blog",
@@ -4112,7 +4308,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/upgrade-stripe",
       "skill_file": "SKILL.md",
-      "description": "Guide for upgrading Stripe API versions and SDKs",
+      "description": "Guide for upgrading Stripe API versions, webhook endpoints, server-side SDKs,\n Stripe.js, and mobile SDKs",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -4122,8 +4318,8 @@
       "duplicate": false,
       "conflict": false,
       "findings": [],
-      "digest": "f4aa17ac21714309e3cafa4eb15b032b3d8ff8623c8731944ccbcaf6766fdb49",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "9557ce790f5ca431be170cd3fe01a3566815fba65c7ce47ffd9414af8bff033d",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "vercel-composition-patterns",
@@ -4149,8 +4345,8 @@
           "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
         }
       ],
-      "digest": "5b3564ca435f4714d5e65023351e1999e4744818603a9cfb6a6f6a61b7d84918",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "cdc52f07ec7bc67c4f2e53205a4e35f99cdae70ca4240a714c96ba3889734678",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "vercel-react-best-practices",
@@ -4176,8 +4372,8 @@
           "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
         }
       ],
-      "digest": "1d197fcdae7cf3210a1305dacca0206f5787775abcb93baf5565f907d3fb536c",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "c5055bab8fbc8218cc5721b6d2625e66c4b772714012e6285c8d1b99ec05c4dd",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "vercel-react-native-skills",
@@ -4203,8 +4399,8 @@
           "recommendation": "Confirm the skill creates this at run time; otherwise add the file or correct the path."
         }
       ],
-      "digest": "b4b0af9b853227db681fd5b8a9e5f5ddd1603af1f6ab388e06ff12c1f6f3aadb",
-      "git_last_commit": "2026-09-29T05:02:15+01:00"
+      "digest": "1298ce94325280f7e56ed297aab7cd2ab022fbbb67ca53cf0b1381a4dd829178",
+      "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
       "name": "web-design-guidelines",

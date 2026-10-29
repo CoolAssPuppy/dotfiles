@@ -1,18 +1,18 @@
 # Agent skills inventory
 
-Generated 2026-10-15T17:33:28+01:00 by `scripts/validate-agent-skills.py`.
+Generated 2026-10-22T22:16:39+01:00 by `scripts/validate-agent-skills.py`.
 Do not edit by hand. Regenerate instead.
 
 ## Sources
 
 | Source | Path | Skills | Anomalies |
 | --- | --- | --- | --- |
-| canonical | `/Users/prashant/Developer/brain/skills` | 148 | 1 |
+| canonical | `/Users/prashant/Developer/brain/skills` | 154 | 1 |
 
 ## Totals
 
-- 148 skills across 148 unique names
-- 116 pass, 32 warn, 0 fail
+- 154 skills across 154 unique names
+- 120 pass, 33 warn, 1 fail
 - 0 duplicate names, 0 unresolved conflicts
 - 1 anomalies in the source directories
 
@@ -65,6 +65,9 @@ Do not edit by hand. Regenerate instead.
 | `finance-wheel` | canonical | Runs the full three-phase options income cycle -- sell cash-secured puts, take assignment if necessary, sell covered calls. Picks strikes, monitors positions,… | pass | disable-model-invocation, user-invocable | none | unique |
 | `find-animation-opportunities` | canonical | Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't. Read-only; it proposes motion with exact values, it doe… | pass | none | none | unique |
 | `find-skills` | canonical | Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express in… | pass | none | none | unique |
+| `fix-gitlab-vuln` | canonical | Use when the user asks to fix, patch or upgrade a self-managed GitLab vulnerability (e.g. 'Please fix my GitLab vulnerability'), CVE-2026-110264 or the GitLab… | pass | none | none | unique |
+| `fix-node-vuln` | canonical | Use when the user asks to fix, patch or upgrade a Node.js vulnerability (e.g. 'Please fix my Node vulnerability'), the October 21, 2026 Node.js security releas… | pass | none | none | unique |
+| `fix-php-vuln` | canonical | Use when the user asks to fix, patch or upgrade a PHP vulnerability (e.g. 'Please fix my PHP vulnerability'), PHP2Shell, CVE-2026-109618 or CVE-2026-109619, or… | pass | none | none | unique |
 | `general-video` | canonical | Author or edit a custom HyperFrames composition when no specialized workflow fits, or when BRIEF.md sets flow: companion. Use for longer or multi-scene pieces,… | warn (0E/1W) | none | none | unique |
 | `generate-ranking-video` | canonical | Create viral ranking countdown videos in PolarRanks style. Overlays ranked lists on background video clips. Works for any topic -- books, people, places, movie… | pass | user-invocable | none | unique |
 | `go-to-market` | canonical | Writes a one-document launch plan for a single product or feature launch, with tier, measurable objectives, audience, key messages, tier-scaled tactics, owners… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
@@ -76,16 +79,16 @@ Do not edit by hand. Regenerate instead.
 | `google-merchant-center` | canonical | Optimize product feeds for Shopping and Performance Max campaigns — from fixing disapprovals to building custom label strategies that power profitability-based… | pass | none | none | unique |
 | `gtm-strategy` | canonical | Develops go-to-market strategy for technical products by choosing and combining product-led, sales-led, open-source, and hybrid motions, including PLG funnels,… | pass | user-invocable | none | unique |
 | `humanize` | canonical | Remove signs of AI-generated writing from text. Use when editing or reviewing text to make it sound more natural and human-written. Based on Wikipedia's compre… | pass | allowed-tools, user-invocable | none | unique |
-| `hyperframes` | canonical | Mandatory entry point: read this first for any request to make, create, edit, animate, or render a video, animation, or motion graphic, including a promo, expl… | warn (0E/1W) | none | none | unique |
+| `hyperframes` | canonical | Read first to make, edit, animate or render any video with HyperFrames (HTML rendered to video), including launch films, explainers, music videos, charts, maps… | warn (0E/2W) | none | none | unique |
 | `hyperframes-animation` | canonical | All animation knowledge for HyperFrames — atomic motion rules, multi-phase scene blueprints, scene transitions, broader motion-design techniques, AND the seven… | pass | none | none | unique |
 | `hyperframes-audio` | canonical | Use when audio already placed in a HyperFrames composition needs to be mixed: fade-in/fade-out, crossfade, track gain or volume, volume automation, ducking, a… | warn (0E/2W) | none | none | unique |
-| `hyperframes-cli` | canonical | Use the HyperFrames CLI development loop: init, add, catalog, capture, lint, check, snapshot, compare, grade-compare, preview, play, present, beats, keyframes,… | warn (0E/4W) | none | references/cloud.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variabl… | unique |
+| `hyperframes-cli` | canonical | The HyperFrames CLI by job - scaffold, check, look at frames, edit the timeline, preview, render locally or in the cloud, publish, project history - plus readi… | warn (0E/5W) | none | SKILL.md: link '../hyperframes/references/plugin-installation.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/plugin-installation.md; it does… | unique |
 | `hyperframes-core` | canonical | The HyperFrames composition contract — build one renderable project. Use for composition structure, the `data-*` timing attributes, `class="clip"`, tracks, sub… | pass | none | none | unique |
 | `hyperframes-creative` | canonical | Non-animation creative direction for HyperFrames videos. Use for design spec (frame.md / design.md) handling, palettes, typography, narration, beat planning, a… | warn (0E/2W) | none | none | unique |
 | `hyperframes-keyframes` | canonical | Use when a HyperFrames composition needs a punch-in, punch-out, zoom, reframe, Ken Burns treatment, camera move, visual match/whip handoff, or other seek-safe… | pass | none | none | unique |
-| `hyperframes-registry` | canonical | Search, install, and wire registry blocks and components into HyperFrames compositions. Use BEFORE hand-building any named visual — whenever a brief, a user, o… | pass | none | none | unique |
+| `hyperframes-registry` | canonical | About 450 ready-made HyperFrames blocks and components installed as editable source - transitions, overlays, titles, kinetic type, captions, charts, map overla… | warn (0E/1W) | none | SKILL.md: link '../hyperframes/references/plugin-installation.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/plugin-installation.md; it does… | unique |
 | `hyperframes-studio` | canonical | Use when building or editing a HyperFrames project that people open in Studio: how the timeline should be laid out so it reads well (one caption track, one ele… | pass | none | none | unique |
-| `impeccable` | canonical | Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwis… | pass | none | none | unique |
+| `impeccable` | canonical | Use when the user wants to design, redesign, shape, critique, audit, polish, simplify, harden, animate, or otherwise improve a frontend interface: websites, la… | pass | none | none | unique |
 | `improve-animations` | canonical | Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-contained implementation plans for other ag… | pass | none | none | unique |
 | `ios-app-intents` | canonical | Design App Intents, app entities, and App Shortcuts for iOS system surfaces. Use when exposing app actions or content to Shortcuts, Siri, Spotlight, widgets, o… | pass | none | none | unique |
 | `ios-deployment` | canonical | Ship an iOS app from the command line without opening Xcode. Covers archive, IPA export, App Store Connect API authentication, TestFlight upload (debug builds)… | pass | none | none | unique |
@@ -96,12 +99,14 @@ Do not edit by hand. Regenerate instead.
 | `link-building-digital-pr` | canonical | Build backlinks, earned media, and brand mentions that move both traditional rankings and AI visibility. The dominant modern tactic is digital PR anchored to o… | pass | none | none | unique |
 | `local-seo-google-business-profile` | canonical | Help local and service-area businesses win the map pack, organic local results, and — increasingly — local answers in AI tools. Local search has its own rules:… | pass | none | none | unique |
 | `macos-deployment` | canonical | Ship a macOS app from the command line without opening Xcode. Covers debug builds, Developer ID signing, notarization, DMG packaging, Sparkle auto-updates, and… | warn (0E/2W) | none | none | unique |
-| `media-use` | canonical | Agent Media OS, the single skill for every media need in a HyperFrames project. Resolve BGM, SFX, image, icon, brand logo, voice, color grade, or LUT into a fr… | warn (0E/5W) | none | none | unique |
+| `media-use` | canonical | Get or make any media for a HyperFrames video - music, sound effects, images, icons, logos, voiceover, avatar and generated video, transcripts, cutouts, colour… | warn (0E/9W) | none | SKILL.md: link '../hyperframes/references/plugin-installation.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/plugin-installation.md; it does… | unique |
 | `meta-ads-account-audit` | canonical | Systematic 75+ checkpoint audit based on the Sam Tomlinson framework: ICP validation → signal infrastructure → account structure → audiences → creatives → meas… | pass | none | none | unique |
 | `meta-ads-campaign-builder` | canonical | Build and configure Meta Ads campaigns across all ODAX objectives — from objective selection through audience strategy, placement, budget, and creative launch. | pass | none | none | unique |
 | `meta-ads-creative-engine` | canonical | Build a systematic creative testing, production, and rotation pipeline for Meta Ads — prevent fatigue, scale winners, and maintain performance through structur… | pass | none | none | unique |
 | `meta-ads-optimizer` | canonical | Optimize running Meta Ads campaigns — audience refinement, budget scaling, learning phase management, placement optimization, automation rules, and creative ro… | pass | none | none | unique |
 | `meta-ads-tracking-setup` | canonical | Implement and validate Meta Pixel + Conversions API (CAPI) for maximum signal quality — the single biggest lever for Meta Ads performance via the Andromeda ran… | pass | none | none | unique |
+| `neon` | canonical | Overview of Neon, a complete set of cloud backend primitives around Lakebase Postgres: Auth, Object Storage, Functions, the AI Gateway, and Realtime. Start her… | pass | none | none | unique |
+| `neon-postgres` | canonical | Guides and best practices for working with Lakebase Postgres on Neon: connections, pooled vs direct, schema migrations, branching, autoscaling, scale-to-zero,… | pass | none | none | unique |
 | `no-use-effect` | canonical | Enforce the no-useEffect rule when writing or reviewing React code. ACTIVATE when writing React components, refactoring existing useEffect calls, reviewing PRs… | pass | user-invocable | none | unique |
 | `on-page-seo-aeo-optimization` | canonical | Turn a draft or existing page into something both Google *and* AI answer engines can index, rank, and cite. This skill operates at the single-page level — keyw… | pass | none | none | unique |
 | `optimise-github-actions` | canonical | Optimise GitHub Actions for cost and speed. Reads the billed minutes and wall-clock time of every workflow and job from the GitHub API, finds the waste, and ch… | pass | none | none | unique |
@@ -116,11 +121,12 @@ Do not edit by hand. Regenerate instead.
 | `product-videos` | canonical | Plan, build and deliver a product's video series: feature spotlights, how-tos from real app screens, onboarding and product tours, store previews, launch and r… | pass | user-invocable | none | unique |
 | `prompt-picker` | canonical | Build a prompt library that reveals how a brand shows up across the full buyer journey in AI search systems. The library is designed for actual LLM visibility… | pass | none | none | unique |
 | `reconcile-checking-ledger` | canonical | Reconcile a personal checking ledger or budget spreadsheet against bank movements, including ledgers that summarize transactions by month and category. Use for… | pass | none | none | unique |
-| `remotion-best-practices` | canonical | Best practices for Remotion - Video creation in React | warn (0E/1W) | none | none | unique |
+| `remotion-best-practices` | canonical | Router for all Remotion skills | warn (0E/3W) | none | none | unique |
 | `remotion-video` | canonical | Build videos with Remotion. Covers timing architecture, animation patterns, component structure, and styling guidelines. | pass | user-invocable | none | unique |
 | `review-animations` | canonical | Review animation and motion code against Emil Kowalski's design engineering principles. Use when reviewing a motion diff or interaction implementation and prod… | pass | disable-model-invocation | none | unique |
 | `sales-email` | canonical | Write concise, relevant sales emails: cold outreach, warm follow-ups, event follow-ups, and nurture campaigns. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `search-reddit` | canonical | Find Reddit discussions where Prashant can add value by sharing Strategic Nerds blog posts. Requires human-driven Playwright browsing. | pass | user-invocable | none | unique |
+| `security-audit` | canonical | Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons. Use for security questions, focused reviews, vulne… | pass | none | none | unique |
 | `seo-aeo-content-strategy` | canonical | Design content systems that earn both Google rankings *and* AI citations. The core insight: AI answer engines read content differently than humans — they extra… | pass | none | none | unique |
 | `seo-keyword-research-intent-mapping` | canonical | Build a keyword universe that reflects how both humans *and* AI answer engines search. Traditional keyword research looks at standalone terms; modern research… | pass | none | none | unique |
 | `seo-max-kt` | canonical | Senior SEO and AEO operator playbook covering strategy, audits, content, local, links, measurement, and AI answer-engine visibility, plus which specialist SEO… | pass | none | none | unique |
@@ -129,8 +135,8 @@ Do not edit by hand. Regenerate instead.
 | `source-command-new-blog` | canonical | Research and create data-driven blog posts using Picks and Shovels methodology | pass | none | none | unique |
 | `source-command-verify-supabase` | canonical | Comprehensive Supabase security and best practices verification | pass | none | none | unique |
 | `spm-build-analysis` | canonical | Analyze Swift Package Manager dependencies, package plugins, module variants, and CI-oriented build overhead that slow Xcode builds. Use when a developer suspe… | warn (0E/2W) | none | SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when s… | unique |
-| `stripe-best-practices` | canonical | Guides Stripe integration decisions across API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), bi… | pass | none | none | unique |
-| `stripe-directory` | canonical | Use when the user wants to find businesses, software, service providers, or partners for a specific industry, workflow, pain point, capability, or job to be do… | pass | allowed-tools | none | unique |
+| `stripe-best-practices` | canonical | Guides Stripe integration decisions across development and test environment planning (separate sandboxes vs the shared test mode sandbox), API selection (Check… | pass | none | none | unique |
+| `stripe-directory` | canonical | Identifies external providers, merchants, nonprofits, platforms, APIs, and software services, and resolves the documented way to engage them — to pay, donate,… | pass | allowed-tools | none | unique |
 | `stripe-docs` | canonical | Use when the user or agent needs to read, search, or look up Stripe documentation or API reference. Prefer this over curl or WebFetch for any docs.stripe.com c… | pass | allowed-tools | none | unique |
 | `stripe-projects` | canonical | Use when the user wants to provision infrastructure or third-party services using Stripe Projects. Triggers: "I need a database", "set up auth", "add caching",… | pass | allowed-tools | none | unique |
 | `supabase` | canonical | Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libr… | pass | none | none | unique |
@@ -141,7 +147,7 @@ Do not edit by hand. Regenerate instead.
 | `swift-testing-expert` | canonical | Expert guidance for Swift Testing: test structure, #expect/#require macros, traits and tags, parameterized tests, test plans, parallel execution, async waiting… | pass | none | none | unique |
 | `swift-testing-pro` | canonical | Writes, reviews, and improves Swift Testing code using modern APIs and best practices. Use when reading, writing, or reviewing projects that use Swift Testing. | pass | none | none | unique |
 | `swiftdata-pro` | canonical | Writes, reviews, and improves SwiftData code using modern APIs and best practices. Use when reading, writing, or reviewing projects that use SwiftData. | pass | none | none | unique |
-| `swiftui-expert-skill` | canonical | Use when writing, reviewing, or refactoring SwiftUI code for iOS or macOS, including state management and `@Observable` data flow, view composition and invalid… | warn (0E/2W) | none | none | unique |
+| `swiftui-expert-skill` | canonical | Use when writing, reviewing, or refactoring SwiftUI code for iOS or macOS, including state and `@Observable` data flow, view composition, resizable layouts, sa… | warn (0E/2W) | none | none | unique |
 | `swiftui-liquid-glass` | canonical | Implement and review iOS 26+ SwiftUI Liquid Glass UI. Use when adopting Liquid Glass or checking its correctness, performance, and design fit. | pass | none | none | unique |
 | `swiftui-patterns` | canonical | Build macOS SwiftUI scenes and components with desktop patterns. Use when shaping windows, commands, toolbars, settings, split views, or inspectors. | pass | none | none | unique |
 | `swiftui-performance-audit` | canonical | Audit SwiftUI runtime performance from code first. Use when diagnosing slow rendering, janky scrolling, expensive updates, or profiling needs. | pass | none | none | unique |
@@ -151,10 +157,10 @@ Do not edit by hand. Regenerate instead.
 | `tech-debt-audit` | canonical | Thorough, user-invoked tech debt and architecture audit of the current codebase. Produces TECH_DEBT_AUDIT.md with file-cited findings, severity, effort estimat… | pass | disable-model-invocation | none | unique |
 | `technical-seo-ai-crawler-audit` | canonical | Diagnose and prioritize the technical issues blocking a site from being crawled, indexed, ranked, and cited. Modern technical SEO has two audiences: Google's c… | pass | none | none | unique |
 | `technical-writing` | canonical | Write or edit technical content for developers in a direct, factual voice. Covers product release and feature announcement posts, changelog deep-dives, Hacker… | pass | none | none | unique |
-| `test-audit` | canonical | Invoke whenever writing, changing, reviewing, or sweeping tests. Authoring gate for new tests plus audit workflow for low-value, implementation-coupled, or dup… | pass | none | none | unique |
+| `test-audit` | canonical | Writing/changing/reviewing/sweeping tests: reject duplicate or implementation-coupled proof; remove test-only production seams. | fail (3E/0W) | none | none | unique |
 | `thought-leadership-blog` | canonical | Write thought leadership blog posts establishing company perspective on industry trends and technical philosophy. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `typesafe-ai` | canonical | Build AI-powered software with TypeSafe: small units of AI intelligence you can use like programming primitives. Its System One models, including Jev, turn nat… | pass | none | none | unique |
-| `upgrade-stripe` | canonical | Guide for upgrading Stripe API versions and SDKs | pass | none | none | unique |
+| `upgrade-stripe` | canonical | Guide for upgrading Stripe API versions, webhook endpoints, server-side SDKs, Stripe.js, and mobile SDKs | pass | none | none | unique |
 | `vercel-composition-patterns` | canonical | React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reu… | pass | none | none | unique |
 | `vercel-react-best-practices` | canonical | React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js… | pass | none | none | unique |
 | `vercel-react-native-skills` | canonical | React Native and Expo best practices for building performant mobile apps. Use when building React Native components, optimizing list performance, implementing… | pass | none | none | unique |
@@ -224,7 +230,9 @@ Do not edit by hand. Regenerate instead.
 
 ### `hyperframes` (canonical)
 
-- **warn** `absolute-path` scripts/lib/frame-packets-core.mjs:163 contains a system absolute path '/private/tmp'
+- **warn** `absolute-path` scripts/locate.mjs:57 contains a system absolute path '/tmp/locate-font.ttf'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+- **warn** `absolute-path` scripts/lib/main-module.mjs:5 contains a system absolute path '/private/tmp'
   - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
 
 ### `hyperframes-audio` (canonical)
@@ -236,11 +244,13 @@ Do not edit by hand. Regenerate instead.
 
 ### `hyperframes-cli` (canonical)
 
-- **warn** `reference-escapes-skill` references/cloud.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked
+- **warn** `reference-escapes-skill` SKILL.md: link '../hyperframes/references/plugin-installation.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/plugin-installation.md; it does not follow the skill when symlinked
   - Smallest fix: link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
-- **warn** `reference-escapes-skill` references/cloudrun.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked
+- **warn** `reference-escapes-skill` references/cloud.md: link '../../hyperframes/references/format.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/format.md; it does not follow the skill when symlinked
   - Smallest fix: link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
-- **warn** `reference-escapes-skill` references/lambda.md: link '../../hyperframes-core/references/variables-and-media.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes-core/references/variables-and-media.md; it does not follow the skill when symlinked
+- **warn** `reference-escapes-skill` references/cloudrun.md: link '../../hyperframes/references/format.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/format.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+- **warn** `reference-escapes-skill` references/lambda.md: link '../../hyperframes/references/format.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/format.md; it does not follow the skill when symlinked
   - Smallest fix: link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
 - **warn** `absolute-path` references/preview-render.md:92 contains a system absolute path '/tmp/hf-profile'
   - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
@@ -251,6 +261,11 @@ Do not edit by hand. Regenerate instead.
   - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
 - **warn** `absolute-path` references/typography.md:81 contains a system absolute path '/tmp/fontquery.py'
   - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+
+### `hyperframes-registry` (canonical)
+
+- **warn** `reference-escapes-skill` SKILL.md: link '../hyperframes/references/plugin-installation.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/plugin-installation.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
 
 ### `lifecycle-email` (canonical)
 
@@ -266,15 +281,23 @@ Do not edit by hand. Regenerate instead.
 
 ### `media-use` (canonical)
 
+- **warn** `reference-escapes-skill` SKILL.md: link '../hyperframes/references/plugin-installation.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/hyperframes/references/plugin-installation.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared 'references/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+- **warn** `absolute-path` audio/scripts/carve.test.mjs:185 contains a system absolute path '/private/tmp'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+- **warn** `absolute-path` audio/scripts/lib/main-module.mjs:5 contains a system absolute path '/private/tmp'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+- **warn** `absolute-path` audio/scripts/lib/python.test.mjs:64 contains a system absolute path '/home/u/.venvs/hf/bin/python'
+  - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
 - **warn** `absolute-path` audio/scripts/lib/tts.spawn.test.mjs:27 contains a system absolute path '/opt/node/lib/node_modules/npm/bin/npm-cli.js'
   - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
 - **warn** `absolute-path` audio/scripts/lib/tts.spawn.test.mjs:28 contains a system absolute path '/opt/node/bin/node'
   - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
 - **warn** `absolute-path` audio/scripts/lib/tts.spawn.test.mjs:30 contains a system absolute path '/opt/node/lib/node_modules/npm/bin/npx-cli.js'
   - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
-- **warn** `absolute-path` audio/scripts/lib/tts.test.mjs:99 contains a system absolute path '/tmp/x.wav'
+- **warn** `absolute-path` audio/scripts/lib/tts.test.mjs:108 contains a system absolute path '/tmp/x.wav'
   - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
-- **warn** `absolute-path` audio/scripts/lib/tts.test.mjs:154 contains a system absolute path '/tmp/none.wav'
+- **warn** `absolute-path` audio/scripts/lib/tts.test.mjs:163 contains a system absolute path '/tmp/none.wav'
   - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
 
 ### `positioning-framework` (canonical)
@@ -309,8 +332,12 @@ Do not edit by hand. Regenerate instead.
 
 ### `remotion-best-practices` (canonical)
 
-- **warn** `reference-missing-extension` rules/voiceover.md: link './calculate-metadata' resolves only once '.md' is appended; on disk the link is dead
-  - Smallest fix: Write it as './calculate-metadata.md'.
+- **warn** `secret-suspected` remotion-docs/REFERENCE.md:15 looks like a assigned-credential: 3e42… (32 chars, sha256:7ebbdbe0)
+  - Smallest fix: Confirm, then rotate the credential and replace it with an environment lookup.
+- **warn** `secret-suspected` remotion-maps/techniques/mapbox/TECHNIQUE.md:101 looks like a assigned-credential: mapb… (17 chars, sha256:1ae18e81)
+  - Smallest fix: Confirm, then rotate the credential and replace it with an environment lookup.
+- **warn** `secret-suspected` remotion-markup/remotion-maps/techniques/mapbox/TECHNIQUE.md:101 looks like a assigned-credential: mapb… (17 chars, sha256:1ae18e81)
+  - Smallest fix: Confirm, then rotate the credential and replace it with an environment lookup.
 
 ### `sales-email` (canonical)
 
@@ -326,10 +353,16 @@ Do not edit by hand. Regenerate instead.
 
 ### `swiftui-expert-skill` (canonical)
 
-- **warn** `absolute-path` SKILL.md:54 contains a system absolute path '/tmp/stop-trace'
+- **warn** `absolute-path` SKILL.md:57 contains a system absolute path '/tmp/stop-trace'
   - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
 - **warn** `absolute-path` references/trace-recording.md:62 contains a system absolute path '/tmp/stop-trace'
   - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
+
+### `test-audit` (canonical)
+
+- **error** `reference-broken` SKILL.md: link '../../../docs/help/testing/writing-tests.md' does not resolve to a file
+- **error** `reference-broken` SKILL.md: link '../openclaw-testing/SKILL.md' does not resolve to a file
+- **error** `reference-broken` references/audit.md: link '../../openclaw-testing/SKILL.md' does not resolve to a file
 
 ### `thought-leadership-blog` (canonical)
 
