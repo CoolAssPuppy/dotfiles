@@ -201,7 +201,12 @@ fi
 
 # command prompt for remote server connections
 if [[ -n "${SSH_CONNECTION:-}" ]]; then
-  PROMPT='%F{yellow}[home-server]%f %F{cyan}%~%f %# '
+  case "${HOST:l}" in
+    *mac-mini*|mini) _ssh_prompt_name=mini ;;
+    *) _ssh_prompt_name=home-server ;;
+  esac
+  PROMPT="%F{yellow}[${_ssh_prompt_name}]%f %F{cyan}%~%f %# "
+  unset _ssh_prompt_name
 fi
 
 # kimi-code
