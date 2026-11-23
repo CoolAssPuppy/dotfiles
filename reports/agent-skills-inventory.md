@@ -1,18 +1,18 @@
 # Agent skills inventory
 
-Generated 2026-10-22T22:16:39+01:00 by `scripts/validate-agent-skills.py`.
+Generated 2026-11-08T13:59:09+00:00 by `scripts/validate-agent-skills.py`.
 Do not edit by hand. Regenerate instead.
 
 ## Sources
 
 | Source | Path | Skills | Anomalies |
 | --- | --- | --- | --- |
-| canonical | `/Users/prashant/Developer/brain/skills` | 154 | 1 |
+| canonical | `/Users/prashant/Developer/brain/skills` | 161 | 1 |
 
 ## Totals
 
-- 154 skills across 154 unique names
-- 120 pass, 33 warn, 1 fail
+- 161 skills across 161 unique names
+- 126 pass, 35 warn, 0 fail
 - 0 duplicate names, 0 unresolved conflicts
 - 1 anomalies in the source directories
 
@@ -34,6 +34,7 @@ Do not edit by hand. Regenerate instead.
 | `campaign-analyzer` | canonical | Analyze paid media performance across dimensions, funnels, cohorts, and channels — turning data into actionable insights and business narratives. | pass | none | none | unique |
 | `case-study` | canonical | Create customer case studies from verified customer evidence. Use when interviewing a customer, structuring a success story, or drafting a case study for sales… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `cmo-coaching` | canonical | Generate a CMO coaching report from the user's Slack, Linear, and Notion activity. Use when the user asks for feedback on executive presence, judgment, leaders… | pass | user-invocable | none | unique |
+| `coloring-book` | canonical | Create, revise, or resume a complete coloring and activity book on any topic, with original illustrations, solvable puzzles, answers, an attractive cover, edit… | pass | none | none | unique |
 | `competitive-analysis` | canonical | Conducts competitive analysis for technical products across a competitive set, including the status quo and build-it-yourself, using public research, product t… | pass | user-invocable | none | unique |
 | `competitive-battlecard` | canonical | Writes a full battlecard document about one named competitor for sales and marketing teams, with company facts, strengths and weaknesses, how each side wins, o… | pass | user-invocable | none | unique |
 | `connect-recommend` | canonical | Use this skill when the user asks about Stripe Connect configuration, charge patterns, Dashboard access, or how to get started with Connect, is building a mark… | pass | none | none | unique |
@@ -70,6 +71,7 @@ Do not edit by hand. Regenerate instead.
 | `fix-php-vuln` | canonical | Use when the user asks to fix, patch or upgrade a PHP vulnerability (e.g. 'Please fix my PHP vulnerability'), PHP2Shell, CVE-2026-109618 or CVE-2026-109619, or… | pass | none | none | unique |
 | `general-video` | canonical | Author or edit a custom HyperFrames composition when no specialized workflow fits, or when BRIEF.md sets flow: companion. Use for longer or multi-scene pieces,… | warn (0E/1W) | none | none | unique |
 | `generate-ranking-video` | canonical | Create viral ranking countdown videos in PolarRanks style. Overlays ranked lists on background video clips. Works for any topic -- books, people, places, movie… | pass | user-invocable | none | unique |
+| `gestures` | canonical | Build drag, swipe, and sheet interactions that track the finger 1:1 and stay interruptible. Use when building or fixing anything the user drags, swipes, flings… | pass | none | none | unique |
 | `go-to-market` | canonical | Writes a one-document launch plan for a single product or feature launch, with tier, measurable objectives, audience, key messages, tier-scaled tactics, owners… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `google-ads-account-audit` | canonical | Systematic 70+ checkpoint audit covering tracking, structure, keywords, ads, bidding, budgets, audiences, and competitive positioning — with ICE-prioritized re… | pass | none | none | unique |
 | `google-ads-campaign-builder` | canonical | Build and configure Google Ads campaigns across all 10+ campaign types — from campaign type selection through settings, targeting, creatives, and launch. | pass | none | none | unique |
@@ -77,6 +79,8 @@ Do not edit by hand. Regenerate instead.
 | `google-ads-optimizer` | canonical | Optimize running Google Ads campaigns — bid strategy tuning, budget reallocation, Quality Score improvement, ad copy iteration, audience refinement, placement… | pass | none | none | unique |
 | `google-ads-scripts` | canonical | Select, implement, and manage Google Ads scripts to automate PPC tasks at scale — n-gram analysis, bid management, budget pacing, anomaly detection, and perfor… | pass | none | none | unique |
 | `google-merchant-center` | canonical | Optimize product feeds for Shopping and Performance Max campaigns — from fixing disapprovals to building custom label strategies that power profitability-based… | pass | none | none | unique |
+| `grill-me` | canonical | A relentless interview to sharpen a plan or design. | pass | disable-model-invocation | none | unique |
+| `grilling` | canonical | Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases. | pass | none | none | unique |
 | `gtm-strategy` | canonical | Develops go-to-market strategy for technical products by choosing and combining product-led, sales-led, open-source, and hybrid motions, including PLG funnels,… | pass | user-invocable | none | unique |
 | `humanize` | canonical | Remove signs of AI-generated writing from text. Use when editing or reviewing text to make it sound more natural and human-written. Based on Wikipedia's compre… | pass | allowed-tools, user-invocable | none | unique |
 | `hyperframes` | canonical | Read first to make, edit, animate or render any video with HyperFrames (HTML rendered to video), including launch films, explainers, music videos, charts, maps… | warn (0E/2W) | none | none | unique |
@@ -135,6 +139,8 @@ Do not edit by hand. Regenerate instead.
 | `source-command-new-blog` | canonical | Research and create data-driven blog posts using Picks and Shovels methodology | pass | none | none | unique |
 | `source-command-verify-supabase` | canonical | Comprehensive Supabase security and best practices verification | pass | none | none | unique |
 | `spm-build-analysis` | canonical | Analyze Swift Package Manager dependencies, package plugins, module variants, and CI-oriented build overhead that slow Xcode builds. Use when a developer suspe… | warn (0E/2W) | none | SKILL.md: link '../xcode-project-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-project-analyzer/SKILL.md; it does not follow the skill when s… | unique |
+| `stageshow` | canonical | Build faux product UI that looks like a real product, as a still illustration or an animated demo with a cursor. Browser and app windows, dashboards, phones, n… | pass | none | none | unique |
+| `strategy` | canonical | Write, review, pressure-test, or update a strategy for a company, product, or team, and turn it into a plan teams can execute. Starts from a diagnosis of the m… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `stripe-best-practices` | canonical | Guides Stripe integration decisions across development and test environment planning (separate sandboxes vs the shared test mode sandbox), API selection (Check… | pass | none | none | unique |
 | `stripe-directory` | canonical | Identifies external providers, merchants, nonprofits, platforms, APIs, and software services, and resolves the documented way to engage them — to pay, donate,… | pass | allowed-tools | none | unique |
 | `stripe-docs` | canonical | Use when the user or agent needs to read, search, or look up Stripe documentation or API reference. Prefer this over curl or WebFetch for any docs.stripe.com c… | pass | allowed-tools | none | unique |
@@ -157,8 +163,9 @@ Do not edit by hand. Regenerate instead.
 | `tech-debt-audit` | canonical | Thorough, user-invoked tech debt and architecture audit of the current codebase. Produces TECH_DEBT_AUDIT.md with file-cited findings, severity, effort estimat… | pass | disable-model-invocation | none | unique |
 | `technical-seo-ai-crawler-audit` | canonical | Diagnose and prioritize the technical issues blocking a site from being crawled, indexed, ranked, and cited. Modern technical SEO has two audiences: Google's c… | pass | none | none | unique |
 | `technical-writing` | canonical | Write or edit technical content for developers in a direct, factual voice. Covers product release and feature announcement posts, changelog deep-dives, Hacker… | pass | none | none | unique |
-| `test-audit` | canonical | Writing/changing/reviewing/sweeping tests: reject duplicate or implementation-coupled proof; remove test-only production seams. | fail (3E/0W) | none | none | unique |
+| `test-audit` | canonical | Writing/changing/reviewing/sweeping tests: reject duplicate or implementation-coupled proof; remove test-only production seams. | pass | none | none | unique |
 | `thought-leadership-blog` | canonical | Write thought leadership blog posts establishing company perspective on industry trends and technical philosophy. | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
+| `twitter-copywriting` | canonical | Draft, edit, or test Twitter posts, threads, hooks, and quote tweets, or audit social performance from actual tweet text and URLs. Use when writing tweets, Twi… | warn (0E/1W) | user-invocable | SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked | unique |
 | `typesafe-ai` | canonical | Build AI-powered software with TypeSafe: small units of AI intelligence you can use like programming primitives. Its System One models, including Jev, turn nat… | pass | none | none | unique |
 | `upgrade-stripe` | canonical | Guide for upgrading Stripe API versions, webhook endpoints, server-side SDKs, Stripe.js, and mobile SDKs | pass | none | none | unique |
 | `vercel-composition-patterns` | canonical | React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reu… | pass | none | none | unique |
@@ -351,6 +358,11 @@ Do not edit by hand. Regenerate instead.
 - **warn** `reference-escapes-skill` SKILL.md: link '../xcode-compilation-analyzer/SKILL.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/xcode-compilation-analyzer/SKILL.md; it does not follow the skill when symlinked
   - Smallest fix: link-skills.sh links the shared 'xcode-compilation-analyzer/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
 
+### `strategy` (canonical)
+
+- **warn** `reference-escapes-skill` SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+
 ### `swiftui-expert-skill` (canonical)
 
 - **warn** `absolute-path` SKILL.md:57 contains a system absolute path '/tmp/stop-trace'
@@ -358,13 +370,12 @@ Do not edit by hand. Regenerate instead.
 - **warn** `absolute-path` references/trace-recording.md:62 contains a system absolute path '/tmp/stop-trace'
   - Smallest fix: Use a path relative to the skill directory, or describe the location instead of hardcoding it.
 
-### `test-audit` (canonical)
-
-- **error** `reference-broken` SKILL.md: link '../../../docs/help/testing/writing-tests.md' does not resolve to a file
-- **error** `reference-broken` SKILL.md: link '../openclaw-testing/SKILL.md' does not resolve to a file
-- **error** `reference-broken` references/audit.md: link '../../openclaw-testing/SKILL.md' does not resolve to a file
-
 ### `thought-leadership-blog` (canonical)
+
+- **warn** `reference-escapes-skill` SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked
+  - Smallest fix: link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.
+
+### `twitter-copywriting` (canonical)
 
 - **warn** `reference-escapes-skill` SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked
   - Smallest fix: link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill.

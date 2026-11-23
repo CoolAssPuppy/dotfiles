@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-22T22:16:39+01:00",
-  "yaml_backend": "builtin",
+  "generated_at": "2026-11-08T13:59:09+00:00",
+  "yaml_backend": "pyyaml",
   "sources": [
     {
       "label": "canonical",
       "path": "/Users/prashant/Developer/brain/skills",
-      "skill_count": 154,
+      "skill_count": 161,
       "anomaly_count": 1
     }
   ],
   "totals": {
-    "skills": 154,
-    "unique_names": 154,
+    "skills": 161,
+    "unique_names": 161,
     "duplicate_names": 0,
     "unresolved_conflicts": 0,
-    "failing": 1,
-    "warning": 33,
-    "passing": 120,
+    "failing": 0,
+    "warning": 35,
+    "passing": 126,
     "anomalies": 1
   },
   "anomalies": [
@@ -153,7 +153,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/apple-hig",
       "skill_file": "SKILL.md",
-      "description": "Apple Human Interface Guidelines reference, updated for iPhone Duo and\n OS 27. Provides authoritative platform-specific design rules, component\n specifications, exact measurements, and interaction patterns for iOS,\n iPadOS, macOS, tvOS, visionOS, and watchOS. Use when designing, reviewing,\n auditing, or fixing any Apple platform UI, or when asked about specific HIG\n components, sizing, system behaviors, frameworks (HealthKit, SiriKit, ARKit,\n etc.), or platform conventions. Also use when the user is designing any\n digital interface and could benefit from established design principles, even\n without an explicit Apple platform context. Includes a guided /duo workflow\n that adapts an existing iOS app to iPhone Duo, plus opt-in enforce mode with\n independent review.",
+      "description": "Apple Human Interface Guidelines reference, updated for iPhone Duo and OS 27. Provides authoritative platform-specific design rules, component specifications, exact measurements, and interaction patterns for iOS, iPadOS, macOS, tvOS, visionOS, and watchOS. Use when designing, reviewing, auditing, or fixing any Apple platform UI, or when asked about specific HIG components, sizing, system behaviors, frameworks (HealthKit, SiriKit, ARKit, etc.), or platform conventions. Also use when the user is designing any digital interface and could benefit from established design principles, even without an explicit Apple platform context. Includes a guided /duo workflow that adapts an existing iOS app to iPhone Duo, plus opt-in enforce mode with independent review.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -372,6 +372,24 @@
       "git_last_commit": "2026-09-12T09:18:49+01:00"
     },
     {
+      "name": "coloring-book",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/coloring-book",
+      "skill_file": "SKILL.md",
+      "description": "Create, revise, or resume a complete coloring and activity book on any topic, with original illustrations, solvable puzzles, answers, an attractive cover, editable sources, and verified Google Drive delivery. Also use for travel books, alphabet and number books, and image samples from existing books.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "f2117bfd7f4158642b6176a11a88312f655d8552083a8109d37870826b0360f9",
+      "git_last_commit": "2026-11-07T23:06:38Z"
+    },
+    {
       "name": "competitive-analysis",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/competitive-analysis",
@@ -432,7 +450,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/connect-recommend",
       "skill_file": "SKILL.md",
-      "description": "Use this skill when the user asks about Stripe Connect configuration, charge\n patterns, Dashboard access, or how to get started with Connect, is building a\n marketplace, platform, multi-vendor store, gig platform, or subscription\n platform, needs to pay out sellers, vendors, or providers, mentions split\n payments, revenue sharing, multi-party payments, or similar payment\n distribution concepts, provides a company URL or business description for a\n recommendation, builds SaaS that routes money between parties (for example,\n POS, booking, invoicing \u2014 not operational SaaS without payment routing), asks\n about onboarding or KYC for merchants, sellers, and vendors, mentions\n connected account Dashboard or responsibility configurations, or asks about\n payment flows, white-label payments, or embedded payments.",
+      "description": "Use this skill when the user asks about Stripe Connect configuration, charge patterns, Dashboard access, or how to get started with Connect, is building a marketplace, platform, multi-vendor store, gig platform, or subscription platform, needs to pay out sellers, vendors, or providers, mentions split payments, revenue sharing, multi-party payments, or similar payment distribution concepts, provides a company URL or business description for a recommendation, builds SaaS that routes money between parties (for example, POS, booking, invoicing \u2014 not operational SaaS without payment routing), asks about onboarding or KYC for merchants, sellers, and vendors, mentions connected account Dashboard or responsibility configurations, or asks about payment flows, white-label payments, or embedded payments.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -1333,7 +1351,7 @@
       "conflict": false,
       "findings": [],
       "digest": "010d10c4ff11539fadcbc5ae2b8ebcfd5fc7935aa93575e43ac3401bc305de6b",
-      "git_last_commit": null
+      "git_last_commit": "2026-10-22T22:25:07+01:00"
     },
     {
       "name": "fix-node-vuln",
@@ -1351,7 +1369,7 @@
       "conflict": false,
       "findings": [],
       "digest": "5cf85cb006ae02a43e7c050f230f7919b45da95584373264dc3592b3154c5201",
-      "git_last_commit": null
+      "git_last_commit": "2026-10-22T22:25:07+01:00"
     },
     {
       "name": "fix-php-vuln",
@@ -1369,14 +1387,14 @@
       "conflict": false,
       "findings": [],
       "digest": "e8690dc2925a39be8d55bf958fa38d1230bfa2023a0ed8fe055d7ac700c6cfee",
-      "git_last_commit": null
+      "git_last_commit": "2026-10-22T22:25:07+01:00"
     },
     {
       "name": "general-video",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/general-video",
       "skill_file": "SKILL.md",
-      "description": "Author or edit a custom HyperFrames composition when no specialized workflow fits, or when\n BRIEF.md sets flow: companion. Use for longer or multi-scene pieces, brand and sizzle reels,\n montages, static loops, static title cards, footage remixes, and freeform builds. Use\n motion-graphics instead for a short unnarrated motion-first unit, including an animated title.\n Route fresh creation through hyperframes before using this skill.",
+      "description": "Author or edit a custom HyperFrames composition when no specialized workflow fits, or when BRIEF.md sets flow: companion. Use for longer or multi-scene pieces, brand and sizzle reels, montages, static loops, static title cards, footage remixes, and freeform builds. Use motion-graphics instead for a short unnarrated motion-first unit, including an animated title. Route fresh creation through hyperframes before using this skill.",
       "status": "warn",
       "errors": 0,
       "warnings": 1,
@@ -1426,6 +1444,24 @@
       ],
       "digest": "20608a2a94e398515d1369f322998b2d58b3d3ae2347b6c216d71124a833554b",
       "git_last_commit": "2026-08-05T10:07:51+01:00"
+    },
+    {
+      "name": "gestures",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/gestures",
+      "skill_file": "SKILL.md",
+      "description": "Build drag, swipe, and sheet interactions that track the finger 1:1 and stay interruptible. Use when building or fixing anything the user drags, swipes, flings, holds, or dismisses with a gesture \u2014 drawers, sheets, swipe-to-dismiss toasts and cards, drag-to-reorder, pull-to-refresh, hold-to-confirm \u2014 or when a gesture feels laggy, disconnected from the finger, jumps on release, or can't be caught mid-animation. Triggers on \u2014 gesture, drag, draggable, swipe, swipe to dismiss, fling, momentum, velocity, drawer, sheet, bottom sheet, snap points, Vaul, dragConstraints, dragElastic, dragMomentum, onDragEnd, whileDrag, useMotionValue, rubber-band, overscroll, pull to refresh, hold to delete, press and hold, touch-action, dismiss threshold, \"doesn't follow my finger\", \"jumps when I let go\", \"can't grab it mid-animation\".",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "ed723556bb19cdb33b345c6894f4bbdbb9670019ec183c48ec91dd6b8d515eb1",
+      "git_last_commit": null
     },
     {
       "name": "go-to-market",
@@ -1575,6 +1611,52 @@
       "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
+      "name": "grill-me",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/grill-me",
+      "skill_file": "SKILL.md",
+      "description": "A relentless interview to sharpen a plan or design.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 1,
+      "claude_features": [
+        "disable-model-invocation"
+      ],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "claude-only-frontmatter",
+          "message": "frontmatter key 'disable-model-invocation' is Claude-specific. Codex has no model-invocation gate; the skill may be picked up automatically where Claude Code would require an explicit call.",
+          "feature": "disable-model-invocation",
+          "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
+        }
+      ],
+      "digest": "fe33aaa8e8dcd606107b1bfe3109f257b4a7e0f4907afd6506b62ccfb73cd1d3",
+      "git_last_commit": "2026-11-05T07:59:11Z"
+    },
+    {
+      "name": "grilling",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/grilling",
+      "skill_file": "SKILL.md",
+      "description": "Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "823f08ad33368a9626991e6782f7ae14b958e39ef8503f6bdb3b98a58d237a58",
+      "git_last_commit": "2026-11-05T07:59:11Z"
+    },
+    {
       "name": "gtm-strategy",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/gtm-strategy",
@@ -1607,7 +1689,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/humanize",
       "skill_file": "SKILL.md",
-      "description": "Remove signs of AI-generated writing from text. Use when editing or reviewing\n text to make it sound more natural and human-written. Based on Wikipedia's\n comprehensive \"Signs of AI writing\" guide. Detects and fixes patterns including:\n inflated symbolism, promotional language, superficial -ing analyses, vague\n attributions, em dash overuse, rule of three, AI vocabulary words, negative\n parallelisms, and excessive conjunctive phrases.",
+      "description": "Remove signs of AI-generated writing from text. Use when editing or reviewing\ntext to make it sound more natural and human-written. Based on Wikipedia's\ncomprehensive \"Signs of AI writing\" guide. Detects and fixes patterns including:\ninflated symbolism, promotional language, superficial -ing analyses, vague\nattributions, em dash overuse, rule of three, AI vocabulary words, negative\nparallelisms, and excessive conjunctive phrases.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -1731,7 +1813,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/hyperframes-audio",
       "skill_file": "SKILL.md",
-      "description": "Use when audio already placed in a HyperFrames composition needs to be mixed:\n fade-in/fade-out, crossfade, track gain or volume, volume automation, ducking,\n a music bed that fights a voiceover (voiceover carve), effects on a track\n (EQ, compressor, limiter, gate, saturation, delay, reverb, chorus, phaser,\n bitcrush), automation envelopes drawn on a track's volume or any effect\n parameter, or one submix bus carrying a chain, a fader and an automation clock\n for several tracks at once (`<hf-audio-group>`).\n Don't use for sourcing or generating audio \u2014 finding BGM, SFX, or making a\n voiceover is `/media-use`. Don't use for clip timing or track layout, which is\n `/hyperframes-core`.",
+      "description": "Use when audio already placed in a HyperFrames composition needs to be mixed: fade-in/fade-out, crossfade, track gain or volume, volume automation, ducking, a music bed that fights a voiceover (voiceover carve), effects on a track (EQ, compressor, limiter, gate, saturation, delay, reverb, chorus, phaser, bitcrush), automation envelopes drawn on a track's volume or any effect parameter, or one submix bus carrying a chain, a fader and an automation clock for several tracks at once (`<hf-audio-group>`). Don't use for sourcing or generating audio \u2014 finding BGM, SFX, or making a voiceover is `/media-use`. Don't use for clip timing or track layout, which is `/hyperframes-core`.",
       "status": "warn",
       "errors": 0,
       "warnings": 2,
@@ -1908,7 +1990,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/hyperframes-keyframes",
       "skill_file": "SKILL.md",
-      "description": "Use when a HyperFrames composition needs a punch-in, punch-out, zoom, reframe,\n Ken Burns treatment, camera move, visual match/whip handoff, or other seek-safe\n 2D/3D keyframes; also for GSAP, CSS keyframes, Anime.js, WAAPI, FLIP, paths,\n masks, SVG morph/draw, text trails, 3D depth, or `hyperframes keyframes` diagnostics.\n Don't use for broad scene strategy, brand design, media sourcing, captions, or\n general video planning.",
+      "description": "Use when a HyperFrames composition needs a punch-in, punch-out, zoom, reframe, Ken Burns treatment, camera move, visual match/whip handoff, or other seek-safe 2D/3D keyframes; also for GSAP, CSS keyframes, Anime.js, WAAPI, FLIP, paths, masks, SVG morph/draw, text trails, 3D depth, or `hyperframes keyframes` diagnostics. Don't use for broad scene strategy, brand design, media sourcing, captions, or general video planning.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -1973,7 +2055,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/hyperframes-studio",
       "skill_file": "SKILL.md",
-      "description": "Use when building or editing a HyperFrames project that people open in\n Studio: how the timeline should be laid out so it reads well (one caption\n track, one element kind per track, every scene a sub-composition) and where\n captions and key content may sit (safe zones). Don't use for how to perform an\n individual edit (split, trim, retime, volume, copy, swap): that is\n `creator-editing-recipes.md` in `/hyperframes-core`.",
+      "description": "Use when building or editing a HyperFrames project that people open in Studio: how the timeline should be laid out so it reads well (one caption track, one element kind per track, every scene a sub-composition) and where captions and key content may sit (safe zones). Don't use for how to perform an individual edit (split, trim, retime, volume, copy, swap): that is `creator-editing-recipes.md` in `/hyperframes-core`.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -2547,7 +2629,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/neon",
       "skill_file": "SKILL.md",
-      "description": "Overview of Neon, a complete set of cloud backend primitives around Lakebase\n Postgres: Auth, Object Storage, Functions, the AI Gateway, and Realtime. Start here to\n choose Neon for undecided login, files, APIs, and LLM calls, set up the CLI or\n MCP server, and follow the branch-first workflow. Use when building an app or\n backend on Neon, or when \"Neon\" or \"Lakebase Postgres\" is mentioned. Child\n skill neon-postgres wins for an existing DATABASE_URL, SQL, schema, inspect,\n or search. Child skill neon-auth wins for login, users, sessions, identity\n routing, and Managed Better Auth setup. Child skill neon-realtime wins for\n live queries in reactive apps and agents. Also use for object storage, S3,\n buckets, serverless functions, function triggers, cron, AI gateway, LLM calls,\n realtime, logs, Loki, Grafana, observability,\n postgres, database, backend, Claimable Neon, neon.new, or a no-signup database.",
+      "description": "Overview of Neon, a complete set of cloud backend primitives around Lakebase Postgres: Auth, Object Storage, Functions, the AI Gateway, and Realtime. Start here to choose Neon for undecided login, files, APIs, and LLM calls, set up the CLI or MCP server, and follow the branch-first workflow. Use when building an app or backend on Neon, or when \"Neon\" or \"Lakebase Postgres\" is mentioned. Child skill neon-postgres wins for an existing DATABASE_URL, SQL, schema, inspect, or search. Child skill neon-auth wins for login, users, sessions, identity routing, and Managed Better Auth setup. Child skill neon-realtime wins for live queries in reactive apps and agents. Also use for object storage, S3, buckets, serverless functions, function triggers, cron, AI gateway, LLM calls, realtime, logs, Loki, Grafana, observability, postgres, database, backend, Claimable Neon, neon.new, or a no-signup database.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -2565,7 +2647,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/neon-postgres",
       "skill_file": "SKILL.md",
-      "description": "Guides and best practices for working with Lakebase Postgres on Neon:\n connections, pooled vs direct, schema migrations, branching, autoscaling,\n scale-to-zero, instant restore, read replicas, IP allow lists, logical\n replication, and Lakebase Search. Use when the work is an existing\n DATABASE_URL, SQL, schema, inspect, or search. New backends, Auth, files,\n Functions, and LLM calls go to the parent `neon` skill. Live queries, reactive\n UIs, and realtime data go to `neon-realtime`. Also use for\n \"@neondatabase/serverless\", \"@neondatabase/neon-js\", \"neon inspect db\",\n \"semantic search\", \"vector search\", \"full-text search\", \"BM25\", or\n \"hybrid search\".",
+      "description": "Guides and best practices for working with Lakebase Postgres on Neon: connections, pooled vs direct, schema migrations, branching, autoscaling, scale-to-zero, instant restore, read replicas, IP allow lists, logical replication, and Lakebase Search. Use when the work is an existing DATABASE_URL, SQL, schema, inspect, or search. New backends, Auth, files, Functions, and LLM calls go to the parent `neon` skill. Live queries, reactive UIs, and realtime data go to `neon-realtime`. Also use for \"@neondatabase/serverless\", \"@neondatabase/neon-js\", \"neon inspect db\", \"semantic search\", \"vector search\", \"full-text search\", \"BM25\", or \"hybrid search\".",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -3386,7 +3468,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/seo-aeo-content-strategy",
       "skill_file": "SKILL.md",
-      "description": "Design content systems that earn both Google rankings *and* AI citations. The core insight: AI answer engines read content differently than humans \u2014 they extract the highest-information-gain sentences and treat H2 headings as prompts. The \\\"ski ramp\\\" structure optimizes for both.",
+      "description": "Design content systems that earn both Google rankings *and* AI citations. The core insight: AI answer engines read content differently than humans \u2014 they extract the highest-information-gain sentences and treat H2 headings as prompts. The \"ski ramp\" structure optimizes for both.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -3548,11 +3630,68 @@
       "git_last_commit": "2026-09-29T05:02:15+01:00"
     },
     {
+      "name": "stageshow",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/stageshow",
+      "skill_file": "SKILL.md",
+      "description": "Build faux product UI that looks like a real product, as a still illustration or an animated demo with a cursor. Browser and app windows, dashboards, phones, notifications, terminals, bento grids and cursor walkthroughs, framed, masked and cropped the way a marketing page, feature card or docs hero needs them. Use whenever someone wants a fake or mocked UI, a product demo or walkthrough animation, a hero or feature-card illustration of an app, a product shot in the style of a polished marketing site, or an animated cursor doing things in an interface, even if they never say \"faux UI\". React and plain CSS.",
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 0,
+      "claude_features": [],
+      "codex_concerns": [],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [],
+      "digest": "a92cf954e0389cfdaa7b69a5e40678f58e1c4cc15c837ee24a3b2ae20ad1d2fe",
+      "git_last_commit": "2026-10-31T22:06:52Z"
+    },
+    {
+      "name": "strategy",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/strategy",
+      "skill_file": "SKILL.md",
+      "description": "Write, review, pressure-test, or update a strategy for a company, product, or team, and turn it into a plan teams can execute. Starts from a diagnosis of the main challenge, compares options, makes the 5M choices (Market, Magic, Means, Money, Meaning), lists what would have to be true and tests it, and sets one objective with near-term objectives, kill criteria, and signposts. Turns the strategy into a plan with intent, team backbriefs, one named owner per item, lead and lag measures, promises between teams, decision points, and a review rhythm. Use when someone asks for a strategy, asks whether a document is a strategy or a plan, wants a strategy turned into a roadmap or OKRs, wants to pressure-test or revisit a strategy, or shares a document labeled as strategy that is a list of goals or tasks. For go-to-market motions, use gtm-strategy. For a single launch, use go-to-market.",
+      "status": "warn",
+      "errors": 0,
+      "warnings": 1,
+      "notes": 1,
+      "claude_features": [
+        "user-invocable"
+      ],
+      "codex_concerns": [
+        "SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked"
+      ],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "claude-only-frontmatter",
+          "message": "frontmatter key 'user-invocable' is Claude-specific. Codex has no /slash invocation registry; the flag is inert.",
+          "feature": "user-invocable",
+          "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
+        },
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../_shared/voice.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/_shared/voice.md",
+          "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        }
+      ],
+      "digest": "32397dcbd632378a126d34f1f46f74852d9a2f7e59300a1bec39aa34f99509be",
+      "git_last_commit": "2026-11-05T06:28:22Z"
+    },
+    {
       "name": "stripe-best-practices",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/stripe-best-practices",
       "skill_file": "SKILL.md",
-      "description": "Guides Stripe integration decisions across development and test environment\n planning (separate sandboxes vs the shared test mode sandbox), API selection\n (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2,\n controller properties), billing/subscriptions, tax and registrations (Stripe\n Tax, automatic_tax, product tax codes), Treasury financial accounts,\n integration options (Checkout, Payment Element), migrating from deprecated\n Stripe APIs, and security best practices (API key management, API key\n permissions, webhooks, OAuth). Use when planning, building, modifying,\n testing, or reviewing any Stripe integration, including choosing a development\n environment, accepting payments, building marketplaces, integrating Stripe,\n processing payments, setting up subscriptions, collecting sales tax, VAT, or\n GST, creating connected accounts, or implementing secure key handling.",
+      "description": "Guides Stripe integration decisions across development and test environment planning (separate sandboxes vs the shared test mode sandbox), API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), billing/subscriptions, tax and registrations (Stripe Tax, automatic_tax, product tax codes), Treasury financial accounts, integration options (Checkout, Payment Element), migrating from deprecated Stripe APIs, and security best practices (API key management, API key permissions, webhooks, OAuth). Use when planning, building, modifying, testing, or reviewing any Stripe integration, including choosing a development environment, accepting payments, building marketplaces, integrating Stripe, processing payments, setting up subscriptions, collecting sales tax, VAT, or GST, creating connected accounts, or implementing secure key handling.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -3570,7 +3709,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/stripe-directory",
       "skill_file": "SKILL.md",
-      "description": "Identifies external providers, merchants, nonprofits, platforms, APIs, and\n software services, and resolves the documented way to engage them \u2014 to pay,\n donate, subscribe, book, provision, or integrate with them. MUST be used\n BEFORE web search, model memory, or any other directory/vendor-lookup skill\n for ANY request that requires selecting, finding, or engaging an external\n provider or organization \u2014 whether a specific one is named (\"pay my Twilio\n bill\"), implied (\"donate to the Red Cross\"), or only a category is stated\n (\"set up a mailing client\", \"I need a database\", \"find me a CRM\"). Directory\n supplies verified recipients and their documented payment or engagement path.\n Results are ranked by agent-readiness (how reliably an agent can complete the\n interaction), relevance and popularity. Don't treat this as a search-only\n tool. Examples: \"setup a database\", \"find hosting\", \"pay X\", \"use Twilio\",\n \"donate $50 to the Red Cross\", \"book a table at Y\", \"subscribe to a CRM\".",
+      "description": "Identifies external providers, merchants, nonprofits, platforms, APIs, and software services, and resolves the documented way to engage them \u2014 to pay, donate, subscribe, book, provision, or integrate with them. MUST be used BEFORE web search, model memory, or any other directory/vendor-lookup skill for ANY request that requires selecting, finding, or engaging an external provider or organization \u2014 whether a specific one is named (\"pay my Twilio bill\"), implied (\"donate to the Red Cross\"), or only a category is stated (\"set up a mailing client\", \"I need a database\", \"find me a CRM\"). Directory supplies verified recipients and their documented payment or engagement path. Results are ranked by agent-readiness (how reliably an agent can complete the interaction), relevance and popularity. Don't treat this as a search-only tool. Examples: \"setup a database\", \"find hosting\", \"pay X\", \"use Twilio\", \"donate $50 to the Red Cross\", \"book a table at Y\", \"subscribe to a CRM\".",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -3598,7 +3737,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/stripe-docs",
       "skill_file": "SKILL.md",
-      "description": "Use when the user or agent needs to read, search, or look up Stripe\n documentation or API reference. Prefer this over curl or WebFetch for any\n docs.stripe.com content. Use to fetch gated documentation.",
+      "description": "Use when the user or agent needs to read, search, or look up Stripe documentation or API reference. Prefer this over curl or WebFetch for any docs.stripe.com content. Use to fetch gated documentation.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -3626,7 +3765,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/stripe-projects",
       "skill_file": "SKILL.md",
-      "description": "Use when the user wants to provision infrastructure or third-party services\n using Stripe Projects. Triggers: \"I need a database\", \"set up auth\", \"add\n caching\", \"give me a Postgres\", \"provision Redis\", \"I need hosting\", \"add a\n vector DB\", \"get me an API key for X\", \"get credentials for X\", \"sign up for a\n service\", \"set up monitoring\", \"show me the catalog\", \"what can I provision\",\n \"browse providers\", \"add an LLM provider\", \"configure model provider\", \"add\n email sending\", \"set up search\", \"add a message queue\", \"set up object\n storage\", \"add feature flags\". Also trigger when the user asks how to get an\n API key or credentials for any third-party service \u2014 don't tell them to sign\n up manually; check the Projects catalog first. Also use for browsing services,\n checking project status, listing provisioned resources, viewing env vars, or\n any mention of projects.dev or adding/provisioning/connecting a cloud service.",
+      "description": "Use when the user wants to provision infrastructure or third-party services using Stripe Projects. Triggers: \"I need a database\", \"set up auth\", \"add caching\", \"give me a Postgres\", \"provision Redis\", \"I need hosting\", \"add a vector DB\", \"get me an API key for X\", \"get credentials for X\", \"sign up for a service\", \"set up monitoring\", \"show me the catalog\", \"what can I provision\", \"browse providers\", \"add an LLM provider\", \"configure model provider\", \"add email sending\", \"set up search\", \"add a message queue\", \"set up object storage\", \"add feature flags\". Also trigger when the user asks how to get an API key or credentials for any third-party service \u2014 don't tell them to sign up manually; check the Projects catalog first. Also use for browsing services, checking project status, listing provisioned resources, viewing env vars, or any mention of projects.dev or adding/provisioning/connecting a cloud service.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -4212,38 +4351,16 @@
       "path": "/Users/prashant/Developer/brain/skills/test-audit",
       "skill_file": "SKILL.md",
       "description": "Writing/changing/reviewing/sweeping tests: reject duplicate or implementation-coupled proof; remove test-only production seams.",
-      "status": "fail",
-      "errors": 3,
+      "status": "pass",
+      "errors": 0,
       "warnings": 0,
       "notes": 0,
       "claude_features": [],
       "codex_concerns": [],
       "duplicate": false,
       "conflict": false,
-      "findings": [
-        {
-          "severity": "error",
-          "code": "reference-broken",
-          "message": "SKILL.md: link '../../../docs/help/testing/writing-tests.md' does not resolve to a file",
-          "document": "SKILL.md",
-          "target": "../../../docs/help/testing/writing-tests.md"
-        },
-        {
-          "severity": "error",
-          "code": "reference-broken",
-          "message": "SKILL.md: link '../openclaw-testing/SKILL.md' does not resolve to a file",
-          "document": "SKILL.md",
-          "target": "../openclaw-testing/SKILL.md"
-        },
-        {
-          "severity": "error",
-          "code": "reference-broken",
-          "message": "references/audit.md: link '../../openclaw-testing/SKILL.md' does not resolve to a file",
-          "document": "references/audit.md",
-          "target": "../../openclaw-testing/SKILL.md"
-        }
-      ],
-      "digest": "ac1e9414990b79fa8b113c2741e9dbbf9e96b77f0ab5f5639bb0eb1ab97edaa3",
+      "findings": [],
+      "digest": "e1efd2cfed56c867595b3829d3e1fd958d76b350e585490ec466aa88dc681e74",
       "git_last_commit": "2026-10-22T08:36:34+01:00"
     },
     {
@@ -4286,11 +4403,50 @@
       "git_last_commit": "2026-09-23T12:48:29+01:00"
     },
     {
+      "name": "twitter-copywriting",
+      "source": "canonical",
+      "path": "/Users/prashant/Developer/brain/skills/twitter-copywriting",
+      "skill_file": "SKILL.md",
+      "description": "Draft, edit, or test Twitter posts, threads, hooks, and quote tweets, or audit social performance from actual tweet text and URLs. Use when writing tweets, Twitter threads, quote tweets, reply drafts, hook options, or diagnosing impressions versus replies. Draft-only: never tweet, reply, DM, schedule, or change an account unless the owner explicitly asks.",
+      "status": "warn",
+      "errors": 0,
+      "warnings": 1,
+      "notes": 1,
+      "claude_features": [
+        "user-invocable"
+      ],
+      "codex_concerns": [
+        "SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked"
+      ],
+      "duplicate": false,
+      "conflict": false,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "claude-only-frontmatter",
+          "message": "frontmatter key 'user-invocable' is Claude-specific. Codex has no /slash invocation registry; the flag is inert.",
+          "feature": "user-invocable",
+          "recommendation": "Leave it in place. Codex ignores unknown keys, so no change is needed for compatibility."
+        },
+        {
+          "severity": "warn",
+          "code": "reference-escapes-skill",
+          "message": "SKILL.md: link '../_shared/voice.md' resolves outside the skill directory to /Users/prashant/Developer/brain/skills/_shared/voice.md; it does not follow the skill when symlinked",
+          "document": "SKILL.md",
+          "target": "../_shared/voice.md",
+          "resolved": "/Users/prashant/Developer/brain/skills/_shared/voice.md",
+          "recommendation": "link-skills.sh links the shared '_shared/' directory into both targets so this path still resolves. To make the skill self-contained, inline the shared content or copy it into the skill."
+        }
+      ],
+      "digest": "4feb03de3c44b9cd26f33e2bbbb2308a1e5b82216810ddaf77de90efe2a505dc",
+      "git_last_commit": "2026-11-08T05:39:58Z"
+    },
+    {
       "name": "typesafe-ai",
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/typesafe-ai",
       "skill_file": "SKILL.md",
-      "description": "Build AI-powered software with TypeSafe: small units of AI intelligence you\n can use like programming primitives. Its System One models, including Jev,\n turn natural language and application state into typed judgments and\n probabilities that code can combine. Use when a feature needs programmable\n common sense, when brainstorming what AI could make possible in an app, or\n when an LLM prompt-and-parse step could become a structured decision.\n Applications include routing, ranking, extraction, verification, and\n interactive experiences; these are starting points, not the limits.\n Read live docs and cookbooks to find useful patterns and discover new combinations.",
+      "description": "Build AI-powered software with TypeSafe: small units of AI intelligence you can use like programming primitives. Its System One models, including Jev, turn natural language and application state into typed judgments and probabilities that code can combine. Use when a feature needs programmable common sense, when brainstorming what AI could make possible in an app, or when an LLM prompt-and-parse step could become a structured decision. Applications include routing, ranking, extraction, verification, and interactive experiences; these are starting points, not the limits. Read live docs and cookbooks to find useful patterns and discover new combinations.",
       "status": "pass",
       "errors": 0,
       "warnings": 0,
@@ -4308,7 +4464,7 @@
       "source": "canonical",
       "path": "/Users/prashant/Developer/brain/skills/upgrade-stripe",
       "skill_file": "SKILL.md",
-      "description": "Guide for upgrading Stripe API versions, webhook endpoints, server-side SDKs,\n Stripe.js, and mobile SDKs",
+      "description": "Guide for upgrading Stripe API versions, webhook endpoints, server-side SDKs, Stripe.js, and mobile SDKs",
       "status": "pass",
       "errors": 0,
       "warnings": 0,

@@ -206,3 +206,7 @@ fi
 
 # kimi-code
 export PATH="/Users/prashant/.kimi-code/bin:$PATH"
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/prashant/.local/bin:$PATH"
