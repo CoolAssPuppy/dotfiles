@@ -46,6 +46,7 @@ link_dotfile() {
 }
 
 link_all_dotfiles() {
+  link_dotfile "$DOTFILES/remote-hosts.zsh" "$HOME/.zshrc.d/remote-hosts.zsh"
   link_dotfile "$DOTFILES/.zprofile" "$HOME/.zprofile"
   link_dotfile "$DOTFILES/dev-tools.zsh" "$HOME/.zshrc.d/dev-tools.zsh"
   link_dotfile "$DOTFILES/.zshrc"                   "$HOME/.zshrc"
