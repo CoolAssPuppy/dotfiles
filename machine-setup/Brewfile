@@ -29,7 +29,7 @@ brew "rbenv"
 brew "libpq"
 
 # Cloud and service CLIs
-brew "vercel-cli"
+cask "vercel"
 brew "dopplerhq/doppler/doppler"
 brew "supabase/tap/supabase"
 brew "stripe/stripe-cli/stripe"
