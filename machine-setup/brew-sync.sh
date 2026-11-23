@@ -47,9 +47,25 @@ for f in $(entries brew); do
   have "$have_formulae" "${f##*/}" || new_formulae="$new_formulae $f"
 done
 
+# Preserve apps installed manually, especially a running Tailscale connection.
+# brew list cannot see them, and replacing them during setup can interrupt SSH.
+app_is_present() {
+  brew info --json=v2 --cask "$1" | /usr/bin/ruby -rjson -e '
+    cask = JSON.parse(STDIN.read).fetch("casks").first
+    apps = cask.fetch("artifacts").flat_map { |a| a.fetch("app", []) }.select { |a| a.is_a?(String) }
+    exit(apps.any? { |app| File.directory?(File.join("/Applications", File.basename(app))) } ? 0 : 1)
+  '
+}
+
 new_casks=""
 for c in $(entries cask); do
-  have "$have_casks" "$c" || new_casks="$new_casks $c"
+  if have "$have_casks" "$c"; then
+    continue
+  elif app_is_present "$c"; then
+    note "Preserve existing $c app (not managed by Homebrew)"
+  else
+    new_casks="$new_casks $c"
+  fi
 done
 
 new_vscode=""
