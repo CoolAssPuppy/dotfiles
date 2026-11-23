@@ -61,7 +61,7 @@ app_is_present() {
 
 new_casks=""
 for c in $(entries cask); do
-  if have "$have_casks" "$c"; then
+  if have "$have_casks" "${c##*/}"; then
     continue
   elif app_is_present "$c"; then
     note "Preserve existing $c app (not managed by Homebrew)"
