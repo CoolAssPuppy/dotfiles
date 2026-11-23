@@ -10,6 +10,8 @@ TIMESTAMP="$(date +%Y%m%d-%H%M%S)"
 BACKUP_DIR="$TARGET_DIR/backups/pre-symlink-$TIMESTAMP"
 BACKED_UP=false
 
+mkdir -p "$TARGET_DIR"
+
 # "skills" is deliberately absent. Skills are no longer authored in this repo.
 # The canonical directory is ~/Developer/brain/skills, and its installer links
 # each skill individually into every agent directory, including this repo's
