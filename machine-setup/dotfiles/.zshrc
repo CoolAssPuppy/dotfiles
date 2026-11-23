@@ -210,3 +210,9 @@ export PATH="/Users/prashant/.kimi-code/bin:$PATH"
 
 # Added by Antigravity CLI installer
 export PATH="/Users/prashant/.local/bin:$PATH"
+
+# Load portable machine-specific tool settings.
+for _dev_config in "$HOME"/.zshrc.d/*.zsh(N); do
+  source "$_dev_config"
+done
+unset _dev_config

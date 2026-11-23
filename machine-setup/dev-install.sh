@@ -16,7 +16,11 @@ else
 fi
 
 install_xcode_tools() {
-  xcode-select -p >/dev/null 2>&1 || xcode-select --install
+  if ! xcode-select -p >/dev/null 2>&1; then
+    xcode-select --install
+    echo 'Finish the Command Line Tools installer, then rerun this script.' >&2
+    return 1
+  fi
 }
 step "Xcode command line tools" install_xcode_tools
 
@@ -42,6 +46,8 @@ link_dotfile() {
 }
 
 link_all_dotfiles() {
+  link_dotfile "$DOTFILES/.zprofile" "$HOME/.zprofile"
+  link_dotfile "$DOTFILES/dev-tools.zsh" "$HOME/.zshrc.d/dev-tools.zsh"
   link_dotfile "$DOTFILES/.zshrc"                   "$HOME/.zshrc"
   link_dotfile "$DOTFILES/.bash_profile"            "$HOME/.bash_profile"
   link_dotfile "$DOTFILES/.gitconfig"               "$HOME/.gitconfig"
@@ -68,18 +74,16 @@ export NVM_DIR="$HOME/.nvm"
 if [ -s "$BREW_PREFIX/opt/nvm/nvm.sh" ]; then . "$BREW_PREFIX/opt/nvm/nvm.sh"; fi
 
 setup_node() {
-  nvm install --lts
-  nvm alias default 'lts/*'
+  nvm install 24
+  nvm alias default "$(nvm current)"
   nvm use default
 }
 step "Node LTS via nvm" setup_node
 
 setup_pnpm() {
-  command -v corepack >/dev/null 2>&1 || return 0
-  corepack enable
-  corepack prepare pnpm@latest --activate
+  npm install --global pnpm@11.1.0
 }
-step "pnpm via corepack" setup_pnpm
+step "pnpm 11.1.0 for project lockfiles" setup_pnpm
 
 step "pipx path" pipx ensurepath
 
@@ -95,3 +99,5 @@ version "stripe  " stripe --version
 
 echo
 note "Setup complete. Open a new terminal or run: source ~/.zshrc"
+
+note "Next: run ./machine-setup/setup-mobile.sh and ./machine-setup/prepare-projects.sh after account setup. See machine-setup/MAC-MINI.md."

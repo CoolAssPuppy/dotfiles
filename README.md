@@ -55,6 +55,8 @@ The Brewfile includes development tools, applications, fonts, and VS Code extens
 `brew bundle` installs and upgrades everything in it, so the Brewfile is the single
 source of truth for what is on the machine.
 
+For the four-app Mac mini setup, follow [Mac mini development setup](machine-setup/MAC-MINI.md). It covers Xcode, Android SDKs, accounts, repositories, and release credentials.
+
 ## Shell configurations
 
 `machine-setup/dotfiles/` contains the zsh and bash configurations:

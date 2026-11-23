@@ -13,6 +13,7 @@ brew "gh"
 # Node itself is managed by nvm (dev-install.sh installs the LTS), not Homebrew.
 # Installing brew "node" too would shadow-conflict with nvm's copy on PATH.
 brew "nvm"
+brew "openjdk@21"
 brew "deno"
 brew "bun"
 brew "python@3.13"
@@ -22,7 +23,7 @@ brew "ruby"
 brew "rbenv"
 
 # Package managers
-brew "pnpm"
+# pnpm 11.1.0 is installed into the nvm-managed Node by dev-install.sh.
 
 # Databases
 brew "libpq"
@@ -46,6 +47,12 @@ brew "swiftlint"
 brew "pandoc"
 
 # Apps
+cask "codex"
+cask "claude-code"
+cask "cursor"
+cask "android-studio"
+cask "android-commandlinetools"
+cask "tailscale-app"
 cask "ghostty"
 cask "visual-studio-code"
 cask "zed"
