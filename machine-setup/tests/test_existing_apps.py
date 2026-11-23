@@ -15,12 +15,13 @@ class ExistingApps(unittest.TestCase):
             root = Path(directory)
             for name in ['brew-sync.sh', 'lib.sh']:
                 shutil.copyfile(ROOT / name, root / name)
-            (root / 'Brewfile').write_text('cask "existing-app"\n')
+            (root / 'Brewfile').write_text('tap "vendor/tools"\ncask "existing-app"\n')
             brew = root / 'brew'
             brew.write_text('''#!/bin/bash
 case "$*" in
   update) exit 0 ;;
   "trust --help") exit 1 ;;
+  "tap vendor/tools") exit 0 ;;
   "list --formula -1"|"list --cask -1"|"outdated --quiet") exit 0 ;;
   "info --json=v2 --cask existing-app")
     echo '{"casks":[{"artifacts":[{"app":["Utilities"]}]}]}' ;;

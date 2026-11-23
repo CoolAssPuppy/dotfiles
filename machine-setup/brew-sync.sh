@@ -23,9 +23,11 @@ fi
 step "Homebrew metadata" brew update
 
 trust_taps() {
-  brew trust --help >/dev/null 2>&1 || return 0
   sed -n 's/^tap "\([^"]*\)".*/\1/p' "$BREWFILE" | while read -r name; do
-    brew trust --tap "$name"
+    if brew trust --help >/dev/null 2>&1; then
+      brew trust --tap "$name" || return 1
+    fi
+    brew tap "$name" || return 1
   done
 }
 step "Trust third-party taps" trust_taps
