@@ -30,7 +30,7 @@ brew "libpq"
 
 # Cloud and service CLIs
 cask "vercel"
-brew "dopplerhq/doppler/doppler"
+cask "dopplerhq/doppler/doppler"
 brew "supabase/tap/supabase"
 brew "stripe/stripe-cli/stripe"
 
