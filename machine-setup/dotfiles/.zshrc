@@ -221,3 +221,8 @@ for _dev_config in "$HOME"/.zshrc.d/*.zsh(N); do
   source "$_dev_config"
 done
 unset _dev_config
+
+# Load remote shortcuts even when installation links have not been created.
+_remote_hosts="${${(%):-%x}:A:h}/remote-hosts.zsh"
+[[ -r "$_remote_hosts" ]] && source "$_remote_hosts"
+unset _remote_hosts
